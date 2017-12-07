@@ -17,13 +17,48 @@
   {% render_bundle 'vendor' 'css' %}
   {% render_bundle 'storefront' 'css' %}
   
-  <link rel="stylesheet" href="/static/assets/custom.css">
   {% block stylesheet %}{% endblock stylesheet %}
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <style type="text/css">
+    .navbar__brand .container {
+      padding: 15px;
+    }
+
+    .logo {
+      color: #00f;
+      font-weight: bold;
+    }
+
+    .navbar__brand ul {
+      list-style: none;
+    }
+    .navbar__brand ul li {
+      display: inline-block;
+      padding: 0 0.5rem;
+      line-height: 1.9rem;
+    }
+    .navbar__brand ul li a {
+      font-size: 12px;
+    }
+
+    .navbar__brand .main-menu {
+      padding-left: 0;
+    }
+    .navbar__brand .main-menu li{
+      padding: 0 1rem 0 0;
+    }
+    .navbar__brand .main-menu li a {
+      font-size: 20px;
+    }
+
+    .navbar__brand__cart .cart__icon {
+      padding: 0 15px;
+    }
+  </style>
 </head>
 
 <body>
