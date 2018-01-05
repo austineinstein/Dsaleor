@@ -16,7 +16,7 @@
   {% include 'favicon.html' %}
   {% render_bundle 'vendor' 'css' %}
   {% render_bundle 'storefront' 'css' %}
-  
+
   {% block stylesheet %}{% endblock stylesheet %}
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -116,7 +116,9 @@
       <div class="container">
         <div class="row">
           <div class="col-8">
-            <span class="logo">{% trans "THMAXX" context "Main navigation item" %}</span>
+              <a href="/">
+              <span class="logo">{% trans "THMAXX" context "Main navigation item" %}</span>
+            </a>
           </div>
           <div class="col-4">
             <ul class="float-right">
