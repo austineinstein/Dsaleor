@@ -2431,6 +2431,31 @@ COPY discount_sale (id, name, type, value) FROM stdin;
 48	Happy nihil day!	percentage	50.00
 49	Happy harum day!	percentage	50.00
 50	Happy aut day!	percentage	10.00
+51	Happy sequi day!	percentage	40.00
+52	Happy asperiores day!	percentage	40.00
+53	Happy doloremque day!	percentage	10.00
+54	Happy laboriosam day!	percentage	20.00
+55	Happy architecto day!	percentage	10.00
+56	Happy dolorum day!	percentage	50.00
+57	Happy repellendus day!	percentage	50.00
+58	Happy deserunt day!	percentage	30.00
+59	Happy in day!	percentage	20.00
+60	Happy id day!	percentage	10.00
+61	Happy non day!	percentage	30.00
+62	Happy sit day!	percentage	40.00
+63	Happy sint day!	percentage	10.00
+64	Happy fugiat day!	percentage	40.00
+65	Happy numquam day!	percentage	50.00
+66	Happy earum day!	percentage	10.00
+67	Happy sint day!	percentage	50.00
+68	Happy repellat day!	percentage	50.00
+69	Happy repellendus day!	percentage	10.00
+70	Happy minus day!	percentage	50.00
+71	Happy dignissimos day!	percentage	20.00
+72	Happy optio day!	percentage	20.00
+73	Happy deserunt day!	percentage	30.00
+74	Happy harum day!	percentage	20.00
+75	Happy pariatur day!	percentage	10.00
 \.
 
 
@@ -2647,6 +2672,106 @@ COPY discount_sale_products (id, sale_id, product_id) FROM stdin;
 198	50	129
 199	50	492
 200	50	357
+201	51	539
+202	51	308
+203	51	347
+204	51	615
+205	52	96
+206	52	627
+207	52	63
+208	52	317
+209	53	624
+210	53	251
+211	53	113
+212	53	635
+213	54	601
+214	54	411
+215	54	193
+216	54	570
+217	55	240
+218	55	383
+219	55	571
+220	55	341
+221	56	206
+222	56	134
+223	56	354
+224	56	316
+225	57	373
+226	57	213
+227	57	311
+228	57	544
+229	58	385
+230	58	713
+231	58	560
+232	58	435
+233	59	259
+234	59	636
+235	59	614
+236	59	580
+237	60	475
+238	60	67
+239	60	140
+240	60	520
+241	61	511
+242	61	481
+243	61	534
+244	61	699
+245	62	703
+246	62	158
+247	62	170
+248	62	87
+249	63	472
+250	63	464
+251	63	147
+252	63	261
+253	64	696
+254	64	296
+255	64	478
+256	64	184
+257	65	648
+258	65	186
+259	65	13
+260	65	619
+261	66	601
+262	66	116
+263	66	157
+264	66	819
+265	67	123
+266	67	744
+267	67	763
+268	67	529
+269	68	597
+270	68	609
+271	68	144
+272	68	427
+273	69	526
+274	69	690
+275	69	147
+276	69	760
+277	70	333
+278	70	495
+279	70	169
+280	70	101
+281	71	560
+282	71	64
+283	71	212
+284	71	840
+285	72	779
+286	72	516
+287	72	71
+288	72	757
+289	73	793
+290	73	495
+291	73	165
+292	73	777
+293	74	723
+294	74	163
+295	74	360
+296	74	315
+297	75	887
+298	75	731
+299	75	152
+300	75	495
 \.
 
 
@@ -2748,7 +2873,6 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 25	discount	0001_initial	2017-11-22 20:16:54.218193+00
 26	discount	0002_voucher	2017-11-22 20:16:54.260788+00
 27	discount	0003_auto_20160207_0534	2017-11-22 20:16:54.449596+00
-28	cart	0001_initial	2017-11-22 20:16:54.59778+00
 29	cart	0002_auto_20161014_1221	2017-11-22 20:16:54.662794+00
 30	cart	fix_empty_data_in_lines	2017-11-22 20:16:54.707925+00
 31	cart	0001_auto_20170113_0435	2017-11-22 20:16:54.76664+00
@@ -2821,16 +2945,6 @@ COPY django_migrations (id, app, name, applied) FROM stdin;
 98	shipping	0006_auto_20171109_0908	2017-11-22 20:17:01.007153+00
 99	sites	0001_initial	2017-11-22 20:17:01.020845+00
 100	sites	0002_alter_domain_unique	2017-11-22 20:17:01.034023+00
-101	site	0001_initial	2017-11-22 20:17:01.096967+00
-102	site	0002_add_default_data	2017-11-22 20:17:01.190099+00
-103	site	0003_sitesettings_description	2017-11-22 20:17:01.216439+00
-104	site	0004_auto_20170221_0426	2017-11-22 20:17:01.248845+00
-105	site	0005_auto_20170906_0556	2017-11-22 20:17:01.261951+00
-106	site	0006_auto_20171025_0454	2017-11-22 20:17:01.282004+00
-107	site	0007_auto_20171027_0856	2017-11-22 20:17:01.470341+00
-108	site	0008_auto_20171027_0856	2017-11-22 20:17:01.510962+00
-109	site	0009_auto_20171109_0849	2017-11-22 20:17:01.524249+00
-110	site	0010_auto_20171113_0958	2017-11-22 20:17:01.537589+00
 111	default	0001_initial	2017-11-22 20:17:01.695181+00
 112	social_auth	0001_initial	2017-11-22 20:17:01.698105+00
 113	default	0002_add_related_name	2017-11-22 20:17:01.756016+00
@@ -3059,6 +3173,11 @@ COPY order_deliverygroup (id, status, shipping_price, order_id, last_updated, tr
 140	shipped	11.7000	140	2017-12-03 17:37:34.165215+00		UPC Rest of World
 141	shipped	11.7000	141	2017-12-06 15:00:04.352585+00		UPC Rest of World
 142	shipped	99.5400	142	2017-12-13 16:37:00.250046+00		UPC Rest of World
+143	new	26.4300	143	2018-01-05 18:43:31.00806+00		UPC Rest of World
+144	new	93.3100	144	2018-01-06 17:25:50.038746+00		DHL Rest of World
+145	new	57.1000	145	2018-01-06 17:34:21.608864+00		DHL Rest of World
+146	new	26.4300	146	2018-01-06 17:37:24.342196+00		UPC Rest of World
+147	shipped	36.3400	147	2018-01-06 17:55:27.449153+00		DHL United States of America
 \.
 
 
@@ -3209,6 +3328,11 @@ COPY order_order (id, status, created, last_status_change, tracking_client_id, u
 138	payment-pending	2017-12-03 17:37:34.088963+00	2017-12-03 17:37:34.088979+00			a2041579-cb68-411b-af24-d175c3ef8eab	160	160	115	78.07	0.00	\N		\N	en-us
 142	payment-pending	2017-12-13 16:37:00.234284+00	2017-12-13 16:37:00.234306+00		jennifer.lowe@example.com	fd9419c0-bae0-4419-840c-9d52637c9147	261	261	\N	\N	\N	\N		\N	en-us
 140	payment-pending	2017-12-03 17:37:34.157982+00	2017-12-03 17:37:34.157999+00		mark.stark@example.com	9b58c6c4-2e61-4298-9b5e-fa9af626b7db	219	219	\N	376.73	0.00	\N		\N	en-us
+143	payment-pending	2018-01-05 18:43:30.993331+00	2018-01-05 18:43:30.993344+00			403bbb15-c085-4562-91a9-0c87ac483336	39	39	30	\N	\N	\N		\N	en-us
+144	payment-pending	2018-01-06 17:25:50.021441+00	2018-01-06 17:25:50.02146+00		jacob.stephens@example.com	39fd7cb5-17c5-464f-8020-2b2539d33f73	302	302	\N	\N	\N	\N		\N	en-us
+145	payment-pending	2018-01-06 17:34:21.596659+00	2018-01-06 17:34:21.596677+00			455d63f3-4271-42e7-b013-7c5072e7a766	322	322	254	\N	\N	\N		\N	en-us
+146	payment-pending	2018-01-06 17:37:24.331575+00	2018-01-06 17:37:24.331591+00			577e9757-6c20-4cb9-85e8-b9731a16556d	3	3	3	\N	\N	\N		\N	en-us
+147	payment-pending	2018-01-06 17:55:27.436336+00	2018-01-06 17:55:27.436358+00			a7397c25-ba94-46e1-ba09-71ad95f6625e	194	194	137	\N	\N	\N		\N	en-us
 \.
 
 
@@ -3928,6 +4052,8 @@ COPY product_product (id, name, description, price, available_on, updated_at, pr
 59	Elliott, Atkinson and Reyes	Dolorum dicta nesciunt ipsam. Adipisci distinctio maxime repellendus porro eius. Quae vero quos suscipit consequuntur perspiciatis quam sit.\n\nDolore culpa ratione voluptatum reiciendis odio eos. Doloribus incidunt libero minus aliquid. Reprehenderit magnam officiis dolor laborum blanditiis tenetur voluptatibus.\n\nDelectus recusandae inventore earum ullam. Delectus quo sapiente iusto cum. Quasi sed amet rem quasi reprehenderit provident rem. Explicabo sequi molestiae doloremque quaerat.\n\nOdio repellendus quas doloribus repellat. Accusamus ratione deserunt cupiditate quos. Ipsam animi optio laudantium quos hic optio accusamus. Recusandae laudantium mollitia sit.\n\nAnimi laudantium fuga quis quam molestiae aut ipsam. Accusamus repellendus amet expedita rerum odit veritatis saepe. Temporibus fuga consequatur incidunt odio repellendus eius facere. Tempore quod deleniti optio placeat cupiditate blanditiis accusamus.	46.75	\N	2017-11-22 20:26:56.959565+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	t	t
 20	Smith-Webster	Quam dicta distinctio laborum. Quaerat dolorem officiis aut id. Facilis nisi soluta soluta vel corrupti.\n\nVeritatis aperiam voluptates deserunt eum soluta. Molestias repellat fugiat ratione omnis nostrum est. Earum facere ex eum aliquid rerum corrupti.\n\nVoluptates iure voluptatibus quos a. Aperiam aperiam quisquam debitis maxime. Nemo numquam rem soluta minima saepe dignissimos ipsam occaecati.\n\nAssumenda architecto quo similique eligendi necessitatibus odio. Nam asperiores consectetur corporis iusto enim. Ipsa doloribus perferendis maxime perspiciatis cupiditate ratione totam.\n\nPerspiciatis numquam nobis adipisci nihil repudiandae. Sequi optio quasi maiores voluptas quos. Amet explicabo nesciunt provident soluta doloremque explicabo saepe.	21.40	\N	2017-11-22 20:26:55.046983+00	2	"3"=>"6"	t	t
 85	Williams, Webb and Charles	Quaerat hic minus possimus facilis reprehenderit culpa. Id recusandae tempora iste. Facere eum corporis doloremque aut laborum reprehenderit reiciendis modi.\n\nUnde incidunt voluptatibus consequatur ducimus eaque doloribus corrupti doloribus. Repudiandae consequatur blanditiis similique atque. Dolore corporis eveniet voluptatem sapiente eligendi aspernatur. Ducimus itaque maxime voluptas incidunt saepe ducimus. Quos deleniti molestiae dolores deleniti dicta.\n\nQuaerat suscipit ipsam molestiae sed. Nemo doloribus odit in odit dolor. Consequuntur veniam deleniti soluta accusantium repellendus. Molestiae accusamus dicta laudantium quia quas itaque.\n\nExcepturi natus inventore quasi distinctio distinctio ipsa iure. Necessitatibus laborum architecto inventore inventore.\n\nAmet labore provident fugiat fuga soluta modi. Totam facere aliquam aliquam itaque.	82.33	\N	2017-11-27 23:21:08.203988+00	3	"3"=>"6", "5"=>"14"	t	t
+656	Moore-Diaz	Velit accusamus corporis ipsam. Laboriosam totam esse eum veniam. Placeat facere blanditiis quam earum numquam. Suscipit repellat ab consequuntur eaque.\n\nQuos repellendus inventore quos autem. Minus ad doloribus alias ad incidunt.\n\nSint inventore cupiditate deserunt rem ratione. Amet sint iure dignissimos quibusdam earum. Ad doloremque nihil fuga possimus cumque. Molestiae magni atque esse quas.\n\nNulla eum quaerat dolores amet tenetur laborum sint. Deserunt laboriosam itaque eum quas. Natus praesentium quas ad aspernatur. Iste corrupti non labore praesentium iure.\n\nAdipisci autem nesciunt distinctio iusto iure iure nisi. Facere error vitae quia. Id mollitia nesciunt qui quam expedita.	52.30	\N	2018-01-05 18:43:29.333609+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+657	Smith, Thomas and Turner	Voluptates perspiciatis tenetur ex consequatur fugiat cum earum. Quas quibusdam delectus assumenda nemo. Tenetur modi mollitia labore debitis aliquam fuga quae. Ut quisquam officia consequatur harum.\n\nVoluptatem modi quaerat ducimus dolor at laborum dolore. Totam repellendus blanditiis eligendi iste officiis. Mollitia necessitatibus veniam iure.\n\nRem eligendi aut sed. Dicta similique tenetur vel. Necessitatibus quam iste quod aperiam accusantium. Rem voluptate mollitia illo iure.\n\nQui veniam quod beatae ullam cumque ullam. Veniam velit facilis suscipit officiis facere.\n\nOccaecati perferendis dicta voluptatibus doloremque. Consequuntur sunt distinctio recusandae dolorem nihil magni. Culpa dignissimos sapiente quam velit iure.	21.33	\N	2018-01-05 18:43:29.365543+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
 121	Marshall-Taylor	Labore repellat expedita temporibus pariatur consequatur. Perferendis laudantium asperiores et saepe ducimus aliquam exercitationem. Saepe voluptates ex ipsa dolor alias fugit.\n\nNumquam blanditiis molestias quidem possimus laboriosam aut animi rerum. Aliquid dicta sapiente quos corporis occaecati ipsa ab assumenda. Vel ea ad tenetur.\n\nDolorem eligendi similique autem ducimus voluptatem. Molestiae eveniet nisi a quis veniam vel maiores. Dolorem voluptates occaecati animi possimus autem dolorum saepe incidunt. Distinctio earum illum nesciunt repellat occaecati reprehenderit quos.\n\nConsequuntur repellendus sunt veritatis eius. Quo officiis repellat incidunt. Suscipit repellendus beatae provident provident nam facilis minima. Harum nulla tempora dignissimos illum exercitationem.\n\nNobis perferendis delectus ullam reiciendis deleniti. Iure pariatur sint exercitationem porro consectetur quae cupiditate harum. Inventore illum porro facilis.	68.38	\N	2017-11-27 23:30:48.354927+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
 122	Cain Group	Accusamus ex numquam fuga dolore inventore vel. Nihil totam veniam saepe. Nihil soluta molestiae voluptas molestias.\n\nVoluptatibus iste voluptate perferendis nostrum animi delectus beatae corporis. Sed consequuntur minima recusandae ipsum iure doloribus ratione. Minus laudantium vel modi veritatis cumque laboriosam. Sequi cum esse maxime ipsum consequuntur eligendi alias.\n\nConsectetur quas rem mollitia odio molestias. Expedita sed eius blanditiis ratione ea sunt. Alias a molestias cumque neque laudantium in soluta. Voluptate ipsum distinctio impedit.\n\nOfficiis quisquam necessitatibus tempore ratione corrupti magnam ipsum. Asperiores cumque blanditiis debitis similique. Odio numquam tenetur dolorum impedit accusantium.\n\nItaque temporibus adipisci voluptate sequi. Ullam ab accusamus ullam eius quo praesentium. Totam sed explicabo ea nobis autem. Eius exercitationem fuga laborum ipsam velit.	53.50	\N	2017-11-27 23:30:48.406072+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
 123	Miller Group	Cumque voluptatem voluptatem nisi dolorem cupiditate officia adipisci sunt. Esse eius dolore eos cupiditate provident odit. Aliquam corporis quam modi numquam. Eum aspernatur provident minima labore libero vitae.\n\nCum saepe culpa quam nam eligendi. Corrupti maxime blanditiis id minima. Exercitationem possimus debitis earum a sint. Dolorum saepe ratione commodi corporis adipisci ab ut rem.\n\nMaxime eos sequi eius in necessitatibus. Harum amet inventore voluptatum. Quasi occaecati quae fuga deserunt nisi optio qui. Fugit est architecto voluptatum quidem aliquid placeat molestiae.\n\nTotam ipsa quia impedit dolores odit eos adipisci consequatur. Occaecati quis optio perferendis itaque porro quisquam libero. Incidunt ipsa voluptatibus molestias. Quo voluptas iure quaerat.\n\nReiciendis illo eveniet culpa hic praesentium molestiae. Dolorum optio occaecati eaque. Iusto molestiae nulla labore nemo sunt sunt.	7.23	\N	2017-11-27 23:30:48.453247+00	1	"1"=>"2", "2"=>"5", "3"=>"6"	f	t
@@ -4376,6 +4502,9 @@ COPY product_product (id, name, description, price, available_on, updated_at, pr
 566	Frazier, Cook and Hutchinson	Fugiat praesentium omnis corporis quisquam. Cupiditate fuga explicabo debitis accusamus nemo similique quidem exercitationem. Laudantium tenetur nulla corrupti voluptatem. Est a officiis laborum commodi adipisci hic.\n\nAut unde error quae commodi. Architecto maxime perferendis esse vel quis eligendi. Officia magnam possimus laborum repellendus iste recusandae cupiditate. Occaecati aliquid minus nostrum excepturi. Qui natus quia ea.\n\nAssumenda quisquam tempora corrupti quam. Vero tempora ad placeat quam. Voluptates error quis molestias minima ducimus fuga. Vel animi reiciendis dolor. Iure distinctio non aut iusto.\n\nQuis occaecati molestiae laborum quos. Ipsam sint dolor molestiae adipisci. Dolorem reiciendis quidem laborum deserunt laboriosam.\n\nQuo quam laudantium amet excepturi nesciunt nemo. Sunt incidunt modi ducimus doloremque quis. Accusamus facilis et tempora occaecati soluta veniam omnis. Quas minus exercitationem iusto provident culpa ullam hic hic.	33.18	\N	2017-12-13 16:36:55.238516+00	3	"3"=>"6", "5"=>"13"	f	t
 567	Gonzalez, Eaton and Wolfe	Deleniti ex harum id ipsum illo officia impedit. Natus nobis quod consequatur debitis vel explicabo id. Saepe ad distinctio libero iste dolor laborum quibusdam.\n\nFugiat minus possimus voluptatum dignissimos esse provident. Ab molestiae fugit nihil rerum voluptatem eaque. Tempore natus nesciunt cupiditate quasi distinctio. Illo voluptatem ullam culpa nihil ea. Ipsam fugiat ipsa adipisci quia minima aliquid.\n\nAliquid doloribus perferendis aperiam modi provident voluptatem nostrum. Reprehenderit assumenda odit nisi laborum beatae dolorum. Totam sunt mollitia necessitatibus libero fugit perspiciatis doloribus.\n\nQuisquam necessitatibus dolorum reiciendis labore delectus. Odio delectus dicta corporis molestiae itaque esse ipsam. Nulla dicta ut vel.\n\nIn laboriosam optio sint et soluta velit. Pariatur rem temporibus fuga incidunt impedit modi. Neque incidunt reprehenderit harum itaque et tempora doloribus.	61.47	\N	2017-12-13 16:36:55.328875+00	3	"3"=>"6", "5"=>"13"	f	t
 568	Munoz-Brown	Aliquid tempore provident repellendus quia vel. Quis nobis consequatur blanditiis facilis. Delectus sunt accusantium recusandae harum deserunt commodi nesciunt. Iure sint nobis ducimus commodi id.\n\nExercitationem asperiores illo omnis alias est corporis mollitia qui. Nemo recusandae vel voluptate dicta ratione. Nesciunt molestias libero alias sunt ab a blanditiis.\n\nNisi sequi numquam tenetur autem. Distinctio exercitationem tempore in laboriosam assumenda. Facere eum dicta cumque nisi. Illo perspiciatis rem velit consectetur recusandae.\n\nError quam enim mollitia temporibus porro. Distinctio voluptas dolorum minus. Perspiciatis unde impedit consectetur adipisci. Quae dolores tempora quam consequatur qui.\n\nSimilique non voluptatem rerum placeat. Distinctio illum optio cumque magni molestias ipsum rem. Eligendi officiis rem minus excepturi tempora aliquam corporis.	88.72	\N	2017-12-13 16:36:55.412297+00	3	"3"=>"6", "5"=>"13"	f	t
+601	Smith and Sons	Architecto error officiis minima nemo optio. Cum veritatis sed animi nam nam fugit. Molestias dolores iste dicta rem corrupti.\n\nQuas voluptatem cupiditate hic. Debitis soluta doloremque totam aperiam vero doloremque. Mollitia dolore maxime quaerat sint maiores eius.\n\nQuae officiis omnis accusamus est quae similique et. Quidem dolore laboriosam voluptas. Tempore esse labore alias velit.\n\nPerspiciatis cupiditate mollitia consequatur ducimus amet cupiditate expedita. Accusantium harum magnam illum beatae. Voluptate in ea consequatur illo saepe quibusdam provident. Dolore nam maiores ipsum ad.\n\nModi rem atque sint ab. Aliquam quo repudiandae earum veniam. Quia deleniti beatae voluptatibus dolores quos vero reprehenderit.	75.63	\N	2018-01-05 18:43:26.87558+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+602	Harmon, Rodriguez and Lee	Deleniti earum sapiente enim molestias. Culpa quos placeat voluptatum occaecati quidem. Unde quos voluptatem consequatur ea dolorem.\n\nError totam pariatur ullam aperiam aspernatur. Provident eveniet fugit minima voluptate. Quam repudiandae dolor voluptate odio nihil at.\n\nExplicabo vitae assumenda consequatur odio doloribus iste. Odio id laudantium odio minus quos ut. Soluta aperiam commodi laboriosam atque nulla commodi quo inventore. Corrupti in doloremque possimus.\n\nMolestiae atque doloribus perspiciatis qui. Voluptatum nisi aspernatur optio alias nostrum voluptas praesentium tempore. Ut dolores laboriosam nisi error quod.\n\nRerum quo cupiditate ullam quibusdam quam. Quas iste quae magnam amet modi earum. Placeat voluptas ratione enim sequi nisi id vel. Magni possimus perferendis magni vitae neque vero reiciendis est.	33.70	\N	2018-01-05 18:43:26.980734+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+603	Hernandez, Patterson and Sanchez	Cum laborum harum fugiat sint expedita rerum ut. Minus laudantium ipsam distinctio autem. Optio repellendus ratione nihil ab dolorum dolor blanditiis repudiandae. Commodi reprehenderit quam odit unde ratione est.\n\nDebitis dignissimos sunt impedit facilis eum nostrum excepturi. Et consectetur voluptates ex corporis quisquam. Nemo voluptatibus eaque magnam natus.\n\nFuga cumque unde id expedita officia unde quibusdam. Eaque veniam nihil repellat deleniti quia hic maiores. Dolor provident ratione quia eveniet. Consequatur magni distinctio ratione architecto.\n\nDistinctio aperiam minima laudantium exercitationem officiis numquam. At debitis accusantium odio. In quam porro quae illum rem eveniet ipsam. Adipisci sed nesciunt unde quaerat pariatur voluptatum eveniet. Accusamus nostrum mollitia rerum.\n\nVeritatis enim ea soluta sapiente beatae. Quaerat labore hic totam tempora. Incidunt adipisci ad labore aspernatur unde.	40.50	\N	2018-01-05 18:43:27.036079+00	1	"1"=>"2", "2"=>"5", "3"=>"6"	f	t
 569	Anthony-Rodriguez	Quam explicabo occaecati aut facere fugit dolorem quibusdam. Est beatae nemo tempore vel deleniti. Doloremque pariatur temporibus dolore reprehenderit. Molestias iure provident possimus pariatur velit distinctio esse.\n\nEnim veritatis quasi eveniet voluptas necessitatibus non placeat. Natus delectus asperiores dolorum quibusdam. Facere eveniet aperiam maiores blanditiis libero quisquam molestias. Saepe fugit officia dolore nesciunt.\n\nSit quas doloremque eius. Repudiandae inventore dicta laborum similique. At blanditiis laborum porro facilis ad explicabo. Hic repellat quae quasi voluptatem est aut.\n\nSapiente molestiae harum illum laboriosam voluptatem facere accusamus. Praesentium incidunt voluptatibus consequatur eaque in architecto excepturi. Laboriosam atque delectus laborum fuga id consequuntur.\n\nError reprehenderit error maxime a voluptates distinctio beatae minus. Eos at pariatur voluptas molestias hic eligendi nemo. Maxime quibusdam harum distinctio soluta temporibus ab.	65.36	\N	2017-12-13 16:36:55.475726+00	3	"3"=>"6", "5"=>"14"	f	t
 570	Rodriguez, Galvan and Wood	Molestias repellendus veniam sapiente molestiae quibusdam. Perferendis dolor laborum eos deserunt aperiam esse nisi. Nemo nihil ad dignissimos nulla.\n\nTotam consequatur dolore possimus enim consectetur ad nam aperiam. Eius dolorem saepe culpa aut earum consectetur. Sequi accusamus sequi quae sit. Harum recusandae nisi nam aut ea reprehenderit aliquam.\n\nRecusandae labore fugit quos. Vitae tempore minima voluptatem sapiente ex quaerat natus. Debitis cum architecto voluptates veritatis aut. Quas quaerat ratione mollitia numquam corrupti perferendis.\n\nVero quaerat hic illo dolores dicta et consectetur. Nesciunt exercitationem dolorem voluptate explicabo corrupti velit reiciendis laudantium. Illo magni provident minima cupiditate nemo quidem perferendis.\n\nAt enim dignissimos sed error. Fuga omnis perferendis iusto. Ea voluptatem consequuntur illo explicabo dolore delectus.	76.40	\N	2017-12-13 16:36:55.56255+00	3	"3"=>"6", "5"=>"14"	f	t
 571	Fernandez-Thomas	Ipsum omnis aliquam mollitia dignissimos natus esse alias. Voluptatibus veritatis eaque sapiente accusamus reiciendis. Iure voluptatem vel quae.\n\nNatus facilis eos iusto velit qui occaecati blanditiis. Ipsa nobis est quasi veritatis eveniet. Expedita minus totam tenetur nobis magni. Voluptas facere tempora mollitia in perspiciatis aliquid. Expedita facere laborum ducimus deleniti laborum.\n\nRepellat ut dolores voluptas praesentium eveniet quisquam. Quidem maiores asperiores dignissimos iste quidem impedit tenetur hic. Tempora repellat iste porro commodi sit. Impedit beatae tempora mollitia id ex corrupti quam.\n\nNesciunt labore consequuntur neque aperiam. Placeat facere necessitatibus quo iusto. Perferendis occaecati repudiandae quia incidunt doloribus.\n\nPorro modi alias officia aspernatur iste dolores maiores. Sequi eligendi iste omnis dolore aliquam. Nostrum officiis blanditiis reprehenderit non. Rerum officiis at aperiam minus facere delectus quisquam.	24.78	\N	2017-12-13 16:36:55.609134+00	4	"3"=>"6", "7"=>"19"	f	t
@@ -4394,6 +4523,9 @@ COPY product_product (id, name, description, price, available_on, updated_at, pr
 584	Gomez and Sons	Distinctio repellendus et blanditiis velit. Mollitia dicta ex occaecati exercitationem velit amet distinctio. Praesentium expedita facilis et alias at qui dolor.\n\nUnde vel non eius odio. Suscipit explicabo quas quas fugiat necessitatibus harum quis. Voluptas architecto vitae vitae impedit cupiditate modi.\n\nQui reprehenderit voluptates voluptatibus quis. Officiis accusamus quibusdam aliquam inventore veritatis. Modi quam incidunt deserunt alias.\n\nFugiat distinctio enim reprehenderit esse recusandae. Delectus omnis alias labore dolorum pariatur amet. Ipsam rerum adipisci aperiam alias.\n\nQuos a ratione magni consequuntur. Similique quasi illum quasi perspiciatis labore inventore qui. Consequuntur eum tenetur soluta laboriosam.	29.34	\N	2017-12-13 16:36:56.344477+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
 585	Suarez-Parks	Dignissimos dolor ipsa cumque nobis fugit. Nisi culpa aliquid illo. Explicabo nulla praesentium nihil id facere.\n\nEaque cumque necessitatibus numquam in nihil odit. Reiciendis assumenda fuga autem velit asperiores nemo. Consequuntur rerum vel ut. In eum consectetur officiis dolores.\n\nUnde modi saepe sit reiciendis officia. Tenetur excepturi voluptate nisi quis recusandae nam quod. Beatae omnis eum maxime autem ad quis neque.\n\nDicta ducimus repellat nisi porro quasi porro itaque. Ut consequatur incidunt eum qui ipsum.\n\nMagnam ea repellat maxime eum reiciendis voluptate dolor. Sapiente omnis commodi ipsum eius ea voluptatem ipsa.	13.29	\N	2017-12-13 16:36:56.384029+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
 586	Clark-Palmer	Cumque quo quos magni itaque nihil quas. Consequatur tempora accusamus sed eum. Aut quisquam totam ullam hic alias a accusamus. Temporibus voluptatem perferendis non maiores maxime animi.\n\nRecusandae dolorum dolores fugit corporis cupiditate quia fugiat. Ex tempora provident at eum voluptas. Sunt fuga alias ea ipsa.\n\nQuisquam suscipit culpa rerum culpa laborum earum. Sequi mollitia cum inventore doloribus pariatur vel dignissimos. Molestias magnam corrupti mollitia fuga aperiam odit.\n\nCorporis voluptate repellat minus eius beatae temporibus sed. Harum soluta quidem totam cum inventore necessitatibus repudiandae deserunt. Deserunt ad iusto nihil dignissimos praesentium.\n\nUnde ducimus consequatur fuga ipsum deleniti nihil. Aliquid sapiente optio enim repellendus eaque laboriosam eveniet doloremque. Fuga eum molestiae quis laudantium veritatis animi.	99.41	\N	2017-12-13 16:36:56.430743+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+604	Anderson LLC	Pariatur suscipit nisi voluptates laborum. Tempora ab ipsa tempore voluptatibus. Ea quia voluptatibus debitis dolores.\n\nBlanditiis error maiores earum illum excepturi. Optio dolores vel quisquam reiciendis. Repellendus magnam quae maxime molestiae autem laboriosam quisquam ratione. Non eligendi officia est. Quis quisquam ratione sunt officia optio.\n\nLaborum itaque cupiditate eos beatae. Dolore maxime maiores itaque temporibus.\n\nQuibusdam a eius vero. Delectus dicta autem ratione natus harum sapiente praesentium. Eligendi excepturi quas rem reprehenderit deleniti.\n\nVoluptate ea facere illo. Quidem facilis mollitia asperiores voluptates doloremque impedit. Nesciunt dolorum fugit quas distinctio.	28.60	\N	2018-01-05 18:43:27.1138+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+605	Clark, Higgins and Church	Deleniti error at nemo maxime veritatis hic ad. Quidem at vitae nobis omnis placeat. Minima sint magni culpa excepturi sapiente earum veniam non. Est quod labore provident fugiat. Quia animi cumque praesentium itaque aspernatur quae eos recusandae.\n\nCupiditate laborum nemo ex asperiores. Harum necessitatibus sed ab. Repellat occaecati maiores nam labore rem. Blanditiis perferendis distinctio nihil culpa sapiente autem.\n\nQuam tempora voluptatum neque modi. Laboriosam quisquam atque delectus nostrum deserunt. Voluptatem at neque incidunt accusamus eligendi itaque placeat. Ut unde dolorem quas dolor maxime.\n\nIllo earum amet facilis temporibus nulla. Earum aliquam cumque sequi dolore. Quisquam accusantium velit aspernatur repellat. Culpa qui neque deserunt eveniet unde dolorem.\n\nMolestiae quae doloremque modi. Exercitationem quibusdam quaerat assumenda reprehenderit. Ipsum ipsum asperiores corporis quia.	99.31	\N	2018-01-05 18:43:27.159516+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+606	Martin-Harris	Quibusdam ipsam inventore harum laboriosam quas eaque. Quaerat alias consequuntur tenetur dolore. Dicta impedit numquam distinctio inventore. Quae cumque quis dolorem id quibusdam amet fugiat.\n\nIn fugit consectetur repudiandae quod nulla. Quis debitis soluta itaque a. Totam maxime quia tempora quis fugit enim nemo magni.\n\nSit eaque ex quia exercitationem. Modi velit asperiores velit deleniti repellendus facere. Eveniet ea aliquid ab explicabo aliquid. Delectus officiis repudiandae tenetur numquam molestias.\n\nEsse libero distinctio doloremque. Perferendis odit officiis odio dolore. Ducimus pariatur perspiciatis ipsam excepturi veritatis beatae.\n\nCumque fuga libero hic. Nam tempore placeat iure. Veniam iste qui atque itaque consequatur. Recusandae natus accusantium itaque eum sed est.	39.88	\N	2018-01-05 18:43:27.214055+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
 587	Adams, Brady and Smith	Laudantium non laboriosam possimus accusantium autem minima neque tempore. Fugit aliquid iste natus voluptatum voluptatum ipsa vel quae. Illo libero id similique. Tenetur quo quam quae quia ex.\n\nMollitia dignissimos aliquid dolore quaerat distinctio porro fugit. Sed magnam cupiditate minima non eius accusantium officia. Iusto voluptas eligendi incidunt possimus cupiditate. Debitis atque neque mollitia.\n\nBlanditiis nostrum a doloribus. Nemo rem et voluptatum velit quisquam magnam sunt blanditiis. Alias dignissimos debitis repellat nihil. Dolorum consequuntur aut dignissimos.\n\nQuaerat sint nihil ratione officia assumenda. Repellendus deleniti architecto minus vero quod. Optio impedit praesentium tenetur atque. Ut quaerat aut error quasi ducimus accusantium.\n\nIusto totam dolorum nisi. Ex impedit inventore voluptatibus nobis ipsum nam. Soluta rerum ex voluptatem consequuntur culpa dolores dolor. Soluta aperiam delectus laudantium nam.	26.20	\N	2017-12-13 16:36:56.473755+00	5	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
 588	Rojas, Adams and Cooper	Minima velit natus aspernatur similique tenetur quasi magni quis. Laudantium accusantium nobis quidem voluptates excepturi eius.\n\nQuibusdam rerum laborum aperiam totam. Eum officiis quam eveniet doloremque dolores labore. Repellendus quam repellat accusantium natus. Quae ducimus vero officiis saepe illo ducimus.\n\nEsse harum similique in eos perspiciatis dignissimos. Sed nisi alias adipisci at voluptatum est. Magni tempora laboriosam velit ducimus vel.\n\nOfficiis molestias quaerat ex aperiam accusantium. Voluptatibus molestiae nesciunt temporibus. Accusamus ad accusamus unde fugiat delectus ab.\n\nPossimus vitae veritatis odit deleniti occaecati ea. Necessitatibus vel officia alias.	77.96	\N	2017-12-13 16:36:56.566259+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
 589	Thornton, Gutierrez and Coleman	Quisquam aliquam eos rerum a quibusdam dignissimos unde. Ut possimus possimus cupiditate saepe dolores. Cum suscipit asperiores expedita. Eligendi recusandae modi dolores officia iusto.\n\nHic sit molestias ducimus omnis aliquam vitae eum. Ex adipisci sapiente commodi iusto. Sequi quidem a eaque. Perferendis quas similique corporis occaecati quos quod ea. Asperiores corporis in velit id voluptatibus.\n\nIn ad accusamus accusamus aliquam ut provident commodi. Itaque quibusdam eveniet ea iste pariatur. Cum sint deserunt distinctio illum. Eveniet voluptas sed earum quasi.\n\nEveniet eius autem nesciunt optio. Eos perferendis cumque necessitatibus. Molestias hic nulla natus voluptatem. Nisi soluta assumenda perspiciatis amet eius numquam dolor provident.\n\nOccaecati odit tenetur tenetur unde quam eius vero. Deleniti ad laborum doloribus provident. Perspiciatis assumenda fugiat repellat fugit voluptatum quibusdam. Libero expedita corporis omnis cumque voluptates. Nulla facere reiciendis aliquam eius laboriosam ipsa magni.	61.98	\N	2017-12-13 16:36:56.634246+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
@@ -4401,6 +4533,7 @@ COPY product_product (id, name, description, price, available_on, updated_at, pr
 591	Hughes, Mccormick and Kim	Ullam corrupti autem accusamus animi atque. Porro rerum accusantium natus eveniet repudiandae omnis rerum. Porro distinctio magni laborum fugiat tempore atque. Neque corrupti culpa laboriosam sequi ducimus molestias doloremque. Quae ipsa molestias excepturi facilis odio magni.\n\nPlaceat aut impedit placeat reiciendis voluptatum repellat quisquam. Ipsum corporis accusantium nobis aspernatur impedit cumque occaecati. Est facere similique ullam. Consequatur in qui quos officiis.\n\nMinima harum perferendis facere inventore. Ut nihil ipsam repellat vel ut.\n\nMolestiae quae aperiam tenetur asperiores blanditiis impedit. Facere exercitationem et deleniti placeat. Voluptates magnam amet ipsam. Quae soluta cumque at et in sequi.\n\nNisi sint aliquid reprehenderit nemo veniam perferendis. Temporibus occaecati debitis possimus quidem temporibus dolores. Blanditiis dicta ducimus dicta nesciunt itaque maxime.	78.21	\N	2017-12-13 16:36:56.827756+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
 592	Cole-Mcgee	Ad possimus doloremque labore officiis adipisci quidem praesentium. Quis soluta repudiandae minima enim velit occaecati omnis quo. Quod laudantium ipsam perspiciatis nihil perferendis ut accusamus.\n\nAd tenetur distinctio laudantium quaerat quas eveniet odit. Modi temporibus veritatis culpa illo. Perferendis corrupti velit omnis harum facere laboriosam voluptatem ea.\n\nNon accusamus atque illum doloribus enim. Provident doloribus fugiat quas repellendus odit. Dolore aliquam harum exercitationem commodi quibusdam fugiat aut.\n\nQui veritatis distinctio animi itaque. Minima nemo voluptates exercitationem. Quas accusantium adipisci voluptatum praesentium autem.\n\nNulla laborum perferendis minus error eius deleniti nobis. Nesciunt vitae autem mollitia atque nobis aspernatur ipsa. Ab nemo enim incidunt id debitis. Quis facere unde eveniet.	78.48	\N	2017-12-13 16:36:56.906339+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
 593	Sanchez-Allen	Adipisci maxime error voluptatibus ipsa a minima nihil. Nulla soluta ex libero vitae itaque sed. Distinctio quidem ducimus nobis non rem. Non ex incidunt quisquam ut.\n\nRerum debitis temporibus error delectus ea dignissimos exercitationem eligendi. Mollitia optio ad cumque atque nobis error dolore. Aliquam culpa quas molestiae repellendus accusantium minus. Magnam aut recusandae vitae numquam amet dolorum.\n\nDignissimos deserunt harum delectus ducimus voluptate. Veniam facilis eum aperiam alias. Eveniet quas iure officia sapiente. Voluptatum totam explicabo eum doloremque praesentium quaerat.\n\nEos earum id voluptas voluptatum animi iusto. Aut doloribus odit iste tenetur quas veritatis ut. Modi delectus doloremque quod saepe eaque voluptatum. Laboriosam consectetur rem ea libero eaque.\n\nNihil ullam sequi eum maxime. Eos quam sint vero quisquam. Eaque pariatur quo corrupti ea inventore placeat odit rem.	32.13	\N	2017-12-13 16:36:56.982094+00	6	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+607	Mosley, Walker and Smith	Voluptas ipsum aliquid saepe iure deserunt est. Suscipit doloribus aliquid labore excepturi maiores et rem. Nemo hic tempore facere autem.\n\nEarum quos quaerat beatae ut aliquam quae repellendus. Pariatur reiciendis facilis beatae est ipsa rem.\n\nRepudiandae molestiae cumque eius natus. Eligendi dolorem excepturi tempore doloremque reprehenderit. Tempore impedit corrupti neque ipsam veniam magnam. Repellendus esse ex sapiente dolor. Optio velit itaque repudiandae.\n\nPerspiciatis tenetur reprehenderit reiciendis facere delectus. Eos consequatur quibusdam occaecati quas. Quos dicta corporis quos.\n\nCulpa saepe itaque tenetur eveniet occaecati deserunt quis. Delectus corrupti harum tenetur debitis ea quasi. Ut dolore illum temporibus soluta. Enim nobis soluta blanditiis debitis.	10.83	\N	2018-01-05 18:43:27.285916+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
 594	Sullivan, Garrett and Ross	Esse molestias ut blanditiis soluta totam iste. Quis necessitatibus possimus facere. Magni deleniti sequi recusandae repellendus nisi dignissimos ipsa dolore. Laboriosam suscipit facilis architecto deleniti nobis culpa in quos. Possimus exercitationem molestias officia laboriosam odit officia.\n\nSimilique est ratione ea ipsam sit inventore. Vitae optio porro esse sequi. Laborum enim ipsam quod ipsum. Suscipit necessitatibus quis excepturi inventore.\n\nQuibusdam unde labore officiis repellat provident fugiat voluptatibus veritatis. Omnis magnam molestias nostrum aspernatur. Deserunt illum consectetur omnis libero sunt. At eos eaque a architecto vitae eligendi.\n\nNatus quas velit pariatur hic veritatis tempora labore. Voluptatem veniam facere aliquam ex vel. Fugit distinctio similique quasi.\n\nAssumenda maxime dolorum voluptates similique odio. Alias omnis saepe aliquam quo ratione. Sequi qui eveniet ratione necessitatibus nisi. Quod aspernatur animi iste minus totam ab quo.	25.90	\N	2017-12-13 16:36:57.079811+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
 595	Patterson LLC	Aperiam maxime quae modi modi quae amet cum deleniti. Doloribus nulla odio mollitia nisi quas sequi nihil odio. Ut quas atque deserunt doloremque. Perspiciatis expedita eligendi facere quo laborum explicabo provident exercitationem.\n\nLabore assumenda natus reiciendis inventore culpa aut rem. Magnam porro ex nisi possimus. Voluptatem deserunt aliquam veritatis praesentium fuga. Dignissimos earum saepe quam inventore.\n\nAdipisci porro magnam sequi dicta reiciendis explicabo architecto. Hic quam enim ratione voluptatibus sint.\n\nSit ducimus perferendis aut saepe adipisci suscipit voluptatibus rerum. Aut vero officiis veritatis id molestiae. Dolores repellendus modi quis ipsam possimus.\n\nAsperiores eos cupiditate hic error. Iusto placeat laudantium inventore voluptatibus. Ipsa iusto facilis accusamus facilis dolores.	6.70	\N	2017-12-13 16:36:57.114745+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
 596	Logan, Chapman and Jordan	Dicta ducimus adipisci consequatur corporis sequi culpa. Minus eius labore ex. Odio suscipit magnam explicabo sed voluptas harum quisquam.\n\nQuia ducimus voluptates dolorem soluta error necessitatibus. Aspernatur velit voluptas molestias minus dignissimos quaerat. Dignissimos debitis porro est suscipit. Facere odit fugiat ipsa rerum ipsa sed expedita.\n\nMaiores reiciendis culpa commodi natus distinctio vitae dolores. Doloribus sed maxime cum nesciunt ut laborum voluptatibus. Nulla maiores architecto praesentium. Nostrum voluptates eos sit voluptas deserunt eaque quidem at.\n\nSit eum corrupti ea aliquid iste. Ad expedita omnis dignissimos voluptatem. Ad tempora id expedita labore voluptates.\n\nVoluptatibus odio enim cum sapiente autem omnis repellendus. Quasi sit molestias nihil architecto.	84.96	\N	2017-12-13 16:36:57.157541+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
@@ -4408,6 +4541,297 @@ COPY product_product (id, name, description, price, available_on, updated_at, pr
 598	Glover PLC	Quo cum alias laudantium itaque ea suscipit nulla sit. Quae deleniti dignissimos exercitationem nam.\n\nConsequatur aliquam dignissimos nisi mollitia. Consequuntur ipsam nihil totam a odio. Aliquid autem fuga voluptate neque cupiditate expedita. Nemo ut impedit nobis numquam cupiditate doloribus.\n\nDelectus veniam maxime laboriosam eveniet consequuntur quae cum. Hic dicta reprehenderit eaque recusandae. Numquam aut rem placeat ut minima ea eius. Illo illum quas quo placeat excepturi.\n\nPorro pariatur eveniet voluptatibus iusto distinctio ipsam. Incidunt excepturi mollitia beatae iusto sed. Nisi corporis odio inventore velit nemo sint laboriosam. Ea quis expedita consequuntur harum. Sapiente saepe praesentium magni asperiores odit.\n\nEarum fugiat possimus id sit laboriosam culpa cupiditate. Facilis odio laboriosam dolorem deleniti praesentium. Saepe ab quidem consectetur incidunt quis quis.	73.73	\N	2017-12-13 16:36:57.320152+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
 599	Ortega, Quinn and Taylor	Sunt distinctio enim magni corrupti. Repudiandae rerum fuga ipsam.\n\nAspernatur sequi unde explicabo minima cum. Quae veritatis saepe sint cumque architecto similique. Incidunt asperiores blanditiis in. Dolorem eum officia doloribus possimus. Quas recusandae unde quam impedit nemo dolor voluptas.\n\nRecusandae debitis ea inventore accusamus nulla debitis fugiat. Dolorem dolor alias corrupti praesentium excepturi mollitia laboriosam. Sed voluptates ratione est reiciendis laborum earum vero a. Velit vel excepturi at voluptas id eligendi debitis.\n\nExcepturi mollitia a quas minima molestias similique. Nesciunt non voluptatum hic odio. Sint consequuntur magni tenetur quidem. Veritatis assumenda modi omnis commodi vero quia.\n\nSaepe soluta impedit quibusdam distinctio eligendi dolor dicta aliquid. Est itaque accusamus alias. Nobis delectus animi debitis voluptate.	26.19	\N	2017-12-13 16:36:57.344725+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
 600	Mayo, Graham and Lopez	Debitis aut deleniti molestiae natus a sed officiis. Ad commodi doloribus reprehenderit blanditiis laboriosam minima. Voluptate illo cum soluta ipsam.\n\nIpsa temporibus possimus delectus sequi quasi. Odit error incidunt sunt molestiae. Possimus molestias magnam occaecati libero ratione. Cum est ut ut itaque nihil. In nemo accusantium fugiat recusandae excepturi.\n\nVoluptatum animi occaecati possimus quas deserunt earum. Deserunt ut alias maxime perferendis. Animi culpa suscipit laborum commodi laboriosam facilis.\n\nCumque provident possimus eveniet nobis. Fugiat quaerat iusto voluptatem repudiandae dolore autem. Sed culpa non magnam ratione labore.\n\nQuo iste occaecati provident dolor perspiciatis consequuntur. Ducimus corrupti ipsam doloremque aliquid tenetur. Qui fuga tempore quidem natus molestiae autem. Incidunt repudiandae hic sed doloribus odio.	71.30	\N	2017-12-13 16:36:57.38181+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+608	Holland-Miller	Placeat sunt quasi exercitationem omnis ipsa corporis. Officia vel quis culpa minus repellat. Laborum exercitationem velit tempore non enim laudantium iusto vel.\n\nProvident ea nisi odit totam facilis beatae. Neque odio aspernatur neque suscipit. Accusamus quos libero nemo at accusamus similique facilis exercitationem.\n\nOfficiis consectetur amet eaque neque sapiente repellat eius. Optio maxime suscipit quas modi ad natus reprehenderit. Deserunt error magni repellat facilis. Odit commodi perspiciatis architecto facilis consectetur nesciunt accusantium reiciendis.\n\nDoloribus voluptatem incidunt nesciunt assumenda mollitia accusantium animi. Natus vero consectetur temporibus. Accusantium quisquam nobis esse ipsum ipsam nesciunt laborum.\n\nQuam soluta vero molestias nesciunt sequi. Aspernatur sunt eveniet incidunt culpa perspiciatis explicabo doloremque. Nesciunt eligendi assumenda vitae eum inventore aperiam nulla. Eum dolorem rerum illum.	3.70	\N	2018-01-05 18:43:27.332448+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+609	Hunter and Sons	Praesentium esse nisi tempore. Veritatis esse quia consequuntur ipsam animi laboriosam. Ducimus nihil incidunt numquam tempore. Itaque modi officiis expedita dignissimos itaque ratione sit.\n\nNeque maiores quibusdam quasi ducimus vero. Veniam quia pariatur id iure dolor temporibus optio. Voluptate magni laudantium delectus laborum. Adipisci laudantium illum deserunt tempora libero eum quibusdam tenetur.\n\nAdipisci minima delectus tenetur qui provident eum. Iusto eligendi modi nam optio. Molestiae eius ad numquam odio provident eveniet. Asperiores tenetur rerum aliquam earum beatae id quisquam.\n\nIpsam nisi in alias magni minima. Dolorem repellat necessitatibus nemo natus. Molestiae quibusdam illo totam enim quidem rem labore voluptas. Porro consequatur qui ab totam velit nisi.\n\nAsperiores impedit atque non velit. Qui repellendus nisi nostrum omnis. Nobis ullam vel in at. Autem blanditiis sit architecto magnam accusantium.	77.14	\N	2018-01-05 18:43:27.384175+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+610	Raymond, Santana and Wright	Voluptas vero maiores adipisci quae. Fugiat odit eum nam labore tempore nemo. Itaque natus inventore tenetur cum ut accusantium. Rem quidem autem enim unde laborum eum ipsum.\n\nAsperiores eos placeat maiores ad cupiditate. Amet modi nostrum excepturi sint quaerat a asperiores. Distinctio tempora fugit mollitia.\n\nMollitia voluptates quos saepe temporibus facilis sapiente dolor sint. Laudantium magnam architecto animi quibusdam quas. Sapiente quasi consectetur ad explicabo a. Eligendi aperiam esse corrupti laboriosam adipisci nemo alias voluptatem.\n\nPariatur nihil cum accusamus ducimus illo. Eius atque vitae debitis perferendis eveniet error consectetur. Inventore nam eum dolorem quae magni alias.\n\nMinima iste nostrum ullam occaecati. Explicabo ratione cum pariatur vitae corrupti voluptas. Minus magni veritatis maiores saepe architecto. Soluta architecto error laborum velit.	31.91	\N	2018-01-05 18:43:27.432183+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+611	Novak-Hill	Aspernatur facere ducimus voluptatibus atque accusantium iste. Quis labore ex voluptates dolor aut vitae tempore. Nobis laboriosam minima temporibus eum. Minima asperiores eaque ea.\n\nMaxime quibusdam quidem aliquam. Beatae fugiat veniam dicta amet eligendi explicabo repellendus quae. Dolore a doloremque quibusdam vel corrupti voluptatem. Provident numquam unde ratione dolorem.\n\nAutem magni nobis maiores eos. Asperiores deserunt harum ad quo vitae. Tempore quos tenetur et modi et esse.\n\nOdio distinctio quasi quam fugit tenetur nihil ut. Praesentium labore odio voluptatem corrupti sapiente sed dicta officia. Ipsum reprehenderit qui deserunt sed nulla tenetur mollitia.\n\nTempore perspiciatis aliquid rerum quas excepturi repudiandae eveniet. Et cumque dicta excepturi. Quam unde esse repellendus doloremque ab id eius. Nulla labore voluptatem eligendi voluptas aliquid accusamus.	1.68	\N	2018-01-05 18:43:27.479897+00	2	"3"=>"6"	f	t
+612	Short-Vang	Nam debitis vel dolore culpa facere molestias. Harum impedit tenetur repellendus officiis nostrum ex earum accusamus. Eveniet quaerat iste neque laboriosam sapiente ducimus soluta. Voluptatem doloremque veritatis neque sed.\n\nAut voluptatum aliquid ipsam. Laudantium sapiente cumque laborum atque ad. Maiores dolorum doloribus distinctio consectetur dolorem accusamus. Quam natus harum eum.\n\nArchitecto dolorum maiores mollitia sed quae cum. Reiciendis quis hic ipsam iste amet deleniti. Ea quis expedita rerum totam. Nobis autem ratione autem minima doloribus.\n\nConsectetur voluptatibus expedita impedit voluptates aliquid. Porro iste ipsam quis. Doloribus aliquam natus impedit iusto. Architecto nam natus quae facere.\n\nSuscipit facere et libero in suscipit ullam veniam. Blanditiis perferendis id quas perferendis fugit ab quos. Iusto inventore eos voluptatum quia eligendi.	24.61	\N	2018-01-05 18:43:27.518026+00	2	"3"=>"6"	f	t
+637	Bennett-Skinner	Nam sunt aliquam doloribus. Molestiae nesciunt maxime eligendi neque repudiandae facere similique. Praesentium neque sapiente itaque iste fugiat ipsam.\n\nMagnam dolorum facilis ab illo. Animi impedit amet sed iure architecto vitae tempore. Consectetur reprehenderit illo recusandae consectetur a aliquid excepturi officiis.\n\nVoluptatibus dicta minus magni delectus sint praesentium. Eveniet veniam laborum autem vel recusandae. Sapiente sed dolor velit pariatur possimus molestias animi.\n\nQuasi accusantium nulla repellendus. Itaque perspiciatis in expedita sapiente amet mollitia quam. Quidem optio nostrum qui minus inventore repellendus consequuntur veritatis. Minima tenetur illo provident illo odio accusantium nulla.\n\nTotam quam quas modi consequatur mollitia. Suscipit nesciunt corrupti quis debitis corporis. Nobis delectus dolor ea esse deserunt quibusdam asperiores iusto.	2.80	\N	2018-01-05 18:43:28.592323+00	4	"3"=>"6", "7"=>"20"	f	t
+638	Ramos-Walters	Id quae ipsa commodi officiis nemo. Facere magni eligendi voluptas voluptatum ipsam. Ipsum animi expedita soluta repellendus. Veritatis dolore quos aspernatur eveniet.\n\nNatus reprehenderit nesciunt illo voluptatem. Reiciendis dolorem omnis deleniti esse ipsum. Nesciunt ad maxime et dolore veritatis.\n\nMollitia libero numquam voluptatum distinctio. Commodi doloremque iusto eum odio recusandae consequatur voluptate cumque. Sequi consequuntur doloremque alias. Ipsam dolorem dolorem quidem eos aspernatur.\n\nRepellendus laudantium recusandae ad hic repellendus. Odit ipsa nostrum consectetur voluptatum fugit cupiditate aliquid sequi. Aut aliquid veniam sequi neque nam facere id. Animi asperiores sed minima impedit corrupti voluptatum accusamus.\n\nDebitis in fugit quam temporibus magnam. Dolorum nisi amet temporibus deleniti.	25.19	\N	2018-01-05 18:43:28.628115+00	4	"3"=>"6", "7"=>"19"	f	t
+613	Cobb, Trevino and Bell	Magnam eligendi aliquam hic velit provident odit ea ipsa. Veniam ipsum perferendis inventore voluptate itaque magnam totam. Nisi assumenda earum corrupti ad officiis assumenda repellat hic. Laboriosam doloremque explicabo autem impedit.\n\nDignissimos doloribus iure quasi rerum incidunt culpa. Quaerat consequuntur ea accusantium. Nesciunt dignissimos nobis ratione similique aspernatur ut. Quod sunt recusandae necessitatibus eum voluptate.\n\nNihil fugiat neque temporibus alias ducimus eos nihil. Illo deleniti corporis necessitatibus. Itaque laboriosam voluptatem adipisci nemo fugit accusantium veritatis. Quaerat autem vitae aperiam commodi.\n\nRecusandae assumenda voluptate quas nihil iusto provident doloribus. Expedita culpa dicta aliquam. Ab facilis occaecati provident aperiam facilis deleniti dolorem beatae. Velit totam voluptate corrupti quos.\n\nExcepturi dolorem facere dolores voluptatem architecto ducimus minus. Modi placeat quis cum nemo quam.	28.18	\N	2018-01-05 18:43:27.546025+00	2	"3"=>"6"	f	t
+614	Martin Group	Maxime quaerat commodi culpa dolore nemo optio ratione. Impedit laborum est nobis et aliquid porro. Eaque dolor esse distinctio nesciunt. Labore sit rerum id sunt neque fugiat id.\n\nMinima saepe voluptatum eos ad explicabo provident similique sapiente. Minima voluptas ad libero vitae tenetur. Quae dolorem nihil non libero iure doloribus. Illum quibusdam id non vero. Odio sit sint delectus ratione ad similique molestiae.\n\nLaborum exercitationem incidunt ab at sint impedit. Eligendi commodi eum animi molestiae quidem debitis. Nemo temporibus nemo iusto voluptatum ad quas.\n\nQuis soluta eveniet ipsum sed. Repellendus necessitatibus eos nostrum quae accusamus. Sequi enim similique dolores officia consectetur minima. Culpa esse unde culpa eaque impedit facere.\n\nItaque neque perspiciatis maiores a ducimus incidunt. Modi dolorum libero quidem consequuntur odio. Laboriosam saepe dignissimos voluptas reiciendis ratione dicta. Architecto unde provident voluptas repellat at.	61.10	\N	2018-01-05 18:43:27.5662+00	2	"3"=>"6"	f	t
+615	Cook and Sons	Deleniti quis dolor facere amet nemo nemo. Sequi reiciendis mollitia laboriosam quas necessitatibus voluptas. Suscipit repudiandae dolorum quaerat iusto et deserunt. Nulla doloremque eaque dolore exercitationem assumenda.\n\nLaudantium eveniet voluptate qui fugiat. Ipsa autem tenetur perspiciatis officiis voluptates ad quia.\n\nOptio amet amet nulla neque quaerat laudantium consequuntur. Quos odit iste qui libero. Vitae nulla dignissimos cupiditate magni fugiat ipsam a. Aspernatur maxime iusto tenetur reiciendis quasi. Perspiciatis quia minus dolorem sunt rem.\n\nDignissimos vel doloremque amet quam illum dolor. Voluptates hic dignissimos blanditiis at nesciunt laboriosam. Dicta magni numquam nemo iusto occaecati eos. Non cum repellendus officiis nisi nostrum iusto.\n\nDucimus labore nostrum recusandae labore illo nulla. Tempore at fugit iure eius autem quam quas. Deleniti necessitatibus nobis necessitatibus incidunt exercitationem voluptatum. Enim dolor possimus voluptas minus fuga.	60.44	\N	2018-01-05 18:43:27.592672+00	2	"3"=>"6"	f	t
+616	Fleming Inc	Numquam harum enim dolorum accusamus quis corrupti repellat. Accusamus aut nihil nesciunt quaerat quod sint fugit. Esse provident nobis culpa rem nemo sapiente vero. Odio cum non tenetur temporibus. Eos delectus quaerat rerum adipisci libero occaecati.\n\nSint corporis iure omnis placeat eos sequi. Excepturi explicabo eius consequuntur mollitia. Dicta fugiat maiores ea ipsum nemo. Non dolore nobis nobis quas modi dicta. Aut repellat dolorum sunt.\n\nRepudiandae dicta commodi veniam at. Laborum nesciunt cum odit libero dolorum blanditiis amet. Maxime amet unde consequatur enim esse. Perferendis quibusdam vitae possimus earum similique.\n\nOdio aperiam quam iure sed. Cum culpa iste inventore nostrum animi. Voluptatum in officiis quaerat fugit. Inventore inventore fugiat distinctio optio voluptatibus quod. Mollitia nihil rerum doloremque qui laborum nisi.\n\nSunt neque quia quaerat quia laudantium. Est ut excepturi eius rerum. Nisi ab quia vitae veniam. Soluta autem tempora quae autem ipsum.	60.75	\N	2018-01-05 18:43:27.629486+00	2	"3"=>"6"	f	t
+617	Riley-Holland	Sed error animi fugiat quisquam. Consequuntur deleniti suscipit repudiandae mollitia eius rerum nobis. Voluptatem minima magnam eveniet fuga dolorem dolore.\n\nQuia rem corrupti quasi possimus autem iusto velit. Occaecati cupiditate veniam inventore nesciunt animi quibusdam eligendi. Distinctio deserunt cumque qui cupiditate repellat voluptate quibusdam.\n\nRem nam dolorum iusto eaque nisi. Exercitationem provident deleniti officiis incidunt tenetur facere. Ut officia quam magnam minima ipsam facilis necessitatibus modi. Quisquam repudiandae atque laboriosam quae excepturi tenetur quas.\n\nDolorem alias labore velit laborum esse temporibus inventore. Cumque deleniti ullam voluptatum itaque eaque dolorum harum. Perspiciatis repellat dolorem dolorum reiciendis recusandae voluptate. Sapiente alias ratione ea omnis quibusdam. Qui modi sed possimus animi.\n\nPossimus temporibus tenetur deserunt vel delectus aspernatur possimus. Culpa est at consectetur iure. Dolor necessitatibus harum odio perspiciatis.	23.15	\N	2018-01-05 18:43:27.661752+00	2	"3"=>"6"	f	t
+618	Williamson Group	Vitae dolor facilis eveniet labore. Animi quas officiis ab quas est labore amet. Neque mollitia adipisci exercitationem nesciunt consectetur sapiente a.\n\nOdit laboriosam id in velit. Adipisci distinctio optio odio voluptatem quo quisquam non. Sed aliquam nihil magnam iusto. At officiis accusantium dolor vitae recusandae unde illo.\n\nDolor esse deleniti quidem enim numquam. Nam ducimus numquam rem nobis eveniet odio explicabo. Eos cum excepturi debitis atque id. Adipisci laborum officiis ad aliquid maxime necessitatibus culpa.\n\nEarum placeat eius nostrum distinctio modi sed quos. Dolorum aliquid eveniet atque eligendi dolor sapiente quod. Voluptate animi eligendi quae deleniti numquam cum pariatur laborum.\n\nTenetur quidem voluptatum asperiores error repellat. Nihil dolorum quam inventore eius. Consequuntur ullam corporis id nesciunt dolorum. Alias quae et iure totam pariatur dolore.	85.87	\N	2018-01-05 18:43:27.694322+00	2	"3"=>"6"	f	t
+619	Palmer-Skinner	Nesciunt voluptatibus repudiandae quam eius earum provident omnis. Ullam ullam ea distinctio minima asperiores. In mollitia cum vitae nihil. Nesciunt neque doloremque nemo. Tempora alias adipisci quis quis.\n\nRepellat et cum sit pariatur cum illo. Ad eum veritatis repellendus eos deleniti. Magni sunt hic soluta iste totam at. Quasi voluptatem quasi voluptatum exercitationem.\n\nAperiam cumque esse quasi doloribus laborum non nulla. Repellendus architecto exercitationem quisquam itaque consequatur officiis iure. Odio mollitia magni pariatur aliquam temporibus.\n\nExcepturi laudantium dolorem culpa. Quos a fugit delectus debitis. Aperiam nam veritatis voluptatibus neque alias. Consequatur maiores at delectus amet. Dignissimos labore suscipit rerum delectus assumenda ab quasi a.\n\nIpsam accusamus voluptatum accusamus facere cum inventore. Neque inventore nemo facere accusantium voluptates laudantium vel. Nam quo blanditiis sequi laudantium sit consectetur. Illum iste molestiae eaque incidunt. Vero dolorem tempora assumenda rem quae.	70.85	\N	2018-01-05 18:43:27.731366+00	2	"3"=>"6"	f	t
+620	Hess, Edwards and Schneider	Sunt error voluptate optio fugit. Enim consectetur illo corporis in ipsa iste. Ratione quam est nobis adipisci eius quo animi eveniet. Nobis qui illo voluptatibus.\n\nOccaecati facilis quia voluptas asperiores blanditiis recusandae. Maxime expedita explicabo quia. Voluptatum aut ducimus eius voluptatem reiciendis quidem quidem. Voluptate vel ut provident exercitationem.\n\nQuia similique tempore voluptate recusandae aspernatur quae. Nulla hic consequuntur ipsa molestiae quas dolorum. Ea error veritatis iste sit.\n\nQuis voluptatum mollitia sunt perferendis laborum. Modi minima maxime occaecati consequuntur. Nisi explicabo amet culpa quasi placeat soluta perspiciatis. Sed nobis quod quo exercitationem.\n\nMaxime ipsum sint non consequatur dolore. Itaque esse molestias voluptates libero. Culpa maxime iure quas quam ducimus quia recusandae. Aliquam molestias at sit voluptatem provident ad nostrum quis. Recusandae magnam cum eveniet suscipit quo quos error.	93.74	\N	2018-01-05 18:43:27.75155+00	2	"3"=>"6"	f	t
+621	Simon, Frey and Lopez	Dolorem quo beatae quod alias porro tenetur eius. Distinctio delectus laboriosam soluta dolorum fugit fugiat. Aliquam laudantium quo facilis labore necessitatibus dolores optio.\n\nFugiat distinctio corporis error dolorum labore. Aut quod dolore animi eaque voluptate officiis. Eum beatae iusto blanditiis nisi fugiat sapiente accusantium voluptatum.\n\nEsse quae deserunt modi odit. Magnam molestiae officia ex repellendus tempora tempore. Laborum iusto vitae rerum velit laborum excepturi occaecati. Tenetur modi accusamus rem commodi officia.\n\nQuisquam quaerat dolorem quis occaecati iure aut. Ad accusamus dolorem illo asperiores. Ut accusamus est iure sit.\n\nFacilis incidunt ex praesentium ipsam praesentium. Eius aut non recusandae fugiat cum atque eum. Distinctio qui dolorem quisquam ipsa commodi accusamus.	79.80	\N	2018-01-05 18:43:27.79135+00	3	"3"=>"6", "5"=>"14"	f	t
+622	Conway, Peck and Johnson	Quibusdam repudiandae tenetur quo qui magni asperiores. Tempore eos fugit quas ipsum. Dolores eveniet facere provident. Libero quibusdam alias totam ratione. Vero consequatur ab tempora rerum.\n\nRem asperiores tempore dolorem nostrum nemo cupiditate distinctio. Delectus soluta laboriosam dolore suscipit debitis magni magni.\n\nAmet porro pariatur voluptas quisquam omnis. Aut itaque temporibus totam delectus odit delectus facilis.\n\nDolorem veniam esse enim aliquid labore itaque vel. Quod alias voluptatibus eveniet vero et. Alias voluptas iusto non perspiciatis consequuntur recusandae ea ducimus. Autem fugiat hic sed esse aliquam doloribus deserunt non.\n\nPerferendis ipsum cupiditate et optio. Eius illum ipsa iure consequuntur. Facere dolorem molestias delectus quisquam. Aliquam autem vel vitae ratione quaerat repellendus.	9.41	\N	2018-01-05 18:43:27.842001+00	3	"3"=>"6", "5"=>"13"	f	t
+623	Brock-Gutierrez	Beatae quia laboriosam optio earum. Sit quo corporis fugiat voluptate accusantium veniam. Maxime ratione cumque nemo repellat quam debitis nulla. At delectus mollitia architecto iure sint.\n\nEst veritatis fuga optio consequuntur placeat dolor nam. Minima ullam nisi temporibus veniam libero ducimus corporis. Fugiat voluptatum dolorum autem ducimus quam nam. Consectetur praesentium voluptate earum nulla veritatis aspernatur consectetur.\n\nDolore modi repudiandae eum incidunt. Voluptatum ipsa ex cumque dignissimos provident. Vel accusamus consequatur esse officiis laboriosam. Eum perferendis maiores expedita fuga maiores vitae.\n\nNisi explicabo similique occaecati. Suscipit officiis ea adipisci pariatur facilis. Excepturi provident temporibus id ipsam.\n\nQuod dolorem molestiae exercitationem perferendis accusamus voluptatibus. Fuga impedit veniam voluptatibus et ut. Suscipit sapiente voluptas omnis maiores aliquam blanditiis unde. Minus nobis amet labore alias fugiat excepturi deserunt.	64.65	\N	2018-01-05 18:43:27.895858+00	3	"3"=>"6", "5"=>"14"	f	t
+624	Duncan Inc	Ipsam veritatis esse soluta sit. Reprehenderit tenetur architecto velit. Nisi vitae expedita deleniti fugit hic neque itaque eaque.\n\nEst quia temporibus cumque quos. Optio similique ad at aliquid cumque commodi odio quos. Corporis quis ab repudiandae eos similique minima minima.\n\nNulla debitis distinctio illum necessitatibus pariatur facilis doloribus sapiente. Facere nesciunt omnis officiis alias eaque. Molestiae earum illo deleniti cum.\n\nSapiente est quae voluptatem quis delectus iste veritatis dolores. Et repudiandae veritatis officiis corporis commodi. Sed aliquid voluptatibus sed laboriosam.\n\nNecessitatibus porro nihil delectus. Atque dolores dolorem exercitationem sapiente tempora. Deserunt eos modi sint facere nam. Error excepturi numquam est facere.	92.70	\N	2018-01-05 18:43:27.952377+00	3	"3"=>"6", "5"=>"13"	f	t
+625	Hudson, Townsend and Vang	Sunt laboriosam repellendus accusantium iste excepturi itaque quasi. Ex aperiam dignissimos optio repudiandae dolor quos. Atque delectus perspiciatis iusto.\n\nDeleniti cum dicta illo neque vero voluptas. Assumenda voluptas molestias dolor dicta error. Repudiandae beatae incidunt quibusdam velit cum dolorem fugit dolores.\n\nOfficia nihil exercitationem impedit soluta natus quis ipsum. Dicta non minima corrupti nam iusto. Eum autem tempore non pariatur ratione explicabo nesciunt. Fuga assumenda mollitia dolorem.\n\nFacilis optio nulla libero saepe occaecati molestias. Voluptates voluptas deleniti minus recusandae voluptatem ducimus occaecati accusantium. Laborum nostrum vitae exercitationem.\n\nPlaceat consectetur ullam laboriosam eligendi. Nam consequatur aut dignissimos ea corporis laudantium molestias. Unde esse magni est animi. Accusamus quia libero cupiditate assumenda odio.	41.46	\N	2018-01-05 18:43:28.027596+00	3	"3"=>"6", "5"=>"14"	f	t
+626	Ruiz-Evans	Dignissimos commodi non dignissimos atque rerum. Facere minima sequi exercitationem quo ut quos odio blanditiis. Adipisci commodi esse minus expedita occaecati possimus sunt culpa. Ipsa corporis earum corporis perferendis.\n\nHic porro odit cupiditate nesciunt velit. Assumenda adipisci hic ea sunt consequuntur. Magni placeat sed maxime eveniet totam error.\n\nA sed quaerat perspiciatis eveniet nemo fugiat. Veritatis iste libero quia aliquam quae nesciunt sint alias. Numquam quis eum velit rem voluptatibus inventore.\n\nArchitecto minus occaecati facere similique suscipit. Dolores atque nulla aut in nemo voluptates magni. Cum accusantium harum architecto dolores. Est dicta distinctio dignissimos voluptatem itaque repellat a earum.\n\nSoluta illo excepturi autem iure corrupti et assumenda. Consequuntur voluptate eum ipsum eligendi. Error hic exercitationem ipsam temporibus illum. Dolor eum facere cupiditate quis ad.	15.98	\N	2018-01-05 18:43:28.091621+00	3	"3"=>"6", "5"=>"13"	f	t
+627	Lewis-Brown	Sit hic veritatis natus laborum corrupti. Maiores incidunt tempora fugit rem explicabo corrupti vero. Deserunt dicta aliquid ratione amet.\n\nSaepe minima amet blanditiis. Fugiat repellendus ex cupiditate modi dolorem similique accusamus. Odit a id esse commodi deleniti consectetur. Expedita minus itaque maiores dolorem.\n\nOdio occaecati ducimus voluptatem iure praesentium. Iusto dicta cumque inventore natus.\n\nNeque quis amet quam reiciendis qui quam tempora. Totam facere exercitationem excepturi suscipit. Tempore aliquam aut impedit ipsam dicta fugiat odio. Maiores quam excepturi officia sint natus illo accusamus.\n\nMollitia delectus libero sunt. Sint rerum tempore mollitia quidem mollitia velit.	4.63	\N	2018-01-05 18:43:28.140663+00	3	"3"=>"6", "5"=>"14"	f	t
+628	Bell, Little and Jacobs	At expedita quaerat maiores vel. Recusandae dolore deserunt unde animi. Impedit necessitatibus ipsam incidunt vel quis ab pariatur. Repellat consectetur inventore molestias quae deleniti sunt dolorum. Eum fugit consequatur inventore eligendi alias ad.\n\nCum assumenda explicabo accusantium accusamus recusandae dolore illo. Unde aspernatur ipsum voluptatem iusto. Illo facilis molestias unde. Magnam aperiam et culpa voluptates omnis accusamus iste. Unde molestias pariatur adipisci necessitatibus omnis velit eos.\n\nCupiditate magnam soluta rem neque iusto. Officia necessitatibus maiores alias. Incidunt voluptatibus quaerat temporibus commodi veniam. Tempora eligendi quis esse laboriosam suscipit.\n\nVeniam mollitia odit inventore rerum officiis. Non facere velit dolorem inventore cumque non. Dolorum ad magnam dicta quae facere.\n\nNesciunt nemo similique reprehenderit corporis. Quas harum placeat a repellat recusandae animi adipisci perferendis. Sit mollitia aspernatur reiciendis ab debitis autem nostrum. Nostrum iusto consequuntur fuga ex.	53.93	\N	2018-01-05 18:43:28.180661+00	3	"3"=>"6", "5"=>"13"	f	t
+629	Obrien Ltd	Nostrum veniam inventore adipisci. Totam nisi aliquam cupiditate error consequuntur aperiam sequi. In alias sequi blanditiis accusamus laudantium. Eum nostrum qui soluta quas.\n\nDelectus ab odio tempora consequuntur tempora sapiente quibusdam quaerat. Pariatur iusto sint adipisci neque fugit earum. Porro totam molestiae occaecati quos.\n\nAut expedita voluptatem consectetur odio repudiandae. Est tempora laboriosam dolorem minus tenetur temporibus sequi. Eum sunt ab repellat ipsa.\n\nConsequuntur non amet praesentium quisquam facilis dolor odit incidunt. Laudantium reprehenderit vel corporis autem nostrum quae. Deserunt dolorum laborum repellendus nemo perferendis animi eligendi. Sint corporis dolorum voluptate dolorum aliquid repellat. Nihil cum ipsa neque facilis.\n\nEa doloribus numquam accusantium natus aliquid perspiciatis. Deleniti aliquam sed magni porro. Provident est omnis ducimus qui voluptatibus beatae. Magni molestias est necessitatibus sequi ratione molestias. Nisi occaecati a officia quisquam.	9.71	\N	2018-01-05 18:43:28.227324+00	3	"3"=>"6", "5"=>"14"	f	t
+639	Jones, Warner and Dean	Facilis aperiam saepe laborum vero exercitationem ullam ex ducimus. Fugiat fugit delectus eum qui.\n\nVoluptatum magnam unde corrupti inventore laborum. Harum consectetur et possimus saepe. Odio laudantium veniam non quia perspiciatis necessitatibus iusto.\n\nQuidem quis cum illum quam delectus voluptates amet corporis. Fuga ea repellendus assumenda reiciendis magnam. Consequuntur totam esse vitae consectetur dolores odit.\n\nConsectetur numquam illo assumenda expedita. Inventore numquam impedit expedita odit fugiat repellendus molestias. Optio exercitationem suscipit consectetur labore. Facere eos officia doloribus minus.\n\nAnimi minus omnis nesciunt. Repellendus sapiente sed repellat delectus. Sed tempora mollitia quis praesentium iusto id.	97.98	\N	2018-01-05 18:43:28.679826+00	4	"3"=>"6", "7"=>"20"	f	t
+640	Brown Group	Cumque temporibus esse quibusdam quaerat soluta. Tempora laboriosam quaerat quos quidem. Magni commodi minima voluptates laudantium velit. Architecto porro reprehenderit consectetur.\n\nNostrum necessitatibus inventore molestiae voluptatibus sint placeat sequi. Dolores praesentium corporis quasi id corrupti animi. Odio dolore saepe deserunt numquam fugit harum voluptatibus.\n\nEx sit ad quasi sequi velit. Itaque eius porro quae non veritatis distinctio. Molestiae nesciunt omnis id eos accusantium. Occaecati culpa doloremque nobis quas ipsam sapiente cupiditate. Earum ipsa aut atque autem vitae.\n\nDolor deserunt quasi minus nihil velit. Earum eius dignissimos quasi sed incidunt ipsa. Nam eos quos possimus deleniti alias cum tenetur nostrum.\n\nTenetur libero eveniet assumenda pariatur natus rerum repellendus. Temporibus alias animi explicabo eius. Vitae placeat eum et quisquam.	16.60	\N	2018-01-05 18:43:28.710152+00	4	"3"=>"6", "7"=>"20"	f	t
+641	Martin PLC	Officiis minima praesentium aliquam fugit vitae atque. Quisquam nam vitae a. Nam fugiat exercitationem cumque laudantium sit. Dignissimos dolorem nemo corrupti in illum.\n\nEst quaerat quibusdam unde. Magnam molestiae asperiores magnam illo voluptatum iusto consequuntur perspiciatis. Inventore nobis occaecati esse quasi quia nesciunt in.\n\nRepellendus nesciunt deleniti possimus voluptatum explicabo. Iusto inventore veritatis aut. Vero accusamus consequatur quaerat ipsum vitae recusandae voluptatibus. Ipsum reprehenderit soluta commodi saepe.\n\nMinus quae animi dignissimos. Dignissimos maxime accusamus sunt magni occaecati eveniet. Harum officia repellat perspiciatis error. Facilis dicta fuga dolorum veniam molestias doloribus repellat. Necessitatibus nesciunt a odio alias explicabo vel.\n\nVitae quae quam ut voluptas eveniet. Ab eius doloribus quas. Laboriosam porro quaerat quas molestiae accusantium asperiores totam. Tempora et earum ipsa dignissimos ut.	38.40	\N	2018-01-05 18:43:28.752282+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+630	Hutchinson LLC	Consequuntur possimus voluptatem dignissimos dolores vero. Deserunt dolorum error veritatis quod maxime quia molestiae quasi. Pariatur pariatur eveniet ratione harum. Velit molestiae atque quasi consequuntur fugiat praesentium temporibus error. Earum incidunt omnis beatae adipisci illo recusandae quas minima.\n\nOdit quos eos optio dolore earum omnis. Provident necessitatibus commodi ea quo totam exercitationem nisi corrupti. Necessitatibus error quis labore veniam quaerat voluptate nulla.\n\nOdio voluptatum ullam error aliquid sed autem ipsam. Ullam blanditiis officia amet veniam. Quas nisi rerum facilis dignissimos expedita deleniti repudiandae praesentium.\n\nPorro aliquid aut incidunt dolorem autem ab occaecati. Cum delectus natus tenetur incidunt consectetur expedita. Praesentium qui optio cupiditate.\n\nCorporis cum incidunt incidunt aut. Nisi at dolorem ut ipsa rerum. Nihil distinctio vero sapiente numquam.	78.39	\N	2018-01-05 18:43:28.266288+00	3	"3"=>"6", "5"=>"14"	f	t
+631	Mcclure-Snyder	Laboriosam asperiores totam illum perspiciatis perspiciatis debitis. Fugiat iste odio quisquam. Delectus blanditiis veritatis fugit dolore.\n\nPossimus dolores officia occaecati est architecto repudiandae nisi. Aperiam eos eius inventore repudiandae nostrum quae. Optio adipisci dolorem asperiores similique.\n\nLibero voluptatum accusamus reiciendis totam occaecati voluptatibus. Mollitia cumque sapiente ea accusamus architecto consectetur ad.\n\nAd fugit libero illum corrupti maiores veniam est. Vel quasi perferendis animi modi tempora. Eius voluptatibus nihil consequatur dignissimos doloremque ut.\n\nMolestiae dolor atque explicabo dignissimos maxime debitis. Consequatur optio quas accusamus. Alias pariatur iste porro saepe quae nulla impedit. Enim id nam quia facere inventore repellat delectus. Deserunt repudiandae aliquam consequatur distinctio.	79.42	\N	2018-01-05 18:43:28.320601+00	4	"3"=>"6", "7"=>"19"	f	t
+632	Arellano, Hansen and Sutton	Voluptate distinctio voluptatibus a sapiente. Facere quis quasi quaerat ab deserunt at. Nemo ut facere placeat porro cumque quis incidunt minima.\n\nQuisquam deleniti libero nobis nam possimus architecto saepe. Sunt praesentium ad nam fuga illum. Illum voluptas ab sapiente facere deserunt.\n\nNulla aut cupiditate eveniet eaque officia quaerat omnis. Tempore sequi dolor iure dolores sit explicabo.\n\nId maiores ullam debitis quia occaecati maiores est. Molestias dolorem recusandae possimus dicta alias saepe quo exercitationem. Excepturi laboriosam enim cum vero id. Aperiam esse sint sed molestiae.\n\nCupiditate ratione suscipit dolores quibusdam iusto. Eveniet cum labore ipsa. Quae esse necessitatibus numquam laborum mollitia odio. Ut itaque optio rem facilis.	48.10	\N	2018-01-05 18:43:28.362711+00	4	"3"=>"6", "7"=>"19"	f	t
+633	Todd PLC	Enim occaecati expedita facere autem suscipit. Eos asperiores voluptates dolor optio ad eligendi occaecati. Id voluptas quae molestias a hic aspernatur repellat eos. Mollitia illum minima velit assumenda maiores. Eligendi quasi minus praesentium porro libero dolorem rem.\n\nEa officia rerum odit cum eos ipsum excepturi. Consequatur ut non beatae autem quia.\n\nNulla corrupti temporibus culpa quod deserunt a laborum. Sed nemo quasi corrupti ex. A vel doloremque consequatur dignissimos saepe iure.\n\nTempore sint non magni. Aspernatur fugiat odio incidunt impedit unde sint. Fugiat tempora id occaecati odit natus voluptatibus. Suscipit enim eaque soluta molestias repudiandae.\n\nSoluta quam dicta aut illum dolor dolorem. Velit est sunt nemo doloribus. Tempora incidunt distinctio facilis quisquam.	71.17	\N	2018-01-05 18:43:28.409542+00	4	"3"=>"6", "7"=>"20"	f	t
+634	Briggs LLC	Corporis sit quo dolore. Asperiores harum aliquam laudantium. Distinctio saepe voluptatum corporis beatae odio.\n\nFuga architecto quae eveniet mollitia odit ullam. Dolores consequuntur cumque unde. Dolorum debitis vel quaerat doloremque aspernatur.\n\nAd molestiae assumenda incidunt adipisci natus ab ea ducimus. Praesentium iure repudiandae vero eius alias velit nobis. Reprehenderit perspiciatis sequi natus alias cum alias temporibus. Quaerat nihil illum id dignissimos asperiores.\n\nPossimus quo tempore unde id ducimus corrupti vero libero. Modi laborum dolorum blanditiis fugit suscipit. Odit officiis voluptate rem unde officiis.\n\nOmnis placeat inventore quas deserunt veniam. Animi adipisci quidem voluptas similique rem hic. Earum eos repellendus sequi veritatis doloremque architecto quasi reiciendis. Repudiandae accusantium voluptates voluptates quas facilis.	88.67	\N	2018-01-05 18:43:28.459846+00	4	"3"=>"6", "7"=>"19"	f	t
+635	Barnes Ltd	Aspernatur dolore suscipit perspiciatis. Corporis quos quas vel ratione. Vel aut quod molestiae accusantium neque possimus. Totam repudiandae impedit architecto tempore atque sapiente occaecati.\n\nQuaerat debitis odio eos ipsa nostrum. Commodi consectetur dolorem veniam aspernatur quidem. Quaerat cum est voluptates cum consequuntur.\n\nOptio quas alias cumque error quo facilis. Dolores quidem illo culpa repellat maxime dignissimos. Culpa culpa soluta cumque at sunt temporibus.\n\nFuga quidem esse quidem voluptatum reiciendis iure. Dolor error nam consequuntur eos officiis. Molestias provident optio explicabo fuga corporis enim. Vel corrupti non itaque fugiat.\n\nDebitis doloribus sed earum deserunt sed nisi cupiditate. Quidem voluptatem fugiat corrupti illo exercitationem accusamus. Aperiam quis nulla quas.	81.96	\N	2018-01-05 18:43:28.503677+00	4	"3"=>"6", "7"=>"19"	f	t
+636	Blair, Meza and Farrell	Debitis dolorum ad molestias quaerat praesentium suscipit beatae. Labore doloremque quam amet. Aliquid perferendis laudantium aspernatur minus odio sequi.\n\nIllum natus vitae illum autem nemo. Tenetur temporibus error deleniti distinctio sunt aliquid quo. Aperiam quo eum qui voluptatibus architecto. Accusamus corporis nostrum aliquam maxime non. Fugiat consequatur reprehenderit sint sit recusandae cupiditate doloribus adipisci.\n\nEveniet suscipit laudantium nam inventore minus vero atque perspiciatis. Pariatur debitis commodi magni maxime natus. Nisi voluptatum laborum dolorem unde aut temporibus placeat. Sequi consectetur quod dignissimos.\n\nConsequuntur deserunt aperiam aliquid earum eligendi at. Ea impedit alias perspiciatis exercitationem corporis. Qui blanditiis illum dicta minus dicta.\n\nQuae magni nisi id impedit possimus. Quos dicta iure similique nihil dolor atque omnis. Sed minus ipsa fugit ipsa hic a perspiciatis.	2.59	\N	2018-01-05 18:43:28.548177+00	4	"3"=>"6", "7"=>"19"	f	t
+642	Prince, Smith and Hall	Delectus ullam nesciunt sit blanditiis ex est maiores. Nihil incidunt nobis temporibus tenetur amet consequatur repellendus. Aspernatur facilis excepturi quasi soluta eveniet.\n\nPossimus quas similique corporis placeat eaque molestias. Quia perferendis accusamus error sint. Magni nesciunt totam similique eligendi quia.\n\nPorro veniam consectetur deleniti fugit neque fuga repudiandae. Id vitae recusandae possimus vitae deleniti iste. Expedita dicta voluptate rem necessitatibus.\n\nAdipisci incidunt veritatis similique tempora pariatur. Doloribus adipisci eius laudantium exercitationem eaque. Facere exercitationem eos necessitatibus ducimus sequi ullam minima. Fugit minima esse quaerat impedit earum quasi placeat.\n\nFugit id laboriosam repudiandae laborum fuga ab. Tenetur dicta asperiores aliquam aliquam dolore eligendi quia. Autem explicabo illo a excepturi ex. Dolor odit amet officia voluptatem illo porro quibusdam. Cum neque velit veritatis possimus placeat ipsum maiores.	48.46	\N	2018-01-05 18:43:28.796406+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+643	Howard-Valdez	Numquam maiores ipsa eaque fugit sed. Omnis aspernatur temporibus qui quos. Saepe minima magnam repudiandae aliquid. Facilis similique asperiores dicta similique quae.\n\nRerum cumque animi corrupti reprehenderit. Impedit ullam voluptates voluptate molestias commodi alias. Magni quidem aspernatur ab ad. Dolores accusantium incidunt iste nemo.\n\nRepellat aut quia assumenda voluptatem ad recusandae. Architecto nostrum numquam est quod quam occaecati adipisci. Hic at error officiis nihil dolore ipsum unde. Illo optio tempora magnam nobis.\n\nNumquam iste accusantium blanditiis in similique inventore id. Officiis pariatur eos dicta asperiores commodi aliquid. Veniam quam quidem impedit quae expedita impedit.\n\nDolorem sit mollitia sapiente magni soluta. Recusandae asperiores odit ut ab maxime delectus praesentium. Laborum fugit pariatur dolorem dignissimos voluptatum tenetur. Labore exercitationem iusto doloribus ab mollitia.	70.40	\N	2018-01-05 18:43:28.83978+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+644	Johnson, Stevens and Gutierrez	Tempore ipsum expedita earum quia. Debitis officiis architecto facere quas illo. Nisi error tempore eveniet eius quidem culpa sit vero.\n\nIncidunt sapiente officiis magni et deleniti non iste architecto. Ipsum molestiae eum commodi reiciendis. Autem sequi ut quaerat pariatur voluptatibus. Provident numquam est fugiat aspernatur facere.\n\nNobis pariatur dolorem ullam voluptatibus. Modi enim nesciunt soluta voluptatum quos. Quidem eaque doloremque perferendis fugiat aliquam.\n\nNon optio numquam minima. Sunt possimus ex officia quas non. Consequatur natus voluptatum similique earum.\n\nExplicabo eligendi explicabo minus dolor beatae. Quidem dolores voluptate assumenda dolor. Eveniet explicabo exercitationem reprehenderit eveniet enim. Occaecati commodi illum aliquam maxime aspernatur quisquam porro.	55.50	\N	2018-01-05 18:43:28.883447+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+645	Soto PLC	Aut dolorum officia est fuga repudiandae. Quaerat quo natus rerum consequatur sint expedita. Incidunt alias impedit placeat veniam tenetur vitae.\n\nNesciunt dicta placeat impedit temporibus dolores est maiores non. Explicabo exercitationem corporis dolores nemo. Consequatur nihil debitis impedit nam. Labore error eligendi sequi quod.\n\nNatus alias officia qui. Ipsum in sapiente maiores laborum dignissimos numquam ipsa. Illo laborum sint rerum sequi ipsa quam vitae. Aperiam eius reiciendis atque architecto velit saepe.\n\nDicta dolore nulla eaque provident. Distinctio repellat ipsa laboriosam architecto quia. Placeat natus eum voluptate tenetur recusandae fugiat.\n\nDeleniti autem molestias voluptates repudiandae molestias animi doloribus. Possimus reprehenderit nisi quasi dolor ipsa harum nisi. Eveniet nisi corrupti occaecati necessitatibus sapiente molestias dolor.	80.60	\N	2018-01-05 18:43:28.915874+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+646	Reed, Randolph and Perry	Fugiat laborum iusto excepturi perspiciatis. A eaque tempora doloremque quos ullam. Dolore iusto hic inventore beatae deleniti officia dolores.\n\nId deserunt sint nam quia facere. Porro quam officiis perspiciatis odit eligendi molestiae dolor. Rem molestias rem iste quibusdam ut.\n\nImpedit numquam exercitationem quidem expedita voluptate atque. Provident distinctio porro magni incidunt.\n\nAutem numquam quasi cupiditate culpa dolor cumque. Temporibus aliquam aut quae eligendi inventore. Suscipit minima facilis corrupti ex impedit quas dolor.\n\nConsequuntur hic ipsam error dicta. Enim cupiditate hic repellat ipsam earum vero nisi. Odit voluptas accusamus exercitationem ratione provident. Tempore dignissimos consequuntur atque blanditiis odit ipsum facere ipsa.	68.31	\N	2018-01-05 18:43:28.941005+00	5	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+647	Stewart-Ruiz	Occaecati dolorem ab tempore dignissimos quisquam laborum eveniet. Necessitatibus ipsa ullam accusantium mollitia maxime reprehenderit. Laudantium aliquid ullam vel iste. Distinctio officia consectetur alias minus recusandae nisi explicabo.\n\nMinus atque veniam aliquid at. Odio corporis molestias repudiandae. Error praesentium tenetur neque ipsum sint. Praesentium voluptas repellat culpa.\n\nCorporis itaque rem nobis quam nesciunt neque velit. Tempora et ex quibusdam non incidunt accusamus. Eligendi consectetur molestias mollitia quae.\n\nDolores maxime enim earum odio ullam optio asperiores non. Ad eos sunt quia possimus nobis. Reiciendis officia deserunt ad amet. Temporibus officia modi dolore hic a vero.\n\nIllo necessitatibus harum sed. Nam velit ex necessitatibus illo. Autem non ipsa explicabo quibusdam aliquam amet unde.	62.32	\N	2018-01-05 18:43:28.966449+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+648	Perez Inc	Id exercitationem dolorum placeat voluptatum sit nostrum. Possimus facilis aspernatur enim fugit numquam saepe. Voluptatem distinctio excepturi perspiciatis. Dolores modi fugit neque eius et corrupti.\n\nVoluptates magni nostrum amet. Consectetur officia unde corrupti. Fugit numquam optio corrupti odio laborum ipsa repellendus. Cum quasi earum voluptatem quo amet.\n\nAnimi voluptatum magnam laudantium impedit enim aut. Autem autem a blanditiis ex odit sit maiores. Deserunt deserunt numquam saepe eos eligendi officia libero ducimus. Saepe iste similique rerum autem.\n\nQuas eum suscipit quam non dignissimos. Fugit eos consectetur magnam pariatur magni commodi voluptates.\n\nEst similique eos labore fugit. Voluptate perferendis ducimus ipsum cumque rerum ducimus placeat commodi. Quae harum omnis magni unde rerum.	50.48	\N	2018-01-05 18:43:29.012581+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+649	Hawkins-Barrera	Porro dicta praesentium a facere enim. Laborum mollitia consequuntur tempore modi rem odio voluptatum.\n\nConsequuntur quod quo ad nemo doloremque consectetur. Consectetur occaecati tenetur veritatis debitis. Impedit aut quae laboriosam sit nisi illo.\n\nVoluptatum mollitia sequi laboriosam harum sint explicabo. Laudantium qui enim fugiat ipsa corrupti esse voluptate. Vel libero quisquam non nobis consectetur esse accusamus. Quidem deserunt quasi a recusandae. Laudantium similique dicta esse enim quis sunt.\n\nIllum ex sapiente sapiente. Earum aliquam dignissimos autem excepturi animi expedita. Earum deleniti placeat accusantium nemo cupiditate amet.\n\nIure placeat error aperiam inventore architecto. Minima mollitia incidunt suscipit voluptate consectetur. Expedita a sapiente ducimus. Quas ut culpa eos quasi unde.	79.64	\N	2018-01-05 18:43:29.04062+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+650	Larson, Taylor and Rodgers	Architecto illum ut pariatur iste adipisci qui quibusdam. Necessitatibus voluptatum quasi non. Recusandae occaecati illum impedit doloremque blanditiis aliquam nisi. Ut placeat modi tempora tempora dolorem consequuntur sunt.\n\nError ab alias quis autem. Temporibus laboriosam cumque sapiente beatae sapiente officia dolor. Iste dolore enim libero nostrum facilis alias. Explicabo repellat blanditiis tempora.\n\nNulla odit sit ex mollitia quos fugit mollitia. Hic voluptatem nostrum corporis nulla beatae quae fugit voluptatum. Suscipit officiis sit quos hic. Pariatur perferendis molestias minima voluptatum.\n\nNesciunt suscipit nemo alias commodi. Occaecati quasi aperiam corporis. Perferendis recusandae nostrum aperiam repellat.\n\nIn ullam dolores ad sit. Odit laboriosam pariatur earum reiciendis nisi fugit officiis. Molestiae repudiandae autem autem vitae. Aperiam iure quidem vero dicta commodi.	57.74	\N	2018-01-05 18:43:29.091613+00	5	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+651	Schneider, Baxter and Joyce	Illum facere assumenda debitis assumenda distinctio necessitatibus explicabo asperiores. Voluptatum fuga ullam expedita ipsa repellendus deserunt. Hic dignissimos maxime totam animi reprehenderit sed magni nobis.\n\nQuae neque laborum debitis optio. Ipsum nisi veritatis tempora doloribus. Totam eaque et blanditiis cupiditate deleniti provident. Enim doloribus voluptatem perspiciatis doloremque nemo excepturi molestiae.\n\nNumquam commodi neque expedita eaque modi. Nostrum beatae laudantium aut beatae distinctio dolor explicabo. Tenetur aspernatur dolor minus explicabo voluptatum dignissimos non.\n\nDignissimos voluptatum quaerat corrupti voluptates unde ipsam tempore. Possimus praesentium dolorem sunt quaerat minus beatae. Reprehenderit vero eaque ducimus quisquam perspiciatis maxime. Non consequuntur corporis eius voluptate.\n\nTemporibus fugiat totam pariatur enim cum dicta. Asperiores earum atque ea sunt expedita ducimus. Est voluptatibus mollitia tempora deleniti culpa.	29.68	\N	2018-01-05 18:43:29.12802+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+652	Hayden-Brown	Aliquid harum voluptatem at autem. Vitae dolore vitae consectetur necessitatibus eum. Deleniti eos repellendus sunt aliquid quasi dolorem temporibus. Amet eligendi architecto fugiat sint.\n\nMolestias accusantium ex incidunt sed cupiditate. Natus ipsum aliquid facere nihil culpa. Architecto numquam eos porro voluptates. Dolore laborum optio laudantium delectus esse perspiciatis repellendus.\n\nNatus occaecati sequi recusandae deserunt ullam reiciendis earum quidem. Suscipit magni beatae earum a. Distinctio id laborum vero nihil accusamus tempore eaque. Debitis amet odit atque aspernatur fugiat atque.\n\nNulla necessitatibus non nulla. Fugiat facilis natus laudantium nihil iure numquam temporibus aliquam. Modi quibusdam omnis occaecati accusamus non officia.\n\nOfficia temporibus error dignissimos labore. Ullam eligendi delectus cum minus enim maxime. Ratione reiciendis expedita velit.	22.18	\N	2018-01-05 18:43:29.170729+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+653	Lambert and Sons	Soluta veritatis culpa iste eius tenetur. Amet facilis ut doloribus dicta.\n\nLibero repudiandae veniam aut animi odio accusantium ullam cupiditate. Illum id occaecati nulla cum iure ipsum placeat. Tempora officia culpa nobis explicabo consequatur hic. Accusamus quisquam dolorum alias dolor ratione id corrupti repudiandae. Reiciendis expedita ex soluta quae laudantium quam.\n\nAnimi perspiciatis excepturi sunt totam illum. Cum eum enim nam eos animi sequi saepe dignissimos. Id cumque dolores laborum.\n\nMolestias rerum cupiditate perferendis totam optio. A nisi recusandae esse iure. Esse minus eum minima voluptatem dolores ex neque.\n\nHarum qui consectetur ad nam. Rerum quo sed excepturi facilis ratione quos. Aliquid facilis assumenda cupiditate ad ad nisi sit. Quam earum perspiciatis nihil quae.	80.50	\N	2018-01-05 18:43:29.221108+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+654	Chen-Schwartz	Quam voluptate laboriosam natus dolor corrupti itaque. Maxime aperiam totam quam distinctio amet. Corrupti voluptatibus iste nisi.\n\nLibero optio saepe nobis dolor ut. Quam saepe doloremque ipsa repudiandae. Earum eligendi ipsa non mollitia.\n\nEa pariatur error animi enim. Perspiciatis omnis rerum ducimus deserunt aliquid rem sint. Sunt aut asperiores vero voluptate nesciunt libero optio nostrum. Quo nesciunt error cum fugit tempore. Illum laboriosam unde quibusdam at.\n\nEt hic rerum totam saepe. Magni possimus ipsum quam inventore vero eveniet. Quos ipsa suscipit harum tempora.\n\nQuam et molestias ipsum dicta vel accusamus. Accusantium saepe dolorum eveniet iusto quisquam fugit. Cupiditate fuga est distinctio omnis maxime enim sapiente. Asperiores culpa dignissimos modi dolore molestias aperiam reiciendis.	29.70	\N	2018-01-05 18:43:29.254391+00	6	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+655	Moss, Burch and Miller	Asperiores perspiciatis magnam doloribus quia cupiditate facilis molestias. Et libero distinctio ipsam aliquid amet tempora voluptas. Aliquam reiciendis a nemo at. Sed minima voluptatibus porro molestiae veritatis nihil ipsam. Quo eum dolores quae.\n\nTenetur soluta delectus totam repellendus consequuntur dignissimos quo. Unde enim odit quam dolorum illo assumenda.\n\nIpsum assumenda error mollitia libero facilis corporis. Iste cumque impedit atque asperiores sit esse repellat. Eum culpa modi libero quos.\n\nQuibusdam et ex optio. Commodi sequi dicta ab blanditiis voluptate. Facilis quibusdam iure autem numquam eos. Adipisci ut illum recusandae facere. Omnis libero vitae occaecati maiores eum modi illo.\n\nIpsam ad reiciendis ad totam porro. Minus deserunt nihil perspiciatis in expedita. Voluptas temporibus veniam voluptatem rem placeat perferendis ratione. Praesentium hic impedit vero autem eaque eum adipisci.	77.53	\N	2018-01-05 18:43:29.293413+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+658	Drake, Garcia and Hall	Est occaecati quia adipisci ipsa iste provident sequi. Totam quaerat tempora natus. Explicabo ut quod atque libero delectus rerum ut odit. Nesciunt deserunt harum iusto minima iste odit.\n\nNulla exercitationem maiores maxime quis repellat. Quidem consequuntur omnis eaque sint consectetur at qui dicta. Iusto facere sequi aspernatur quisquam. Soluta non repudiandae qui officia iure occaecati dignissimos.\n\nQuae et occaecati aliquid eligendi expedita minima. Accusantium aperiam dicta illum animi a eaque. Ratione nemo porro placeat dolorem. Soluta aut numquam aliquid repellat.\n\nDoloribus maxime quod tempore. Hic ullam voluptas corrupti dolor eius. Mollitia voluptatum possimus voluptates beatae odit tempore placeat maiores.\n\nFugit animi dolorem occaecati ipsum. Animi quia minus commodi distinctio esse necessitatibus. Veritatis optio nesciunt dicta voluptatum minus. Sunt dolore ipsa ut eos.	8.25	\N	2018-01-05 18:43:29.397337+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+659	Bird, Gilbert and Delgado	Beatae corrupti quos voluptatem itaque iusto impedit ducimus. Enim repellendus assumenda tempora libero dignissimos praesentium rerum. Facere odit quis quasi incidunt.\n\nAnimi voluptate accusantium nobis. Vitae ratione alias atque distinctio harum id. Ipsum repellat eos vel quaerat consequuntur.\n\nAssumenda fugiat eos nobis dolore rerum. Hic ex dignissimos dolorum consectetur maxime eligendi. Deserunt iure delectus ab cum doloremque nobis atque ullam.\n\nReprehenderit dignissimos cupiditate dolores velit. Natus tenetur vitae excepturi laboriosam omnis. Debitis ea ad fugit sit.\n\nDoloremque expedita quasi harum hic voluptatem dicta. Quibusdam vitae sint nobis molestiae minus quos. Adipisci est hic vitae. Quaerat commodi ratione maxime sequi eius.	61.59	\N	2018-01-05 18:43:29.442027+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+660	Scott Inc	Quisquam assumenda fuga facilis porro nam. Aut minus et enim fugiat sint.\n\nReprehenderit ipsam nesciunt cum consequatur veniam ab. Quidem reprehenderit magnam est labore quis ipsa. Voluptatem provident architecto atque ab similique quasi. Consectetur ab laboriosam dicta possimus vitae nemo.\n\nQuo reprehenderit ipsum quo accusamus voluptatem. Iure necessitatibus cupiditate debitis veniam deserunt. Voluptatibus ea ratione vero animi nostrum expedita mollitia nulla.\n\nDolore ullam maiores nam sed quasi veniam. Illum mollitia quo sapiente exercitationem consequuntur nisi. Eum id laboriosam rerum. Minus ab dolore voluptatum dolore facere.\n\nQuidem id id accusantium hic similique. Labore sit molestiae dicta assumenda quod. Temporibus in voluptas molestias omnis ratione.	29.48	\N	2018-01-05 18:43:29.476298+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+661	Dixon-Erickson	Qui saepe velit optio voluptate. At impedit et alias ipsa. Doloribus nulla ab perspiciatis quam exercitationem.\n\nEt error numquam maxime dignissimos voluptate id molestiae. Earum amet eveniet libero quasi. Ratione laborum doloribus at. Blanditiis quo inventore consequatur a.\n\nLibero molestiae illo quaerat quidem. Perspiciatis suscipit voluptates sunt reprehenderit. Ea hic exercitationem voluptas error. Accusamus ad fugiat eum a totam.\n\nQuam natus quidem itaque officia recusandae maxime pariatur. Qui cupiditate recusandae amet vitae suscipit rerum. Provident ab assumenda nemo asperiores. Earum nemo ipsa quis earum magnam odit.\n\nPariatur pariatur cumque aliquid impedit cupiditate explicabo recusandae eos. Aliquam suscipit debitis dolore voluptatibus.	79.91	\N	2018-01-06 17:25:44.071286+00	1	"1"=>"2", "2"=>"5", "3"=>"6"	f	t
+896	Smith, Hernandez and Brown	Debitis nobis commodi autem. Nulla beatae cum accusamus expedita porro cum. Perferendis dolorum ratione sapiente cum consectetur. Error illo est laborum praesentium eaque illo quam. Ullam facilis perspiciatis doloribus aliquid ipsam deleniti.\n\nNemo vero occaecati quia quis illum facilis. Voluptas fugit praesentium sint eius. Ratione maiores cupiditate veniam minima praesentium.\n\nSimilique dolore aliquam laborum labore autem accusamus voluptatibus. Consequatur nesciunt accusantium molestias doloribus voluptate saepe. Numquam saepe molestiae fugit optio.\n\nEst quam pariatur occaecati veritatis. Aut mollitia laudantium aliquam maiores repellendus fugiat.\n\nVeniam quasi mollitia totam ut quaerat provident laboriosam impedit. Id nostrum exercitationem nostrum.	10.63	\N	2018-01-06 17:55:25.939241+00	6	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+897	Burch Ltd	Odio ut enim aut at incidunt quo velit. Veritatis quo velit non quia. A soluta pariatur quisquam dolore explicabo ipsa. Libero ab magnam voluptatem non dicta rem.\n\nConsequatur numquam expedita itaque ab. Itaque laudantium ipsam occaecati ad. Soluta voluptatibus facilis dicta rerum porro.\n\nDignissimos possimus inventore saepe inventore. Adipisci non sit odit praesentium voluptatem placeat.\n\nIpsam repudiandae tempora doloremque saepe rerum repudiandae. Rerum nostrum a vitae voluptatum. Possimus facere adipisci quisquam optio maiores veritatis.\n\nNesciunt itaque commodi iusto quibusdam asperiores. Asperiores ad perferendis autem quas quisquam placeat.	85.40	\N	2018-01-06 17:55:25.969428+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+898	Perry, Torres and Smith	Sapiente eos numquam facere asperiores harum nihil nostrum. Quaerat quod quod repellat. Dolore tempore amet distinctio accusamus natus. Quisquam ut quo possimus amet.\n\nUnde exercitationem culpa reiciendis blanditiis alias. Temporibus velit corporis culpa deleniti aut. Ullam praesentium hic omnis quidem nemo itaque adipisci quidem.\n\nArchitecto dolores perspiciatis odio labore. Explicabo possimus repellendus voluptatem quia ad corrupti. Culpa earum vitae occaecati delectus recusandae iusto odio. Adipisci nam vitae unde omnis occaecati.\n\nConsequuntur temporibus cum eius. Nobis quia dicta sunt sed earum. Adipisci necessitatibus asperiores exercitationem deleniti perspiciatis explicabo dolorem. At ratione at exercitationem occaecati ea numquam sit.\n\nOfficia nulla cupiditate commodi ut. Officia mollitia dolor soluta sapiente a dignissimos neque. Distinctio minima dolorum nihil inventore.	67.48	\N	2018-01-06 17:55:25.995136+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+662	Madden Group	Explicabo voluptates perspiciatis et nihil rem. Est odio expedita placeat laborum.\n\nRatione in consequuntur vitae ea tenetur aliquid ipsam optio. Quaerat velit cupiditate accusamus provident dicta natus esse. Porro nisi cum voluptatum. Modi officiis adipisci iusto similique odio porro.\n\nIpsam mollitia ipsam eos voluptates vitae. Blanditiis quisquam non velit sed voluptatem occaecati reprehenderit nostrum. Ducimus pariatur fugiat voluptates. Nesciunt quibusdam quas magni perspiciatis laudantium.\n\nA at tempore fuga facilis. Aspernatur minima suscipit illo a vitae eius incidunt accusantium. Molestias amet tempora itaque voluptates. Fuga debitis at a. Cupiditate temporibus assumenda explicabo error.\n\nNon consequatur mollitia repellat nihil nobis. Adipisci temporibus vel similique impedit ea libero officiis. Minima atque autem repellendus aspernatur.	98.62	\N	2018-01-06 17:25:44.33697+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+663	Meza, Powell and Jackson	Molestiae inventore eligendi et. Facere eum doloremque alias saepe ea culpa optio modi. Aut vel sint hic beatae earum autem.\n\nPerspiciatis dicta impedit quos minus atque. Itaque libero odio quod asperiores dolore. Corrupti corrupti cupiditate mollitia nulla libero.\n\nNon doloribus vitae magni praesentium quae nisi laborum facere. Pariatur deserunt delectus minima veritatis. Laudantium iste eligendi atque dolorum consequuntur sapiente totam. Corporis suscipit dolorum itaque fugiat maxime. Repudiandae laboriosam nihil minus nihil culpa.\n\nMolestiae velit odio commodi perspiciatis eaque ut. Veniam veritatis fugiat neque quod maiores ullam quae. Corrupti doloremque natus quas incidunt natus illum. Perferendis sit quas sapiente.\n\nSapiente tenetur quos dicta cum quisquam ad. Voluptates totam amet mollitia assumenda deleniti earum numquam. Atque excepturi asperiores omnis eius tenetur.	78.42	\N	2018-01-06 17:25:44.39291+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+664	Wagner PLC	Voluptatum vero ea iusto sit. Iusto architecto unde alias. Quos illo cum odio quaerat.\n\nAliquam ipsum aperiam nesciunt sit exercitationem perferendis magni. Nihil rem eos facilis expedita voluptates inventore voluptate veniam. Ipsa maxime cum maiores quasi odit pariatur.\n\nIpsam laboriosam doloribus consequatur corporis. Eligendi reiciendis atque iusto mollitia veritatis doloremque sint. Ducimus impedit doloribus eos. Repudiandae sunt veniam quisquam quae recusandae cum dolores pariatur.\n\nRepellat atque sunt quaerat numquam dicta ex animi. Eos numquam odio expedita vero. Impedit tempore non praesentium odit vitae voluptates assumenda. Odio atque debitis iusto alias provident libero quia.\n\nAd aliquam quidem dolorum. Minus aspernatur molestias eaque itaque consectetur nobis.	14.79	\N	2018-01-06 17:25:44.503038+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+665	Jones, Graham and Alexander	Ipsa eveniet officia consequatur adipisci non velit voluptatum doloribus. Rem nesciunt est mollitia eaque. Soluta sunt sit beatae itaque. Cupiditate sit impedit laudantium ad laboriosam a.\n\nEnim voluptates numquam maiores aut libero blanditiis. Impedit asperiores architecto aperiam numquam voluptates. Voluptatibus itaque alias ipsa eaque iste sint. Nulla incidunt ipsum necessitatibus.\n\nCupiditate ipsa ad delectus cupiditate voluptatem. Enim tempore commodi eveniet nostrum consequuntur nostrum. Repudiandae quos quidem aliquam.\n\nIpsam laborum veritatis quam voluptas voluptatum ratione doloremque officia. Amet asperiores debitis fuga cum quasi accusamus. Aliquid sint voluptatem omnis magnam nostrum earum culpa.\n\nSaepe perferendis ipsa saepe dolor ad quos. Labore delectus culpa debitis ex saepe. Voluptas voluptatum dolores nesciunt numquam. Repudiandae vel libero suscipit laudantium nam.	61.98	\N	2018-01-06 17:25:44.555757+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+666	Leonard-Jones	Natus impedit nam qui fugiat impedit. Totam eum molestias dignissimos maiores aut earum. Vero facilis neque corrupti veritatis repudiandae. Blanditiis asperiores aliquam corporis minus vel temporibus quod. Quo ipsum velit quidem libero inventore nisi autem.\n\nIn pariatur vitae blanditiis molestiae illo aperiam. Sunt magnam nesciunt molestiae aliquid temporibus a vitae ipsum. Nostrum dolor ducimus exercitationem libero velit minima adipisci.\n\nNostrum consequatur adipisci doloremque. Enim doloremque quo similique facere. Earum atque sunt ratione sapiente ullam deserunt. Laborum rerum necessitatibus officiis ullam.\n\nMollitia perferendis facilis similique tempora minima. Enim veritatis facilis provident commodi maiores.\n\nTempore pariatur fugiat laboriosam ratione architecto. Sit quaerat quidem reprehenderit. Nobis commodi corrupti unde consequatur dolore voluptatum. Deleniti doloremque perferendis cupiditate et provident.	4.69	\N	2018-01-06 17:25:44.646567+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+667	Howard-Knight	Ipsum omnis exercitationem recusandae distinctio fugiat. Repellat qui numquam consectetur deserunt. Amet voluptatum laboriosam omnis dignissimos non. Dicta animi dicta voluptatum recusandae voluptatibus iusto eligendi quam.\n\nAliquid neque ex delectus accusantium fugiat. Necessitatibus dolore mollitia magni delectus. Temporibus eligendi cum repellat vitae quis odio. Iste quas nostrum eum.\n\nDoloremque repudiandae voluptatem nostrum. Dolor id voluptatum quod. Impedit recusandae magni atque reiciendis voluptates. Occaecati libero excepturi quis magnam natus nesciunt quasi.\n\nOdio omnis corrupti aperiam numquam nisi placeat. Dicta vero unde assumenda sit at maxime eos. Quidem blanditiis laboriosam tenetur nobis.\n\nTotam impedit voluptatibus nihil alias molestias quod hic. Vel nobis a dolor commodi. Cupiditate perspiciatis nobis quidem illo aut omnis distinctio ducimus.	34.50	\N	2018-01-06 17:25:44.74543+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+675	Gonzalez-Davis	Esse ab doloremque at accusamus molestiae. Libero quasi perferendis occaecati eveniet expedita iusto molestias. Omnis dignissimos ipsum in maiores nihil. Id beatae ullam blanditiis cumque maiores dolorum.\n\nQuis sequi omnis quia. Inventore ex numquam architecto voluptas labore. Veritatis quo praesentium beatae.\n\nQuia aut eius quia molestiae rem iste. Totam omnis assumenda aut. Libero molestias totam quos voluptates eligendi blanditiis. Qui unde explicabo necessitatibus architecto harum vitae iusto.\n\nOptio odit dolorum reiciendis nisi nulla aperiam id. Dignissimos voluptate voluptatibus eveniet illum illo quia. Architecto ducimus harum rem numquam id impedit. Perferendis alias corrupti ut sit doloremque nesciunt.\n\nConsectetur velit aspernatur quisquam iusto corrupti. Dicta similique nam temporibus quisquam. Impedit dicta exercitationem dolorum quod eos.	78.91	\N	2018-01-06 17:25:45.383753+00	2	"3"=>"6"	f	t
+668	Juarez Ltd	Hic odio tempore nulla unde beatae repellendus facilis. Unde beatae deleniti animi facilis. Dolorum iste fuga maiores porro exercitationem.\n\nAspernatur temporibus molestiae ab explicabo voluptates molestias rerum. Optio esse ipsum cum assumenda voluptatibus suscipit. Cumque molestiae ipsam nesciunt veritatis totam esse.\n\nVoluptatem quas dolor dignissimos recusandae ipsum illum. Aliquam itaque quidem assumenda corporis eos similique voluptates hic. Error blanditiis libero corporis architecto quam aut eum. Cum suscipit rerum reprehenderit placeat provident.\n\nMaxime iusto expedita aspernatur ratione culpa quidem. Ipsum qui sit voluptatem ullam. Deserunt nobis impedit sunt impedit accusamus dolorum suscipit. Totam id velit vitae repellat magnam reprehenderit.\n\nMinus rerum incidunt reiciendis eaque. Tenetur doloribus consectetur iure reprehenderit consequuntur reiciendis sint. Ex perspiciatis impedit amet laudantium exercitationem. Aliquid officia velit iure hic.	98.44	\N	2018-01-06 17:25:44.81671+00	1	"1"=>"2", "2"=>"5", "3"=>"6"	f	t
+669	Oliver Inc	Esse at debitis maiores natus magnam. Eveniet iure a consectetur corrupti. Impedit amet aperiam corrupti expedita numquam. Occaecati culpa dolore mollitia doloremque.\n\nEaque doloremque eveniet culpa maxime mollitia. Consequatur dolorem rerum sapiente nulla. Officia esse ab et autem excepturi. Rem natus quam quo quos optio. Nulla cum nemo blanditiis quia.\n\nDignissimos numquam aliquid suscipit molestiae dolorum fugit. Sit quam beatae labore. Ipsum eaque architecto incidunt odit fuga eos. In aliquam deserunt eius perspiciatis minima. Vero amet cupiditate amet magnam mollitia.\n\nSint nobis dicta quia a tempore eveniet ullam dolor. Velit corporis nostrum possimus assumenda officia tempore. Possimus ut tempora harum voluptas alias qui vitae.\n\nCommodi incidunt reprehenderit dignissimos nisi culpa reiciendis animi. Cumque ullam dicta ad alias nobis nobis. Occaecati magni vel magnam veritatis adipisci magnam numquam animi. Itaque ex quo ipsum expedita optio placeat.	57.80	\N	2018-01-06 17:25:44.927986+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+670	Hill-Jackson	Temporibus recusandae voluptates magnam voluptatem. Corporis harum voluptas at tempore at nemo cum. Dolorum autem rerum aliquid repellat laudantium explicabo accusamus.\n\nBeatae iusto accusantium molestiae accusamus. Suscipit ipsa nemo repellendus animi repellat aliquid. Amet neque tempore dolore suscipit eveniet voluptatibus. Ratione nihil quisquam vitae magni minima.\n\nEligendi nemo deserunt itaque enim enim in. Architecto dignissimos velit reiciendis molestias nisi. Adipisci aspernatur ab ratione corporis quaerat in.\n\nNam ullam consectetur quam quibusdam. Illo libero voluptatem beatae veniam. Aperiam reiciendis error omnis odio.\n\nSuscipit omnis soluta nisi possimus. Placeat animi delectus architecto fugit dolore unde. Explicabo quas inventore non sequi laboriosam voluptas.	21.93	\N	2018-01-06 17:25:44.986428+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+671	Duncan-Moran	Cum consequatur accusantium sapiente ipsam. Consequatur corrupti possimus repellat aliquam incidunt dolore ut. Blanditiis excepturi recusandae vitae enim non sapiente velit.\n\nSequi soluta dolor officiis perferendis officia. Vitae eius doloribus temporibus aliquid dolor. Neque consequatur facilis qui delectus. Aperiam sint eveniet a dolorum tempore aliquam vel.\n\nDignissimos quia officia molestiae. Vel ullam voluptates impedit sunt magni laborum reprehenderit. Perferendis rem dolor maiores magnam fuga.\n\nAccusamus voluptas neque quasi aspernatur rerum facere. Suscipit eligendi maiores dolor tenetur. Dicta quo natus recusandae nulla quis iusto. Laudantium asperiores perferendis magni at.\n\nIllum esse distinctio corporis quam unde doloribus rem. Delectus rem soluta cum hic tempore laboriosam fugit. Maxime quisquam voluptate animi.	11.63	\N	2018-01-06 17:25:45.049805+00	2	"3"=>"6"	f	t
+672	Kaufman, Stone and Robertson	Laudantium quod rem consequuntur tenetur. Voluptates sed iusto quam perspiciatis expedita repellendus. Illum harum in natus ullam. Dolore culpa commodi illo ab.\n\nQuibusdam tenetur at incidunt facere dolorem laborum. Quaerat dolore mollitia unde laborum. Culpa eum nemo earum officiis voluptatum. Accusantium atque et modi ducimus dolores.\n\nAutem alias ex ea porro ab reiciendis. Atque magnam voluptatum omnis facilis dolorem. Deserunt pariatur laborum aut autem nihil minima soluta.\n\nId magni vitae cumque blanditiis in libero explicabo. Vero autem eum provident sequi. Sequi ullam dolore adipisci eligendi tempora voluptate. Quisquam placeat perspiciatis ratione culpa ratione cumque occaecati non.\n\nDucimus dolorem eius ratione officiis voluptates possimus. Aliquam iste reiciendis eum recusandae velit. Culpa molestias corporis rerum rem voluptate similique. Perferendis illo eaque pariatur ab at fugiat.	99.75	\N	2018-01-06 17:25:45.208482+00	2	"3"=>"6"	f	t
+673	Sanders Group	Nemo accusamus possimus velit laborum ullam. Dignissimos numquam provident adipisci sapiente eos. Pariatur nam perspiciatis assumenda voluptate laudantium commodi fugiat iste.\n\nDelectus dolorem quos dolorem dicta. Quia placeat harum saepe aut. Amet aperiam pariatur ea temporibus eligendi aliquam.\n\nIpsam quisquam odit doloremque minima. Nisi quam quam officia odio eius. Necessitatibus facere labore quasi magnam.\n\nSapiente ab mollitia excepturi error dicta quas consectetur. Perferendis perferendis at reiciendis deleniti. Sequi fugiat officia repellat delectus magni.\n\nExpedita dolorum officia optio facere excepturi necessitatibus voluptate. Saepe expedita amet alias eius in delectus incidunt. Earum dignissimos et repellendus quibusdam ad a. Consequuntur sequi quisquam nihil ut magni.	79.56	\N	2018-01-06 17:25:45.325944+00	2	"3"=>"6"	f	t
+674	Watkins, Brown and David	Fugiat placeat aspernatur reprehenderit harum excepturi id maiores. Perspiciatis vero dolore neque totam explicabo. Vel nam possimus et deleniti. Consectetur saepe quos beatae ab nihil.\n\nNulla voluptates dignissimos nam totam. A pariatur molestiae velit voluptas. Dicta dolorem corrupti ipsam officia nesciunt ea totam.\n\nOccaecati aliquam quibusdam fugit harum maxime. Cumque aperiam nulla ipsum repudiandae nesciunt ex earum. Ducimus quam numquam iure esse rem. Voluptas accusamus ex nulla fuga quod.\n\nDucimus ex laborum consequuntur. Quas voluptatem quibusdam in occaecati. Explicabo quia voluptas hic. Eius est animi ad eveniet iusto sed consequatur.\n\nNon deleniti nisi optio voluptatibus placeat. Optio corporis illum ducimus cum. Cum modi atque laudantium at soluta expedita nam.	5.92	\N	2018-01-06 17:25:45.358881+00	2	"3"=>"6"	f	t
+676	Church LLC	Cupiditate laboriosam totam fuga nulla non tenetur. Possimus dolores reiciendis impedit exercitationem aliquid at atque. Quos nulla exercitationem consectetur occaecati reprehenderit.\n\nRepellat quam unde autem fuga libero voluptatibus. Quaerat animi consectetur quam iure. Adipisci excepturi voluptatibus aut id assumenda. Quis accusantium dolorem inventore unde odit. Quasi dicta blanditiis repellat.\n\nPariatur et ea minus perspiciatis. Amet quia quae porro recusandae itaque provident. Laborum similique recusandae atque sequi harum saepe.\n\nOfficiis suscipit ipsum illum illum excepturi temporibus consectetur debitis. Voluptatibus consequuntur maxime sit tenetur nostrum voluptate beatae vel. Neque possimus sequi repellendus recusandae possimus quasi.\n\nFacilis delectus voluptatum nam nisi fugit. Alias molestiae sed corrupti animi deleniti provident. At voluptate atque laborum autem commodi accusamus labore ratione. Mollitia aspernatur libero rerum tenetur nostrum facere libero.	79.26	\N	2018-01-06 17:25:45.423937+00	2	"3"=>"6"	f	t
+677	Williamson Group	Perferendis culpa vitae suscipit sed. Dolorem hic necessitatibus quas voluptas. Unde vero odio aliquam repellat iusto laudantium expedita.\n\nAliquid velit quos veritatis neque quam. Sunt quidem distinctio molestiae deleniti officia ullam. Ut culpa alias praesentium adipisci quasi debitis. Beatae sapiente ducimus accusamus debitis.\n\nBeatae modi voluptates enim ducimus. Consequatur exercitationem quis cupiditate. Consectetur reprehenderit ipsam sunt soluta explicabo repudiandae. Expedita neque consequatur at temporibus.\n\nNon enim ducimus ut quam. Aut aliquam autem praesentium itaque cumque. Eligendi iste expedita consequatur nulla omnis. Sit omnis sed sequi mollitia magni illo soluta. Error beatae dolores itaque quo tempore iure vero.\n\nMagni placeat ab repellat molestiae temporibus tempore illo. Velit error exercitationem quas quod architecto mollitia.	57.59	\N	2018-01-06 17:25:45.465111+00	2	"3"=>"6"	f	t
+678	Hernandez, King and Anderson	Occaecati cumque iure corporis beatae quos atque at. Id voluptatem repudiandae qui rem. Laudantium unde impedit labore. Eligendi occaecati deserunt error magni aliquid reiciendis cumque.\n\nSit earum illum natus nobis. Explicabo ullam eveniet cumque veniam animi officiis illo. Eligendi sunt atque sequi.\n\nQuia quos velit sapiente doloribus aliquid iusto. Exercitationem modi possimus quis rem architecto. Iusto harum mollitia omnis facilis odio.\n\nNumquam reiciendis quidem qui asperiores recusandae praesentium fugit. Asperiores repudiandae placeat aspernatur illum. Tempora delectus reprehenderit sint tempora aliquam ex velit.\n\nArchitecto necessitatibus occaecati dignissimos et mollitia fugiat quisquam. Ab cupiditate voluptatum beatae quam quos officiis cumque. Illo praesentium ex sapiente neque earum suscipit. Quo eius enim voluptate eum ratione veritatis aliquid.	46.27	\N	2018-01-06 17:25:45.498078+00	2	"3"=>"6"	f	t
+679	Willis-Garcia	Maiores expedita rem eum. Neque quisquam quis molestiae error corrupti corporis impedit. Esse beatae error tempora quibusdam harum. Impedit ratione quibusdam voluptates sed.\n\nAdipisci in nam quasi illum architecto impedit eum. Minus assumenda assumenda eligendi harum nulla voluptas recusandae atque. Dignissimos amet minus excepturi itaque debitis aliquid at esse.\n\nAnimi non porro magnam consectetur cupiditate numquam velit iste. Ipsam quos culpa quae enim libero repellendus. Hic repellat fuga aspernatur occaecati minus.\n\nHic accusamus sapiente at ducimus recusandae facilis corporis illo. Soluta ab nesciunt eaque velit quisquam. Ipsa sit aut perferendis maxime eveniet. Fugiat doloremque ab harum velit.\n\nNatus quidem quisquam minus eos iste. Perspiciatis odio nesciunt harum. Voluptatibus ducimus adipisci quidem nulla architecto.	75.18	\N	2018-01-06 17:25:45.537348+00	2	"3"=>"6"	f	t
+680	Decker Ltd	Praesentium recusandae ex mollitia. Numquam perspiciatis doloribus sit. Eligendi a aliquid quam neque natus quidem enim.\n\nFugit perferendis nemo occaecati in odit ipsum. Laudantium autem aliquam saepe illum eius libero voluptatum. Cumque labore cumque nihil reiciendis sequi ut. Nihil iure reiciendis possimus voluptas earum voluptate.\n\nNam perferendis quidem aliquid ipsum fuga ipsum iste voluptatibus. Fugiat similique reiciendis libero libero. Quos ab debitis odit adipisci.\n\nSaepe quia iure libero hic laborum aspernatur enim. Aperiam esse doloribus aut ipsam numquam nihil quibusdam excepturi. Omnis quisquam autem voluptas aliquam sint temporibus.\n\nVel maxime eius autem consequatur sequi fuga perspiciatis. Adipisci nemo accusamus tenetur corporis culpa aspernatur. Optio nisi impedit inventore quasi eos distinctio. Incidunt amet assumenda velit itaque.	49.37	\N	2018-01-06 17:25:45.577941+00	2	"3"=>"6"	f	t
+681	Bryant LLC	Officiis esse repudiandae natus libero. Blanditiis exercitationem asperiores dolorem ratione. Possimus sequi dolorem et expedita dolores minima neque. Cumque quia blanditiis porro.\n\nNatus magnam voluptate dolorum optio pariatur enim. Praesentium aspernatur architecto veniam. Sint debitis voluptatibus debitis. Tempora quo vero vel nisi aspernatur.\n\nMolestiae voluptatem impedit reprehenderit. Molestiae quos fugiat alias sequi. Dicta expedita vero mollitia mollitia sed itaque quo.\n\nEt et reiciendis quasi quod. Deleniti accusantium dolor corrupti voluptates. Voluptatibus praesentium asperiores commodi labore voluptas nulla.\n\nAutem autem est quisquam nisi. Voluptates beatae perferendis qui excepturi. Nobis eos tenetur sit cupiditate dolorem vero. Iure consequatur eum quo aliquam illum.	22.91	\N	2018-01-06 17:25:45.617425+00	3	"3"=>"6", "5"=>"14"	f	t
+682	Curtis-Carpenter	Fugiat necessitatibus dolores impedit laborum. Qui odit magni itaque omnis voluptatibus perspiciatis. Magni velit consequuntur reiciendis ipsam cupiditate. Iste expedita sequi numquam esse odio doloribus iste.\n\nIure enim ipsum quos corrupti illum. Numquam cumque aperiam facere nam laudantium. Ducimus error occaecati itaque unde ex voluptate.\n\nEius earum quas nobis veniam cupiditate voluptates quia. Rem illum beatae iste voluptates eos impedit sequi. Cum sed ullam autem facere aliquid molestiae tempora iure. Similique odit occaecati cumque eius laborum.\n\nVoluptatum accusantium quis officiis. At cum repudiandae mollitia libero culpa. Beatae cumque impedit nesciunt quis molestiae.\n\nSunt reprehenderit ea delectus reprehenderit eius. In molestias consectetur sunt illo facere architecto. Ab saepe harum minima commodi omnis voluptate sunt. Perferendis natus esse quasi asperiores.	59.76	\N	2018-01-06 17:25:45.668858+00	3	"3"=>"6", "5"=>"14"	f	t
+683	Estrada-Adkins	Dicta veritatis accusamus praesentium facere modi. Provident expedita earum at dolore. Unde officiis nostrum ducimus culpa nisi saepe. Ab aliquam quis enim. Reiciendis et debitis excepturi nihil assumenda ratione.\n\nAutem ab aliquam architecto fugit. Est distinctio optio quasi cupiditate eum. Incidunt reiciendis asperiores eveniet eum quibusdam. Fugiat veniam veritatis rem quasi asperiores suscipit. Dicta hic ea labore consequatur architecto natus at.\n\nLaboriosam suscipit consequatur perferendis non accusamus temporibus quos corporis. Libero totam dignissimos facilis aut officia. Sit cupiditate magnam corporis ipsam quisquam. Sapiente voluptates odio ut possimus voluptas nam eum eos.\n\nDolores dolor ab vero accusamus expedita eveniet. Incidunt iste quam vero labore libero officia. Possimus quo perferendis in distinctio voluptas. Sapiente non aperiam laudantium quos. Laboriosam error nostrum dolorum minus.\n\nQuibusdam dolore voluptate aliquam quod. Iure occaecati dolorum aliquid iusto eos tenetur. Occaecati voluptatum id quisquam. Architecto deserunt quod illum dignissimos veniam repellat.	57.43	\N	2018-01-06 17:25:45.756122+00	3	"3"=>"6", "5"=>"14"	f	t
+684	Kaiser Ltd	Incidunt enim magnam fuga. Tempore molestias nam necessitatibus voluptate.\n\nInventore tempore corrupti possimus. Quaerat aut ex eveniet fugiat error doloremque fugiat. Dicta earum quisquam odit ipsum.\n\nEveniet dolor earum occaecati at. Repellat nisi doloremque cupiditate earum inventore libero. Hic atque saepe alias voluptatem non.\n\nEnim ratione nostrum quod. Explicabo facere debitis ducimus architecto. Esse laborum ut natus dicta.\n\nAb voluptates nostrum molestias magni. Distinctio illo ex voluptas dolor.	64.10	\N	2018-01-06 17:25:45.803783+00	3	"3"=>"6", "5"=>"14"	f	t
+685	Oconnor Ltd	Est aperiam sint sint ad. Eaque quo ea consequuntur animi voluptatum natus. Omnis ratione debitis assumenda ad ducimus omnis. Omnis minus eligendi omnis.\n\nRem magni porro vel vero distinctio ipsam quae. Modi aliquam id nobis voluptates expedita. Ad impedit quaerat odit culpa.\n\nOdit dicta modi optio. Cupiditate itaque ea atque blanditiis ratione. Aspernatur quis sint officia ipsum voluptatum.\n\nVeritatis modi tempore consequuntur tempora quibusdam exercitationem reiciendis nam. Necessitatibus veritatis soluta nemo enim ducimus. Vero pariatur doloremque ex beatae. Culpa culpa labore vitae tempore. Unde amet iste laborum maiores accusamus distinctio.\n\nExpedita eaque optio blanditiis eum hic. Cum repellendus blanditiis id quaerat ea aperiam. Non veritatis vitae eos nam architecto dolore.	28.29	\N	2018-01-06 17:25:45.876281+00	3	"3"=>"6", "5"=>"13"	f	t
+686	Jennings, Lewis and Nash	Eligendi molestiae nemo sapiente repellendus dolorem. Illum nobis porro dolorem et. Ipsa animi maiores harum similique nesciunt eum est. Illum voluptates magni sed voluptatem cum nisi.\n\nNesciunt quod blanditiis incidunt. Iusto cupiditate ea aspernatur vitae amet. Occaecati sed blanditiis unde.\n\nCupiditate odit provident possimus amet assumenda. Doloribus voluptatibus aspernatur facere accusantium adipisci nihil. Facere repellat nisi quas nostrum blanditiis. Praesentium totam tempore beatae pariatur at dignissimos.\n\nSaepe nihil nostrum ea cum nobis nulla. Porro atque tempore vel amet quod temporibus. Consequatur voluptate molestias consequuntur et voluptatum autem nemo.\n\nMaiores cupiditate recusandae nulla placeat asperiores expedita. Porro ut voluptatibus accusantium debitis iste saepe blanditiis facilis. Cum optio ullam nam facilis explicabo tenetur. Fuga nemo praesentium corrupti illum tempore est.	61.52	\N	2018-01-06 17:25:45.977155+00	3	"3"=>"6", "5"=>"13"	f	t
+721	Santiago-Thompson	Labore soluta cumque minus sunt facere et architecto. Recusandae repudiandae aliquid quo impedit eos aliquid nobis. Mollitia cum aliquam itaque.\n\nIpsam sequi repellendus doloremque earum. Odit ut distinctio tenetur aperiam rerum reiciendis. Iste illum reprehenderit necessitatibus.\n\nNulla molestiae perspiciatis dolore ipsam impedit at voluptates doloribus. Ducimus debitis quibusdam eos. Ab ipsa necessitatibus autem dolorem voluptates error.\n\nExercitationem deleniti voluptatem odio maxime cupiditate. Id recusandae delectus sit ipsa. Tenetur impedit sunt tenetur explicabo.\n\nDolor dolorem ipsam repudiandae. Iste eaque optio numquam. Reprehenderit necessitatibus commodi vero eius.	44.97	\N	2018-01-06 17:34:16.823514+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+722	Rodriguez-Olson	Laudantium aspernatur ea ipsa asperiores quidem fugiat quaerat. Doloremque eos necessitatibus quam inventore blanditiis. Explicabo neque ut sed voluptates.\n\nId veritatis neque voluptatum ullam. Fugiat enim eaque ullam ex. Pariatur unde fugit aliquid recusandae laboriosam.\n\nDeserunt voluptates doloremque ipsa repellendus. Quisquam sed voluptatibus quis ipsam minus voluptate. Eaque officiis quasi error dolorum assumenda.\n\nFugit accusamus facere accusantium minima voluptas itaque. Tempora officia omnis dolorem repellat deleniti explicabo ea. Delectus distinctio culpa cum dicta asperiores consequuntur natus. Numquam aperiam hic autem harum iusto voluptates quaerat. Odit iste possimus sed facilis temporibus exercitationem voluptate.\n\nLaborum similique nihil non eius iste illo libero. Reprehenderit fugit commodi corrupti. Occaecati et nostrum accusantium earum nam. Et facere deserunt blanditiis deserunt.	85.46	\N	2018-01-06 17:34:16.891142+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+723	Wilkinson-Lowe	Dignissimos sed et fugit et a perspiciatis. Voluptatem possimus accusamus accusantium odio recusandae pariatur. Aperiam rem aliquid ratione iusto.\n\nIn quod voluptates recusandae nemo minus veniam. Nesciunt accusantium sequi nihil fuga cum. In quisquam architecto dolores optio natus. Numquam officia laborum soluta.\n\nIusto fugiat modi natus qui totam nam. Rem consequatur optio exercitationem sed dolore aliquid cum. Occaecati illum accusantium inventore magni.\n\nFacere vel quod sint sint. Dignissimos quis at adipisci architecto ullam at. Odit architecto saepe accusamus magni beatae accusantium debitis iste. Sit pariatur iure voluptates.\n\nNobis exercitationem autem nam tenetur distinctio quaerat et in. Aperiam eligendi maiores enim fugiat cupiditate. Incidunt explicabo quidem repellendus assumenda recusandae quis.	28.47	\N	2018-01-06 17:34:16.9407+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+687	Rogers LLC	Eaque dolore laudantium soluta officia molestias repellendus necessitatibus. Distinctio provident magnam at. Libero dolore sapiente nihil pariatur voluptates alias qui.\n\nAnimi ad reprehenderit facilis illum sed repellendus voluptatum. Numquam error sed distinctio quisquam eos dolor provident. Accusamus mollitia recusandae quis ratione. Inventore at velit iure dicta molestias.\n\nNesciunt animi quis unde. Libero mollitia in atque hic nesciunt voluptas iusto saepe. Veniam recusandae aut est ducimus sapiente tenetur mollitia.\n\nCupiditate sequi neque exercitationem. Alias doloribus at quia officiis ipsa recusandae culpa. Sapiente aperiam tempora vitae itaque. Hic eius quia impedit incidunt fugit impedit.\n\nPorro et alias eos voluptas accusamus. Quis tempora a aut cupiditate suscipit praesentium distinctio molestiae. Possimus repellat blanditiis explicabo unde earum enim et.	41.76	\N	2018-01-06 17:25:46.022033+00	3	"3"=>"6", "5"=>"14"	f	t
+688	Anderson-Cook	Animi fugit assumenda sint doloribus quia sint optio. Quisquam molestias voluptate earum dolorem accusamus aut ratione.\n\nIn dolore quo velit repudiandae. Nemo harum id laudantium beatae est quisquam voluptas. Officia iste ratione fugit.\n\nNatus consequatur magni facere at. Optio consequuntur ipsa ducimus quasi sed fugit. Quisquam provident corporis quia numquam ipsum nulla nisi.\n\nNulla similique explicabo unde dignissimos omnis voluptate. Porro voluptate ad minus dolorem sint voluptatum iure ea. Perferendis rerum fugit reprehenderit eos. Ipsa hic incidunt qui doloremque eum facilis tempore.\n\nNesciunt facilis molestias ullam soluta. Commodi ducimus iste delectus aut animi fuga impedit necessitatibus. Error accusamus voluptatibus commodi deleniti aspernatur saepe. Id voluptate dignissimos consectetur iure. Corrupti labore perspiciatis perferendis blanditiis.	63.33	\N	2018-01-06 17:25:46.091953+00	3	"3"=>"6", "5"=>"13"	f	t
+689	Mcdonald, Frye and Brown	Temporibus rerum minus adipisci. Voluptates neque dolorum ducimus accusantium. Enim dolores necessitatibus magnam. Velit culpa consequatur repellat error. Possimus perferendis culpa itaque id.\n\nVel debitis laudantium dolor eligendi. Et quis repellat tempora a exercitationem ratione atque. Ut dolorem quaerat error optio corporis sed fuga. Voluptatem quis facilis veniam modi mollitia assumenda.\n\nInventore amet illo reprehenderit neque voluptates mollitia. Earum aspernatur officia quis nam tempore harum repudiandae eos. Suscipit facilis veritatis labore voluptatum. Quod delectus aspernatur maiores. Nihil odit enim dolores modi.\n\nImpedit assumenda ullam fugiat. Possimus unde veniam vitae eveniet possimus repudiandae veniam. Reprehenderit nam nisi nulla facilis. Voluptates ipsam occaecati perspiciatis libero.\n\nOdio quaerat vero incidunt minima alias delectus. Laudantium quidem molestiae quis perferendis dignissimos vel assumenda. Placeat suscipit accusantium dolore.	4.38	\N	2018-01-06 17:25:46.144627+00	3	"3"=>"6", "5"=>"14"	f	t
+690	Donovan, Nguyen and Hernandez	Asperiores eius quibusdam quidem quia recusandae incidunt nisi. Ipsa consequatur ratione atque asperiores minus. Deleniti blanditiis unde fugiat fugiat consequuntur cum quisquam.\n\nVero nostrum nulla natus laudantium similique ipsum repellendus. Molestiae aut eius ipsa mollitia veniam voluptates enim. Nesciunt minima ipsa blanditiis delectus laborum optio alias. Eligendi nemo maiores quo animi similique.\n\nEius quidem quis quasi velit totam modi. Iure delectus ipsam minus voluptatum consequatur necessitatibus quis. Sapiente magnam perferendis odit maxime molestias tenetur. Expedita expedita maxime repellat laborum neque quis dolores provident.\n\nError dicta delectus occaecati similique. Omnis libero quaerat a assumenda aliquam aperiam optio repellat. Laudantium vero ea sed. Eaque laborum quod repudiandae nostrum reiciendis.\n\nFacilis voluptas odio ut expedita facilis. Porro earum molestiae non adipisci dolorem modi totam. Minima quae sequi inventore.	25.39	\N	2018-01-06 17:25:46.253887+00	3	"3"=>"6", "5"=>"14"	f	t
+691	Simmons Ltd	Sequi asperiores ipsum neque ex molestias porro. Sapiente eos ab veniam similique. Ipsa ducimus deleniti fuga ullam. Tempore quae nostrum dolores iste magni nostrum repellat.\n\nCorporis quisquam nobis praesentium eligendi soluta quam. Omnis dignissimos repellat provident tempora molestias. Dignissimos atque iusto maxime neque nostrum. Fuga nesciunt iure officia pariatur consequatur inventore.\n\nUllam cumque tempore ea voluptates. Exercitationem sunt porro velit beatae ipsam eaque. Accusantium amet suscipit repellat veritatis sunt. Magnam quia commodi sapiente.\n\nCupiditate corporis reprehenderit fugiat similique perspiciatis quisquam. Soluta nisi cupiditate alias ratione reprehenderit placeat hic. Laborum nesciunt accusamus quasi ipsum labore eligendi assumenda. Itaque sint minima necessitatibus sit.\n\nIllo perferendis exercitationem eos impedit incidunt. Enim cumque officiis accusamus voluptatum ratione nemo. Temporibus cupiditate laborum debitis laudantium sequi sunt. Exercitationem officiis soluta provident non nemo ratione.	89.50	\N	2018-01-06 17:25:46.345676+00	4	"3"=>"6", "7"=>"20"	f	t
+692	Smith LLC	Nam temporibus explicabo eligendi illum quidem nesciunt ullam. Deleniti aliquid laborum pariatur vitae. Ducimus nemo alias sapiente.\n\nOccaecati rem laboriosam dolor dolorum ducimus possimus iste. Nesciunt facere facere nesciunt deserunt. Quibusdam nesciunt eaque odio amet sequi veniam iure.\n\nVitae possimus quo itaque a. Nesciunt minima repellat adipisci iste.\n\nLaborum accusantium numquam saepe excepturi molestias laborum ex. Aliquid sed excepturi molestiae repellat voluptatibus nam. Nihil reiciendis quibusdam earum omnis suscipit.\n\nQuaerat blanditiis nostrum corrupti. Eos quos minima veniam vero. In voluptatem veritatis deleniti fugit.	94.99	\N	2018-01-06 17:25:46.415487+00	4	"3"=>"6", "7"=>"20"	f	t
+693	Garcia Inc	Voluptatum esse asperiores impedit dolorem. Rerum quidem saepe culpa eveniet animi repudiandae. Nostrum praesentium voluptates consequatur vero amet aspernatur.\n\nIllo provident molestias repellat dignissimos doloribus fugit. Quibusdam error error necessitatibus consectetur suscipit doloremque deserunt soluta. Autem nulla vel assumenda vel. Culpa voluptates sint sunt quasi.\n\nPariatur blanditiis dolor quisquam nobis. Vitae veritatis magni commodi ipsum sit aperiam. Reiciendis dolores praesentium soluta quaerat. Labore earum nam fugiat blanditiis ipsam dignissimos explicabo culpa.\n\nRecusandae quaerat soluta voluptatem quas laudantium quos ut. Suscipit blanditiis amet non qui. Ab delectus esse exercitationem quibusdam ratione maxime. Quia cupiditate dolor necessitatibus nesciunt. Consectetur modi provident maiores.\n\nEsse accusamus reprehenderit optio consequuntur laudantium assumenda laudantium. Aliquid eaque totam minima unde iure. Maiores ut quibusdam quasi soluta fugiat sit.	40.54	\N	2018-01-06 17:25:46.462105+00	4	"3"=>"6", "7"=>"19"	f	t
+694	Henderson Inc	Corrupti mollitia reiciendis tenetur quisquam. Vel impedit quam nisi soluta excepturi vel cupiditate distinctio.\n\nDucimus ea dignissimos quos incidunt perferendis sit. Omnis eaque perferendis ipsa labore harum. Ea doloremque voluptates odit quo.\n\nSimilique ipsa in hic. Labore officiis quis amet soluta blanditiis. Architecto non cum minus praesentium. Doloribus beatae iusto unde deleniti.\n\nSit praesentium voluptatem harum nam excepturi. Praesentium dolores ipsum numquam velit consectetur illum. Ipsam dignissimos impedit quae consequatur. Inventore consequatur ex ipsum esse exercitationem laboriosam.\n\nAsperiores ipsam saepe sequi aliquam. Rem beatae ab modi aperiam ratione quibusdam ratione. Sapiente eum eius placeat earum natus. Nulla totam magnam ratione quibusdam.	4.38	\N	2018-01-06 17:25:46.501295+00	4	"3"=>"6", "7"=>"19"	f	t
+695	Barker-Burnett	Asperiores sint voluptatum modi delectus doloribus unde eligendi voluptatem. Atque rem sunt quidem officia accusamus atque. Corporis labore esse deleniti quae quos saepe. Atque temporibus architecto ad quasi recusandae. Omnis ipsa voluptates molestiae quis.\n\nCommodi voluptates ea odit delectus. Laboriosam ducimus provident veritatis reiciendis accusamus accusantium. Eveniet sed assumenda doloribus harum repellendus.\n\nVeritatis dignissimos totam commodi inventore unde laboriosam. Sit accusamus soluta maiores aspernatur. Pariatur voluptas et cum culpa rem. Necessitatibus dolores tempore fugit ullam natus.\n\nPraesentium occaecati explicabo possimus a aperiam. Dicta porro et quas quo possimus eos. Nesciunt est ea atque animi dolorem laborum ullam. Sequi doloribus eligendi vero culpa ipsa earum perspiciatis.\n\nAspernatur quibusdam vel ut eligendi commodi cum. Numquam eius consequuntur libero aut laborum. Reprehenderit saepe mollitia consectetur exercitationem perferendis. Quos perspiciatis dolorem quod unde hic placeat maxime.	28.63	\N	2018-01-06 17:25:46.576252+00	4	"3"=>"6", "7"=>"20"	f	t
+756	Maxwell Group	Aut praesentium corrupti earum sit quos cum. Tenetur accusamus veritatis inventore soluta eos. Deleniti ab maxime maxime cumque non. A fugiat ducimus enim sed officia eius.\n\nNam iusto dolor voluptate vel. Incidunt atque sit quo repellat amet. Sed excepturi blanditiis exercitationem nesciunt cum.\n\nUt quae alias porro aperiam. Rerum beatae vero mollitia aliquam neque voluptate corporis eos. Quia eos eligendi sequi harum hic officiis.\n\nIpsum voluptate dolores odit dignissimos cum quas recusandae. Nemo earum necessitatibus minus ipsum commodi accusamus eius. Ipsa id esse suscipit maiores corrupti. Quos odit iure reprehenderit corrupti libero repudiandae corporis.\n\nConsequuntur sint ea enim repellat. Repudiandae at at minus eius itaque. Saepe possimus in mollitia nihil quibusdam maiores. Libero facere ipsa esse dignissimos eveniet provident nam.	70.27	\N	2018-01-06 17:34:18.608876+00	4	"3"=>"6", "7"=>"20"	f	t
+794	Olson and Sons	Voluptatibus qui porro quia totam doloribus. Sint laboriosam dolorem commodi molestiae rerum molestiae sapiente. Ex tempore unde minus magnam laudantium. Laborum totam consequuntur placeat.\n\nOmnis ducimus beatae quia incidunt repellat tempore perferendis laboriosam. Placeat iste nulla nisi eos asperiores magni id. Architecto quo odio cupiditate ex consequatur nam deleniti. Nemo tempora officia nihil aperiam nulla id similique.\n\nEveniet vitae velit dicta placeat. Vitae vero delectus minima quibusdam. Recusandae ab expedita laudantium ratione. Vel dolorem nostrum deserunt cumque rem aspernatur ratione illum. Eveniet quidem odit et sequi quia.\n\nLaudantium quae quas aspernatur. Sint beatae fugit optio explicabo sed. Harum quis quaerat aperiam nostrum enim magni similique.\n\nTenetur nam ad architecto tempora ad. Nisi deleniti laudantium consectetur ratione officia. Dolorem provident odio minima iste maxime fugit tempora.	30.49	\N	2018-01-06 17:37:20.2388+00	2	"3"=>"6"	f	t
+696	Massey-Arnold	Vero fugit quisquam ipsam non eveniet maxime tenetur. Veritatis minima ipsa illum molestias quos. Sit dolore quas maiores non sed tempora ratione.\n\nUnde blanditiis ea asperiores fugiat excepturi quod vel. Totam vero voluptatibus ratione officiis ipsam aut. Nostrum reprehenderit quisquam vero commodi error.\n\nDicta nihil quod praesentium voluptates nobis repudiandae incidunt. Quia quaerat sequi velit corrupti. Maiores pariatur dignissimos similique magnam.\n\nEt nisi magni ex numquam labore repellendus sapiente. Accusamus commodi cumque non amet pariatur sint deleniti eaque. Sed voluptates enim labore exercitationem porro. Recusandae labore enim dolor vitae iusto dolores.\n\nAsperiores quia quis vel distinctio dolorem. Illo amet id consequatur tempora ipsa at ipsa. Quisquam autem inventore repudiandae aliquam. Quasi architecto occaecati deleniti eligendi nemo consequuntur officia. Voluptatem eaque facilis veritatis quis porro amet ipsum.	34.49	\N	2018-01-06 17:25:46.617827+00	4	"3"=>"6", "7"=>"19"	f	t
+697	Davis, Young and Tate	Odit iste repellat laboriosam ratione facilis aliquid autem. Sit mollitia velit veritatis autem quas repellendus. Numquam nam aperiam et perspiciatis dicta debitis vitae.\n\nMagnam delectus natus molestias nam fugit. Ut possimus porro provident laboriosam at ipsa asperiores. Quis deleniti at tenetur tempora voluptas.\n\nVeritatis minima provident optio dolorem aut unde corrupti. Neque sapiente expedita consectetur facere. Non nisi debitis quod natus explicabo amet.\n\nRerum odio nobis illo quasi. Non omnis velit dolores asperiores eaque quasi facilis. Facilis laborum dolorum magnam. Vero error quaerat nostrum rerum.\n\nOfficiis ullam voluptas recusandae fugiat. Neque blanditiis nostrum nihil minus aut eos magnam.	33.41	\N	2018-01-06 17:25:46.707424+00	4	"3"=>"6", "7"=>"20"	f	t
+698	King, Carrillo and Goodman	Dolorem corrupti corporis rerum recusandae. Architecto dignissimos enim error rerum velit provident. Animi perspiciatis quo ab. Iste aliquam labore ad dolorem.\n\nMollitia dolores laboriosam sed officia id. Blanditiis voluptas nobis maxime quo vitae nostrum vel. Dolorem voluptatibus sed rem fugit. Aperiam repellat minus voluptas autem a nesciunt.\n\nMaiores ullam minima omnis. Quia nulla ab ullam nobis vero doloribus. Veritatis neque voluptatibus qui velit enim quaerat quas.\n\nVero commodi tempora qui perferendis. Aliquam laudantium ab est deleniti quis assumenda. Ratione sint numquam sint ipsum. Vitae labore consectetur tempora fugit a distinctio.\n\nRepellat reprehenderit quo provident similique ex. Iste dolorem magni architecto reprehenderit sunt quia in deserunt. Est corporis voluptates laudantium.	99.90	\N	2018-01-06 17:25:46.771099+00	4	"3"=>"6", "7"=>"19"	f	t
+699	Perkins Inc	Aut sed inventore nostrum assumenda harum ad. Dolorum molestias est tenetur debitis. Autem doloremque fugit distinctio facere suscipit maxime.\n\nReprehenderit aspernatur tenetur sint eius alias. Reiciendis totam officia laudantium. Neque adipisci nihil dolorum illum suscipit magnam sapiente fugit. Itaque enim ad enim numquam natus.\n\nSed esse similique voluptates distinctio aliquid impedit quis. Voluptates assumenda possimus minima facere ex saepe.\n\nNon repellendus laboriosam eum dolores sint sunt debitis. Eveniet nam labore nostrum architecto odit.\n\nExcepturi pariatur illum doloribus autem. Ex mollitia repellendus alias beatae nesciunt. In et ea provident accusamus laborum.	69.71	\N	2018-01-06 17:25:46.823261+00	4	"3"=>"6", "7"=>"19"	f	t
+700	Johnson, Morgan and Patrick	Reiciendis vel beatae nihil. Corrupti magni laborum soluta non est. Optio harum illo necessitatibus debitis quod.\n\nTenetur vitae explicabo iure. Amet optio voluptatem asperiores. Quas odit dignissimos non quibusdam maiores dolore. Amet doloremque asperiores ab consequatur ea assumenda rem.\n\nTenetur dicta ea esse perspiciatis repudiandae. Ipsa enim architecto eos mollitia aperiam minus. Minus sit quia est impedit ipsum.\n\nEius eligendi omnis beatae aliquid. Reprehenderit voluptatum vero illo dolorum. Porro minus excepturi hic enim nesciunt aspernatur blanditiis. Vero facilis deleniti amet numquam odit perspiciatis porro.\n\nAlias temporibus blanditiis laudantium alias et rem ipsam. Corporis enim aspernatur unde. Eveniet dolorum assumenda dolor sit dolores impedit. Aut voluptatem sed iusto modi.	56.65	\N	2018-01-06 17:25:46.883597+00	4	"3"=>"6", "7"=>"19"	f	t
+701	Gardner Group	Commodi necessitatibus tenetur quibusdam deserunt iure nihil eveniet. Architecto quas voluptas excepturi quod nulla.\n\nDoloribus quod libero libero laboriosam voluptate. Veniam praesentium cumque consequatur quam sed. Illo qui aliquam dolore iste sequi. Quidem perferendis itaque deserunt ipsam.\n\nBlanditiis ut ratione tempora saepe labore ducimus. Veritatis aut dolorem ducimus laudantium quibusdam similique cumque nobis. Nisi odit perferendis veritatis quam doloremque dolore.\n\nMagnam non impedit corrupti ipsam. Aspernatur perferendis odit veritatis culpa iste vero voluptate. Nulla nulla sint molestias non reiciendis saepe temporibus. Recusandae veritatis temporibus sunt quos maxime nam.\n\nTemporibus doloribus corporis cupiditate ipsum ex. Explicabo quis tenetur consequatur vel eum laboriosam. Labore error neque placeat cum.	11.21	\N	2018-01-06 17:25:46.968842+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+702	Hebert PLC	Id nobis quaerat totam magnam consequatur voluptatum quam. Repudiandae eius debitis dolorum. Blanditiis aut veniam soluta quae nostrum dolorum excepturi. Quidem nemo et nemo voluptate consequatur voluptates.\n\nQuidem odit eaque velit sequi. Ut expedita totam quam ea consectetur consectetur. Perspiciatis modi qui accusantium numquam alias voluptatibus at.\n\nSaepe qui debitis saepe tempora deserunt iure. Est a laboriosam nisi eveniet tempore temporibus. Unde quas atque ex adipisci fugit inventore unde dolores.\n\nAsperiores alias quam deleniti tempora dolores reprehenderit voluptatum. Laborum dolor molestias repellendus aperiam unde molestiae ullam nam. Pariatur consectetur repudiandae laborum nihil.\n\nDelectus consequuntur doloribus corrupti illo aspernatur aut. Debitis incidunt assumenda nihil nobis nulla sapiente facere earum. Reprehenderit id ex praesentium magni.	96.31	\N	2018-01-06 17:25:47.037351+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+703	Simpson-Jensen	Minima rem architecto sequi accusantium voluptate assumenda. Nisi id omnis natus rem enim quisquam nobis. Deleniti porro minima magnam perferendis harum deserunt hic officia. Ducimus dolores excepturi vero similique neque sed nam. Nemo adipisci quasi minima distinctio.\n\nVoluptatibus in eaque temporibus labore quo molestias aliquid officiis. Totam quos atque illum repellendus culpa dolore voluptatibus. Tempore officia nulla molestias assumenda.\n\nNatus cumque quidem eum inventore nisi nobis harum ad. Modi maxime impedit quia necessitatibus recusandae dolorem. Debitis quae error temporibus veniam qui. Maiores asperiores odio ratione corrupti libero repudiandae odio totam.\n\nPlaceat totam aperiam commodi mollitia qui quibusdam doloribus nesciunt. Voluptatibus possimus modi dolor expedita. Consectetur laborum ut accusantium officiis possimus. Explicabo eius sequi unde quidem aliquam.\n\nIllum velit voluptas quae eligendi atque vero nesciunt. Optio natus atque harum numquam. Dolore numquam temporibus laboriosam quasi. Reiciendis quae nobis ipsa illum qui excepturi deserunt.	75.42	\N	2018-01-06 17:25:47.108103+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+704	Salinas and Sons	Ipsa beatae minima odio. In error reprehenderit a eligendi in iusto. Voluptas asperiores amet veniam illo rerum. Sequi hic adipisci velit deserunt ullam. Accusantium necessitatibus velit quisquam beatae veniam rem.\n\nPerferendis eaque dicta beatae officiis temporibus quae. Cum mollitia vero delectus maxime laudantium. Omnis ratione sed cum eaque. Ut illum quam sint velit dicta.\n\nIpsum ratione cumque rem voluptates. Aperiam excepturi nesciunt repellat ab. Quis dignissimos quibusdam aspernatur consequuntur aliquam eaque. Voluptate deserunt tenetur temporibus libero.\n\nIn adipisci ut inventore voluptatum mollitia officia fuga. Nostrum totam eum dignissimos at maiores dolor. Eius rem numquam voluptatibus ipsum corporis temporibus distinctio. Quod ipsum temporibus eaque.\n\nQuos ipsa amet corporis eius unde nisi eum. Sapiente incidunt placeat corporis consequatur aliquid laboriosam. Sapiente maiores quas libero maxime. Tenetur aperiam aliquid totam nam libero iste.	29.12	\N	2018-01-06 17:25:47.160118+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+705	Bryant-Perez	Nesciunt earum laboriosam aliquid quaerat magnam. Velit recusandae dolore explicabo dicta fugiat sit reprehenderit. Quod eveniet autem perspiciatis quo ut. Illo impedit dolores atque corporis.\n\nPorro fuga tenetur totam eos exercitationem. Odit amet tempore velit. Reprehenderit amet assumenda esse esse.\n\nTotam doloribus mollitia enim ratione minus iste animi. Dolore aut quod aliquam laborum. Libero aliquid dolorum eaque quos rerum atque. Officiis eos iste numquam expedita repudiandae tenetur ipsam illum.\n\nEst veritatis numquam sint corporis veniam. Ea dignissimos vero dolorem necessitatibus culpa eum. Inventore atque aperiam dolorum nobis corporis ratione molestiae.\n\nQuia maiores odio culpa est sunt labore ratione. Magnam eius laborum pariatur incidunt incidunt ea deserunt. Optio exercitationem occaecati explicabo alias eaque ratione. Exercitationem recusandae iusto rerum quod exercitationem in.	28.69	\N	2018-01-06 17:25:47.236823+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+706	Holt-Baker	Non odit tenetur voluptatem dolorem. Similique laboriosam beatae occaecati dignissimos nostrum suscipit. Temporibus non distinctio quas deserunt.\n\nSint suscipit modi doloremque minima et. Neque possimus placeat ipsa quod ad distinctio placeat. Maiores soluta quo eum porro nam. Rem facere sapiente aperiam incidunt explicabo.\n\nIllo voluptatem blanditiis culpa dolor nulla ex officiis voluptatem. Dolor dolorem repudiandae accusantium odit fugiat. Eos quas eligendi dolorem pariatur.\n\nVel nobis accusamus sequi quas. Corrupti nesciunt laborum tenetur delectus. Iusto vero quidem impedit laudantium. Atque architecto eaque praesentium doloribus impedit.\n\nExcepturi beatae blanditiis voluptates eaque ratione. Assumenda doloribus earum est voluptate at consequuntur. Voluptatem alias iusto commodi officiis. Cumque praesentium pariatur rem ex porro.	90.29	\N	2018-01-06 17:25:47.292184+00	5	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+795	Scott, Hooper and Shepherd	Explicabo culpa similique inventore deleniti. Accusamus quasi quibusdam hic consequuntur facere sapiente. Esse tenetur accusamus vero amet alias velit eligendi. Reiciendis praesentium repellat pariatur repellendus.\n\nHic voluptatum mollitia occaecati cum numquam. Eveniet magnam cupiditate similique esse. Corporis quae accusamus esse.\n\nConsequuntur neque fuga excepturi vero. Excepturi error in minima vero.\n\nEsse perferendis at atque ducimus impedit sed. Tenetur nam maiores corporis amet iusto. Quia suscipit vel quo rem nulla quos.\n\nVeritatis impedit accusantium doloremque provident laboriosam quasi. Labore corporis repellendus beatae nihil.	64.30	\N	2018-01-06 17:37:20.272448+00	2	"3"=>"6"	f	t
+796	Abbott Inc	Sint blanditiis nam cum magni. Quaerat praesentium tempora laboriosam officiis aliquam odio. Earum molestias laborum reprehenderit tenetur nihil numquam non ipsum. Quod aperiam nulla velit.\n\nDeleniti labore animi tempore ipsa soluta qui. Eos ratione excepturi dolores facere dicta molestias ducimus.\n\nAliquid fugit dolores ipsa nihil. Perferendis magnam iste tenetur ut ullam pariatur veritatis. Numquam minima recusandae voluptas placeat. Distinctio sit impedit placeat velit autem sequi.\n\nCulpa numquam placeat suscipit aut. Cupiditate consequuntur at aspernatur harum aut aliquam facilis quibusdam. Doloremque doloremque amet delectus iure.\n\nDoloremque delectus culpa sequi labore ratione inventore totam. Maxime ea harum qui quibusdam nulla optio ipsum. Minus dolores fugiat doloribus consequuntur quam quis libero. Sunt delectus culpa totam reprehenderit. Omnis enim voluptatibus magni placeat dicta soluta.	71.54	\N	2018-01-06 17:37:20.314261+00	2	"3"=>"6"	f	t
+797	Lynch, Smith and Miller	Sit ipsa sunt labore consectetur accusantium. Debitis asperiores odio veritatis excepturi dignissimos accusantium sed. Amet maxime laborum doloribus numquam. Saepe deserunt soluta assumenda soluta saepe nam ratione.\n\nEa impedit quo eius mollitia suscipit quibusdam. Officiis iusto velit omnis voluptatibus voluptatibus consequuntur cumque. Temporibus ea odio error officia dolor sint.\n\nSimilique harum vero tempora. Nihil et dolorem sequi aspernatur occaecati. Voluptatum consequatur incidunt veniam velit.\n\nDebitis perferendis tenetur sed cumque magni. Iusto corporis dicta excepturi est. Necessitatibus ea commodi cum unde debitis expedita pariatur.\n\nReprehenderit ut blanditiis praesentium voluptates enim ut. Explicabo quos occaecati inventore animi doloribus quibusdam. Ipsam minima sit numquam delectus.	48.72	\N	2018-01-06 17:37:20.342813+00	2	"3"=>"6"	f	t
+707	Woodard, Davis and Gutierrez	Fugit ipsum excepturi pariatur maxime blanditiis qui. Delectus unde molestias ratione aut repudiandae pariatur sit. Expedita voluptatibus accusamus velit nam nulla incidunt similique.\n\nRecusandae nostrum facilis quo sint. Fugit magnam natus asperiores. Consectetur suscipit cumque aliquam necessitatibus sequi id nemo. Rerum quaerat quaerat recusandae culpa ipsa iusto. Ipsum odit dolores fugit perspiciatis quidem maxime deleniti.\n\nVoluptatibus deleniti quae corporis officiis voluptate dolorem repellendus. Rerum quibusdam natus qui velit. Suscipit dicta exercitationem quaerat deserunt. Optio perspiciatis totam nam vitae ab quaerat quisquam.\n\nNobis sit sequi praesentium vitae. Voluptate quos quaerat sit rem tempora porro. Ex illo veniam provident delectus officiis officiis. Porro odit suscipit illo tempore.\n\nAperiam maiores maxime molestiae natus asperiores asperiores. Iure adipisci animi dolorem. Saepe alias modi harum quis placeat facere ipsa.	56.39	\N	2018-01-06 17:25:47.352489+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+708	Glover-Garcia	Maxime id amet quidem rerum provident magnam ipsa. Ipsam autem reprehenderit quos incidunt eligendi. Magnam error doloribus excepturi doloribus quis quasi nihil.\n\nIllo necessitatibus neque voluptate nihil neque eum qui. Blanditiis quisquam hic nisi et est.\n\nSapiente culpa debitis architecto ducimus. Deserunt sint autem ex culpa. Iste possimus quisquam vero eligendi debitis beatae a.\n\nIllum incidunt placeat voluptates officiis vero accusantium. Delectus a molestias deserunt. Debitis nam a modi repellat quaerat.\n\nPossimus nesciunt nobis modi asperiores veniam culpa ad. Quidem quis vitae in error ad sit doloremque error. Tenetur totam exercitationem aspernatur facilis.	4.69	\N	2018-01-06 17:25:47.391269+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+709	Hood, Sparks and Watson	Occaecati tenetur consequatur non dicta accusamus expedita ducimus. Molestias culpa inventore fuga cum illo. Impedit corporis quam nihil amet saepe. Corrupti aliquam minima occaecati tenetur reprehenderit facere impedit aut.\n\nProvident vero aliquid doloribus non laudantium ab nesciunt. Labore nihil harum ducimus perspiciatis. Est minima fugit occaecati ab non fugiat quisquam. Atque ipsum eum eaque velit distinctio.\n\nOdit optio libero sequi sint at id commodi. Dolorem beatae optio deserunt vel voluptas autem nemo.\n\nMolestiae assumenda nobis nam sit odit reprehenderit sunt. Velit magnam voluptatum sed libero temporibus laborum. Error eligendi dicta voluptatem repellendus exercitationem.\n\nFugiat quidem ex similique tenetur fugit autem. Repudiandae iure nihil quas fuga natus. Sapiente repellendus ea veritatis harum quaerat pariatur. Vero totam ipsum qui exercitationem mollitia.	79.36	\N	2018-01-06 17:25:47.455594+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+710	Martin PLC	Officiis assumenda iure velit non est dolor. Laboriosam tempore dolore maxime odio nisi vero. Dolorum nihil doloribus voluptatem laudantium rem laudantium reprehenderit. Officiis non dolores quam deserunt vel corrupti aliquid error.\n\nRatione distinctio ducimus exercitationem ut officiis. Mollitia distinctio officiis neque illum libero aut asperiores. Autem ratione sunt exercitationem. Dolorem minima nisi pariatur deserunt veniam.\n\nAtque accusamus rem in eius excepturi. Ducimus officia laudantium expedita similique accusamus. Incidunt magnam nesciunt nobis similique corrupti eaque dignissimos.\n\nSint neque impedit ducimus consequuntur exercitationem magni quo. Voluptatibus tenetur voluptatem commodi maiores magnam modi eius. Adipisci libero voluptas ipsam at.\n\nVoluptas illo ipsam officiis aperiam unde voluptates consectetur. Dolor aspernatur alias voluptas explicabo aliquam reiciendis illo. Quam aut quod velit non.	79.94	\N	2018-01-06 17:25:47.485228+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+711	Duncan LLC	Autem consequuntur voluptate aliquid veniam consequatur. Nihil minima non perspiciatis dolores suscipit odio. Voluptatum rerum culpa voluptas voluptates.\n\nBlanditiis ut atque iure veniam porro. Dolorem velit tempora numquam dolorum ullam dolorum. Accusantium architecto officia vitae ratione consectetur labore dolore sequi. Aliquid accusamus accusantium vitae aut cumque molestiae.\n\nDignissimos alias eius aperiam ullam temporibus. Sit veniam libero quaerat exercitationem ut ipsum debitis. Illum totam sapiente tempora magnam perspiciatis temporibus quibusdam.\n\nOfficiis iure consequuntur incidunt nam. Ea adipisci dolorem excepturi quibusdam quia. Alias ea quos ex.\n\nA nisi accusantium tempore labore nisi doloremque. Quo molestiae sit totam iure.	49.29	\N	2018-01-06 17:25:47.548365+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+712	Berg-Thomas	Ad eius magni velit pariatur magnam ea. Sed maiores molestias in nobis qui quidem aliquam optio. Quam sapiente nisi debitis. Fugit aperiam dicta quisquam unde qui consequatur labore quo.\n\nNam perspiciatis quia ipsam nulla laborum. Sint minus quidem at eveniet hic odio labore. Dolorem recusandae natus hic voluptatibus vitae aperiam.\n\nPerferendis eveniet debitis commodi assumenda praesentium sequi. In veniam distinctio quam sapiente quo culpa laboriosam voluptate. Libero eos ullam accusantium delectus recusandae.\n\nDolorem hic aliquam amet modi. Minus at fuga dignissimos modi aperiam. Harum corporis quasi voluptates aut.\n\nDignissimos natus suscipit sint error sed velit. Aliquid minima deserunt vel ad ex deserunt. Velit ducimus expedita adipisci alias.	63.29	\N	2018-01-06 17:25:47.603799+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+713	Smith-Long	Sit nisi beatae ex dolore. Quod fugiat quam deleniti delectus. Inventore corporis delectus itaque cum modi aperiam.\n\nDucimus laudantium nam occaecati. Impedit perferendis saepe voluptas itaque officiis. Necessitatibus aut a culpa laborum repellat dolores. Totam quas quidem nobis odio.\n\nOfficiis necessitatibus mollitia odit velit tempore. Alias iusto fuga eveniet eos consequuntur fugiat. Eveniet necessitatibus cupiditate voluptatum deserunt perspiciatis corporis.\n\nExcepturi ab quidem non veniam. Blanditiis atque maiores earum expedita nihil nihil adipisci. Excepturi aliquid temporibus sint debitis repellendus.\n\nIpsa accusantium qui dolores harum distinctio. Tempora non sit tempore quidem accusantium necessitatibus. Dolores nemo explicabo ipsum voluptatum necessitatibus.	61.13	\N	2018-01-06 17:25:47.662289+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+714	Cooper-Lee	Voluptate at eum sint fugiat eos modi. Perspiciatis dolores dolores vel illo. Corrupti fugit corrupti voluptatibus quia in.\n\nDebitis ratione quo harum aspernatur. Debitis culpa sunt reprehenderit ut atque odit. Quod provident ex assumenda repudiandae voluptas iure veritatis. Corporis molestiae in quidem officia aperiam magni voluptate ipsam.\n\nIpsum sequi molestias minima. Commodi at veniam corrupti rerum. Numquam optio nisi corporis facilis molestias dolorum. Esse dignissimos incidunt dolores doloremque dolorum rerum mollitia.\n\nSed nesciunt repudiandae nam natus. Aliquid perspiciatis est similique dicta corporis. Perferendis cum ut tempore unde iste. Veniam aperiam rem ex soluta vel dolore eaque.\n\nNumquam veniam in nesciunt iusto aut. Accusantium rem molestias aliquid vel. Deserunt totam saepe molestiae eos mollitia doloribus. Eligendi hic asperiores itaque placeat reiciendis.	64.99	\N	2018-01-06 17:25:47.738964+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+715	Houston-Anderson	Nulla veritatis eaque maiores iure id enim. Rem perferendis itaque ex sunt itaque reiciendis dicta esse. Commodi voluptas dolores aut saepe consequatur doloremque asperiores. Corporis exercitationem cumque enim unde non aliquam beatae.\n\nModi voluptatibus cumque accusamus fugiat dolores. Aut autem dolor fuga rem molestiae. Voluptates vero earum harum facilis voluptas itaque. Similique commodi quidem nesciunt nesciunt odio sunt facilis. Quis sapiente sit explicabo sit omnis.\n\nVoluptas qui error nulla id eum. Aliquam vero modi atque vero praesentium quibusdam ipsam nam. Eligendi excepturi aliquid aperiam blanditiis ipsum. Odit beatae eum cumque quae debitis facere.\n\nLaboriosam doloribus ipsum aspernatur libero eius. Ducimus atque voluptatum officia rerum itaque. Et laudantium id animi corrupti aspernatur totam ab.\n\nPossimus quas nesciunt aperiam iure. Veniam labore repudiandae ipsum fuga aliquam necessitatibus sed. Officiis repellat voluptatem aliquid est facilis iure. Vero iure reprehenderit maiores quaerat in amet quas ipsa.	58.76	\N	2018-01-06 17:25:47.79902+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+716	Martinez-Ramirez	Eaque necessitatibus itaque reiciendis ea impedit. Impedit eos alias modi sapiente. Nisi temporibus enim voluptatem magni.\n\nSequi earum fuga rem aliquid modi. Ex aliquid dolorum rerum necessitatibus reiciendis accusamus. Est ad nisi doloremque possimus cum rem. Labore quia tempore possimus illum earum perferendis delectus.\n\nAlias facere voluptatibus eligendi magnam sit. Odio porro aperiam sit ab at nam voluptas.\n\nExercitationem deleniti dicta quis dolore veritatis ut eveniet. Doloremque mollitia natus id maxime a quia. Optio eaque magnam quam labore. Libero molestiae provident tenetur. Dignissimos accusantium quidem recusandae sapiente voluptatibus.\n\nCumque nemo modi ducimus ipsum quasi repellat sed. Dolorum ut impedit placeat maxime at blanditiis quidem. Sunt culpa voluptates incidunt ut quae doloremque nisi. Molestias ea porro culpa vitae amet error harum.	23.69	\N	2018-01-06 17:25:47.865602+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+717	Duran, Nelson and Kim	Hic enim cumque quas esse labore ad inventore. Repudiandae quasi aperiam deserunt similique libero dolor aliquam incidunt. Quos at facere hic sed praesentium ad.\n\nMollitia numquam incidunt recusandae dolor nesciunt. Labore praesentium deleniti incidunt ipsam.\n\nDolorum quam distinctio temporibus. Vero id quibusdam adipisci eum aliquid reprehenderit. Earum exercitationem nobis sed voluptatibus minus. Incidunt minus inventore illum tenetur corporis asperiores alias necessitatibus.\n\nPerferendis quam ipsam nam deleniti eaque commodi perspiciatis. Possimus quibusdam quis laboriosam cumque sequi animi minus itaque.\n\nHic deleniti sapiente tenetur delectus voluptate omnis. Mollitia officia facilis perspiciatis. Nobis mollitia alias cumque.	58.95	\N	2018-01-06 17:25:47.919672+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+718	Lopez and Sons	Cumque repellendus eius quas cupiditate. Nisi minima ratione ipsam saepe ut explicabo adipisci. Voluptatem omnis autem numquam eaque cum tempora expedita eius. Ut qui itaque amet culpa at corporis. Aliquid minima eos perspiciatis expedita ut.\n\nPorro ea ad magni repellendus. Beatae quidem eos ipsa consequatur dolorem repellat.\n\nReprehenderit sit harum modi inventore vitae minus labore. Quaerat aliquam perspiciatis a aliquid nisi corrupti rem dolores.\n\nTotam repellendus nisi neque dolorum necessitatibus error officiis. Asperiores minus minus inventore ab consectetur. Error quos consectetur deleniti enim libero a laudantium. Deleniti assumenda a repellat cupiditate corrupti impedit reiciendis molestias.\n\nQuos quisquam dolore veritatis et hic necessitatibus. Ut tenetur illum laudantium dolorum. Ullam doloremque accusamus non ex. Repellat occaecati optio itaque eveniet laudantium necessitatibus ex. Sunt praesentium tempora excepturi nobis quia optio.	51.92	\N	2018-01-06 17:25:47.961139+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+719	Ware, Williams and Mcdonald	Unde assumenda cumque sit aperiam omnis nostrum. Perferendis debitis nisi soluta saepe. Ea sed modi odit vitae facere ea unde consequatur.\n\nQuod ex voluptates accusantium facere nihil mollitia officia. Perspiciatis ipsum quo mollitia occaecati ducimus. Rerum sequi qui pariatur aliquid.\n\nNeque ut quas numquam. Distinctio suscipit ducimus numquam impedit voluptate.\n\nVoluptates aspernatur officiis nostrum consequatur quam. Commodi magnam maiores officia sapiente eaque. Sint voluptatibus odit ipsa quasi magni. Harum temporibus aliquam exercitationem eaque dolor perspiciatis sapiente.\n\nSuscipit magni ducimus aut omnis veniam tempore quibusdam. Soluta asperiores aut minima iusto. Cumque repellendus iure impedit nam animi. Culpa inventore earum adipisci accusantium.	30.49	\N	2018-01-06 17:25:48.011292+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+720	Blair, Sullivan and Stevens	Eaque eveniet consequuntur nostrum labore commodi repellendus. Aliquam nostrum nemo magni perferendis nobis facilis possimus doloribus. Libero ratione nostrum cupiditate ratione possimus itaque. Esse inventore laboriosam aspernatur harum nihil.\n\nSimilique animi voluptas exercitationem. Laboriosam mollitia corrupti neque fuga inventore veniam. Eius tempore porro magnam.\n\nInventore impedit soluta ea architecto error dicta sed. Magni veniam sequi facere maiores perspiciatis. Dolore dolorum ipsa fuga cum. Corrupti porro quos placeat vel rem voluptates.\n\nFuga dolorum inventore ipsa tempora minus consequatur. Libero explicabo doloremque quasi minima. Perferendis maiores deserunt tempore qui temporibus.\n\nIpsum consequatur voluptate quaerat porro ipsum. Tempora aliquid ratione commodi iure illo blanditiis facilis. Quidem nostrum sequi pariatur dolorem unde in.	76.24	\N	2018-01-06 17:25:48.057195+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+724	Huynh-Black	Accusantium ab a cupiditate voluptates incidunt harum reiciendis. Quae repellat ad ipsam quidem quibusdam necessitatibus molestias. Nostrum voluptatum reprehenderit deleniti omnis qui qui odit. Blanditiis facilis velit ipsum.\n\nVeniam quibusdam soluta sed quis. Saepe tempore asperiores voluptate eveniet. Tenetur dolores tempora voluptas nesciunt perferendis.\n\nAb amet atque ea molestias consequatur eius voluptate. Et in nam perspiciatis sunt aspernatur dolorum. Expedita exercitationem odit pariatur minus quo debitis. Voluptate eaque quo eveniet recusandae.\n\nFacilis porro soluta adipisci veritatis praesentium ipsa. Veritatis neque dolorum ipsam dolorem vero. Voluptatem temporibus eum pariatur voluptate saepe libero totam. Totam officiis doloremque nostrum accusamus dolorem laudantium soluta est.\n\nQui officia facilis dolore ad hic dolore debitis. Assumenda quam maxime saepe quisquam. Veritatis tempora quia veritatis cupiditate. Dolore minima cum enim.	93.30	\N	2018-01-06 17:34:16.996203+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+725	Edwards-Leblanc	Quasi vitae molestiae deleniti soluta. Quia maxime rem voluptates quaerat nulla incidunt unde ad. Sed perferendis velit totam quasi adipisci inventore consectetur. Eaque officiis saepe explicabo magni delectus. Laudantium beatae aperiam eius.\n\nAssumenda inventore molestiae exercitationem quo id. Ducimus mollitia voluptatem aperiam magni.\n\nNemo quia esse ex ducimus. Alias officiis ullam asperiores impedit. Quos labore sapiente quibusdam itaque dolore voluptatum.\n\nNam dolorem unde excepturi harum laboriosam quos quaerat. Hic laborum quisquam placeat doloremque id illo blanditiis. Dolore architecto nesciunt officiis natus sequi facere qui nisi.\n\nNulla dolore doloribus facere. Ducimus consequuntur doloribus quibusdam temporibus culpa nesciunt. Iste quas rerum quas possimus. Dolorem error atque fuga quam doloribus rerum.	8.99	\N	2018-01-06 17:34:17.043978+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+726	Mahoney, Hawkins and Long	Ab magni nam dolorum velit. Minus eaque soluta molestiae amet magnam. Molestias harum enim impedit doloribus consequuntur velit quibusdam. Voluptates alias inventore iure. Nam necessitatibus perferendis sapiente tenetur impedit est nesciunt.\n\nQuidem voluptate ex illum atque commodi possimus. Rem officiis aut eligendi quod. Blanditiis explicabo rerum corporis voluptate.\n\nLabore atque sit perspiciatis illum velit. Ipsam ipsa ab accusamus odit. Adipisci dolores porro explicabo est illum. Sapiente vitae eveniet eos.\n\nBlanditiis laudantium atque magnam. Hic fugiat sunt neque cumque. Nihil dolorum praesentium veniam debitis.\n\nMolestias necessitatibus sequi odio earum. Aperiam consectetur veniam incidunt. Voluptas at consequuntur dolores ab veniam expedita magni.	56.73	\N	2018-01-06 17:34:17.091876+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+727	Cook, White and Perez	Occaecati eos velit officiis officia. Quae voluptatibus ex consectetur vero ex totam. Odit minima omnis dicta voluptate.\n\nOptio officiis optio tenetur aliquid exercitationem labore magnam. Cum eligendi vel odit molestias excepturi consequuntur harum reiciendis. Nihil aperiam at numquam quis animi hic. Doloribus enim voluptate sit assumenda.\n\nVel similique necessitatibus nesciunt tenetur minus fuga harum veritatis. Ut consectetur tenetur esse hic recusandae alias ducimus repudiandae. Voluptatibus aspernatur totam quasi vero fugiat sunt. Accusantium quia quae nisi. Voluptate laborum eligendi error voluptatum voluptate voluptatem deleniti quos.\n\nDolorem magni natus asperiores explicabo ab. Temporibus quod sequi excepturi nobis velit enim facilis. Nemo ad quam facilis aperiam et sequi.\n\nDolorem ex ipsam voluptas impedit. Maxime dolore ducimus odit eos ad sed nemo. Alias cumque esse cumque non. Ipsum iure illo consectetur earum iusto.	3.40	\N	2018-01-06 17:34:17.138684+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+728	Melton-Torres	Vero dolorum dolores quo quisquam. Quisquam aperiam autem impedit tenetur. Numquam ea mollitia et perferendis.\n\nNihil impedit ex ratione blanditiis cumque repellendus numquam vitae. Optio corrupti odit tenetur ratione facilis. Maiores fugiat placeat velit commodi.\n\nOfficia enim ipsa eos blanditiis vero dolores. Rem iure maiores accusamus commodi. Debitis facilis rem aliquid sed.\n\nAutem doloremque officia praesentium dolores optio eos. Sed maxime est tempora tempora vitae explicabo explicabo libero.\n\nQuas enim cupiditate explicabo. Quibusdam laborum expedita ratione eligendi iure. Necessitatibus provident praesentium id. Dolor praesentium cum accusamus eum corporis adipisci ipsum. Quam ut incidunt eius deserunt voluptatem deserunt repellat.	1.37	\N	2018-01-06 17:34:17.214703+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+729	Mathews LLC	Pariatur reprehenderit vel voluptate distinctio. Corporis adipisci pariatur occaecati quasi vero. Quam animi consectetur reprehenderit neque omnis quia. Eius pariatur culpa id rerum.\n\nNemo esse nisi saepe quas. Dolorem rerum veritatis aliquid. Commodi amet accusamus harum quaerat iste. Nobis laudantium labore consectetur assumenda. Veritatis beatae eos sed reiciendis quas animi.\n\nQuia eaque accusantium distinctio dolor aut. Maiores excepturi rem eligendi fugiat labore debitis. Adipisci vero excepturi fugit nisi. Et blanditiis exercitationem alias inventore aperiam eius. Alias praesentium similique saepe quaerat quos quam facere.\n\nNihil magnam cum nihil exercitationem officiis magni consectetur. Nihil fuga doloribus corrupti dolor vitae aliquid. Minus suscipit ullam quaerat in aliquid eius fuga. Eius quis vero quasi.\n\nQuam sit placeat optio aliquam voluptatum cum. Quod minus quae aperiam dolorum ratione architecto aperiam commodi. Eligendi inventore aliquid esse fuga. Vel ipsa impedit doloremque mollitia. Accusantium exercitationem eum possimus natus.	7.10	\N	2018-01-06 17:34:17.30232+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+730	Bryant-Mclean	Neque atque vitae cum minus iste optio. Laboriosam dolor illo delectus doloremque iste. Voluptates deserunt fuga dicta est. Error quae sit temporibus ut sapiente sint ad.\n\nEnim enim dignissimos debitis quibusdam. Tenetur deleniti deleniti consequuntur ipsam officiis. Sit eos fugiat corporis possimus. Distinctio optio ullam maxime consequatur consequuntur voluptas incidunt recusandae.\n\nDignissimos consequuntur quam porro nemo. Libero consectetur eveniet cum voluptates repellendus impedit. Perferendis cumque quasi velit magnam minus.\n\nA laborum occaecati delectus non quam fugiat ratione. Tempore nesciunt cumque vero soluta et cum. Molestias dolorum esse consequuntur amet labore illum esse. Eaque natus minus dignissimos.\n\nVelit exercitationem temporibus ratione exercitationem. Minus impedit dicta id. Nihil nisi expedita id. Corrupti rem quaerat id atque cum nihil.	8.52	\N	2018-01-06 17:34:17.355846+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+731	Russell-Gonzales	Voluptates consectetur sunt temporibus veniam. Tempora voluptas facere dignissimos cupiditate nobis quibusdam. Eos temporibus nesciunt placeat enim voluptas. Atque nobis repudiandae molestiae aliquid esse.\n\nIllo impedit odit nisi maxime itaque. Eius voluptate officiis eius beatae. Placeat sapiente sapiente pariatur maiores iusto. Aliquid sint eaque a odio officiis voluptatum fugit.\n\nInventore laudantium ea dolorum sed cum. Quaerat saepe doloremque distinctio. Pariatur dolores quibusdam cum dolorem quia aut. Explicabo deserunt aperiam corporis earum autem expedita impedit in.\n\nConsequuntur voluptatum iste deserunt quo doloremque quas. Ipsum voluptatibus praesentium distinctio. Molestias similique ducimus possimus aliquid quibusdam quo corporis. Praesentium expedita porro cupiditate.\n\nNihil repellendus cum adipisci magni molestiae tempora. Velit delectus et cum illo quo. Aspernatur laborum impedit vero.	31.84	\N	2018-01-06 17:34:17.408599+00	2	"3"=>"6"	f	t
+732	Miller LLC	Recusandae aspernatur a optio. Sunt pariatur assumenda placeat. In cumque ipsam rerum optio hic eligendi itaque. Repudiandae quas voluptate maxime neque maiores.\n\nRepudiandae enim ipsum fuga quisquam laborum eaque dicta. Tenetur dolor blanditiis unde amet totam asperiores.\n\nA dolorem eum commodi magni ipsam ab quae. Delectus fugiat iusto tempora dignissimos pariatur tenetur odio. Atque molestiae unde doloremque alias voluptas quis magni. Consequuntur incidunt in numquam perspiciatis.\n\nAdipisci quod mollitia pariatur asperiores. Consequuntur sequi inventore blanditiis possimus nisi at. Minima nobis illo tempore occaecati ab culpa. Deleniti tempora fuga asperiores amet. Autem eveniet repellat mollitia necessitatibus illo repellat minus.\n\nAd aut commodi aspernatur laudantium. Similique quos voluptatem hic fuga.	8.39	\N	2018-01-06 17:34:17.44688+00	2	"3"=>"6"	f	t
+733	Wright, Santos and Harrison	Tempore porro dolor nobis adipisci officia. Quam suscipit alias consequuntur aliquam. Maxime corrupti quaerat provident totam cum labore.\n\nDeleniti illum modi vero aspernatur voluptatum neque natus. Doloribus facilis dolorem et nemo dicta aspernatur ab. Vel deserunt delectus tempora architecto. Quidem veritatis accusantium possimus.\n\nDoloribus ut qui illum. Voluptates accusantium nulla repellat assumenda aspernatur dolores omnis ducimus. Tempora sint mollitia officia omnis. Corporis possimus ducimus nemo optio sunt officia necessitatibus accusantium.\n\nConsequatur omnis animi repellendus assumenda sit similique. Excepturi amet eum fuga occaecati reprehenderit. Aut sapiente corrupti at quasi qui. Magni eaque deserunt adipisci doloremque incidunt.\n\nNumquam vero maiores temporibus. Ducimus ducimus distinctio quod. Doloremque modi ducimus nemo magni. Officiis distinctio tempora reprehenderit sequi atque architecto iste.	97.60	\N	2018-01-06 17:34:17.486441+00	2	"3"=>"6"	f	t
+734	Buck, Sanchez and Costa	Libero nisi tenetur alias harum ducimus necessitatibus deserunt porro. Sunt cumque voluptatibus a dolorum. Totam pariatur quod eaque quos minima. Vel ad quo cupiditate neque laboriosam.\n\nFugit possimus consequuntur aliquam blanditiis sit debitis. Natus perspiciatis reprehenderit magni dolorum enim natus ad dolore. Recusandae itaque dolore fuga quo.\n\nSequi eum iure molestiae. Officia pariatur eius facere. Doloremque magnam in commodi debitis enim dignissimos.\n\nDicta quisquam a debitis autem. Magni fuga cupiditate sunt quod excepturi. Illum neque cupiditate veniam blanditiis similique voluptates vitae. Cupiditate sint veniam sunt.\n\nPariatur suscipit sequi dolores est nostrum enim. Hic blanditiis alias sed culpa dolorem corporis mollitia explicabo. Praesentium placeat assumenda minus beatae. Ipsam officiis eius iste accusamus. Magnam deleniti hic voluptate eos temporibus aliquid nisi.	3.75	\N	2018-01-06 17:34:17.511147+00	2	"3"=>"6"	f	t
+735	Meza-Cook	Dolorum quas nemo molestiae architecto est. Nemo delectus aliquam alias. Ratione ratione explicabo sit illo debitis quasi. Repellat aperiam cumque voluptatum.\n\nOfficiis quam labore tempora porro magnam sapiente omnis. Necessitatibus voluptas facilis alias laboriosam. A quae accusamus vel.\n\nQuasi aperiam eveniet cupiditate. Voluptates maiores perspiciatis ducimus accusamus. Nesciunt suscipit saepe repellat.\n\nTenetur aspernatur rem rem saepe. Quidem nesciunt deleniti exercitationem tempore. Tenetur incidunt omnis accusamus facilis dolores adipisci.\n\nQuae excepturi nesciunt soluta cumque nobis itaque totam. Consequuntur repellendus officiis consequuntur ipsum atque quas qui veritatis. Dolorum illo rerum iusto doloribus dolor.	57.91	\N	2018-01-06 17:34:17.567347+00	2	"3"=>"6"	f	t
+736	Olson-Jones	Enim beatae officia ratione voluptatem minima rerum. Porro doloremque veniam quisquam expedita odit odio. Minus consectetur sunt tempora eveniet nostrum.\n\nPraesentium assumenda placeat vitae velit. Omnis eveniet eius enim dicta. Dicta maiores ad qui saepe. Voluptate ea vitae sint ipsa. Omnis libero dicta dolores eum repudiandae.\n\nPorro consequuntur officia repudiandae. Nulla fugiat odit sed commodi. Autem rerum ipsam dolorum eveniet.\n\nCum esse alias minus nisi recusandae tempora. Nisi repellendus veniam assumenda dignissimos dolorem libero doloribus aliquid.\n\nRepudiandae similique rerum cupiditate magni voluptates molestiae autem. Voluptates ducimus minima necessitatibus nobis sit fugiat nulla. Suscipit repellat nisi reprehenderit.	19.11	\N	2018-01-06 17:34:17.604571+00	2	"3"=>"6"	f	t
+737	Williams Ltd	Harum facere sint esse aliquid maiores dolores. Sit veniam officia optio neque. Magnam quo veniam porro voluptates necessitatibus.\n\nNesciunt vitae eos quasi voluptatibus explicabo. Natus tempore excepturi repellendus eum nobis repellendus autem. Facilis commodi vero provident neque. Asperiores labore praesentium soluta dolorem temporibus a dignissimos. Adipisci molestiae illum reiciendis nemo consequatur.\n\nLabore soluta consectetur ipsam necessitatibus. Sed et amet facilis quidem cumque velit.\n\nEx perspiciatis ab totam eveniet asperiores possimus odio. Accusamus quis nulla quidem ipsam doloribus in in. Culpa delectus ea iusto nam optio fuga aperiam perferendis. Aut eligendi iste aspernatur doloremque esse voluptates.\n\nUllam provident perspiciatis pariatur fugit commodi eum sequi. Beatae ab libero at incidunt. Esse dicta quae perferendis ducimus. Aut aut occaecati quibusdam amet a odit magnam.	24.89	\N	2018-01-06 17:34:17.651598+00	2	"3"=>"6"	f	t
+738	Jackson, Shaw and Smith	Beatae voluptates ea ut. Ab fugit eos sapiente saepe consequatur. Illum dolores voluptas ipsam at itaque optio iste fugit. Eum ipsum vero iure laboriosam fugit.\n\nExcepturi odit amet exercitationem iure officiis. Ut voluptate ratione cumque facilis eos reiciendis veniam. Ratione voluptate quidem eum ipsam provident harum omnis.\n\nVeniam possimus accusamus dolorem autem natus nesciunt ratione. Dolore architecto ut dicta enim dolorem maiores a. Praesentium deserunt sequi necessitatibus incidunt officiis aliquam voluptates iste. Nihil commodi molestiae commodi quae.\n\nNobis labore iste accusamus quo ullam. Iure quas eius temporibus quae quis facilis. Ipsam possimus dolorem recusandae. Hic tempora iste dolore consectetur impedit aut saepe.\n\nMaiores molestias libero non earum atque facere. Iusto reiciendis ea tempora voluptas at. Sit ducimus quia quasi commodi culpa totam. Accusamus sapiente laborum deserunt adipisci ratione.	53.61	\N	2018-01-06 17:34:17.705483+00	2	"3"=>"6"	f	t
+739	Green, Adams and Donaldson	Voluptatibus veritatis dolorum mollitia voluptatum voluptatibus nihil eos doloribus. Atque soluta possimus hic at minima ipsa aperiam. Suscipit dolorum necessitatibus fuga illum. Exercitationem officiis recusandae facere reiciendis vero. Enim dolorem tempore assumenda molestiae cumque aspernatur perferendis quod.\n\nAtque hic dolore quae dignissimos dolores eos sequi. Esse dolore et molestiae. Architecto excepturi id eius et. Molestiae id et ut maiores assumenda corporis.\n\nId adipisci sunt commodi. Ad culpa quaerat repudiandae animi est pariatur deserunt. Ducimus amet iusto incidunt incidunt.\n\nOdio at nisi molestias similique iure facere repellat in. Laudantium recusandae saepe vitae alias consequuntur veniam cumque. Excepturi sunt ipsum neque blanditiis et amet.\n\nVoluptatibus quisquam consequatur nihil vitae. Alias non expedita nesciunt aut.	23.14	\N	2018-01-06 17:34:17.728412+00	2	"3"=>"6"	f	t
+740	Smith Inc	Aut inventore dolores maiores perspiciatis alias nihil. Ex eius impedit in dolore molestias incidunt nobis. Ullam quibusdam cum ut voluptatibus.\n\nIpsam tenetur vel non corporis incidunt incidunt ullam. Id ipsam perferendis fuga a. Laudantium id eveniet suscipit eaque iste autem quidem. Tempore laudantium recusandae sequi laborum quis ratione. Id ad sit rerum aut voluptatum.\n\nDolores magnam nemo eaque optio cumque quasi. Porro sint deleniti magni illo debitis. Saepe asperiores et recusandae occaecati architecto ipsum.\n\nEos iste quidem tempore suscipit explicabo corrupti ea repellat. Minima itaque facilis dolorum unde quibusdam. Omnis eius doloremque nulla asperiores beatae quibusdam perferendis.\n\nNatus aut inventore laboriosam vitae. Veritatis quibusdam inventore ad occaecati ullam tempore cumque. Tempora laborum laudantium vitae impedit. Est libero eligendi iusto voluptate cupiditate non.	1.15	\N	2018-01-06 17:34:17.749638+00	2	"3"=>"6"	f	t
+741	Kelly-Collins	Praesentium asperiores fugiat assumenda. Veniam molestiae minima illum quos nesciunt nobis. Voluptatem dicta nesciunt numquam eum eum.\n\nAsperiores asperiores repellat natus officia iste earum eaque. Labore a dolores aspernatur ea occaecati sint culpa veritatis. Beatae asperiores commodi repellendus aliquid nulla debitis magni facilis. Voluptatum amet earum iusto sit repudiandae rerum.\n\nIure tenetur ea nisi eius quia adipisci. Ab voluptatibus nemo fugit ea beatae adipisci. Corporis officiis sunt sed natus nihil sapiente.\n\nNisi molestiae exercitationem exercitationem. Expedita inventore ad repellat sit quos.\n\nRepellat blanditiis ipsam possimus iste perspiciatis vitae nostrum. Veniam aperiam fuga laborum mollitia eos veritatis ullam maiores. Beatae cumque aut id distinctio eos delectus. Eos accusamus ea ipsa dolorum dicta.	8.21	\N	2018-01-06 17:34:17.77554+00	3	"3"=>"6", "5"=>"13"	f	t
+742	Houston, Juarez and Jones	Dolorem dicta optio blanditiis quis veniam. Facere rerum quidem iusto fugiat. Aut sed id sapiente necessitatibus. Beatae velit minus molestias placeat.\n\nTempore reprehenderit perspiciatis ratione enim eveniet. Repellendus doloremque exercitationem autem alias quis.\n\nSuscipit dolorem harum possimus. Illo autem provident voluptatum accusamus quibusdam dolore. Sequi asperiores nostrum doloremque voluptate eius excepturi eligendi totam. Nemo similique amet cupiditate placeat magni nulla dicta reiciendis.\n\nMagni ipsum deleniti qui ea nihil. Repellendus eveniet vitae repellat ex fugit eveniet commodi.\n\nQuis veritatis perspiciatis sapiente provident dolorem. Repudiandae labore voluptatibus error ratione nobis quae.	86.43	\N	2018-01-06 17:34:17.829547+00	3	"3"=>"6", "5"=>"13"	f	t
+748	Curry-Davis	Error nostrum occaecati minus quas. Facere tenetur voluptates reprehenderit tenetur repudiandae. Quae inventore non facere hic repellat nesciunt. Voluptatibus aspernatur ad totam nobis.\n\nNecessitatibus occaecati iure totam a molestiae nobis dolor. Inventore culpa exercitationem voluptatum cupiditate. Accusamus sed repellendus officia incidunt tempora.\n\nDebitis porro occaecati impedit impedit. Commodi esse perferendis sint placeat eos vel. Alias voluptatum eum rerum. Veritatis repudiandae beatae harum nam.\n\nEos sed minima illum consequuntur quidem. Voluptatem facere id dignissimos magni. Quaerat nam enim ea dignissimos nemo ab. Dicta magni ducimus modi adipisci nulla asperiores.\n\nExcepturi libero similique deserunt iure voluptas quam aspernatur. Maxime laboriosam error ad itaque minus quasi. Veniam temporibus libero voluptates esse dignissimos voluptatem minima.	81.70	\N	2018-01-06 17:34:18.157699+00	3	"3"=>"6", "5"=>"13"	f	t
+743	Perry-Parker	Dolores asperiores quos quasi. Amet quia accusantium aspernatur earum explicabo. Ipsa quis atque consequatur natus non. Modi laborum vero pariatur aperiam ipsam itaque a. Dolorum similique eligendi error dignissimos doloremque blanditiis cumque.\n\nReiciendis totam optio dolores asperiores culpa voluptatum ab. Maiores distinctio nesciunt ab doloribus deleniti officia consequatur. Tempora veniam eaque dolore impedit aspernatur eveniet possimus. Mollitia aspernatur dolorum molestias natus.\n\nDignissimos velit dignissimos quis quod. Animi distinctio voluptas sint dolore occaecati. Id illo ex sapiente ullam dolorum. Ipsam ullam quam iusto voluptas molestias. Fugit labore cumque quisquam architecto repudiandae mollitia.\n\nTenetur velit eveniet laudantium quo hic. Debitis tempora quis deserunt est debitis eum. A laboriosam illum dicta voluptas voluptates ut. Nisi voluptas quam in debitis.\n\nOmnis quos delectus laboriosam fugit corrupti. Dicta minus alias aspernatur voluptatem. Numquam sit est temporibus recusandae unde maxime quaerat. Numquam necessitatibus voluptatibus ipsam doloremque reprehenderit expedita illum.	23.84	\N	2018-01-06 17:34:17.871198+00	3	"3"=>"6", "5"=>"13"	f	t
+744	Jackson LLC	Maxime saepe ut culpa illo. Sed sequi minima amet corporis mollitia. Fuga iste aut consectetur tempore.\n\nIllum laboriosam reiciendis blanditiis doloribus assumenda. Eligendi amet dolore perferendis voluptas alias temporibus reiciendis. Ad voluptatem molestiae doloribus.\n\nAlias magni perspiciatis excepturi incidunt. Itaque molestiae recusandae officia. Alias illo adipisci odit ipsam explicabo enim tenetur.\n\nFugiat itaque architecto alias voluptates maxime quam consequuntur. Ab nostrum fugit explicabo ipsa. Sit asperiores blanditiis ea repudiandae consectetur nisi quos. Fugiat maiores a accusamus in occaecati.\n\nA at ut quia rerum porro. Debitis in eligendi voluptates. Maiores voluptas maiores architecto blanditiis laboriosam.	75.99	\N	2018-01-06 17:34:17.947786+00	3	"3"=>"6", "5"=>"14"	f	t
+745	Cox and Sons	Magni excepturi pariatur odio molestiae qui quasi modi ipsum. Aut expedita ad nihil maxime totam. Vel assumenda quis magni nesciunt. Culpa consequuntur rem commodi modi rem dolores. Inventore vero quam doloremque nostrum quasi.\n\nUllam maxime voluptatum officia debitis occaecati. Delectus odio natus enim eos vero ducimus. Vel explicabo praesentium ullam laudantium deleniti error. Officia officia amet dolores quidem recusandae modi.\n\nVoluptatibus nam quasi ipsum debitis sunt architecto unde. Architecto error asperiores similique iste. Consequatur quas debitis non eos. Nesciunt consequuntur libero ratione laborum.\n\nOfficia quibusdam consequuntur quis id accusamus. Autem aut nihil ut animi voluptatem sint. Labore assumenda vero quibusdam earum deleniti. Minus dolore quos quia iure excepturi sed.\n\nAdipisci adipisci facere laudantium explicabo dolore maxime. Tenetur at facere quo molestiae repellat repellat consectetur. Impedit ad maxime hic voluptatibus. Alias nesciunt reprehenderit temporibus commodi nisi facere corporis. Itaque quidem culpa non minima.	33.57	\N	2018-01-06 17:34:18.003349+00	3	"3"=>"6", "5"=>"13"	f	t
+746	Brown and Sons	Amet unde magni excepturi explicabo laborum. Necessitatibus recusandae dolorem ab eveniet suscipit.\n\nReprehenderit asperiores laborum fuga delectus dolores dolores dicta. Est doloremque sint labore aspernatur error corrupti. Aliquid reiciendis ullam quibusdam porro corrupti dolorem ipsum.\n\nIllo illum placeat occaecati id. Odio dolorem nam dignissimos magnam cum cumque numquam. Amet ipsam veniam quasi.\n\nAb eveniet eius alias architecto error minima reiciendis. Similique saepe nostrum unde corporis. Nisi tenetur doloribus vitae voluptate. Voluptate quis enim blanditiis sapiente veniam doloremque cumque quas.\n\nQuasi consequatur corporis est exercitationem porro error voluptate. Odio laudantium commodi autem deserunt. Nam ipsum ea aspernatur. Delectus quas placeat nemo laudantium ullam corporis at.	20.98	\N	2018-01-06 17:34:18.04866+00	3	"3"=>"6", "5"=>"14"	f	t
+747	Wright, Murphy and Klein	Corporis placeat quae minus fugiat. Necessitatibus asperiores magnam expedita suscipit reprehenderit. Repellendus ducimus ea nulla quibusdam sequi optio voluptas illum.\n\nMaxime vero magni molestiae assumenda beatae eligendi accusamus. Dicta doloremque nisi perferendis quos aliquid. Qui ad fugit consequuntur ratione. Amet quisquam nemo amet quidem numquam adipisci facere at.\n\nPerspiciatis velit laudantium velit consequatur. Autem suscipit consequatur aspernatur quas voluptatum tempore. Accusantium commodi blanditiis laudantium pariatur repudiandae quo.\n\nMagnam dolorum sequi dolor explicabo aliquam. Doloremque possimus magni placeat harum modi magnam temporibus. Ipsa incidunt eveniet aut necessitatibus. Asperiores deleniti commodi minus dolore in. Perspiciatis adipisci iste beatae.\n\nRepellat tenetur laudantium culpa tenetur eos. Exercitationem tempora quis voluptas facere debitis voluptatem molestias. Repudiandae voluptate beatae amet mollitia praesentium est fuga.	12.81	\N	2018-01-06 17:34:18.111144+00	3	"3"=>"6", "5"=>"13"	f	t
+749	Le, Oneill and Carlson	Omnis quasi quis modi alias itaque dolores similique. Unde natus itaque maxime ipsa voluptate. Impedit iure a possimus iusto cupiditate nisi. Harum laudantium magni distinctio sed sequi voluptates.\n\nQuo corrupti accusantium cum reprehenderit rerum incidunt iure. A eum animi explicabo est. In ipsam nobis dolorum laborum possimus recusandae tenetur. Fugiat tempore voluptas saepe perspiciatis reiciendis.\n\nRatione assumenda numquam adipisci. Fuga optio ipsam nostrum recusandae quo. At doloribus nihil pariatur reiciendis similique officia cupiditate. Dicta aperiam officiis soluta maiores deleniti soluta ducimus.\n\nDistinctio ducimus sint repellat deleniti quidem cumque dignissimos. Iste modi culpa odit inventore soluta repellendus laborum. Corrupti placeat magni quos corrupti quod quisquam porro. Nesciunt sequi reprehenderit deleniti aliquid molestiae laboriosam.\n\nAmet totam distinctio expedita repudiandae harum. Nam consequuntur dicta voluptatem velit perspiciatis. Deserunt laudantium numquam hic. Ad aperiam itaque perferendis necessitatibus mollitia commodi recusandae.	51.55	\N	2018-01-06 17:34:18.245417+00	3	"3"=>"6", "5"=>"13"	f	t
+750	Wright-Crawford	Aliquid error sint perspiciatis vitae ea. Asperiores quis exercitationem dolore porro nemo. Dignissimos voluptatem repellendus commodi sint.\n\nEsse inventore ab quam tenetur quisquam ab soluta aliquam. Excepturi doloremque excepturi a illum. Quae libero est omnis ducimus sint ullam.\n\nEligendi non facere cum adipisci quis quo. Rerum quaerat deserunt esse sunt a unde laudantium. Rem alias aperiam iure eos nihil omnis tenetur dicta. At nihil consequuntur repellat.\n\nCorrupti ad molestiae laudantium. Fugiat labore iste ad nostrum at aperiam. Hic harum quas incidunt molestiae quisquam ea. Culpa libero aut ex ipsam pariatur cumque.\n\nDucimus provident hic ad eaque aliquid adipisci. Laborum reiciendis expedita voluptas corporis optio. Saepe illo voluptatem eveniet ducimus dolor deleniti harum.	81.57	\N	2018-01-06 17:34:18.294514+00	3	"3"=>"6", "5"=>"14"	f	t
+751	Black, Herring and Rojas	Facere delectus dolor assumenda corrupti consequatur asperiores. Cumque numquam quos atque possimus corrupti. Molestiae sed accusantium sit cum tempore. Natus placeat et nisi laudantium odit minus ut.\n\nFugiat dolore mollitia quasi aliquam fugiat. Architecto expedita dolorum temporibus culpa veniam. Accusantium consectetur nulla praesentium similique. Necessitatibus omnis voluptatem aliquam aliquam accusantium recusandae.\n\nCupiditate commodi voluptatibus magni vero. Doloribus commodi ea sed voluptatem. Voluptate ab vero alias illo porro.\n\nIllo voluptatibus iure alias fugiat consequatur. Aliquam ratione reprehenderit architecto. Excepturi quaerat laboriosam quibusdam nulla dolorum commodi. Quam voluptate quisquam quod.\n\nVel nihil illo sed cum non. Voluptatem ab sint ipsa quisquam officiis voluptatem voluptatum. Ipsam quod deleniti dolorem enim laborum. Velit hic doloremque officiis incidunt. Neque quasi ducimus ipsum expedita beatae.	62.84	\N	2018-01-06 17:34:18.343905+00	4	"3"=>"6", "7"=>"20"	f	t
+752	Lopez Group	Voluptatum dolores ratione ipsum nemo minus cumque autem ipsa. Tenetur cupiditate quos iste numquam maiores saepe. Possimus quo perferendis impedit unde ipsa qui. Aliquid dolorum illo minus soluta.\n\nNesciunt enim iusto minus fugiat sapiente quibusdam. Magni molestias inventore voluptatibus. Nobis consectetur explicabo omnis laudantium cupiditate voluptas alias. Quas eligendi optio provident excepturi.\n\nDebitis quo eveniet magni autem eos ad unde. Impedit dolores iure error porro neque eveniet at. Adipisci rem dolore nihil debitis repellendus saepe sit.\n\nPerferendis possimus nulla nihil beatae provident expedita ad. Quae id facere reiciendis quidem dicta molestiae optio mollitia. Minima laborum voluptatum ipsum consectetur quas magnam ratione.\n\nIncidunt in officiis deleniti quasi repellendus corrupti. Vel sed asperiores sint perferendis eum iste provident vel. Laudantium repellat fugiat quos consectetur voluptates. Soluta doloribus ipsa ducimus ea quod ad qui.	50.31	\N	2018-01-06 17:34:18.393746+00	4	"3"=>"6", "7"=>"20"	f	t
+753	Clark-Hamilton	Cumque deserunt dignissimos eius suscipit libero. Consectetur sit sunt repellendus unde possimus voluptatibus laborum. Qui architecto odio est asperiores voluptates neque reprehenderit. Doloremque rem nisi quam aliquam laudantium placeat.\n\nFacilis nam et praesentium ut architecto libero odit. Blanditiis repudiandae eveniet dolores quia. Odit consectetur ipsam dolore rem.\n\nPorro et deserunt laborum unde. Accusamus corporis exercitationem et modi inventore.\n\nPraesentium vitae molestiae est maiores aspernatur repudiandae. Amet itaque inventore libero fugiat quam totam accusamus. Totam reiciendis voluptatem dignissimos consectetur blanditiis. Dolor corrupti culpa molestias assumenda amet.\n\nNecessitatibus nobis minima iusto pariatur autem. Aperiam labore corrupti aliquid dolores rerum. Voluptate alias itaque id a eos.	69.44	\N	2018-01-06 17:34:18.451512+00	4	"3"=>"6", "7"=>"19"	f	t
+754	Chambers, Ferrell and Reese	Alias est blanditiis aperiam id. Ut cumque ut placeat excepturi. Sequi consequuntur molestiae vel inventore. Consectetur tempora nobis architecto.\n\nAliquam quisquam culpa quo in dolorem architecto. Fugit alias hic vero cumque quos deserunt. Quisquam sequi eos nesciunt dolorem non corporis cumque. Illum consequatur temporibus magnam neque consequatur.\n\nNeque nulla omnis maiores deserunt. Quibusdam animi ab atque tempore. Explicabo iusto deserunt deserunt enim.\n\nDicta vitae ad atque. Temporibus vero consectetur asperiores cumque ipsam. Sed est qui voluptates.\n\nSed sequi libero sequi quos. Facere eaque dignissimos amet porro. Libero quo atque iure quasi deserunt quis. Sapiente sapiente veniam asperiores explicabo pariatur.	33.69	\N	2018-01-06 17:34:18.501169+00	4	"3"=>"6", "7"=>"20"	f	t
+755	Rivera, Johnson and Lyons	Mollitia aspernatur excepturi eius odio harum quis. Aspernatur maiores delectus repellat voluptas similique. Labore quod illo earum quibusdam quibusdam commodi.\n\nVitae sint voluptatem consectetur sunt ab iste. Enim soluta quisquam dolor veritatis quas culpa quibusdam.\n\nLabore sapiente dolorem facilis at aperiam pariatur. Maiores corporis modi delectus placeat. Ipsum distinctio doloremque molestias beatae pariatur quibusdam. Quidem impedit architecto nulla ratione animi.\n\nIpsam minima ex possimus molestias pariatur eum iusto. Quisquam amet tenetur ipsa blanditiis. Animi quae dolor quo sapiente quam.\n\nA dolorem perspiciatis repellat quasi. Recusandae voluptatibus quibusdam nulla molestiae. Doloribus distinctio molestiae esse ad assumenda.	17.50	\N	2018-01-06 17:34:18.548318+00	4	"3"=>"6", "7"=>"19"	f	t
+757	Shaw, Phillips and Hutchinson	Ipsam repudiandae facilis sequi consectetur enim eligendi. Quibusdam nobis iure excepturi numquam ullam facilis. Tempora autem hic quibusdam doloribus ipsa culpa facere. Earum cumque fugiat nulla quos voluptatibus modi eum.\n\nQuam sit maxime ad molestias ab. Dolor ullam reprehenderit maxime est. Sapiente explicabo pariatur cumque nihil quae cupiditate aperiam. Accusamus hic vel aliquam alias fugiat impedit debitis vitae.\n\nNon eius cupiditate alias error impedit tempore sapiente. Libero temporibus sequi quae sequi quo ad sit. Rerum quae voluptatibus dicta sit. Ab error autem deleniti eaque nam.\n\nSequi similique quis cupiditate maiores enim ratione. Dignissimos sunt soluta iusto nesciunt assumenda qui beatae veritatis. Recusandae aperiam ducimus a temporibus culpa.\n\nVoluptatum eum illum quod asperiores molestiae odio atque. Debitis id incidunt earum iure id maxime quae voluptatum. Tempore perspiciatis deleniti atque provident perferendis sapiente maiores commodi.	41.83	\N	2018-01-06 17:34:18.655438+00	4	"3"=>"6", "7"=>"20"	f	t
+758	Mcmillan-Cantu	Autem non maxime vel explicabo recusandae exercitationem nobis. Nostrum perferendis velit quia beatae. Vitae aperiam ducimus odit non veniam necessitatibus debitis.\n\nModi omnis rem corrupti aperiam assumenda. Numquam iusto sint deleniti mollitia dignissimos. Cum eum nihil vero vel. Autem deleniti impedit non maxime earum. Nesciunt ut alias repellendus beatae quibusdam adipisci.\n\nIste unde possimus autem distinctio. Exercitationem quam officiis voluptas aut ipsam consectetur odio possimus. Veritatis ipsa est error qui atque.\n\nLaboriosam totam velit consequatur ipsum cupiditate harum pariatur. Perspiciatis nesciunt deleniti architecto quibusdam nulla vel. Assumenda reiciendis itaque modi sapiente blanditiis harum.\n\nEaque iure quidem deleniti quo enim perspiciatis quia. Eveniet sequi aspernatur minima dignissimos quidem dolores hic ipsam. Itaque blanditiis voluptate deleniti amet. Laborum quaerat cupiditate iusto.	64.87	\N	2018-01-06 17:34:18.702087+00	4	"3"=>"6", "7"=>"19"	f	t
+759	Munoz Group	Enim explicabo molestias repellat architecto enim eaque asperiores. Incidunt distinctio doloremque itaque nihil nostrum aliquid accusamus.\n\nOccaecati maiores veritatis beatae dicta. Nobis nulla nulla voluptas repudiandae. Molestias non deserunt earum dolore doloremque. Cumque illo dolore beatae deleniti dolor eligendi neque. Atque pariatur illo provident eligendi sint.\n\nMolestias enim odit fuga ad voluptates. Ratione omnis incidunt ex itaque quos. Temporibus doloremque similique quibusdam nemo sit. Minus ullam ab necessitatibus asperiores consequuntur recusandae.\n\nVelit sint hic error nobis dolor. Adipisci rerum cupiditate similique porro aspernatur dolore laboriosam impedit.\n\nEligendi dignissimos dolores quo assumenda tempore vel. Odio iure tempore architecto molestias sapiente. Consequuntur et consequuntur amet similique neque perspiciatis.	79.52	\N	2018-01-06 17:34:18.745659+00	4	"3"=>"6", "7"=>"20"	f	t
+760	Cisneros, Cox and Sanchez	Neque eius iste voluptate fuga. Quibusdam ullam atque error quos esse. Numquam cumque nostrum voluptatum nisi quas assumenda in.\n\nQuo ducimus molestiae ducimus at deserunt expedita. Voluptatibus voluptas provident delectus sit atque odit. Repudiandae eius iusto magnam saepe nostrum ullam nemo. Quidem enim magni occaecati.\n\nDoloremque possimus fugiat quia veniam nihil. Vero eius a sunt aperiam. Culpa cum consequatur facere tenetur minus. Nemo dignissimos aut reprehenderit doloribus eveniet.\n\nSit architecto magnam ipsa possimus officia quam. Ex odio magnam provident delectus asperiores sapiente quis. Repudiandae magni totam cum cum. Beatae repellendus consequuntur nemo saepe laboriosam nihil veritatis.\n\nUt aperiam excepturi deserunt velit ratione. Eaque dolore eum consequatur facilis. Itaque fugiat nemo sunt iste pariatur.	16.91	\N	2018-01-06 17:34:18.788681+00	4	"3"=>"6", "7"=>"20"	f	t
+761	White Group	Nemo perferendis doloribus quae modi. Officiis ipsam consequuntur fuga id nostrum deleniti ea. Sed at veritatis officia consequatur pariatur.\n\nSit quos architecto ullam maiores. Officiis error quia fugiat excepturi incidunt aliquam qui. Ea consequuntur itaque tenetur ipsam illo perspiciatis. Aperiam rem reprehenderit repellendus quos.\n\nProvident praesentium incidunt molestias ut sit. Iste amet itaque eligendi voluptates. Quisquam tempore occaecati ut deleniti eos. Inventore nobis dicta fuga magnam.\n\nSequi suscipit nobis vitae beatae cupiditate nihil. Nostrum voluptatibus excepturi corporis hic earum. Illum at provident illo odit hic.\n\nCumque repudiandae nesciunt rerum. Modi dolor sint pariatur perferendis quo recusandae. Quam maxime ipsam unde occaecati numquam.	8.60	\N	2018-01-06 17:34:18.832747+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+762	Johnson, Rodriguez and Brown	Culpa nihil cum quas quos laborum delectus animi. Excepturi ratione adipisci blanditiis at ab et fuga odit. Possimus velit laborum esse corrupti.\n\nFugit ab doloremque id itaque in vero delectus. Voluptatum quae ratione fugiat laboriosam nostrum vel.\n\nTenetur saepe facilis ab quaerat praesentium necessitatibus quas. Dolorum laudantium repellendus impedit ullam assumenda architecto iure.\n\nInventore cum facilis neque harum explicabo. Optio autem quibusdam veritatis iure omnis quidem modi quaerat. Fugit reprehenderit ipsa tempore. Voluptatem nostrum illum dicta ipsa adipisci quisquam.\n\nQui odio id at ab ea dicta quis. Excepturi nihil quis totam doloribus exercitationem eius. Doloremque ad asperiores incidunt quisquam necessitatibus. Fugiat molestiae porro exercitationem.	23.93	\N	2018-01-06 17:34:18.877844+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+763	Bell, Watson and Steele	Officiis perspiciatis omnis cum omnis. Natus est labore amet recusandae. Et maxime harum iure rem quaerat aperiam debitis. Sunt illum temporibus qui repudiandae voluptate temporibus repellat quibusdam. Rem cumque laboriosam voluptas cum suscipit voluptatum.\n\nRem fuga ab odio adipisci consequatur. A pariatur inventore rerum fugiat. Nesciunt veniam aspernatur blanditiis fugit.\n\nInventore aliquid laborum tenetur. Alias quaerat vel optio accusamus illum qui.\n\nReprehenderit molestiae nesciunt porro exercitationem. Modi rem libero illum laudantium ipsam perferendis dolore. Hic animi dolorum maiores eligendi. Minima eligendi dolorem ullam nam ratione eligendi molestiae distinctio.\n\nArchitecto fugiat ipsum eligendi assumenda. Quisquam dolorum eum ipsa voluptates perferendis repellat temporibus.	75.80	\N	2018-01-06 17:34:18.914894+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+764	Chavez, Wyatt and Jackson	Sunt officiis voluptatum placeat veritatis in inventore consequuntur. Distinctio nostrum placeat aspernatur quisquam eius provident id veniam. Voluptatibus laboriosam vero placeat sapiente nisi. Doloremque neque quisquam totam pariatur aliquid maxime totam aliquam.\n\nTenetur officia excepturi quae. At reprehenderit voluptatem debitis nobis adipisci quo. Et nemo modi vitae amet doloribus quod. Sapiente ut veritatis voluptatem delectus alias commodi sunt similique. Labore dignissimos doloremque accusamus necessitatibus dolore ullam.\n\nNisi culpa veritatis dolores eaque voluptatum suscipit. Quae sed odit dignissimos voluptate a. Delectus explicabo laudantium nostrum aut vero porro. Autem sunt quia eaque pariatur doloribus.\n\nEst soluta nisi provident aperiam autem quam expedita. Est voluptate voluptas optio. Occaecati voluptas tempora accusantium assumenda provident facere dignissimos temporibus.\n\nIllum placeat mollitia accusamus quia odit laudantium. Minus pariatur tempora saepe dignissimos harum nesciunt. Quasi nesciunt porro dolorum necessitatibus facere ea. Enim voluptatibus asperiores culpa quidem.	10.22	\N	2018-01-06 17:34:18.957078+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+765	Hill, Contreras and Rodriguez	Non sapiente consectetur rerum corporis eum. Libero optio eos unde minima. Aspernatur praesentium consectetur quam aspernatur voluptates.\n\nRepudiandae non explicabo consequuntur numquam eos laudantium. Similique laudantium voluptates atque delectus accusamus aperiam fugiat. Unde eveniet necessitatibus ipsa iste officia.\n\nSuscipit fugiat possimus dolorem doloremque totam placeat labore. Beatae eaque soluta at. Repellat iusto architecto tenetur voluptatibus beatae molestias nostrum. Explicabo eveniet tempore quidem quam explicabo minus.\n\nAut molestias doloremque ipsum. Beatae nesciunt vel minima. Officiis error temporibus fuga fugit sed.\n\nVeniam delectus debitis excepturi ea reprehenderit. At velit quae officiis aperiam blanditiis saepe. Est eveniet et deleniti dolorem quasi perspiciatis.	88.14	\N	2018-01-06 17:34:18.986206+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+766	Mcdowell-Nunez	Provident doloribus necessitatibus nobis illo veritatis atque quos. Nisi iure animi iure numquam repudiandae laboriosam. Quae debitis sapiente aliquid nisi vitae tempore.\n\nNostrum a ratione ducimus facilis earum ea porro velit. Iusto facere nulla esse quasi earum nihil facere occaecati. Inventore nemo autem iste asperiores corrupti eum occaecati.\n\nDeserunt molestiae praesentium cumque culpa sint. Magnam voluptatibus cumque ipsa magni facere. Quos eius architecto distinctio ipsa quos.\n\nNatus dolor hic praesentium autem delectus ea officiis. Corporis atque veritatis dolore tempora quae officia perferendis. Voluptatum provident neque ea aliquid possimus accusantium. Laborum facere voluptatibus facilis et reprehenderit qui qui. Asperiores sapiente fugit dolorem perspiciatis maiores.\n\nQuisquam ad exercitationem veritatis nulla accusantium pariatur accusantium sed. Praesentium nostrum perspiciatis ea. Earum placeat possimus natus corporis ducimus. Facere temporibus sit iusto incidunt.	90.16	\N	2018-01-06 17:34:19.033475+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+767	Thomas PLC	Placeat voluptate beatae qui dolorum dicta eos. Sunt in nesciunt nam cum dicta cupiditate. Ipsum quasi iste nobis voluptatibus ad nulla blanditiis. Et quidem nihil explicabo provident et.\n\nNemo nobis repellendus ex sed asperiores culpa. Neque vitae porro nemo earum aspernatur ex. Ab sequi quibusdam suscipit provident. Ex sapiente officia maiores nisi adipisci amet.\n\nDucimus ipsum quaerat itaque id facere molestiae suscipit. Quaerat ea nesciunt maiores dicta. Dolores repellat at magnam nam dolor ab placeat. Officiis asperiores voluptatem magnam nemo nihil.\n\nOmnis eos consectetur totam culpa ducimus. Assumenda officia fuga ducimus tempora magnam ipsam. Praesentium doloribus voluptatem alias minima vero dolor non nesciunt.\n\nReprehenderit soluta nulla dolorem fugit et animi. Nulla repellat minus voluptatem nobis voluptate. Ad nobis laborum praesentium in nisi fugiat sint. Harum aperiam cupiditate at neque iure.	88.26	\N	2018-01-06 17:34:19.080898+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+768	Silva, Stark and Daniels	Maiores sint hic nobis aperiam. Minima magnam doloribus minima repellendus alias ratione. Sapiente reiciendis tempora vel nemo doloribus.\n\nAsperiores temporibus totam expedita adipisci. Laboriosam laboriosam velit enim at excepturi. Atque harum in illum consequatur. Ea tempore quibusdam ratione occaecati optio repellat placeat minima.\n\nModi ipsa assumenda sequi quisquam quod porro. Doloribus enim optio ea distinctio dolorum aspernatur. Fugit quisquam repudiandae non soluta suscipit cumque.\n\nPariatur cumque blanditiis iusto quod doloremque libero quam nam. Dolore non numquam ipsam fuga iure autem impedit. Quod reprehenderit repellendus cupiditate magnam voluptatem mollitia. Id officiis mollitia nemo cumque corrupti beatae. Accusamus provident alias dolorum quas id officiis.\n\nOfficia mollitia perspiciatis itaque distinctio deleniti odio corrupti voluptatibus. Veniam quidem id iusto atque impedit distinctio.	98.43	\N	2018-01-06 17:34:19.11814+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+769	Perkins PLC	Aperiam praesentium odit minus odit. Exercitationem delectus quam dolore quisquam.\n\nTemporibus reprehenderit ipsum excepturi. Reiciendis nihil ratione a quaerat ullam. Nihil doloremque esse dolorem omnis nemo aut eius. Eveniet asperiores earum inventore modi earum.\n\nAccusamus repellendus beatae blanditiis cupiditate. Praesentium maiores error dolorum minima maiores. Numquam exercitationem blanditiis totam nihil consequuntur numquam dolores.\n\nCommodi occaecati eius repudiandae consequuntur ratione. Incidunt sed nostrum amet quisquam nulla dolorum. Omnis similique alias quia aliquid. Magnam neque recusandae aliquid assumenda non ipsam excepturi.\n\nRepellendus modi tempora quasi illo quasi eveniet quod. Esse nemo est quibusdam est commodi. Iusto corporis aliquid maiores eius suscipit enim exercitationem molestiae. Voluptas molestias doloribus amet numquam consequuntur fugit nostrum doloremque.	33.52	\N	2018-01-06 17:34:19.150223+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+770	Baker and Sons	Animi libero eum quis vero ipsam optio. Quasi quos dolorem tenetur rerum. Totam voluptate quae nesciunt corrupti laboriosam quibusdam optio. Animi dolore aspernatur consequuntur consectetur et ducimus.\n\nPerspiciatis minus beatae deserunt aliquam ipsa. Ex quia voluptatibus ipsa optio cum. Iste fugiat alias porro adipisci beatae non pariatur.\n\nLabore in aliquid dolorum error enim. Alias nobis sequi in reiciendis dignissimos atque. Nesciunt magni perspiciatis totam. Facere unde labore quaerat hic omnis.\n\nCorporis non deleniti ipsum nesciunt. Ut ad exercitationem unde facilis illum eos minima. Alias quod vero libero laborum ut modi facilis velit. Iure nemo vel ipsa ducimus dolorem quod dolor dolorem.\n\nSint officia deserunt assumenda. Ab ipsum eaque qui ipsa debitis incidunt mollitia. Consequatur quae ducimus a earum voluptatum aperiam vitae. Minima architecto impedit fuga nesciunt aspernatur animi. Commodi ducimus sunt omnis accusamus ut velit.	23.40	\N	2018-01-06 17:34:19.200257+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+771	Hughes, Burns and Stokes	Libero repudiandae corporis possimus aperiam minus. Alias eligendi quasi fugit enim. Repudiandae harum impedit porro id. Tempora autem harum quidem ducimus voluptate.\n\nOmnis ex et illo nemo vitae. Eius maiores minima molestias exercitationem accusamus consequatur. Voluptas eum expedita cum similique consequatur molestias nulla. Tenetur deserunt alias hic repellat a.\n\nVoluptate ipsa id neque quaerat. Iure iusto nemo laboriosam.\n\nSed perferendis nisi nobis praesentium pariatur omnis. Vero sit maxime quia voluptate facere minima deleniti. Consequuntur quia commodi modi quaerat error.\n\nQuis cum tempora facere quasi. Sint dicta officiis veniam adipisci quae unde.	25.91	\N	2018-01-06 17:34:19.252757+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+772	Hall-Vazquez	Nesciunt pariatur vitae tenetur. Consequuntur delectus quidem dolores similique ipsum itaque. Quod perspiciatis eligendi maiores iusto deserunt.\n\nQuos maxime dolorem pariatur quas maiores. Labore molestias perspiciatis a assumenda.\n\nEt sit rem illo. Illo at molestias dolorem ad. Odit modi ullam nostrum exercitationem.\n\nNumquam sunt reiciendis quod impedit et aperiam omnis. Minus atque accusamus illum.\n\nIusto non ducimus repellendus maiores cupiditate sequi. Ex soluta maxime repellendus ipsum sequi delectus at. Beatae excepturi necessitatibus atque modi maiores. Veritatis ducimus numquam ex sint consequuntur adipisci.	48.13	\N	2018-01-06 17:34:19.302731+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+773	Shields-Brown	Dicta aperiam ipsam tempora alias distinctio reprehenderit. Consequatur sequi deleniti numquam modi numquam. Qui illo corrupti incidunt itaque.\n\nMolestias facilis et nam excepturi aliquid rerum. Magnam architecto impedit numquam assumenda rem minima in. Accusantium nostrum fugiat nulla iste ducimus nemo. Ipsum provident ab error. Reiciendis rem vitae amet quas.\n\nFacilis quasi voluptatum impedit quis. Delectus fugit ad corporis non rem ducimus voluptate. Minus voluptatibus provident quam architecto sunt repudiandae natus itaque.\n\nDolorum consectetur assumenda deleniti error. Non labore assumenda facilis. Enim ex numquam molestiae doloremque soluta nisi. Tempora corporis fugiat repellendus praesentium iusto nulla.\n\nNulla earum dolore accusamus voluptas illo. Sint ullam quasi temporibus labore eos illum culpa. Perspiciatis facere molestiae deleniti facere dignissimos ea. Vero labore sit nam ratione inventore.	12.75	\N	2018-01-06 17:34:19.343977+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+785	Oconnor-Richardson	Sapiente labore ex aspernatur tempora ducimus autem. Nihil aliquam aspernatur eligendi consequatur voluptatum ipsum. Molestiae perferendis nulla iure minima facere iure natus natus.\n\nCum facere tempora molestias. Nulla suscipit sequi cum.\n\nAperiam nobis unde quidem necessitatibus. Autem dicta magni qui deserunt voluptates. Eveniet quaerat tenetur alias nesciunt.\n\nQuod autem delectus et facilis. Eius reprehenderit qui amet non eius tenetur qui iusto. Aliquid voluptas nihil delectus sapiente totam odio earum. Qui itaque accusamus beatae temporibus delectus.\n\nId totam blanditiis alias quibusdam iusto accusamus eius. Nihil expedita minus eum sapiente dignissimos inventore. Quibusdam ipsa similique eum deserunt porro animi repudiandae. Dolore sit in vel delectus veniam quibusdam.	72.17	\N	2018-01-06 17:37:19.620158+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+786	Rush-Williams	Occaecati eaque dignissimos voluptas eos repellendus. Voluptatem dolorem laudantium cumque dolor omnis repudiandae corporis.\n\nMinus dolorem dignissimos deserunt minus. Iusto laudantium reiciendis excepturi sapiente eos consequuntur dolor facilis.\n\nNumquam autem vitae dicta. Dolorum tempore vero vel nulla. Voluptas similique cumque repellendus repudiandae quod. Velit earum laboriosam amet.\n\nLibero explicabo ex sequi quasi cupiditate. Quaerat rem nemo id repudiandae. Cumque quisquam reprehenderit similique non dolore. Quisquam provident distinctio reiciendis expedita tenetur iusto adipisci.\n\nEst animi repellat ut dignissimos possimus eius. Labore officiis aliquam tenetur laborum et accusantium labore. Ipsum blanditiis animi ratione.	14.30	\N	2018-01-06 17:37:19.696032+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+787	Harris Inc	Explicabo rem quidem unde cum alias dolores dolorum. Iste vero ullam placeat necessitatibus unde non nemo animi.\n\nQuia facilis vitae illum eius debitis. Nam accusamus amet libero corporis mollitia quos. Dicta excepturi quod optio placeat. Impedit id consequatur tempora nemo alias incidunt fuga.\n\nDolor a nihil at ea impedit dolore. Nesciunt beatae aspernatur sed unde sequi. Natus aut quas accusantium blanditiis maxime eveniet eligendi. Eligendi neque quibusdam earum enim.\n\nAmet eius similique consequatur commodi. Delectus quaerat dolor iusto adipisci reiciendis alias.\n\nRatione possimus voluptatibus quasi cupiditate illo iure consequuntur. Dicta ea fugit tenetur. Fugiat est accusantium alias cupiditate nisi modi quo.	41.26	\N	2018-01-06 17:37:19.772339+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+774	Castillo Group	Suscipit maxime consequatur aut natus. Ab minus nobis commodi quod placeat nihil officiis. Qui recusandae quaerat laboriosam molestias eius ea. Labore impedit magnam aut harum laborum possimus fugiat beatae.\n\nMinima fugiat rem eum nihil ea. Iste magnam enim totam quo suscipit quibusdam adipisci. Debitis assumenda provident est minima.\n\nCorporis itaque quia aliquam reprehenderit. Inventore at officiis temporibus voluptatum. Nihil consequuntur cupiditate praesentium ipsam similique aut.\n\nEaque error tempora cum odio soluta odio incidunt. Harum repudiandae quo aliquid reiciendis. Tempora reiciendis similique itaque id ab temporibus vitae. Consectetur quaerat eos dignissimos. Necessitatibus repellat laboriosam eaque optio dolorum harum numquam.\n\nTempore corporis architecto ut exercitationem saepe voluptas numquam. Temporibus dignissimos unde nulla placeat cupiditate consequuntur. Alias debitis incidunt autem quo tempore similique.	66.27	\N	2018-01-06 17:34:19.398872+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+775	White LLC	Occaecati quisquam numquam et. Debitis quisquam nisi excepturi deserunt asperiores illum. Harum sunt atque iste. Nesciunt odio tenetur doloribus odit fugiat enim ad.\n\nBeatae delectus maiores libero fugiat temporibus asperiores repudiandae. Eos commodi rem eius autem aliquam. Corrupti sapiente quos veniam illo ullam quae magni. Dolorum sed perferendis magnam corporis.\n\nCumque culpa eius tenetur voluptate quibusdam. Nihil quod quis quasi. Sint ipsam vero beatae tempore ducimus. Quam ipsam aliquid eaque at.\n\nQuam quas quos nesciunt voluptates iusto. Ut ea vero id ullam eaque est facere ex. Magni ipsam aliquam perspiciatis suscipit officiis minima.\n\nNeque iure dignissimos adipisci deserunt fuga commodi. Ipsa dolorem cum ullam. Repellat temporibus facilis adipisci quaerat voluptates cumque dolorum nisi. Velit dicta nam ea nam.	2.29	\N	2018-01-06 17:34:19.438589+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+776	Smith-Jones	Accusamus veritatis quidem fugit reprehenderit non id quis. Tenetur autem dicta aspernatur fugiat vel. Fuga expedita ullam soluta vero aliquam nobis.\n\nNisi tenetur occaecati excepturi alias nihil autem ut. Quibusdam iure quam fuga adipisci ea totam. Consectetur reiciendis consequuntur temporibus explicabo.\n\nQuod cupiditate doloremque nulla esse laudantium quisquam ipsa. Temporibus iure quaerat numquam ipsam. Necessitatibus vitae vitae excepturi modi temporibus modi. Vitae officia rerum veritatis debitis qui numquam nostrum ex. Inventore unde molestias ipsum voluptas cumque non consequatur.\n\nOccaecati labore maiores fugiat officia iusto dignissimos voluptatem sequi. Ipsam assumenda in hic ab. Illo modi rem dignissimos ipsam nesciunt reiciendis similique. Dolor mollitia ipsum unde accusantium. Necessitatibus unde pariatur odit ea blanditiis quia vero.\n\nNeque corporis iure adipisci voluptatem atque voluptates. Minus doloribus porro nulla velit ratione.	76.20	\N	2018-01-06 17:34:19.49264+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+777	White, White and Scott	Voluptatum excepturi nihil eum inventore. Quis animi nihil quod architecto corporis tenetur mollitia labore. Ullam quo sequi odit veritatis vero sapiente incidunt. Praesentium assumenda quas quasi quidem.\n\nReiciendis officia tempore harum incidunt. Maxime mollitia molestias dolorem ad magni accusantium. Voluptatibus quae ut ipsum eum laborum maxime exercitationem. Rem qui reiciendis assumenda iusto aliquam.\n\nAliquam maxime inventore voluptatum hic assumenda perspiciatis temporibus. Accusantium debitis illo sit ab. Explicabo delectus animi autem deserunt possimus ipsam eligendi. Nulla facilis molestiae expedita.\n\nSuscipit libero rem et numquam. Vitae cupiditate soluta delectus tempore quis nulla. Id molestias assumenda aliquid cumque.\n\nAperiam eveniet atque iste quas laborum quod ipsa. Perferendis rerum magni impedit voluptatem. Sunt libero commodi ab ex occaecati laborum veritatis. Atque porro expedita nam.	61.84	\N	2018-01-06 17:34:19.54484+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+778	Jones-Holloway	Nesciunt quo reprehenderit recusandae. Odio necessitatibus nihil esse expedita tempora. Asperiores veniam nobis sapiente corporis laboriosam et optio.\n\nFacere iusto officia vero excepturi minima. Dolorum iste nisi nulla rerum. Nesciunt iste eligendi totam modi ullam.\n\nAnimi in laudantium similique quae minima harum recusandae. Facere ratione corporis commodi ad sit numquam. Eius repellendus distinctio illo assumenda. Officiis ipsum eum dolore in earum repudiandae aspernatur.\n\nMolestias et sapiente asperiores totam earum. Recusandae quam delectus impedit assumenda consequatur animi. Provident ad facere dolorum quibusdam saepe. Fugit blanditiis adipisci asperiores recusandae aperiam accusantium atque.\n\nMolestias fugiat blanditiis eum veritatis quasi reiciendis. Inventore ullam autem repudiandae accusantium ea consectetur inventore aliquam.	91.84	\N	2018-01-06 17:34:19.590587+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+798	Roberts LLC	Excepturi laudantium minima sunt provident eveniet. Optio eaque ex laborum doloremque placeat doloremque officiis nemo.\n\nQuas illo nesciunt vel ratione culpa perspiciatis. Quisquam placeat architecto iure dolorem beatae aliquid. Nemo beatae neque veniam totam ducimus corrupti. Fuga non eaque fugit aspernatur expedita dolores veritatis iste.\n\nDolorem odit ipsum ullam impedit. Illum et sint velit velit tempore explicabo minus. Exercitationem occaecati error repellat id magni cum. Aut velit fugiat consequuntur ut voluptatum.\n\nDucimus perferendis voluptatum aliquid ipsum magnam. Totam perspiciatis nobis libero repudiandae nam cum accusantium. Iusto aliquid eius incidunt debitis iure voluptates cupiditate. Eveniet iusto maiores quis corrupti dignissimos a doloremque.\n\nError eligendi tenetur ipsum illo. Numquam perspiciatis officia ullam cupiditate deserunt.	14.99	\N	2018-01-06 17:37:20.373476+00	2	"3"=>"6"	f	t
+799	Parker, Zimmerman and Johnson	Molestias ea eligendi cumque asperiores minus tenetur. Dolore ex corporis voluptatem omnis natus sit. Sit voluptate quas mollitia quaerat ad nemo. Iusto molestias rem officia praesentium.\n\nNulla quis possimus doloremque quasi pariatur distinctio. Esse est quibusdam atque a eveniet hic. Ab qui soluta exercitationem ut.\n\nDelectus totam excepturi minima atque dolorem culpa. Quibusdam voluptatum modi voluptatum atque exercitationem rem. Fuga eos doloremque ex explicabo animi aperiam.\n\nPerspiciatis placeat recusandae nisi quod voluptas eligendi. Nemo beatae accusantium nihil ullam sequi error doloremque. Tempora beatae quae molestiae voluptas asperiores. At necessitatibus commodi magni.\n\nDelectus soluta culpa impedit alias a accusamus. Rem dolorum distinctio quam provident aliquam nisi.	50.23	\N	2018-01-06 17:37:20.395752+00	2	"3"=>"6"	f	t
+779	Hodges-Bartlett	Voluptatem debitis non cumque tempora corrupti. Ullam recusandae quisquam accusantium aspernatur. Ea tempora rerum cumque. Autem dignissimos accusamus reiciendis animi saepe nulla delectus.\n\nRerum minus cum ratione veritatis voluptatibus accusantium. Amet quos numquam in sit officia. Ducimus quis dolorem minima ut odit tempore repudiandae. Rerum reprehenderit architecto possimus voluptates.\n\nPerferendis dicta recusandae pariatur dolorum placeat dignissimos. Fugiat eum laboriosam deserunt vitae similique placeat id. Occaecati commodi iure perferendis porro consequuntur consectetur. Ducimus beatae enim necessitatibus illo incidunt omnis itaque.\n\nVeniam est eligendi ratione id suscipit debitis. Expedita quam modi laborum sapiente architecto cupiditate autem. Ipsam nesciunt ex incidunt odit rerum. Consequuntur modi quaerat aliquam consequuntur minus at.\n\nQuas ratione excepturi ipsam nemo unde. Molestias perspiciatis deserunt quam blanditiis quidem ipsum consectetur.	16.94	\N	2018-01-06 17:34:19.644308+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+780	Clements, Olsen and Waters	Praesentium dignissimos alias quasi aspernatur. Repudiandae incidunt dolor quaerat quod soluta placeat. Quisquam hic nisi quidem soluta asperiores. Similique reiciendis voluptates nisi debitis eaque iusto distinctio.\n\nInventore aperiam et officia blanditiis vitae nihil enim. Cupiditate temporibus itaque atque. Assumenda sed dicta perspiciatis optio incidunt.\n\nEa quos aliquid provident unde nostrum. Dicta quibusdam impedit asperiores quod possimus dolore molestias. Corrupti dolor hic aut ab neque. Sunt nobis nemo nihil deleniti consectetur. Atque voluptatibus necessitatibus totam commodi iusto.\n\nPerferendis nisi cum reiciendis ratione. Tempora fuga perspiciatis illo quos quasi esse sequi. Soluta dolor suscipit natus atque recusandae consequatur aut dolore.\n\nQui quae odio odit repudiandae harum. Dolor maxime tempora expedita sunt. Itaque id ducimus iste natus. Ex accusamus nesciunt quia reiciendis delectus.	74.78	\N	2018-01-06 17:34:19.694505+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+781	Anderson, Bruce and Anderson	Fugiat ipsum expedita commodi excepturi ullam itaque. Veniam natus esse sunt atque amet. Inventore saepe maiores reprehenderit soluta vero. Excepturi cupiditate adipisci possimus iusto excepturi temporibus. Iusto quam repellat fugit ullam tempora ratione asperiores.\n\nDoloribus sed expedita dicta eos aperiam accusantium sunt consectetur. Nobis ab voluptates error adipisci voluptatibus earum. Ea dolorum voluptates vero libero fugit. Perspiciatis et voluptates repellendus accusamus incidunt consequatur et. Corporis pariatur quis reiciendis placeat quas.\n\nRepudiandae eos exercitationem omnis dolor minus. Cupiditate id animi laudantium eius officia. Repellat quasi doloribus error laudantium ut perferendis. Quibusdam animi eos soluta recusandae modi delectus.\n\nRecusandae necessitatibus similique neque nisi. In unde tenetur at incidunt aliquam eligendi ratione. Neque sapiente soluta ratione repellendus repudiandae aut id voluptate. Sunt quos quibusdam ut pariatur totam rem.\n\nIusto vel ipsam fugiat sit qui repudiandae vitae. Ad dolores nam repellat perspiciatis soluta saepe veritatis cumque. Aliquid eius nobis quo.	31.19	\N	2018-01-06 17:37:19.392525+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+782	Allison-Bennett	Consequuntur repellendus optio rerum rerum corrupti laudantium. Sit fugit rem voluptatem fugiat ducimus ducimus. Dolorem explicabo eum alias culpa sint ducimus ipsum.\n\nMinus aperiam architecto eligendi debitis earum. Saepe minus modi maxime autem explicabo porro minima corrupti.\n\nRecusandae in dolorem alias ipsam sed. Nobis delectus voluptates adipisci molestias exercitationem voluptatem amet. Laborum ipsa voluptatum at quisquam excepturi ratione modi aut. Reprehenderit eum voluptates qui atque similique consequuntur illo. Perferendis ratione eius consequuntur.\n\nReiciendis voluptatem pariatur reiciendis voluptatibus temporibus. Ex voluptatum itaque eius consectetur consequatur. Nemo voluptatum occaecati voluptates consectetur.\n\nVitae quam fugit non maiores explicabo. Officiis facere nisi consequatur voluptatibus iste unde. Quae pariatur voluptatum non blanditiis placeat repellendus. Voluptas reiciendis architecto ratione est soluta qui.	47.81	\N	2018-01-06 17:37:19.458447+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+783	Schmidt, Allen and Farley	Sapiente repudiandae possimus voluptate. Quaerat velit veniam explicabo explicabo quod nesciunt et. Nihil fugit sint corporis.\n\nQuos incidunt repudiandae quas quaerat deserunt delectus. Culpa aliquam corrupti sequi voluptates temporibus ut. Dolorem earum dolore deleniti nobis.\n\nDoloremque eos vitae iste cumque possimus dolor magni. Pariatur tempore distinctio quas at id. Consequuntur libero animi assumenda neque aperiam maiores. Nostrum ducimus quasi voluptas perferendis. Reprehenderit dolor tempore quibusdam fuga atque labore ipsum adipisci.\n\nPerferendis velit dolore magnam dolorum aliquid corrupti mollitia eos. Quod culpa ea reprehenderit nemo. Eaque natus perspiciatis soluta dolorum at. Omnis natus cum vero minus culpa temporibus. Odio reiciendis fugiat perspiciatis.\n\nInventore dolore ex assumenda dignissimos ducimus nostrum odit. Dolor veniam quas excepturi harum quidem. Accusantium consequatur sint ipsam exercitationem consectetur aperiam blanditiis.	27.26	\N	2018-01-06 17:37:19.510103+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+784	Morgan, David and Mathis	Animi placeat voluptates est fuga. Distinctio repudiandae tempora doloribus dicta. Facilis dicta similique explicabo.\n\nAdipisci saepe autem deserunt expedita eaque corporis praesentium. Eos delectus vel nobis cupiditate libero. Architecto ab ipsam accusamus debitis fugit necessitatibus. Ipsam possimus similique aspernatur tempora optio deserunt. Nihil natus commodi odit.\n\nAtque quasi corporis iure saepe. Magni sit corporis alias ullam adipisci eveniet minima. Quisquam expedita fugiat neque quos explicabo consequuntur tempore.\n\nMolestias omnis in pariatur dolorem fugit cupiditate laborum. Possimus labore voluptatibus ipsum error quas commodi. Cumque esse voluptate quod. Necessitatibus tempore natus veniam voluptas eos minus.\n\nHic omnis minus dolorem corporis sunt rem quos. Nobis sunt alias vel corporis totam fugiat. Eum dicta aliquam tempore nostrum error. Magnam fugiat at tempore voluptatem quae quaerat ipsum repellendus.	82.98	\N	2018-01-06 17:37:19.566685+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+788	Fisher Group	Cum explicabo soluta corrupti esse perspiciatis. Amet numquam ab exercitationem neque. Animi et esse dolor similique. In ipsa accusamus incidunt molestiae similique rerum blanditiis. Reiciendis quo voluptates eligendi suscipit.\n\nModi cumque nihil debitis assumenda excepturi asperiores ipsa. Nulla corrupti maxime perspiciatis ea amet. Magni labore voluptas molestiae minima illo. Sapiente sapiente aut repellendus aut exercitationem illum.\n\nVel explicabo explicabo rem debitis. Commodi facilis cupiditate numquam qui dignissimos veritatis odio. Error quos quae beatae nemo reiciendis. Necessitatibus ipsa amet soluta adipisci.\n\nLabore laborum optio nisi libero. Explicabo illum cupiditate rem. Nulla nihil vel nesciunt eveniet. Ipsa aperiam quam veritatis ratione.\n\nAperiam dicta vel tempora recusandae blanditiis. Provident consequuntur dolorum quidem laborum suscipit dignissimos sequi dolores. Totam nemo consectetur quae repellendus ab molestiae alias. Tenetur nihil corporis ipsum rerum. Doloribus occaecati consectetur tempore harum.	10.40	\N	2018-01-06 17:37:19.88503+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+789	Sanchez-Drake	Quas odit quas dicta reprehenderit ad. Nemo commodi iure asperiores esse neque. Suscipit rem distinctio fugiat illum. Nihil deleniti commodi dignissimos eligendi. Temporibus atque facere pariatur nostrum quam consectetur cumque.\n\nMolestiae deleniti quae voluptatum dolores mollitia illo. Ex atque voluptas enim adipisci vitae. Consequatur nemo possimus tempore ea. Repudiandae eos nobis nobis saepe iure laudantium. Minus repellendus soluta tempora dolores consectetur nam.\n\nNumquam sit commodi blanditiis esse at eveniet. Eligendi ullam quas at saepe delectus. Qui sunt corporis nesciunt eos quasi doloribus. Perferendis similique incidunt error facilis facere omnis ducimus eius. Delectus accusamus facere placeat sit nam eius.\n\nError dolorum libero deserunt consequatur quisquam illum quasi. Fugiat expedita assumenda consequatur eveniet debitis. Amet quisquam quasi reprehenderit illum natus alias ipsam.\n\nLabore ullam cupiditate commodi facere hic. Nisi nostrum tenetur eveniet consequuntur porro. Sit minus esse aliquam deleniti odio quia. Aspernatur molestias eius atque accusantium molestiae.	0.70	\N	2018-01-06 17:37:19.955582+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+790	Ball, Harris and Garcia	Eligendi harum repellendus laborum sapiente ratione neque adipisci. Culpa deleniti soluta numquam. Accusantium dolores maiores perferendis nam quaerat aliquid. Temporibus laudantium autem repellendus iste a error vel.\n\nIpsum iure reiciendis animi veniam neque officia. Esse dolor veniam numquam nostrum. Deserunt quaerat eos eligendi reprehenderit ipsam.\n\nVoluptatem corporis maiores quaerat quos nobis doloremque labore. Provident excepturi vitae sapiente saepe modi maxime. Amet recusandae minima molestias architecto quo assumenda consectetur itaque. Necessitatibus laborum cupiditate soluta nam nam perferendis.\n\nTempore numquam esse corporis aspernatur quod iste quod. Quaerat cupiditate doloremque magni porro odio ex consectetur earum.\n\nPerspiciatis iusto cupiditate incidunt ullam minus vitae cum. Optio sunt vero impedit exercitationem voluptas excepturi debitis. Fuga consectetur libero illo repellat totam. Quos impedit dolore ipsum sapiente consectetur earum.	88.60	\N	2018-01-06 17:37:20.018883+00	1	"1"=>"1", "2"=>"5", "3"=>"6"	f	t
+791	Lewis-Medina	Autem illo corrupti ipsa hic sapiente. Qui quibusdam corporis voluptatum molestiae. Quisquam labore repellat eligendi eius mollitia velit.\n\nMolestiae explicabo exercitationem fugit aspernatur blanditiis animi porro. Sapiente nesciunt modi excepturi. Nemo fugiat cupiditate necessitatibus odio. Praesentium nostrum est laboriosam incidunt facilis.\n\nAccusamus dignissimos unde excepturi suscipit suscipit odit eaque. Architecto nobis excepturi voluptatum a pariatur adipisci. Sapiente dolorum consequuntur assumenda molestias ipsum reiciendis ducimus. Molestias eum nobis nisi tenetur fugiat dolorem nisi.\n\nFacilis in repudiandae perspiciatis sit maxime maxime. Aperiam iste deleniti accusamus libero aperiam. Aperiam ut provident optio sit.\n\nEt aliquam aliquam recusandae quisquam maxime ab voluptates. Fugiat enim culpa aliquid. Nobis ad eligendi similique asperiores. Consequatur repudiandae impedit earum perferendis doloribus quod laborum.	69.30	\N	2018-01-06 17:37:20.11108+00	2	"3"=>"6"	f	t
+792	Wiley-Lewis	Vitae necessitatibus aliquid fuga repellendus. Et veniam repudiandae fugit alias impedit. Laboriosam atque neque optio ex odio vero.\n\nEius nobis architecto cumque aperiam veniam similique dolorem. Eveniet facilis ratione ab vero id. Esse eos ratione deleniti nisi iusto. Animi officiis doloribus illo labore ex.\n\nTempore natus at adipisci eum soluta molestias vero nihil. Impedit culpa porro dolores unde quo voluptas. Repudiandae dolores laudantium labore voluptatum.\n\nDoloremque quibusdam labore tenetur magnam nemo. Eligendi aut voluptatibus neque vitae dolore quisquam. Rem ex laudantium molestias modi. Accusamus molestiae quo architecto sunt eveniet rerum dicta animi.\n\nCorporis laborum minus mollitia voluptatibus. Ex adipisci consequatur sed saepe commodi eaque.	28.36	\N	2018-01-06 17:37:20.133374+00	2	"3"=>"6"	f	t
+793	Smith Ltd	Nesciunt commodi inventore laudantium minima deleniti consequuntur quis. Quod non veniam dolorum ullam unde facilis ad. Cupiditate ipsam quos quas deserunt suscipit commodi fugit.\n\nRerum architecto ducimus pariatur asperiores quas atque voluptatibus. Incidunt dolor quis reprehenderit. Quae deserunt dolorum dicta tenetur eveniet occaecati dolore. Accusantium libero soluta mollitia error ratione.\n\nLibero corrupti incidunt est ipsum. Quis quam suscipit laudantium neque soluta. Voluptas optio vitae quisquam natus. Deleniti nostrum tenetur quo eum deserunt odit.\n\nVoluptas corporis et enim dignissimos minima quia earum. Minima consectetur iste necessitatibus est tempore eveniet excepturi blanditiis. Veritatis ipsam ex sit quam consectetur. Similique velit quis suscipit libero mollitia ducimus.\n\nRepellat ducimus repudiandae quae accusamus rerum distinctio. Reiciendis magnam eius voluptas nesciunt sapiente cupiditate fugit. Ad voluptatibus architecto assumenda ut earum mollitia. A ipsa id est et iure voluptatum hic ut.	38.41	\N	2018-01-06 17:37:20.164747+00	2	"3"=>"6"	f	t
+800	Cohen, Davis and Martinez	Sapiente sint minus doloribus commodi esse veritatis quaerat dolor. Saepe velit officia consequatur cupiditate. Odio nostrum quos odit doloremque occaecati.\n\nNumquam dignissimos magnam praesentium excepturi repudiandae asperiores consequatur. Necessitatibus neque consectetur atque corporis explicabo numquam perspiciatis necessitatibus. Animi quod odio perferendis officia repellendus ullam adipisci. Ipsum eligendi cum doloribus perferendis impedit.\n\nUt voluptatem voluptas maiores cupiditate earum rem quaerat eaque. Molestiae itaque ipsum fugit odit placeat natus. Amet neque rerum animi corporis dolorum reprehenderit id qui. Nostrum eaque id ut exercitationem.\n\nSapiente nulla aliquam vel nulla officiis quia. Eius dolor odio qui dolor voluptas. Quis iusto tempore optio reprehenderit ad quod itaque. Modi officia suscipit distinctio quia ullam quisquam eaque.\n\nCulpa fuga labore quis ut. Non a repellat sit quibusdam recusandae voluptas illo repellat. Harum ex veniam aspernatur consectetur voluptate.	6.57	\N	2018-01-06 17:37:20.429578+00	2	"3"=>"6"	f	t
+801	Mcdaniel PLC	Alias dignissimos aliquid modi veritatis similique vitae facilis. Repudiandae quo tenetur illum voluptates. Eligendi maxime aspernatur vitae praesentium. Ut animi quisquam fuga exercitationem modi esse fugit.\n\nIllo minus excepturi temporibus. Nobis ducimus dolore explicabo sed distinctio provident. Ut impedit adipisci nesciunt pariatur iusto dolore. Magni accusantium ut id expedita culpa doloribus eaque.\n\nNulla corrupti fugiat deserunt quasi cum. Repellendus voluptatem fuga perspiciatis veniam expedita. Debitis dolorem accusantium quod.\n\nLabore assumenda perspiciatis tempore. Ea aliquid sint provident fuga laborum qui dolore. Similique voluptatibus sequi hic ipsam tempore. Earum cupiditate perferendis natus illo voluptas modi modi.\n\nDebitis aperiam culpa maxime quos eligendi. Iste dolor earum eius pariatur error ut amet. Voluptate facilis porro odit quasi. Recusandae at voluptate sint tenetur.	25.23	\N	2018-01-06 17:37:20.456656+00	3	"3"=>"6", "5"=>"14"	f	t
+802	King, Orr and Valencia	Odio nobis repellendus qui exercitationem fuga necessitatibus neque. Sed perspiciatis quae suscipit nulla magnam nesciunt dicta iste. Harum blanditiis ipsum tempore quisquam mollitia. Quae a deserunt similique soluta a.\n\nMinus odio asperiores exercitationem molestias ipsum ducimus officia. Eius accusantium laudantium aspernatur maiores aperiam consequatur. Cum odit excepturi necessitatibus eligendi. Sit hic repellendus soluta sequi eos modi nemo.\n\nPraesentium dolor nobis consequatur minus temporibus facere voluptates. Atque harum natus quasi illo nam. Tempora natus ipsum quam totam veniam.\n\nBeatae numquam recusandae accusantium dolorum vitae dolor aut. Occaecati unde commodi eum laboriosam. Laudantium minima occaecati maxime ducimus.\n\nRecusandae accusamus est fugiat doloribus suscipit. Dolor molestiae omnis similique facere temporibus repellat eos. Nisi aperiam fuga natus reprehenderit et. Debitis ex impedit assumenda enim magnam. Libero velit eius iusto rerum.	80.21	\N	2018-01-06 17:37:20.505783+00	3	"3"=>"6", "5"=>"14"	f	t
+803	Jimenez LLC	Molestiae autem aliquid fuga recusandae optio repellat. Occaecati illo iure rem sint porro totam occaecati fugit. Earum doloremque ipsam asperiores magni magni corporis. Ipsam tempora consectetur culpa voluptate reprehenderit et.\n\nMolestias molestias quas quos odit tempora. Ipsum fuga a quos sunt exercitationem pariatur optio neque. Atque id aspernatur quasi quibusdam sunt mollitia minus.\n\nAt cum voluptatum doloribus tempora. Alias porro non adipisci ipsum sint. Vel non doloremque ducimus exercitationem tempora ullam dolorum. Et commodi iusto in necessitatibus sequi.\n\nIste eos corporis iusto alias. Nesciunt voluptate ut dicta ducimus. Laudantium fuga quasi quos ipsam quia. Veritatis quibusdam provident omnis odio neque sunt aspernatur.\n\nAb iure iste quas sed eveniet consectetur animi ut. Facilis voluptates laborum placeat. Eius minus expedita perspiciatis sequi vel ipsum nisi. Sequi ad sed ad rem veritatis quod voluptatum.	77.40	\N	2018-01-06 17:37:20.557973+00	3	"3"=>"6", "5"=>"13"	f	t
+804	Brooks, Johnson and Farmer	Ipsam amet recusandae pariatur praesentium. Nam facere autem cumque suscipit nostrum similique. Illo natus molestiae nostrum tempora eaque tenetur.\n\nNatus repellendus ab sunt corrupti non provident sit nemo. Occaecati assumenda modi ipsum repudiandae. Incidunt occaecati assumenda fugit repellat vitae aliquid. Alias sit praesentium laboriosam repudiandae ad debitis.\n\nQuibusdam explicabo iusto repudiandae optio perspiciatis. Beatae voluptates dicta voluptatem natus provident. Ad sint id consequuntur. Nulla harum quis dolores hic facilis ipsa.\n\nLabore nulla dicta assumenda. Perferendis veritatis nisi aut temporibus error officiis error. Dolorem accusantium esse rem odio eum repellendus. Tenetur consectetur exercitationem nemo similique at ad.\n\nNemo quis totam odit enim maxime fugit odit id. Similique ipsa delectus deleniti provident exercitationem eum eius. Ut tempore nulla eligendi nisi.	22.34	\N	2018-01-06 17:37:20.624464+00	3	"3"=>"6", "5"=>"14"	f	t
+805	Mejia and Sons	Enim sequi deleniti aliquid. Minima atque omnis non magnam ut adipisci alias et. Illo nulla quis dignissimos placeat ducimus culpa sint perferendis. Porro ratione aspernatur explicabo iste.\n\nUllam quod ducimus asperiores illum minus. Nam rerum nostrum atque quo facere. Earum quasi ducimus officiis assumenda sit quaerat ducimus.\n\nNatus pariatur quae voluptas. Eum at pariatur modi fugit minima ut quis dolorem. Animi dolore libero minima distinctio nostrum modi rem. Vitae sapiente nihil dolorum fuga recusandae asperiores dolores.\n\nIusto iusto laborum officiis quod deleniti ut. Quos repellat est minima non hic nesciunt ipsam quae. Porro fugit adipisci omnis et assumenda eligendi iusto. Eveniet sed esse impedit ipsa aut ullam ullam. Reiciendis velit consectetur omnis neque.\n\nRecusandae repellat commodi dolores culpa. Nesciunt molestiae esse et facilis eveniet. Iste quasi officia error vel.	81.25	\N	2018-01-06 17:37:20.670672+00	3	"3"=>"6", "5"=>"13"	f	t
+806	Romero Ltd	Alias necessitatibus molestias praesentium animi dolor omnis rem asperiores. Magnam recusandae saepe temporibus atque alias a aliquam asperiores. Suscipit nisi ipsa vero omnis aspernatur quam rerum.\n\nRepudiandae repellat nisi tenetur voluptates. Porro impedit illum incidunt ab praesentium iure nulla. Beatae iusto aspernatur doloremque sint corrupti ut est.\n\nDeleniti ad ab veritatis accusantium. Tempore deleniti esse maiores voluptatum labore sint quibusdam. Numquam soluta blanditiis neque sapiente facilis placeat vero occaecati. Laudantium voluptatem repellendus quam odit autem laudantium eius iusto. Itaque vero distinctio consequuntur quos magni praesentium.\n\nQuibusdam quos velit excepturi quos mollitia dolorem. Molestias possimus nulla odit necessitatibus. Illo quas ipsam repellendus dolores. Magnam assumenda magni deleniti praesentium. Accusantium provident non quod nobis inventore error consectetur.\n\nOptio maiores exercitationem molestiae maiores natus optio unde excepturi. Provident doloremque laudantium reprehenderit. Provident dolor impedit aspernatur itaque.	31.72	\N	2018-01-06 17:37:20.711244+00	3	"3"=>"6", "5"=>"13"	f	t
+807	Heath, Johnson and Martin	Laudantium voluptatem nam esse quibusdam sed quisquam. Fugit cupiditate sapiente quasi. Laboriosam culpa fuga modi cupiditate.\n\nRepellat neque quis illo enim voluptate necessitatibus dicta. Dolore temporibus deserunt delectus quidem. Repellat dolor illum culpa labore qui ratione itaque. Architecto quisquam velit libero veritatis eaque et doloribus.\n\nEnim repudiandae repellendus repellat reiciendis quas dolorem maxime. Facere voluptatibus quidem illum dolores qui nobis ipsum. Aliquid tempora praesentium aliquam nostrum.\n\nOdio inventore ex impedit expedita porro. Dolore labore consequatur qui officia quos ex impedit optio.\n\nDolorem voluptatem incidunt optio alias autem sit ex minima. Doloremque temporibus nobis esse voluptate. Commodi eos ratione dignissimos animi labore.	98.68	\N	2018-01-06 17:37:20.775797+00	3	"3"=>"6", "5"=>"14"	f	t
+808	Potter-Shaffer	Voluptatum sint necessitatibus neque. Voluptates voluptatibus non sunt quibusdam molestias. Vitae saepe porro harum id rem porro. Non neque suscipit voluptas voluptatem nesciunt.\n\nPraesentium nostrum minus laudantium iure maxime autem. Aliquid iusto eligendi delectus quod ratione. Odio modi temporibus distinctio excepturi repellat.\n\nBlanditiis doloremque reiciendis vero asperiores quidem aut numquam. Dolores doloribus cumque quas dolorum incidunt consectetur. Quos labore ipsa tempore iure.\n\nBlanditiis nobis assumenda optio possimus. Ut quisquam quaerat ducimus quasi quia natus. Accusantium illo quo vitae eaque eligendi explicabo porro. Hic possimus libero nobis aliquid sint quis vitae.\n\nReiciendis ipsa perspiciatis corporis ad expedita. Id nesciunt veritatis nihil. Quibusdam omnis cum eius. Dolorem ratione enim quibusdam.	30.21	\N	2018-01-06 17:37:20.831666+00	3	"3"=>"6", "5"=>"14"	f	t
+809	Anderson-Mccarty	Modi consectetur quisquam voluptatum fugit repellendus eaque facere. Corporis fugit totam tempora veritatis ex minus.\n\nOdit vitae eos voluptas officiis veritatis non voluptate. Impedit voluptate veniam iusto odio necessitatibus. Illo facilis sapiente magnam deleniti aliquam voluptatum nostrum dolorum.\n\nUt qui possimus ipsa fugit itaque aspernatur neque. Cumque vitae vitae nesciunt aut. Quas eius doloremque fugiat laboriosam aspernatur enim officiis sunt. Error totam eius dolores exercitationem perspiciatis.\n\nMaxime reprehenderit autem quasi esse accusantium mollitia sed. Inventore sunt maxime illum sequi quibusdam cumque officiis. Ullam ut maxime similique optio. Ullam architecto alias magnam est voluptatem.\n\nMinima placeat praesentium facilis vero officia. Et tenetur cumque modi officia illum aperiam itaque molestiae. Aliquam ipsum quaerat voluptates totam. Natus ab dolor enim.	88.31	\N	2018-01-06 17:37:20.881553+00	3	"3"=>"6", "5"=>"13"	f	t
+810	Harris Ltd	Harum voluptatibus officia rem eius voluptatum perspiciatis consectetur facere. Quibusdam sed commodi est. Commodi rem placeat cumque deserunt molestias eum doloribus. Eius in placeat aspernatur distinctio. Porro ea quo dolores doloremque minima aliquam temporibus.\n\nEum facere nam sed illum non blanditiis delectus. Corporis laborum pariatur est tempore reprehenderit suscipit. Repudiandae rem itaque facilis iste earum quo dolorem.\n\nIpsam autem quae illum unde molestiae ipsum dolorem neque. Magni vel voluptas aut amet laborum ducimus. Ratione vitae debitis assumenda esse rerum aspernatur. Illo pariatur ipsa occaecati.\n\nAlias molestiae amet iure est. Atque sapiente similique eum natus. Nulla deserunt explicabo laudantium culpa velit praesentium.\n\nNemo quia ex explicabo suscipit modi. Atque a ratione minus ex aperiam facere praesentium. Ducimus nam ullam ea sint laborum atque nulla consequuntur.	96.59	\N	2018-01-06 17:37:20.936613+00	3	"3"=>"6", "5"=>"14"	f	t
+811	Wells-Ray	Expedita quam facilis aperiam repellat repellat dignissimos repudiandae. Maxime illo assumenda soluta magnam voluptatem eos. Minus sunt quia soluta aliquid.\n\nAperiam esse quia adipisci beatae nemo atque. Consectetur dolores culpa magni dolores ex. Eveniet deserunt aspernatur quis iste exercitationem autem. Sed autem deleniti veritatis consequatur.\n\nRepellat officiis ut nesciunt sapiente. Assumenda dolorem voluptates harum voluptatibus earum reprehenderit. Voluptatibus quidem itaque eius eum.\n\nEaque natus sapiente cum fuga minus exercitationem. Magni sapiente non delectus eveniet. Animi fugit unde porro velit totam. Praesentium voluptatibus quidem perspiciatis earum consequuntur.\n\nQuidem culpa unde ducimus. Quae possimus maxime corporis saepe exercitationem officia porro natus. Culpa ipsum exercitationem error nemo provident unde vero.	35.68	\N	2018-01-06 17:37:20.994351+00	4	"3"=>"6", "7"=>"19"	f	t
+812	Lozano, Galvan and Jennings	Aliquid maiores illo delectus sed necessitatibus eum adipisci. Eos occaecati similique nesciunt quae voluptatem. Alias rem distinctio ipsa deserunt possimus iure modi dignissimos. Quasi ipsa quaerat vitae expedita aspernatur ipsa soluta.\n\nNumquam quaerat aspernatur dicta non similique. Neque voluptatem deserunt accusantium accusamus. Deleniti corrupti consequuntur voluptatum molestiae cumque. A dolorum corrupti recusandae dolorum ab.\n\nAperiam nihil dolor laudantium enim dolorem. Fugiat tenetur aut voluptatum beatae consequatur sequi. Omnis hic nam porro assumenda reiciendis quisquam possimus.\n\nTempora neque voluptas beatae commodi autem. Fugit impedit eius temporibus impedit. Ducimus minus a vel distinctio hic.\n\nEarum nulla molestiae laudantium voluptatum aliquid porro consequatur. Dolorem adipisci sequi harum laudantium minus perferendis. Suscipit in non ad neque.	29.82	\N	2018-01-06 17:37:21.040871+00	4	"3"=>"6", "7"=>"19"	f	t
+813	Robinson and Sons	Perferendis repudiandae numquam veniam suscipit dolorum qui aut. Laudantium eveniet cumque velit delectus omnis. Libero quasi sed vitae amet laboriosam doloremque.\n\nEx aliquam ratione dolore architecto quasi. Molestiae ea error tenetur voluptate. Quo veniam esse magni veritatis expedita. Exercitationem reprehenderit iusto ipsum consequuntur eveniet assumenda assumenda.\n\nNatus fugit harum a inventore expedita nihil. Debitis ex quas voluptas dolorum animi odio amet. Sed fugiat accusamus saepe maiores deserunt. Similique dolorum maiores ratione quod veniam repellat. Nemo eum eum distinctio suscipit placeat.\n\nNihil facere minus ipsum fuga consequatur exercitationem quos occaecati. Doloremque natus placeat illo officia hic nesciunt optio. Aspernatur molestiae laudantium minima sapiente minima reiciendis doloremque nobis.\n\nNeque natus dignissimos id officiis quibusdam tempora. Dolore numquam consectetur excepturi commodi. Perspiciatis dignissimos vero iste minus recusandae libero.	9.80	\N	2018-01-06 17:37:21.080923+00	4	"3"=>"6", "7"=>"19"	f	t
+814	White, Sanchez and Campbell	Aut impedit consequatur totam ducimus repudiandae. Voluptates quas excepturi autem labore temporibus et. Mollitia dolorem adipisci deleniti sapiente voluptatum ut.\n\nExcepturi consectetur suscipit facere modi possimus ad nesciunt. Error qui quisquam possimus quisquam ratione perferendis. Reiciendis maxime dolor eveniet voluptate tempore.\n\nMolestias laudantium aspernatur quae voluptates. Minima odit nihil fugiat. Earum alias autem facilis aperiam quasi itaque.\n\nVoluptatibus ipsa aperiam animi quas mollitia eum dignissimos. Cumque doloremque eveniet beatae ipsam assumenda vero dolorum facilis. Numquam inventore nemo numquam aut dolorum esse. Magni expedita vitae ea eius earum atque consectetur.\n\nCumque ab et nihil animi totam voluptate. Dolore placeat nobis incidunt deleniti nam. Doloremque delectus veritatis maxime molestias minus praesentium. Distinctio ex corrupti porro quidem distinctio beatae.	38.43	\N	2018-01-06 17:37:21.125376+00	4	"3"=>"6", "7"=>"20"	f	t
+815	Nelson Group	Repellendus itaque cupiditate saepe tempore. Commodi impedit blanditiis culpa voluptatum ex nobis facilis. Accusamus ipsam fuga quis voluptate iure labore quisquam doloribus.\n\nQuisquam sit quasi asperiores necessitatibus velit quibusdam nostrum. Dicta voluptate modi excepturi repellat neque. Dignissimos voluptate repellendus placeat repellendus. Alias dolor voluptatum accusantium atque.\n\nArchitecto vitae consectetur recusandae temporibus perspiciatis optio. Officia non consequuntur dolorum voluptates vitae vel.\n\nDucimus non hic praesentium enim ullam nesciunt. Unde nemo maiores eos maiores veritatis. Consectetur totam alias fugit laudantium quo ad dolorum fugit.\n\nReiciendis fugit non libero doloremque delectus. Voluptas ex repudiandae fugit numquam quidem. Veniam autem incidunt animi neque veritatis tenetur eveniet incidunt.	40.25	\N	2018-01-06 17:37:21.175132+00	4	"3"=>"6", "7"=>"20"	f	t
+816	Berry-Patton	In laboriosam nobis rem nisi saepe quasi voluptatibus fugiat. Blanditiis autem culpa illo molestias recusandae. Architecto nisi illum aperiam consequuntur quam tenetur.\n\nIpsam necessitatibus sapiente fuga sequi qui in placeat. Enim amet eaque recusandae minus aliquid optio hic. Odio distinctio provident quis incidunt necessitatibus minima. Magni neque sunt magni qui recusandae.\n\nSoluta tempora numquam voluptatem incidunt eius incidunt libero aperiam. Iusto reiciendis culpa illum earum nostrum doloremque similique veritatis. Sapiente fugit et repellat magnam quisquam.\n\nEius neque enim culpa dolore. Exercitationem nisi consequuntur nobis porro ratione. Esse alias error unde quos minus nihil.\n\nAb repudiandae neque voluptatum similique doloribus enim aut. Iste rem excepturi animi quasi pariatur. Voluptatem in eius aperiam sequi. Nulla dolores natus occaecati.	22.81	\N	2018-01-06 17:37:21.276824+00	4	"3"=>"6", "7"=>"19"	f	t
+817	Alexander-Mcdaniel	Quaerat reiciendis eum nobis incidunt placeat. Natus pariatur aperiam odit quibusdam. Consectetur id veritatis dolore. Dolore dolorum porro minima est necessitatibus ipsa veritatis.\n\nOptio nostrum libero recusandae itaque illum. Quod itaque consequuntur fugit impedit rerum vero repellendus. Recusandae fugiat illo fugiat hic officia animi repudiandae. Quisquam odio corporis quod ex sapiente perferendis rem excepturi.\n\nOdio tempora ad tenetur molestias. Ea aliquid itaque accusantium molestiae dolore numquam ipsa. Magni dicta enim aspernatur reiciendis.\n\nEt non rerum laboriosam quia id necessitatibus. Quas necessitatibus quibusdam a vero hic deleniti laboriosam. A architecto temporibus perspiciatis perferendis hic a. Minus sequi illum ratione totam. Repellat maxime maiores voluptatem adipisci odit.\n\nAutem ea quis sed placeat excepturi non. Est maiores vitae earum eligendi. Itaque quod deleniti illum inventore. Error eius rem harum.	83.55	\N	2018-01-06 17:37:21.331177+00	4	"3"=>"6", "7"=>"20"	f	t
+818	Sanchez-Hart	Ullam nesciunt soluta earum veritatis illum adipisci. Officia at quas vero non sed neque excepturi enim. Sed voluptatum ea repellat vero. Odio dignissimos excepturi eveniet sed ex.\n\nQuod assumenda esse aperiam ipsam libero. A mollitia porro quod minus earum hic. Labore reprehenderit quidem est. Et id nulla ipsam quod similique.\n\nOfficia possimus unde ducimus accusamus architecto. Facere consectetur tenetur commodi rerum incidunt illum. Quis nulla aliquam perferendis eius officia minima repellat quos.\n\nItaque perspiciatis aliquam libero provident libero commodi. Eum esse quas fugiat necessitatibus beatae quibusdam eligendi soluta. Ex harum a quas quae. Voluptatibus corporis facere omnis reprehenderit.\n\nLaborum tempora libero veritatis esse sed labore impedit. Quo maiores accusantium deserunt quae aspernatur. Veniam dignissimos asperiores accusamus omnis. Eligendi ipsum expedita ipsa error saepe cum reiciendis distinctio.	9.26	\N	2018-01-06 17:37:21.400202+00	4	"3"=>"6", "7"=>"19"	f	t
+819	Stone and Sons	Nemo distinctio optio voluptas culpa cum facilis. Optio aliquid temporibus labore voluptatem officia. Voluptates sit ducimus neque libero. Eum expedita beatae eos.\n\nUt laboriosam beatae itaque. Veniam nulla culpa similique adipisci minus facilis officiis. Ab autem officiis temporibus exercitationem excepturi quibusdam. Quidem at rerum in perferendis doloremque.\n\nNulla fuga earum perspiciatis temporibus vitae vitae inventore. Magnam quos iste dolores veritatis iste. Qui nemo accusantium nulla sed. Eaque assumenda qui officia eveniet esse voluptatem tempora.\n\nRerum aut fuga necessitatibus nulla aut nemo. Ex dolores laboriosam autem tenetur doloremque aspernatur. Aspernatur non voluptatum dolore mollitia molestias suscipit sed. Delectus dolorem architecto accusantium officiis est odio.\n\nNesciunt aspernatur officiis exercitationem accusantium aut occaecati. Ex fugiat quos dolorem ab doloribus. Neque nulla laborum repellat quibusdam quae. Non explicabo sed esse.	29.66	\N	2018-01-06 17:37:21.462374+00	4	"3"=>"6", "7"=>"19"	f	t
+820	Velez Ltd	Illum reprehenderit animi nulla corporis praesentium. Quis at minima optio odio veritatis at alias. Quis asperiores sapiente sint dolorem ullam excepturi asperiores ad. Suscipit alias illo sapiente accusamus tenetur. Suscipit est rerum aut voluptatum.\n\nTotam quod dolore quisquam non. Molestias quia ut suscipit molestias. Soluta sed eligendi quo molestiae labore recusandae perspiciatis. Ratione odit error ex cumque harum. Nisi qui maxime minus optio nulla id.\n\nDicta accusantium ab porro facilis. Impedit animi rem suscipit nemo. Deleniti omnis delectus ullam porro sequi facilis minima cumque. Eveniet aspernatur ratione ex labore enim.\n\nTemporibus officiis quisquam quidem mollitia. Amet eum animi optio facere neque cum. Ullam qui voluptas alias quas molestiae enim.\n\nTemporibus saepe error ea eum molestiae tempora. Dolor iure aperiam occaecati optio dolores odit iusto. Ad mollitia mollitia molestiae dolorem animi pariatur.	50.85	\N	2018-01-06 17:37:21.524372+00	4	"3"=>"6", "7"=>"19"	f	t
+821	Kelly Ltd	Magni iure voluptatem quod quas iure libero. Minima assumenda error doloribus beatae ullam. Voluptas animi officiis consequuntur sit totam reiciendis. Magnam alias saepe id animi doloremque autem. Impedit reiciendis fugiat sit.\n\nNisi aut blanditiis harum delectus id. Unde eius corrupti at exercitationem. A eligendi porro quod fugit iste excepturi eveniet. Quae recusandae ratione commodi. Et doloremque itaque voluptate eos nulla blanditiis.\n\nRepudiandae distinctio odio natus eaque impedit magni earum voluptatibus. Id id nobis dolor voluptatibus voluptates voluptatem. Cupiditate id id eaque officia.\n\nPossimus soluta quae debitis ipsa recusandae. Beatae quae eum quas neque id. Omnis corrupti beatae unde accusamus laboriosam a facilis voluptate. Cumque in soluta laborum eligendi unde delectus.\n\nSaepe repudiandae eum eum. Maxime perspiciatis ratione porro reprehenderit. Facere saepe dolorem et hic. Dolorem distinctio dignissimos vel fugiat dignissimos eos.	95.85	\N	2018-01-06 17:37:21.58854+00	5	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+822	Miranda LLC	In sapiente et accusamus tempore tenetur praesentium odio. Consectetur facere accusamus est quia blanditiis. Ad necessitatibus illum eveniet magni doloribus perferendis. Explicabo similique occaecati alias laudantium quia rem.\n\nRepudiandae amet nostrum earum exercitationem minima doloremque. Eaque exercitationem dolore sequi quos molestias dolores illo.\n\nSequi minima facilis itaque placeat exercitationem odio. Animi impedit odio quo nihil. Architecto quas illum occaecati a deleniti.\n\nAtque ab magnam nulla natus. Voluptatibus sunt dolorem fugiat occaecati dicta dolore dicta. Mollitia praesentium animi assumenda et. Impedit dolorem corrupti placeat sit accusamus. Molestiae error nemo fuga libero.\n\nAdipisci repudiandae at ullam voluptatum iure. Dolore sit ipsum odit. Unde atque ipsam quam ipsa voluptatem corrupti optio.	27.91	\N	2018-01-06 17:37:21.631152+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+823	Dillon Ltd	A reiciendis doloribus porro. Voluptas laborum repudiandae aliquid aliquam architecto fugit in. Accusamus culpa iusto dicta laborum.\n\nExplicabo officiis repellendus doloremque. Exercitationem accusantium consequuntur minus. Aspernatur aut velit libero similique. Enim ex quam dolor expedita cupiditate impedit aliquid amet.\n\nNisi eaque facere explicabo maiores quo. Architecto vel fuga esse possimus in autem consequatur. Quis mollitia omnis soluta nulla error. Nihil cumque illo a perferendis nisi consequatur.\n\nCommodi soluta porro doloribus aspernatur. Cum qui quisquam eaque eligendi. Quidem magnam ipsa facilis tempora deserunt. Ullam ducimus est eius illum sapiente autem. Ad odio eum recusandae error sint culpa asperiores.\n\nFugiat animi laboriosam eligendi sit reiciendis ea. Maxime reiciendis dignissimos sequi amet fuga aliquid molestias. Omnis magni quia fugiat error ut animi.	35.40	\N	2018-01-06 17:37:21.678648+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+824	Contreras-Gilbert	Officia necessitatibus optio praesentium eaque non est et adipisci. Aspernatur corporis harum a. Minus tenetur porro repudiandae. Voluptate voluptatibus cumque doloribus.\n\nVoluptate autem praesentium aperiam perspiciatis fugiat. In debitis exercitationem occaecati unde voluptatem. Magni non ea labore fugit accusamus fugit in. Perferendis quidem perferendis accusamus. Quas enim ducimus qui sunt qui commodi.\n\nReprehenderit consequuntur tenetur veritatis explicabo atque. Facilis asperiores totam maxime accusamus quos culpa. Inventore blanditiis iusto saepe repudiandae. Id ducimus exercitationem incidunt suscipit natus quidem modi quo. Aliquid amet saepe eligendi assumenda consectetur molestiae tempora cumque.\n\nCum soluta unde excepturi magnam eos. Dolores accusamus autem voluptatum minus. Id cumque aut nobis ullam blanditiis beatae.\n\nAperiam ad quam natus corrupti excepturi dolore. Voluptates eum at necessitatibus aperiam eligendi eligendi excepturi. Aperiam eius nesciunt commodi eum. Natus deserunt repellat maxime incidunt maxime qui.	55.47	\N	2018-01-06 17:37:21.718953+00	5	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+825	Cook, Clark and Martinez	Optio deleniti iure modi earum ratione sit fugit. Dolore odit expedita id. Consequuntur consectetur soluta impedit. Sed voluptatem eveniet nobis voluptatem.\n\nTenetur aperiam iure deserunt. Numquam dolore nemo adipisci eum exercitationem.\n\nCumque perferendis molestiae temporibus. Praesentium corporis magni ab occaecati odio. Dolor quibusdam error quod iure fugiat molestiae officiis. Recusandae aut ad molestias vitae.\n\nOptio temporibus nostrum perferendis aliquid. Velit perspiciatis deserunt quia alias officia.\n\nBlanditiis illo quaerat deleniti debitis nostrum consectetur alias vero. Natus veritatis hic facere sed ratione. Blanditiis corporis vel voluptatibus aliquam tempora.	96.17	\N	2018-01-06 17:37:21.760018+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+826	Day Inc	Natus officiis asperiores ipsa assumenda. Adipisci voluptates magnam excepturi unde. At necessitatibus maiores neque alias. Necessitatibus blanditiis quibusdam cumque hic.\n\nExplicabo ipsum laboriosam quas perspiciatis corporis in corrupti. Aut quod sit vitae asperiores numquam. Laborum maiores occaecati consectetur magni blanditiis.\n\nIusto et molestias doloribus qui nulla soluta error doloremque. Sunt sapiente in dolores pariatur repellendus minus. Tempora nulla fugit minima nobis accusantium est.\n\nDoloremque occaecati eum harum magni. Quis quibusdam deserunt voluptates vel. Autem quos ea accusantium praesentium itaque. Aliquam ad hic tempore accusantium qui praesentium ipsa ex. Sunt ad rem fugit nam temporibus quam dolores.\n\nQuae nesciunt amet quia adipisci. Voluptas quidem saepe amet quas hic quis id. Omnis enim debitis dicta laudantium temporibus incidunt quidem.	17.74	\N	2018-01-06 17:37:21.808814+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+827	Gallagher LLC	Nulla hic porro optio doloribus nesciunt ipsam provident. Praesentium ea atque occaecati quam. Reiciendis voluptatibus ea adipisci dolores suscipit iure.\n\nEst officia quae sequi. Autem esse exercitationem velit itaque recusandae. Et quo sint cumque ipsam iure officia fuga.\n\nVelit explicabo incidunt at nihil vero possimus repellat. Natus nulla reiciendis nam incidunt quam. Accusantium aliquid sint tempore eveniet maiores. Deserunt nemo repellendus perspiciatis ratione eligendi culpa. Fugit necessitatibus repudiandae reprehenderit qui.\n\nQuas ullam repellat qui temporibus iure veniam non. Rerum mollitia cum sequi ullam fugit labore voluptatum. Veritatis quidem asperiores repudiandae. Perspiciatis totam cupiditate dolore atque fugit.\n\nModi eligendi veniam qui quo. Minima numquam animi architecto iure soluta. Ipsa qui deserunt fugiat quia aspernatur.	42.35	\N	2018-01-06 17:37:21.856235+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+828	Decker-Johnson	Voluptatum exercitationem tempore at nesciunt illum in laboriosam. Quas ut tempora omnis earum distinctio porro in. Delectus culpa iste totam inventore quae voluptatibus possimus. Reprehenderit veniam adipisci quis at reprehenderit.\n\nIusto minima voluptas perspiciatis quis. Tenetur sunt soluta vero deleniti neque dolorum. Architecto molestiae similique sed cupiditate consequuntur earum.\n\nLaboriosam impedit ut numquam commodi ducimus. Accusamus cum sequi nostrum ipsa porro quae eos. Consectetur deserunt laudantium totam labore distinctio incidunt unde illo. Perferendis sunt incidunt a hic distinctio quidem unde laudantium.\n\nExpedita ducimus earum ab unde magni voluptatem tempora vel. Alias aperiam hic magni voluptatum omnis.\n\nEst vel voluptatibus numquam nesciunt numquam. Doloribus quam vero deserunt molestias beatae deserunt. Suscipit nihil cupiditate vitae temporibus esse quasi commodi. Fugiat accusantium ratione quam ut quod neque.	0.91	\N	2018-01-06 17:37:21.889316+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+829	Chapman-Young	Maxime vero corporis magni totam dolore. Culpa eum explicabo dolores iure. Praesentium ad optio dicta dolor. Esse exercitationem libero cumque dolores nesciunt ratione dignissimos itaque.\n\nAspernatur nobis officia molestiae voluptatibus. Itaque omnis doloribus vero. Officiis sed aperiam aliquid repellat libero suscipit. Ipsa excepturi odit est tempora earum.\n\nVeritatis iusto consequuntur blanditiis sed animi magni quibusdam. Cupiditate a aperiam saepe sint quo.\n\nFuga veniam laudantium alias debitis iure facilis debitis. Sit laborum reprehenderit ipsum harum provident tempora. Necessitatibus alias quisquam sequi aut consequuntur.\n\nError quo ut perspiciatis impedit. Quod ut saepe debitis quibusdam. Cupiditate atque itaque aspernatur earum.	81.17	\N	2018-01-06 17:37:21.916447+00	5	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+830	Bush-Scott	Eius voluptatum ducimus nam libero odio aspernatur. Consectetur in quo eaque placeat ipsum dicta ipsam deleniti. Ex voluptate perferendis eum necessitatibus dolores.\n\nQuaerat earum recusandae vel quos odio. Enim aliquid cumque quo. Assumenda minima velit veniam commodi fugiat neque. Dolor est provident facere nam porro quo minima.\n\nRepudiandae iure quaerat animi molestias voluptates. Dolores praesentium qui quasi aliquam iste quod.\n\nUt sapiente aut a reprehenderit alias ut laboriosam. Id est excepturi voluptate dolor iste tempora perferendis. Repellendus libero excepturi beatae culpa quas qui eligendi. Delectus ullam placeat dolorum.\n\nDolorem et sint ratione. Praesentium eaque nam quo aut delectus voluptatem. Harum repellendus accusamus in ipsum cupiditate accusamus doloribus. Tenetur ut eum inventore porro molestiae.	55.87	\N	2018-01-06 17:37:21.965706+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+831	Hamilton, Garcia and Perez	Deleniti expedita magnam magni facere maxime laboriosam non. Eligendi harum odio perspiciatis excepturi voluptate voluptatibus. Sit ea laboriosam placeat. Facilis temporibus repellendus blanditiis delectus officia tempora quidem ipsa. Cum cupiditate tempore fuga nobis voluptas fuga.\n\nFugiat accusamus officia fugiat. Ducimus ab amet quisquam qui. Quae nulla cumque quas exercitationem quae.\n\nMinus minus itaque totam iure reiciendis fugiat expedita. Architecto cupiditate rem voluptates alias laboriosam esse minus. Ex quaerat animi ex voluptatibus eius voluptas. Repellat ab vero iste eveniet quod.\n\nSimilique vero culpa laborum saepe. Ratione eaque recusandae quas consequatur excepturi commodi eveniet. Quia voluptate aspernatur repellendus animi harum. Quidem nesciunt corporis deleniti magnam.\n\nExpedita eos optio reprehenderit assumenda nemo amet necessitatibus. Reprehenderit id natus enim dolor. Facere quidem ratione dignissimos aliquam dolores.	92.89	\N	2018-01-06 17:37:22.013808+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+832	Wilson-King	Totam corporis quidem quos vitae quidem. Animi accusamus dicta quidem. Explicabo soluta quis consectetur quasi. Ratione doloremque repellat omnis reiciendis laboriosam quam.\n\nBeatae officia ipsa quasi quam laboriosam minus harum. Tempora libero necessitatibus quos maxime beatae. Inventore facilis debitis officiis iure. Perspiciatis aliquam beatae tempora totam.\n\nId ipsa rem quam iusto doloribus expedita ducimus. Qui ad a possimus perspiciatis recusandae ducimus impedit perferendis. Velit laboriosam rerum expedita ducimus alias voluptatem nulla. Dolor fugit quos labore ea.\n\nMollitia quis placeat illum neque voluptatum maxime. Similique odio quisquam magni aliquam eius culpa. Beatae perspiciatis sed explicabo assumenda. Reprehenderit dolorem perferendis assumenda.\n\nBeatae neque ullam odio totam esse eum. Tempora temporibus omnis veniam tenetur delectus sapiente autem.	6.99	\N	2018-01-06 17:37:22.049825+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+833	Berger, Brown and Ramirez	Id numquam nemo pariatur hic ipsa mollitia ullam. Vel voluptas sunt dicta amet molestiae.\n\nEnim quibusdam itaque tempore error explicabo debitis. Architecto minus fugit tenetur a. Explicabo cupiditate iste placeat odio cum quaerat nostrum. Numquam laborum corporis maxime et sit.\n\nVero quisquam consectetur soluta animi veniam cum. Architecto repudiandae quisquam temporibus iure eligendi voluptatum. Quas suscipit velit iste commodi distinctio ea. Debitis voluptas molestias eius id.\n\nConsequuntur voluptatibus quasi ut ipsam esse. Assumenda beatae praesentium ut nemo ducimus accusamus ratione tenetur. Suscipit blanditiis veritatis nemo quia ex.\n\nId nostrum aspernatur laboriosam labore. Tempora voluptatem fuga inventore voluptate ea. Sapiente veniam ut molestias sapiente saepe. Architecto vero facere temporibus voluptas quisquam. Officia doloremque consequuntur in mollitia inventore quia.	61.93	\N	2018-01-06 17:37:22.103235+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+834	Schmidt Inc	Sequi tempore necessitatibus perspiciatis fugit cum nam iure. Provident temporibus asperiores nisi repudiandae esse. Nemo animi libero temporibus ipsa.\n\nEligendi voluptas suscipit sit ab. Ratione ducimus debitis labore mollitia. Minima quaerat voluptatem repellendus odit.\n\nVelit dolor atque voluptatum neque. Accusamus numquam facere totam suscipit id voluptates unde. Maiores debitis ratione dolores eos architecto repellendus doloribus. In itaque dolorem excepturi.\n\nPraesentium beatae distinctio voluptas blanditiis sed quidem. Cum commodi sed recusandae modi. Veniam unde repellat consectetur earum aperiam nesciunt voluptatem.\n\nAd facilis numquam repudiandae sint eum ad dignissimos. Nihil error dolore voluptates nesciunt odit. Nobis illo delectus quo magnam qui est magni eum.	81.49	\N	2018-01-06 17:37:22.15004+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+835	Nichols, Rose and Juarez	Autem adipisci animi sunt rerum. Facere ea repudiandae tempora ipsam cumque. Odio eligendi corrupti tempore voluptatem. Ab assumenda dolor esse totam impedit ab. Quasi deleniti ipsam molestiae enim nisi cum quasi.\n\nDolorem cupiditate similique rerum fugiat. Asperiores occaecati debitis ab eligendi.\n\nRecusandae quo itaque architecto magni iure ducimus saepe quaerat. Hic autem provident voluptates laborum mollitia similique. Dignissimos rerum corporis et ab facere dolor modi.\n\nHic rem in expedita ullam ad impedit quaerat. Sint qui nobis aspernatur eius illo doloribus saepe eligendi. Optio recusandae expedita explicabo dolorem aspernatur debitis.\n\nIllo nisi animi soluta ipsa quisquam eius velit. Tenetur nobis laboriosam quos dolor culpa. Quibusdam quae sed voluptates asperiores quos. Veritatis asperiores nostrum corporis. Animi voluptatum quia voluptatum.	10.47	\N	2018-01-06 17:37:22.186237+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+850	Johnson Group	Natus facilis dolorem quibusdam velit impedit. Cum quidem provident repudiandae repellendus nobis. Error iure exercitationem molestiae rem.\n\nReprehenderit repellendus porro dicta officia. Similique earum magni quis repellendus. Praesentium fugit qui magnam porro doloribus deleniti. Autem provident consequuntur fugiat commodi minus ab rerum deleniti.\n\nVelit soluta eaque temporibus consequuntur illum. Dolor ullam sint maxime repellat facere. Perspiciatis dicta numquam sint fugit porro architecto. Officia enim explicabo ducimus eum.\n\nReiciendis vitae eos aliquid beatae nemo. Fugit dignissimos dicta perspiciatis nihil voluptatibus. Quam culpa perspiciatis dolore perferendis facere. Reiciendis eligendi maiores natus eius rerum voluptas.\n\nEnim quam autem ipsam eaque natus ab. Nulla repudiandae cum officiis atque quo magnam quod. Id magni pariatur nisi quaerat sit nam. Modi laborum voluptate officia eius.	37.69	\N	2018-01-06 17:55:23.822545+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+851	Scott-Compton	Facere laborum pariatur pariatur amet. Vitae enim nostrum dolorem unde soluta debitis perspiciatis. Veritatis ipsa natus veritatis distinctio veritatis sequi recusandae.\n\nQui voluptatem qui quam nostrum. Nam vel ad officiis eligendi voluptas. Rerum ipsum accusamus deleniti voluptatum at fugiat. Fugit totam iusto aliquid quia iusto nesciunt.\n\nPerspiciatis esse maiores amet at. Ipsam rerum nisi similique sequi blanditiis cum hic. Eaque magni accusantium dignissimos aut iste consectetur. Aut ipsa eum ex occaecati quasi. Eius qui nemo eum a possimus fugit.\n\nSint in amet sit facere impedit quia. Reprehenderit dignissimos nisi in pariatur iste. Ullam ab mollitia unde.\n\nAssumenda dolore eaque nostrum natus quas et. Nisi est dolores aliquam. Aspernatur dicta cupiditate fuga dolorum reiciendis rerum.	36.19	\N	2018-01-06 17:55:23.874625+00	2	"3"=>"6"	f	t
+836	Soto-Cook	Consequatur harum voluptates nobis expedita eaque. Dolores placeat debitis exercitationem veritatis illo ipsam asperiores. Reprehenderit omnis nihil asperiores vero vel voluptate. Maxime facere voluptatibus sit error deserunt magni dignissimos.\n\nRepellendus sequi numquam inventore perspiciatis omnis necessitatibus magnam. Deserunt ad excepturi unde culpa vitae. Magnam magni praesentium ex quos. Repudiandae a perspiciatis veritatis nobis ipsum.\n\nUllam repellat numquam ducimus eum tenetur tenetur velit temporibus. Accusantium sint veniam fuga dignissimos eius. Quod beatae ipsam numquam suscipit.\n\nConsequuntur voluptates hic excepturi illum. Numquam aperiam quaerat similique maxime eos. Possimus maiores quae suscipit animi aspernatur officia esse.\n\nEligendi eaque est maxime praesentium esse reiciendis quasi fugit. Vero nesciunt magni rem sint ipsum officia id. Dolor ullam ut assumenda ea quaerat amet illo. Quo ducimus iusto quidem facilis illo cupiditate.	59.62	\N	2018-01-06 17:37:22.278315+00	6	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+837	Munoz, Rogers and Barker	Dicta error maxime dolores aspernatur quo. Impedit magnam illum soluta maxime eveniet veritatis. Deserunt eos sint unde laborum cum quaerat quaerat.\n\nDolor perspiciatis culpa fuga voluptatem culpa. Laudantium excepturi libero ad doloribus consequuntur reiciendis adipisci. Vero aperiam quos magni velit vero.\n\nIn ipsum quaerat eveniet molestias. Saepe velit ipsa atque. Harum ea eveniet assumenda earum.\n\nOccaecati eligendi fugit ad recusandae ad blanditiis. Minima nemo voluptatum minima libero porro similique. Doloribus eligendi id deserunt quae.\n\nMaiores quae quia cum error modi rerum. Doloremque nemo sunt possimus quod. Facere rem quaerat ipsam sequi aut. Qui quae odit magni quas.	61.29	\N	2018-01-06 17:37:22.332945+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+838	Reilly, Moody and Rose	Ullam excepturi veniam unde possimus natus sint sunt itaque. Quam laboriosam repellat nostrum odio. Pariatur autem cumque optio odit deserunt. Voluptates sed cupiditate alias omnis deleniti vel tempore accusamus.\n\nDolore esse quibusdam laboriosam amet minima. Amet laudantium sint itaque impedit. Ipsa vel impedit doloribus fugit reprehenderit mollitia.\n\nCorporis libero tempore non officia perferendis natus laborum vel. Consequuntur non est sit neque voluptatum. Corrupti rerum suscipit omnis delectus. Tenetur eum similique reprehenderit consequuntur deserunt expedita.\n\nEius similique nemo autem autem occaecati voluptas. Est molestiae vero deserunt libero quam quidem. Rerum placeat nulla placeat saepe. Doloremque repudiandae quos labore corrupti repellat ab.\n\nDolore unde asperiores vero doloribus. Corrupti tenetur facilis minus neque adipisci unde nemo. Optio facere occaecati ad aspernatur est.	11.00	\N	2018-01-06 17:37:22.379792+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+839	Ballard LLC	Autem praesentium suscipit autem libero. Qui quod natus facere velit distinctio qui. Delectus cum commodi corporis.\n\nAperiam quam dolores molestias ipsa nam molestiae. Inventore assumenda adipisci dolor modi occaecati dolore distinctio. Unde doloremque nulla assumenda consectetur minus rerum. Repellendus quam sit velit suscipit unde.\n\nIllum sapiente temporibus sit eum. Facere sit unde accusantium. Minima voluptatibus ipsam distinctio eligendi magni aut fuga. Aspernatur nisi aliquam incidunt officiis. Eum impedit dolore distinctio vero.\n\nDeleniti ratione at perferendis iste omnis officia reprehenderit. Quasi tempora harum suscipit delectus enim quis. Corporis explicabo esse facilis doloremque velit natus placeat.\n\nConsequuntur veritatis ex laboriosam distinctio enim. Reprehenderit nulla autem commodi ipsa quis pariatur necessitatibus. Quod velit odit blanditiis animi a quia expedita. A doloremque animi illo earum culpa iste.	84.13	\N	2018-01-06 17:37:22.438576+00	6	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+840	Kent Ltd	Quo doloremque delectus non corporis voluptates voluptatibus. Iusto magnam dolores saepe. Ab esse vero labore quidem sunt praesentium. Tempore quos impedit ad quia nihil error.\n\nNam explicabo ipsam enim excepturi soluta. Accusantium eveniet ex et distinctio placeat. Non labore aspernatur tempore. Eos excepturi illo quaerat in amet sapiente atque.\n\nVelit delectus facere reprehenderit perspiciatis sapiente quibusdam laudantium. Dolores molestiae tempora aperiam nobis. Dolorem praesentium suscipit nihil quo reiciendis ex possimus repellat. Sit quos vitae debitis culpa occaecati nesciunt. Deleniti ab eligendi autem modi voluptatem.\n\nSequi accusamus perferendis doloremque porro. Magnam nulla adipisci in eaque. Iusto alias neque eum possimus quaerat culpa.\n\nArchitecto iste esse voluptates vero. Placeat nemo inventore reprehenderit quas laboriosam blanditiis quidem non. Tenetur sed provident alias necessitatibus praesentium non. Officiis nobis culpa repellat.	38.13	\N	2018-01-06 17:37:22.486509+00	6	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+841	Freeman and Sons	Molestiae qui ipsum sunt rem alias. Dolore ipsum delectus voluptatem consequatur quam ut voluptates. Ex harum tempora dolorem praesentium inventore modi saepe.\n\nIncidunt voluptate eius earum. Totam mollitia placeat recusandae cumque vero. Nobis animi impedit incidunt eveniet dolor molestias alias.\n\nConsequatur dolor inventore voluptatum. Sit quas ipsum numquam fugiat illum. Qui ad mollitia similique nobis veniam accusantium culpa magnam.\n\nOmnis ipsum reiciendis facilis. Error rerum dicta cumque suscipit ea soluta. Quo debitis mollitia animi esse magni. Magnam iure dolor nostrum placeat impedit.\n\nMinus assumenda esse architecto debitis dicta officia. Autem aliquid aliquid dolorem vero debitis libero dolores.	74.22	\N	2018-01-06 17:55:23.27984+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+842	Rivera, Martin and Howell	Doloremque voluptatem non distinctio quis culpa. Similique saepe perferendis inventore quasi. Nisi minima sapiente ad aliquam ratione. Commodi rerum aperiam aperiam eveniet quis. Eos nam voluptatum accusamus amet.\n\nQuod facilis omnis voluptate officiis qui nobis. Tempore et eaque iste.\n\nNatus hic quo cum hic sed pariatur id. Vel debitis fuga tempore. Quibusdam molestias nulla totam maxime possimus. Rerum impedit magnam deserunt culpa alias voluptatibus. Temporibus animi rem veniam at illo.\n\nTotam enim a quae incidunt voluptatibus id aliquam. Minima at dolores reprehenderit. Tenetur inventore ducimus ab a maxime consequatur deserunt omnis.\n\nRecusandae eum iure incidunt sunt aliquid. Optio quis quis officiis aliquam cum accusantium molestiae. Praesentium veniam enim ea architecto. Autem quis id ipsam pariatur exercitationem.	96.20	\N	2018-01-06 17:55:23.372109+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+843	Flores-Murphy	Voluptates alias beatae non expedita quod. Ut doloribus labore incidunt debitis tempora. Voluptates aliquid voluptatem aliquid qui aliquid at ab. Aliquam accusantium sint adipisci esse suscipit.\n\nQuis sint dolore quae. Aut sint consectetur cupiditate voluptatibus mollitia dicta tenetur. Explicabo esse aliquam eligendi odio non itaque. Odio eius ipsa adipisci animi accusamus quasi.\n\nSit voluptatum beatae quae ut. At itaque explicabo magni. Itaque molestias deleniti commodi quo doloribus. Aliquid distinctio libero quod doloribus illo blanditiis.\n\nRem animi possimus neque voluptatibus voluptatem quia commodi. Aut odit veritatis temporibus ab sint quas excepturi. Laborum suscipit commodi inventore inventore reiciendis veniam dolorum. Id sint aut officiis maxime repellat temporibus velit nam.\n\nTempora sit rerum at doloremque dolore in repellendus. Doloribus iusto incidunt expedita eos dignissimos. Ut in consequatur porro eius. Molestiae illo sit impedit magnam nesciunt consequatur.	8.80	\N	2018-01-06 17:55:23.421324+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+844	Harrington-Shannon	Atque provident iure libero eius. Corrupti vitae blanditiis nam. Harum at laudantium autem at culpa aliquam facilis minima.\n\nSint ducimus sed eos accusamus assumenda harum vel. Tenetur eveniet soluta earum accusantium harum corporis blanditiis. Explicabo incidunt iste eaque perspiciatis porro accusamus dolorum.\n\nEum repudiandae soluta natus natus ipsa. Veniam earum iste similique temporibus. Laudantium eveniet modi nostrum deserunt veniam rerum. Possimus quaerat unde commodi optio commodi. Quos quae rerum suscipit sequi et ipsum.\n\nCupiditate explicabo blanditiis consequatur. Voluptatem eaque cupiditate deserunt. Delectus incidunt soluta officiis illo tenetur blanditiis ducimus autem. Perferendis fuga enim recusandae delectus.\n\nCum distinctio minus tenetur hic eius illum impedit beatae. Fugit ut assumenda dicta est placeat mollitia amet in. Pariatur aut incidunt mollitia explicabo.	3.34	\N	2018-01-06 17:55:23.481544+00	1	"1"=>"1", "2"=>"4", "3"=>"6"	f	t
+845	Mendoza, Martin and Drake	Nobis inventore iusto omnis eos ipsum repudiandae alias reiciendis. Modi recusandae esse odit soluta adipisci. Aliquid accusantium quas temporibus quis.\n\nRepellat nisi soluta dicta. Impedit dolore eius tenetur aliquid possimus provident. Sint sunt placeat optio illum expedita ullam.\n\nAtque eveniet voluptates laudantium nemo. Nulla quisquam sunt laborum voluptate occaecati esse ipsa. Vitae atque numquam non possimus. Voluptatem consectetur expedita nam ipsam.\n\nSapiente fugiat quos officiis quo eius illo. Cumque quam quos illo numquam deserunt. Esse rem incidunt perspiciatis adipisci omnis.\n\nCulpa voluptatem esse nam fuga repellendus. Dolores possimus facere soluta nisi. Deserunt optio laborum fugiat iusto. Dolores maiores necessitatibus corrupti nisi nulla.	60.30	\N	2018-01-06 17:55:23.540852+00	1	"1"=>"2", "2"=>"5", "3"=>"6"	f	t
+846	Sawyer-Cowan	Ad est fuga libero odio quibusdam. Culpa recusandae tempore voluptatibus fuga voluptate corrupti voluptatum. Perspiciatis quas perferendis quas. Placeat id dolores laborum quod.\n\nExercitationem porro perspiciatis non quo inventore molestiae. Rerum in enim ullam amet itaque voluptate. Minima ipsum officiis distinctio eligendi molestias inventore minima. Harum numquam quidem eveniet dolor incidunt deserunt earum.\n\nOptio laudantium exercitationem hic iure debitis sequi voluptas voluptate. Impedit nisi non sit laborum. Illo quibusdam ut iste optio inventore quasi.\n\nAdipisci nulla similique iste exercitationem numquam pariatur. Exercitationem vero totam rerum eos facilis. Ullam asperiores molestias optio quo consequuntur deleniti aperiam temporibus. Iste molestias asperiores ea nobis provident.\n\nDolore cumque itaque omnis quod officiis. Totam eligendi explicabo veniam.	35.29	\N	2018-01-06 17:55:23.590741+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+847	Lee-Cruz	Nihil soluta iste nisi impedit dolore. Beatae reprehenderit sed aut occaecati. Tempore quisquam quaerat laudantium deleniti possimus.\n\nQuod corrupti laboriosam beatae. Hic provident ipsa similique in excepturi ducimus. Nesciunt quia sint assumenda nam mollitia numquam hic. In omnis veniam numquam dignissimos.\n\nEligendi nam quod reiciendis. Deleniti et aliquid alias dicta ipsum ut fuga. Minus ad consequatur reprehenderit explicabo cumque atque ullam.\n\nVoluptatibus earum fugit sunt aspernatur modi ut aliquid. Eveniet perferendis consectetur omnis. Beatae nisi accusamus quis beatae itaque assumenda. Cupiditate veritatis placeat odio facere expedita sapiente voluptates.\n\nDolores ut debitis rem placeat delectus officia. Laborum blanditiis quae saepe facere laboriosam tempore. Earum odio nam accusamus soluta. Quibusdam ab quo et qui inventore enim.	78.86	\N	2018-01-06 17:55:23.649884+00	1	"1"=>"1", "2"=>"3", "3"=>"6"	f	t
+848	Hoover Inc	A aliquid soluta unde voluptatem sed nihil. Saepe suscipit minus deleniti natus ducimus id voluptatibus. Soluta itaque minus tempore dolorum placeat. Magni numquam cumque accusantium. Laborum perferendis hic architecto labore suscipit repudiandae.\n\nRatione deserunt vero culpa. Veritatis reiciendis incidunt quaerat aliquam. Possimus quia repudiandae tempore mollitia error.\n\nMagnam id consequatur beatae quidem ea. Non excepturi laboriosam quisquam vel. Reprehenderit perferendis minus mollitia aliquid illo quisquam. Numquam perferendis nam accusamus quisquam vel a.\n\nItaque vero beatae nobis magnam facilis dolore saepe. Quas asperiores deserunt aliquam eligendi ut officia ad. Recusandae molestiae assumenda sapiente culpa. Sint minus exercitationem possimus nisi inventore molestiae mollitia.\n\nAliquam odio odio cumque corporis. Suscipit ut ipsum velit alias velit. Deleniti ducimus tempore velit eligendi.	22.97	\N	2018-01-06 17:55:23.704876+00	1	"1"=>"2", "2"=>"4", "3"=>"6"	f	t
+849	Quinn-Williams	Praesentium alias aut expedita vitae aspernatur sapiente. Illo consectetur excepturi perferendis harum optio et corporis. Hic modi in nostrum quibusdam. Voluptatibus eaque ab enim.\n\nConsequuntur officia quos harum voluptate facilis. Saepe soluta vel ut illo eius.\n\nEt adipisci quas soluta iste quasi ea rerum. Rem quaerat deleniti animi. Aperiam temporibus nam omnis adipisci voluptatum non. Sint repellat velit itaque harum eveniet tenetur.\n\nAspernatur ab ratione ducimus autem sint quae fugiat. Similique explicabo dolorum tempore quasi. Officia natus ratione quasi ut illum tempore.\n\nMolestias eaque corporis numquam repellat quae. Occaecati est tempora fugit id nam. Possimus aliquam quis ipsum labore.	64.71	\N	2018-01-06 17:55:23.759925+00	1	"1"=>"2", "2"=>"3", "3"=>"6"	f	t
+852	Nolan-Rowland	Impedit illo distinctio tempore delectus fugit. Magni fuga minima eligendi in unde vero. Sequi rerum exercitationem cum deserunt fuga dignissimos. Tempora ut tempora totam inventore nihil possimus.\n\nSunt perferendis beatae veritatis mollitia id voluptatem. Corrupti dolor laborum excepturi reiciendis provident. Dolorum quod provident voluptatibus beatae eius recusandae laborum autem.\n\nSuscipit ullam nemo possimus tempora accusamus rem asperiores. Nam libero qui consequuntur animi quidem. Culpa sunt repellendus earum similique. Nostrum repellendus a nihil fugiat praesentium recusandae voluptate autem.\n\nQuidem nam odit voluptatibus laboriosam. Exercitationem eius ipsam repudiandae maxime. Ipsam quibusdam repellendus perspiciatis nulla neque officiis. Culpa quisquam officiis illo modi eaque enim. Voluptates repudiandae tempora accusamus praesentium quia accusamus temporibus.\n\nDeserunt occaecati quidem iure similique exercitationem quia. Ea est laborum in iure. Distinctio quod cumque magni possimus incidunt maxime distinctio. In voluptatibus cum nobis aperiam tenetur.	62.88	\N	2018-01-06 17:55:23.903691+00	2	"3"=>"6"	f	t
+853	Small-Lamb	Praesentium soluta quidem illum officiis odio repellendus. Eum autem ea dolorum itaque. Quod aspernatur delectus totam nesciunt et. Suscipit dolore alias ipsum.\n\nAlias rem harum corporis. Temporibus quia illo voluptates vel voluptatibus eius voluptate aspernatur. Eius eligendi sequi soluta qui.\n\nAssumenda placeat labore repellendus. Fugiat est iure assumenda iure. Ipsam alias a saepe.\n\nNisi quibusdam dolore accusamus amet id mollitia. Dolores nihil quod animi voluptatem. Incidunt nisi sunt porro dolores.\n\nOptio id dolorem consequatur veniam illum repellendus delectus. Sapiente doloremque quae consectetur molestias iusto placeat. Ullam distinctio eligendi debitis non numquam distinctio. Commodi ex quisquam sequi quibusdam inventore animi laboriosam.	44.89	\N	2018-01-06 17:55:23.956891+00	2	"3"=>"6"	f	t
+854	Berry Group	Itaque ab non doloribus accusamus ipsa velit numquam. Minima perspiciatis magni ipsam cumque cumque.\n\nConsequatur molestiae molestiae quibusdam asperiores. Quasi consequuntur velit sequi minima quam reprehenderit sit enim. Ab distinctio iste numquam molestias delectus molestiae ex.\n\nVeniam rerum animi tenetur earum necessitatibus. Perferendis harum ipsa corrupti. Aperiam quo eius maxime aut hic. Qui repellat nam quibusdam fugit.\n\nIste vel quasi atque similique dignissimos laborum. Itaque aliquid accusamus ratione. Vitae sunt a cumque dignissimos.\n\nConsequuntur suscipit quis laudantium totam ducimus. Dolore dolorem sint quaerat consectetur alias ratione reprehenderit. Facilis fugit dicta quos odio. Praesentium repellendus tenetur neque neque unde aliquid qui.	11.93	\N	2018-01-06 17:55:23.974806+00	2	"3"=>"6"	f	t
+855	Taylor Inc	Molestias nulla debitis aliquid deleniti. Hic numquam sint vero omnis commodi. Impedit repellendus vero omnis.\n\nExplicabo perspiciatis dolore iusto sed. Totam minus neque quo ullam. Ducimus nam odit et nemo blanditiis assumenda corporis alias. Ut laudantium ipsa modi esse quasi nihil.\n\nBeatae blanditiis numquam tempora pariatur. Nulla ratione provident iste sapiente vitae animi. Optio reiciendis optio incidunt libero laudantium officiis.\n\nAutem aliquam amet amet. Beatae recusandae illum temporibus voluptas voluptate non totam. A delectus illum aut labore quidem quibusdam incidunt quis.\n\nReprehenderit modi cupiditate in a accusamus nulla. Animi dolores ipsa ex blanditiis amet esse. Natus voluptas nobis earum minus quis. Dicta placeat minima soluta debitis. Officia ipsum laudantium ullam esse cupiditate optio iure blanditiis.	53.43	\N	2018-01-06 17:55:24.005932+00	2	"3"=>"6"	f	t
+856	Cobb, Lang and Ramos	Fuga similique autem quos sunt odio maxime. Asperiores occaecati impedit voluptatem delectus dolorum impedit. Adipisci dicta officiis in.\n\nItaque animi fugit minima impedit quaerat exercitationem voluptatem. Harum quo quis sapiente et maxime harum aut laboriosam. Nulla fuga molestiae quisquam hic.\n\nQuis omnis odio fugit inventore eveniet repellendus. Esse expedita dolor molestiae earum delectus eum. Ullam qui quasi officiis.\n\nIste quasi porro voluptas ab soluta provident nihil. Numquam illo error totam et. Voluptates laborum neque iusto possimus nam illum.\n\nRecusandae odio asperiores ipsum officiis temporibus illum dolor iste. Aperiam animi saepe deleniti dolores. Repellat neque dolores ipsa doloremque libero quo numquam.	96.47	\N	2018-01-06 17:55:24.043307+00	2	"3"=>"6"	f	t
+857	Santiago, Jones and Carter	Laborum aspernatur neque perferendis ex excepturi vitae omnis corrupti. Ab temporibus corporis unde praesentium. Provident ut atque consequuntur fuga.\n\nPraesentium nemo quidem veritatis tenetur reprehenderit aut. Pariatur ex dolores omnis cum numquam sint. Nisi exercitationem exercitationem iusto laudantium fugiat saepe vero. Expedita ullam inventore magni nemo.\n\nAsperiores ipsam nemo animi. Nulla asperiores voluptates accusamus. Iure ipsa earum optio ipsum laboriosam. Nemo sed facere culpa iure omnis nobis molestias.\n\nFugit similique voluptate saepe deserunt aliquam. Iste illo quod cumque animi expedita. Totam officiis enim laborum accusamus ab.\n\nEa in beatae odio accusamus ab amet. Repellendus pariatur maiores beatae inventore unde iusto. Aut adipisci nesciunt non eum reiciendis.	88.60	\N	2018-01-06 17:55:24.083824+00	2	"3"=>"6"	f	t
+858	Wilson-Archer	Libero temporibus necessitatibus aut aperiam. Quo odit aperiam consequuntur pariatur quos necessitatibus natus. Velit inventore iusto mollitia hic soluta. Deleniti suscipit consequatur iste ea eveniet atque.\n\nAdipisci perspiciatis incidunt id nesciunt ut distinctio voluptate. Nihil nihil magni quam possimus libero. Eaque qui sunt exercitationem sint veniam aut dolores. Sint labore voluptate mollitia dolore debitis.\n\nCulpa itaque quasi consequatur modi. Inventore quia suscipit dolor porro architecto nemo placeat eligendi. Itaque ab doloribus voluptatibus maxime.\n\nNeque blanditiis sint nostrum. Iure eos nihil harum accusamus assumenda ratione excepturi. Earum totam itaque nisi amet animi ullam quia. Aspernatur commodi blanditiis ad repellendus nemo.\n\nEa reprehenderit ut voluptatum. Laborum in architecto fuga iure sit illum. Commodi ipsum ad sed architecto eveniet ipsam molestiae architecto. Numquam doloremque repudiandae at alias velit.	44.29	\N	2018-01-06 17:55:24.133196+00	2	"3"=>"6"	f	t
+859	Walker, Shannon and James	Odio voluptatum earum mollitia ullam natus veniam magni. Sed doloremque voluptatibus provident impedit error numquam. Veniam incidunt laboriosam eligendi perspiciatis sed deleniti earum.\n\nRepudiandae quo consequuntur animi animi. Rerum ducimus nihil debitis distinctio voluptate. Labore atque saepe ullam ullam.\n\nDeserunt enim porro eligendi mollitia soluta. Iure voluptates aspernatur sed ad corrupti. Modi ab a placeat facilis delectus. Velit distinctio quam sit illo.\n\nCumque iste repellendus temporibus consequuntur dolore perferendis accusamus. Nulla soluta quas sapiente possimus impedit corrupti. Explicabo commodi quasi vel ab. Optio officia illo laboriosam recusandae quaerat nam.\n\nDucimus necessitatibus reprehenderit animi ipsum itaque veniam. Quis impedit laudantium perspiciatis sequi officiis aperiam ut. Eveniet reprehenderit et nostrum occaecati. Distinctio tempora unde labore neque eligendi quidem quisquam.	91.27	\N	2018-01-06 17:55:24.162859+00	2	"3"=>"6"	f	t
+860	Mora-Nelson	Asperiores doloribus odit ea est nobis. Earum veritatis dolore qui autem odit explicabo fuga aut. Maxime assumenda voluptates debitis placeat iusto neque earum architecto.\n\nEos temporibus similique laborum voluptatem. Soluta dicta corrupti odit quidem eveniet veritatis. Ut cum fuga provident enim eligendi qui. Nobis molestias officiis fugiat porro eveniet iste.\n\nHic quae laborum velit odio hic cupiditate. Earum ullam reiciendis expedita numquam ullam dolorem. Libero eos tempore esse doloremque. Voluptas accusamus aut aperiam aliquid enim dolor.\n\nPerferendis modi laborum explicabo nostrum sapiente. Accusamus harum totam repellat commodi deserunt. Iste mollitia sint deleniti fuga quisquam quaerat.\n\nAssumenda mollitia beatae voluptatem ipsam saepe. Quisquam ipsa sed provident ea. Officia ut accusamus reprehenderit quae. Ut nisi possimus sapiente voluptatibus quis explicabo.	12.90	\N	2018-01-06 17:55:24.209085+00	2	"3"=>"6"	f	t
+861	Garza, Johnson and Sherman	Non pariatur ad tempore pariatur nobis. Animi reprehenderit ut reprehenderit minima vitae. Placeat natus consequatur consectetur quasi numquam modi. Ab laudantium alias aliquam.\n\nMaxime tenetur illo magni sed eligendi doloribus. Quae cum corporis quaerat. Eos aut doloribus aperiam ipsa. Assumenda dolore facere repellendus sequi natus sint vitae.\n\nVoluptate reprehenderit doloribus ipsa vitae alias totam dolor molestias. Voluptas iste magni deserunt suscipit voluptas sunt. Tenetur debitis eveniet laudantium ad. Vero quis officiis quaerat voluptas perferendis iste.\n\nLaborum excepturi tenetur tempore iusto. Dolor at repudiandae a dolore. Consectetur eligendi error excepturi velit tempore aliquam quos. Blanditiis architecto reiciendis aspernatur hic optio.\n\nOccaecati distinctio amet officiis hic exercitationem. Velit exercitationem optio saepe est magni. Minus nihil delectus est pariatur voluptatum quod possimus.	28.33	\N	2018-01-06 17:55:24.290612+00	3	"3"=>"6", "5"=>"13"	f	t
+876	Hill and Sons	Vitae porro a sit iste qui unde facilis. Mollitia animi dicta perspiciatis nulla maxime repudiandae possimus. Vero nostrum vel fuga possimus.\n\nFugit quia illum molestias mollitia exercitationem. Maiores harum adipisci totam ad ullam. Eligendi laborum error sapiente sequi accusamus qui fugit. Odit eaque vel tempore. Maiores beatae alias repudiandae.\n\nQuia consectetur consequatur blanditiis. Animi est temporibus est. Porro unde vel maiores iure. Reiciendis officia quos soluta a delectus. Sequi magni cum quos in.\n\nEum asperiores unde dolore accusantium cum. Perspiciatis porro tenetur doloremque excepturi cumque. Deserunt minima vitae ratione commodi hic veniam. Commodi soluta excepturi iusto accusantium.\n\nOccaecati exercitationem et illo qui sunt eius. Debitis impedit esse earum deleniti nostrum cum. A dignissimos nemo animi totam. Dolores eligendi qui id. Fugit ipsa soluta neque assumenda sunt atque provident.	64.14	\N	2018-01-06 17:55:25.158952+00	4	"3"=>"6", "7"=>"20"	f	t
+877	Miller-Long	Temporibus fugit ducimus quisquam libero labore suscipit. Accusantium dignissimos autem vitae dolor necessitatibus ut odio distinctio. A itaque minima minus voluptas id dicta laboriosam. Ducimus qui deleniti quia vitae similique.\n\nNesciunt neque maxime maxime impedit. Maxime eius nam tempore natus quasi velit. Incidunt occaecati sapiente praesentium molestiae ipsum amet porro voluptatem.\n\nIncidunt repellat debitis rerum perferendis recusandae sapiente doloribus. Nemo alias amet similique laborum ea consequatur. Sapiente porro dignissimos magni excepturi ut quod quaerat. Occaecati porro quo sed sunt tenetur.\n\nExplicabo recusandae necessitatibus illum consequuntur. Incidunt temporibus maxime aliquid aut. Officiis dignissimos laudantium nihil pariatur quam.\n\nVoluptatem aliquid illo temporibus perferendis. Distinctio fugiat qui tenetur nisi cupiditate quos earum. Culpa pariatur commodi dicta libero.	31.14	\N	2018-01-06 17:55:25.192967+00	4	"3"=>"6", "7"=>"20"	f	t
+878	Gonzalez LLC	Accusamus voluptatum illum nemo deserunt unde iusto. Fugiat qui consequuntur voluptatem totam architecto. Corporis iure atque cupiditate saepe. Perferendis iste inventore autem minus eius. Illum dolorem iusto iste qui minima.\n\nDeserunt voluptatibus adipisci commodi incidunt. Placeat aspernatur odit voluptatum. Ab aperiam facere voluptate.\n\nEligendi voluptate non dolorum non. Iure rem commodi cumque voluptas consectetur tempore aliquid. Corporis quaerat dolores qui sunt voluptate tempore.\n\nSed molestias itaque itaque fugiat sint totam amet inventore. Incidunt ad ratione vel numquam excepturi totam repudiandae animi. Quas alias maiores cumque officiis voluptatibus facere rem.\n\nDucimus quam cum maiores dolorum. Praesentium error aperiam quo delectus facilis porro a. Magnam debitis qui voluptate voluptatibus commodi odit aliquid error. Eos qui modi explicabo deleniti animi culpa nisi.	32.60	\N	2018-01-06 17:55:25.25526+00	4	"3"=>"6", "7"=>"20"	f	t
+862	Robles-Knox	Error dolor placeat unde assumenda aliquam iusto non praesentium. Itaque impedit tempore odio hic occaecati. Explicabo fuga voluptates quis ad tempore nihil nobis.\n\nMinus veritatis quas officiis dolor. Repudiandae suscipit laborum similique numquam asperiores ipsum. Dolorem quae quo ad eligendi. Ea rem illum dignissimos alias.\n\nDolorum quaerat excepturi ex quibusdam aliquam accusamus. Praesentium perspiciatis error quis laboriosam. Dignissimos accusamus eligendi amet perferendis doloribus aut a vel.\n\nRatione exercitationem debitis modi molestias incidunt commodi quam. Alias consequatur illum nam porro consequatur id perferendis. Odit qui aliquam accusantium ipsum. Quae soluta deleniti velit nemo ab assumenda facere.\n\nIncidunt beatae et nulla est necessitatibus adipisci. Dolor ullam consectetur rem alias adipisci voluptates quae. Molestias minima dicta minus minus occaecati commodi. Sequi possimus facilis voluptates possimus accusamus eveniet esse.	70.95	\N	2018-01-06 17:55:24.478934+00	3	"3"=>"6", "5"=>"14"	f	t
+863	Casey, Ramsey and Wilcox	Recusandae recusandae amet itaque provident. Deserunt quidem ullam laboriosam eius explicabo ut error. Similique vitae fuga minima eos. Nulla nesciunt voluptas ad veniam maxime autem iusto.\n\nAtque beatae explicabo laudantium dicta recusandae quae sunt. Quod numquam dolor impedit. Doloremque nisi nam quis enim quidem explicabo consequuntur fugit.\n\nIste rem quae odit. Pariatur nihil corrupti deserunt impedit dicta. Culpa aut consectetur beatae aliquid. Reiciendis ducimus neque sequi autem necessitatibus quo.\n\nDignissimos et commodi est recusandae. Optio libero ipsum iste sint beatae unde. Ipsam nulla saepe beatae in vel vero.\n\nSunt error quos praesentium iure atque ab. Cum modi mollitia quos optio minus dignissimos. Quidem veniam quis cum quas pariatur amet animi.	96.21	\N	2018-01-06 17:55:24.556622+00	3	"3"=>"6", "5"=>"14"	f	t
+864	Richmond PLC	Cumque perspiciatis magnam possimus beatae. Nisi atque reprehenderit laudantium facere deleniti autem. Delectus autem qui esse modi rerum. Explicabo tenetur aspernatur aperiam architecto nihil.\n\nQuaerat at similique possimus aut quasi et magnam. Dolorum quia temporibus doloribus voluptatem aliquam iure ducimus. Eaque repellendus praesentium quas repellat. Quos ipsum quaerat quos quod perferendis.\n\nDeserunt suscipit quibusdam voluptates delectus quidem rerum fuga alias. Labore aliquam dolorum neque voluptatibus labore animi atque. Doloribus beatae vel assumenda ea cupiditate velit. A quasi molestias odio fugiat.\n\nArchitecto cupiditate magnam dolorem voluptas deserunt a perspiciatis. Repellendus fugit dolor a harum.\n\nQuibusdam repudiandae ducimus tempora facilis fugiat dicta tempore. Commodi omnis provident nulla porro. Illum harum aspernatur quam occaecati. Adipisci ipsum laborum ipsam laborum veniam harum.	62.37	\N	2018-01-06 17:55:24.621245+00	3	"3"=>"6", "5"=>"14"	f	t
+865	Simpson, Pineda and Reese	Expedita provident rem perspiciatis vero reiciendis cumque. Consectetur enim ab cumque magnam recusandae sit. Eos explicabo praesentium occaecati eaque voluptate eligendi magni beatae.\n\nCum dolorem sint id neque esse aliquid beatae. Distinctio cupiditate aliquid optio laudantium. Dolorem nam quos voluptate odit perferendis eligendi. Ipsum occaecati neque et rem voluptatem ut atque.\n\nExercitationem molestias eos porro vel consequatur optio culpa. Porro voluptatum ipsa eveniet dolorum. Error qui quam esse aspernatur inventore. Inventore alias voluptates ipsum vero culpa architecto. Quas quis minus culpa voluptatem aliquid.\n\nIpsa perspiciatis reprehenderit ad sunt doloremque cupiditate. Cum error odit nobis laboriosam quis recusandae. Aliquam sit iusto est ea itaque minus quibusdam minima.\n\nMagni iure iusto laudantium voluptas at quae perferendis ab. Rerum occaecati provident sed quasi ex error molestias tempora. Inventore reiciendis numquam quasi suscipit.	11.10	\N	2018-01-06 17:55:24.675175+00	3	"3"=>"6", "5"=>"14"	f	t
+866	Malone Inc	Ea nesciunt nam fugit reiciendis ut. Sit perferendis aliquid itaque placeat delectus. Ipsa eveniet quos alias laborum rerum molestiae consectetur.\n\nDebitis ullam sed ea fuga laudantium aspernatur. Qui quisquam minima fugit quaerat.\n\nNulla odio quis eaque ut doloremque. Perspiciatis voluptatum deleniti modi quibusdam quia. Id iure impedit reiciendis praesentium commodi a dolore. Voluptatum totam nesciunt corrupti nulla eum distinctio nobis. Incidunt natus cumque animi.\n\nMagnam magnam ipsum dolore sed accusamus. Maiores suscipit illum eius optio soluta suscipit. Perspiciatis delectus laborum esse occaecati doloremque non dolores. Eius est tempora vitae.\n\nPlaceat illum deserunt tempore iure quibusdam ex. Esse debitis saepe nihil quidem. Labore illo aliquid laboriosam voluptates fugiat.	94.86	\N	2018-01-06 17:55:24.715739+00	3	"3"=>"6", "5"=>"14"	f	t
+867	Marks Inc	Quibusdam doloribus facere quod quas a. Blanditiis quos itaque exercitationem quisquam. Aut placeat velit facere quia.\n\nVel commodi odit voluptatum velit cupiditate quae rem. Quibusdam omnis ipsum provident aliquam rem. Quo fugiat voluptate tempora fugiat atque voluptate exercitationem. Sint dolor consequuntur nulla.\n\nSint dolorem tempora aliquam ab illo. Libero molestiae fugit ipsa. Quis fugit autem amet repellendus distinctio cum id.\n\nEius suscipit doloremque tempore error magni perferendis laudantium. Eum tempore eaque maxime qui dolores officiis. Ut mollitia voluptates quidem quasi. Animi impedit distinctio illo.\n\nMinus magni error nobis sapiente. Praesentium ullam voluptas minus sequi temporibus. Iusto ut delectus eius commodi asperiores dolorem esse voluptate.	61.62	\N	2018-01-06 17:55:24.777213+00	3	"3"=>"6", "5"=>"13"	f	t
+868	Daniels-Robertson	Fuga illum dolore doloremque explicabo. Accusantium fuga ipsam illum. Quia explicabo nihil accusantium vero veniam beatae repellendus.\n\nIn error doloremque expedita maxime iste. Optio ab quisquam possimus quam excepturi. Perspiciatis aperiam quis explicabo corrupti. Exercitationem porro laborum sunt eum id sed.\n\nAdipisci aliquam quis vero architecto. Alias autem accusantium quis animi dolor omnis in. Quae mollitia impedit eum ut ad ratione.\n\nIpsam nostrum quod cupiditate delectus. Suscipit sint illo in rerum eius tenetur reprehenderit minus. Ratione enim quisquam asperiores soluta reiciendis.\n\nVelit nulla labore enim vel eius voluptates. Dolore facilis magnam accusamus necessitatibus dignissimos. Soluta ipsa expedita nam debitis odit optio. Ut provident debitis nihil dolorum quisquam cumque.	49.20	\N	2018-01-06 17:55:24.832398+00	3	"3"=>"6", "5"=>"14"	f	t
+869	Page-Scott	Quam provident amet ratione. Dignissimos molestias quasi quidem tenetur magnam eum ducimus. Ab rerum sed deserunt maiores. Ipsum quam deleniti repellendus aspernatur nobis.\n\nPorro necessitatibus alias repellat et. Voluptatem error deserunt necessitatibus natus sunt voluptatibus. Perspiciatis iste animi quis unde non quidem beatae. Nulla velit eligendi sed debitis doloribus eos.\n\nNam consectetur quas delectus provident dignissimos nesciunt laudantium necessitatibus. Eius soluta minus eveniet consequatur sapiente. Voluptate iure adipisci fugiat sint eligendi.\n\nTemporibus accusantium dolores aut accusantium eligendi veritatis optio. Cum nobis expedita doloribus natus facilis. Doloremque vero nostrum eius atque fuga architecto. Hic quibusdam amet esse ipsam suscipit.\n\nVoluptatibus fugit sit nam enim quasi. Repellendus dolorum quidem at iure nemo. Cupiditate ullam quae quis architecto pariatur. Animi deleniti aliquam optio nulla dicta.	79.41	\N	2018-01-06 17:55:24.886917+00	3	"3"=>"6", "5"=>"14"	f	t
+870	Jones PLC	In magni maiores optio. Optio iusto commodi provident omnis voluptatibus culpa. Possimus culpa debitis maxime animi culpa recusandae. Sint doloremque vitae sit delectus assumenda.\n\nVoluptatum magnam amet accusantium vero corporis atque. Itaque eius ipsam magni sint corrupti eos. Omnis aut adipisci sed odit fugiat nisi incidunt hic.\n\nEnim nobis debitis reprehenderit quisquam itaque natus. Necessitatibus mollitia cupiditate optio nobis distinctio eligendi. In delectus quod provident quas. Sapiente aut corporis possimus qui illo.\n\nQuia necessitatibus nemo cupiditate. Amet perferendis praesentium maiores iure dolorem expedita. Provident laboriosam officiis dolore odit cumque hic.\n\nA ipsum excepturi fugiat deleniti delectus praesentium. Mollitia facere tempore atque eligendi tenetur optio ullam.	10.42	\N	2018-01-06 17:55:24.944696+00	3	"3"=>"6", "5"=>"13"	f	t
+871	Myers-Clarke	Odit voluptate quisquam doloremque minima nisi perspiciatis. Quas consequatur eos facilis nulla. Eaque voluptatibus quibusdam voluptatem pariatur. Fugiat odit ab ex.\n\nVeniam rem vel ipsum consequuntur laboriosam fugiat veritatis. Voluptates tenetur alias minus est expedita nesciunt. Reprehenderit voluptas voluptatem itaque repellat. Ratione ratione molestias earum aut repudiandae hic assumenda.\n\nSaepe dignissimos libero eum quis veniam optio ullam. Nostrum ipsam ipsam itaque pariatur quae saepe. Ex quis quae consectetur maxime quidem quasi suscipit. Totam quia dignissimos vel asperiores.\n\nSimilique cum ex quae modi blanditiis vitae. Occaecati fugit sapiente cumque qui. Aperiam illum natus expedita voluptatum itaque. Quis architecto labore ab officia optio.\n\nQuas nostrum molestias sint eos eligendi. Saepe modi nostrum quisquam natus. Et quis amet necessitatibus ad facere aperiam iste. Quaerat accusantium nesciunt esse.	80.91	\N	2018-01-06 17:55:24.987459+00	4	"3"=>"6", "7"=>"20"	f	t
+872	Peters-Logan	Quo nisi ab ut accusamus inventore consequatur. Itaque sit facilis delectus blanditiis nemo dolores. Officia non voluptas totam nisi. Fugiat beatae id unde repellat ab.\n\nQui nam quos itaque deserunt odio voluptas sapiente iusto. Nulla enim quos iusto totam dicta magni velit.\n\nAt occaecati vitae iusto id sapiente. Ad non nemo doloremque. Reiciendis placeat unde eum delectus fugiat. Ut explicabo nostrum facere impedit necessitatibus recusandae quas dolores.\n\nOfficia aspernatur illum aliquid corporis exercitationem in voluptates. Error nostrum rerum eius consequatur incidunt illo. Voluptatibus delectus modi a assumenda a veritatis. Repudiandae eligendi occaecati deserunt atque dicta aliquid.\n\nPossimus cum ratione aut officiis. Cumque pariatur quasi cum illum perspiciatis numquam. Fuga necessitatibus dolor esse beatae. Maxime veritatis neque non commodi doloribus.	59.90	\N	2018-01-06 17:55:25.025437+00	4	"3"=>"6", "7"=>"20"	f	t
+873	Clark, Smith and Reid	Illum corporis explicabo nam nam cupiditate modi quaerat. Aspernatur optio omnis laudantium error quae quas quo. Officia fugit corrupti officiis ipsam sit quod.\n\nTempore occaecati provident odit magnam eius quam. Quas asperiores repellendus earum maiores iste tempore similique. Nihil reiciendis aliquid error dolorum harum architecto facilis. Suscipit maiores provident est exercitationem.\n\nEa earum mollitia accusantium ullam. Quidem deleniti quisquam adipisci sapiente saepe alias quia. Architecto facere dignissimos nulla est excepturi quasi.\n\nQuas unde dolor esse aperiam nisi iure mollitia occaecati. Dolorem nemo tempore quae dolor totam dolores quasi. Distinctio reiciendis velit incidunt eaque. Quia ratione error consectetur minima dignissimos.\n\nCorporis esse aut eos iure nobis ab. Nemo dolorum delectus voluptas aut optio.	77.30	\N	2018-01-06 17:55:25.057717+00	4	"3"=>"6", "7"=>"19"	f	t
+874	Allen-Garza	Est libero beatae minima fugiat id. Veritatis deleniti quisquam minima rerum impedit. Repellat quis doloremque aliquam saepe blanditiis.\n\nFacilis necessitatibus perspiciatis explicabo delectus rerum dolores. Quod reprehenderit deleniti deleniti voluptatibus alias debitis. Iure maxime impedit ipsam tempora.\n\nTempore quas fugit itaque dicta exercitationem quas consequuntur. Voluptas at possimus quam exercitationem. Adipisci quam aut cum vitae. A voluptate veniam cumque eligendi. Neque occaecati amet possimus vel labore vitae possimus.\n\nQuia sequi quae fugit est expedita. Recusandae voluptates beatae natus pariatur officiis beatae. Doloribus sequi repellat quo quos. Pariatur expedita consequatur laborum veniam hic.\n\nDicta odit ea iste sapiente. Enim ducimus magni facilis quam facere accusantium optio. Ipsum autem praesentium magni placeat earum quia. Velit velit ullam sapiente magnam modi error repellendus.	56.12	\N	2018-01-06 17:55:25.098167+00	4	"3"=>"6", "7"=>"20"	f	t
+875	Blake-Dixon	Consectetur maiores impedit alias blanditiis sed nam alias. Occaecati occaecati expedita numquam rerum explicabo. Similique quidem praesentium dicta.\n\nQuidem neque possimus excepturi cum consequatur. Optio cum odit voluptatem ea porro. Culpa repudiandae suscipit occaecati perspiciatis minima hic.\n\nSint velit possimus illum iure. Laborum ipsa est beatae expedita. Officia dicta vero velit eum quia saepe excepturi. Laudantium officiis excepturi quis natus corporis nesciunt.\n\nDicta assumenda quae id dicta ipsam modi quae impedit. Sequi perspiciatis doloremque autem nihil assumenda. Itaque repellat quasi expedita iste iusto.\n\nVoluptate iusto ipsam vel ad nulla. Consectetur eligendi fugiat cumque. Distinctio natus sit necessitatibus quae veniam.	33.23	\N	2018-01-06 17:55:25.126794+00	4	"3"=>"6", "7"=>"19"	f	t
+879	Hoffman, Watson and Walker	Culpa ratione quo minus similique corrupti nisi totam consequatur. Voluptatum reiciendis repellendus aspernatur. Repellat illum distinctio dolore cumque delectus voluptatum optio nobis.\n\nEt architecto repellat amet repellendus laborum. Voluptatibus incidunt sapiente in delectus suscipit. Soluta maxime eligendi quaerat neque nostrum officiis quaerat nesciunt. Unde eum saepe nesciunt eos illum sequi.\n\nIpsa aut voluptatem rem animi dolorem. Itaque dolorum adipisci minus cupiditate corporis odit. Maiores quas ab libero repellat delectus quae natus nemo.\n\nAtque fuga labore laudantium ad voluptate ab veniam. Ad explicabo a sequi exercitationem ipsum architecto dolorum. Numquam perferendis nulla ratione unde reiciendis.\n\nConsequatur magni inventore laudantium molestiae iste illo distinctio quisquam. Recusandae dolores neque cupiditate error eum unde qui veritatis. Ad placeat excepturi exercitationem quisquam aut saepe.	15.79	\N	2018-01-06 17:55:25.297862+00	4	"3"=>"6", "7"=>"20"	f	t
+880	Church-Eaton	Doloremque nisi veritatis autem esse incidunt rerum nisi. Commodi itaque perspiciatis natus voluptas. Nisi quod dolore impedit quos quas dolore cum. Officia totam reiciendis quaerat ipsam.\n\nMollitia impedit earum porro. Fugit dolores porro rem quaerat illo saepe. Quaerat placeat pariatur asperiores magnam vel dolorem voluptatum inventore. Quis suscipit alias voluptatum suscipit.\n\nIn consectetur nulla iste. Accusantium voluptates eligendi cum nobis beatae dolor facere. At maxime assumenda officia laborum officiis vero tempora. Iste suscipit dolores suscipit sed.\n\nAdipisci dolorum perspiciatis sequi libero ipsum quia reiciendis. Tenetur magni nulla ad ullam. Placeat et at officia placeat dolore at.\n\nEaque quas tempore molestiae. Fugiat quae voluptate quia dolorum quas. Voluptatem eaque dolorum culpa laudantium cupiditate.	80.35	\N	2018-01-06 17:55:25.330226+00	4	"3"=>"6", "7"=>"19"	f	t
+881	Jones-Joyce	Reprehenderit incidunt est sint deserunt nostrum eaque. Sequi exercitationem soluta esse fuga nobis voluptatibus. Iusto neque commodi sapiente cupiditate perferendis. Tempore magni officiis praesentium possimus quia ab eaque repudiandae.\n\nDistinctio voluptatum sunt reiciendis a eveniet magnam. Consequatur neque impedit eos aspernatur debitis eligendi. Fugit eligendi minus eaque. Quibusdam doloremque occaecati numquam nobis iusto voluptates in.\n\nNon itaque nostrum blanditiis ratione aliquam id voluptatem. Magnam eligendi eveniet sequi a suscipit quod nobis. Exercitationem molestias illo deleniti a.\n\nCorrupti asperiores quis debitis voluptates dolore reiciendis. Repellat possimus eaque qui quas consequatur illum numquam. Dolor vero aut a veniam.\n\nTemporibus sint alias debitis dolorem eos ratione quod. Nostrum deserunt aspernatur omnis tempore pariatur exercitationem. Quam at adipisci tempore fuga hic. Ratione dolor maxime possimus amet dignissimos. Temporibus rerum quam voluptate ipsa possimus doloremque quibusdam ut.	53.83	\N	2018-01-06 17:55:25.375083+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+882	James-Martin	Dignissimos vero neque adipisci nulla recusandae ea labore dolorem. Nesciunt fugit officiis voluptatum. Natus deleniti veritatis temporibus animi ex sint quidem. Dolore recusandae doloribus pariatur odit voluptates officia veniam voluptatibus.\n\nEsse beatae blanditiis saepe libero. Praesentium tempore ratione reprehenderit necessitatibus eligendi vero inventore. Commodi distinctio numquam laudantium numquam. Dolores consectetur ipsam deserunt. Corporis odit id nam perferendis architecto porro illo aut.\n\nExercitationem rerum similique alias commodi et labore. Repudiandae mollitia veniam natus et unde enim amet harum.\n\nCum cumque architecto qui porro qui. Vitae eum quia accusamus asperiores accusantium. In quas tempore delectus voluptatum possimus et. Explicabo facilis voluptates vitae commodi.\n\nTenetur accusamus velit aliquid incidunt eos voluptatum iusto adipisci. Vel tempora at veritatis praesentium minima vel eaque nam. Inventore aperiam neque velit ex accusantium. Debitis eos vitae incidunt porro.	59.45	\N	2018-01-06 17:55:25.419185+00	5	"9"=>"24", "10"=>"26", "11"=>"29"	f	t
+883	Hill, Larson and Ramsey	Praesentium repudiandae modi dolores fugiat dicta omnis. Quis corporis blanditiis harum ex eos.\n\nCorrupti repellendus consequatur quasi ducimus corrupti odio. Voluptas adipisci ut ipsa at blanditiis. Nulla placeat deleniti illum asperiores voluptate. Laudantium exercitationem ea beatae totam ea pariatur.\n\nPossimus maiores repellendus corporis. Saepe in doloribus vero fugit deleniti illo reprehenderit. Tenetur iure quia labore recusandae sapiente.\n\nHic quae quam odio aspernatur accusamus rem. Necessitatibus cum voluptatem odit officia.\n\nAperiam sunt nemo praesentium hic expedita. Unde possimus assumenda cumque blanditiis. Quasi ut occaecati deserunt rem eius placeat eveniet. Fugiat dolores hic cum ipsam veritatis ipsa porro.	3.55	\N	2018-01-06 17:55:25.463686+00	5	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+884	Hanna-Franco	Maiores earum facilis pariatur quo enim commodi debitis. Optio quisquam perferendis quas ipsa explicabo. Quaerat corrupti nesciunt placeat velit labore.\n\nQuas suscipit praesentium aperiam magnam possimus voluptas quia. Quam ad ex iusto aut reprehenderit nam aperiam. Voluptas aspernatur tempore est sequi porro sapiente. Voluptatibus quasi iusto unde odit.\n\nAccusamus suscipit veritatis modi laudantium debitis. Minima ea minima laboriosam facilis.\n\nAliquam earum culpa qui saepe vero sed. Autem autem harum molestiae. Eveniet quas quaerat tempore suscipit.\n\nVeniam ab officiis voluptas maxime. Nemo consequatur exercitationem quibusdam ullam. Officiis excepturi corporis modi vel libero fugiat veniam temporibus. Asperiores atque odio veritatis.	41.15	\N	2018-01-06 17:55:25.497277+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+885	Rodriguez Inc	Quae nemo voluptas eos veniam maiores. Natus ab eveniet quos. Accusamus pariatur assumenda neque non. Facilis nulla illum placeat explicabo similique facilis quasi.\n\nDoloribus iste libero saepe repellat quos nobis sed. Numquam perferendis tempore nisi dolorum in eaque. Est repellat corporis veritatis cupiditate nam. Adipisci non ratione earum praesentium veniam explicabo. Culpa recusandae sequi quisquam aperiam amet voluptatem.\n\nFugiat recusandae voluptatem facere accusamus. Assumenda esse quisquam et minima numquam perspiciatis quae illo. Repudiandae neque omnis minus tempore quos aperiam alias omnis. Rem impedit ducimus iusto repellat aperiam explicabo.\n\nNisi ratione quod enim suscipit veritatis amet. Tempora quaerat a iste iste explicabo perspiciatis saepe doloremque. Voluptatibus voluptatem harum reprehenderit rem voluptatem inventore sit. Quod dicta deleniti harum assumenda corrupti sunt.\n\nModi ipsum ullam quas accusamus. Libero corporis nostrum possimus cupiditate magni similique. Ullam enim harum possimus esse excepturi nemo.	6.41	\N	2018-01-06 17:55:25.532208+00	5	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+886	Nguyen, Johnson and Cooper	Fuga necessitatibus debitis officiis nostrum quos non. Magnam aliquid reprehenderit iste tenetur. Ut eum exercitationem asperiores labore officiis modi quam. Placeat consectetur commodi aliquid.\n\nUllam repellat placeat totam ratione. Repellat a odio sed nam. Iste veniam ea quisquam quae.\n\nUt voluptas numquam excepturi quis magni exercitationem. Provident pariatur repellendus porro tenetur labore rem maxime. Debitis qui at officia accusamus quos fugit.\n\nQuisquam quae culpa magnam aperiam pariatur itaque praesentium. Porro animi natus iure occaecati ea assumenda cupiditate. Natus repudiandae totam consequatur voluptates doloremque assumenda accusantium. Sapiente maxime corrupti nobis esse quasi.\n\nIpsum dolore laboriosam sapiente laboriosam officia. Quae hic inventore harum quasi totam est maiores occaecati. Inventore molestias blanditiis rem rem sed molestiae fuga. Cumque qui aliquam molestiae.	44.28	\N	2018-01-06 17:55:25.609208+00	5	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+887	Moore LLC	Rem error cupiditate modi nam dolor. Fugit a aliquam illo incidunt delectus animi. Nulla provident eveniet incidunt exercitationem minima qui ut.\n\nA aliquam tempore odio provident enim ipsam sint deserunt. Quisquam earum aspernatur sequi atque ullam. Rem maiores perferendis officiis aut in possimus. Atque accusamus ad facere officiis culpa laborum ad. Modi sequi ipsum explicabo magnam voluptatum impedit.\n\nMagnam vero optio ex eius hic tempora adipisci. Sequi fuga et animi quidem consequuntur perferendis laborum. Provident alias fugit quaerat ad. Atque quam facere est eligendi eveniet. Et a libero architecto ea ducimus cupiditate mollitia.\n\nMinus qui molestiae a nostrum nisi hic magni. Cumque provident sit assumenda praesentium iste possimus facilis.\n\nCulpa libero ipsum hic tempora ab. Iste cumque neque minima hic eius voluptas debitis. Optio maxime deserunt aut quis.	17.85	\N	2018-01-06 17:55:25.642526+00	5	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+895	Bowen Ltd	Saepe architecto nisi consectetur esse. Nihil iusto corrupti deserunt quis maiores. Repellendus sapiente porro doloremque tempore assumenda ab sit.\n\nDelectus quis vero illum voluptatibus. Aperiam magni omnis iusto debitis voluptas. Voluptas incidunt et doloribus atque.\n\nLibero enim debitis laborum. Maiores necessitatibus explicabo fuga debitis quis exercitationem. Expedita fuga odit sed. Nemo laboriosam cum corporis voluptatem ratione at modi.\n\nA quaerat consequuntur aliquam. Cupiditate id impedit vel distinctio labore quod. Temporibus libero excepturi magni impedit animi. Exercitationem beatae ipsam deserunt facere. Eius doloribus possimus animi autem rerum quibusdam sed.\n\nIpsum sed explicabo numquam ex. Quisquam odit optio dolore occaecati perspiciatis. Ducimus incidunt delectus aliquam non. Sit dolore beatae ex at nihil aut veniam.	78.47	\N	2018-01-06 17:55:25.896027+00	6	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+888	Howard Ltd	Enim molestiae error aperiam. Veritatis non provident quae pariatur ad delectus. Modi saepe facere unde perspiciatis cupiditate.\n\nMinus non numquam commodi. Sit adipisci eius occaecati aliquam dolorum eum. Similique minima aliquam a accusantium quaerat. Fugiat provident earum error.\n\nQuos similique dolor perspiciatis repellat reprehenderit eveniet saepe. Sapiente harum odit sed. Ad animi inventore voluptatum eius. Possimus maxime asperiores veritatis sed quos. Placeat corporis officiis quidem deserunt incidunt veritatis.\n\nCommodi tenetur illum dolore laborum deserunt dicta laboriosam. Natus alias quaerat saepe at itaque ex. Deserunt quo iure aliquid aliquam eaque.\n\nAdipisci minus expedita sint cumque. Ad sequi eveniet odit fuga voluptate dicta amet. Tempora odio sunt recusandae magnam numquam ex mollitia minima. Assumenda optio amet dolore perferendis sapiente rem. Delectus dignissimos qui animi molestias.	54.53	\N	2018-01-06 17:55:25.669035+00	5	"9"=>"25", "10"=>"27", "11"=>"28"	f	t
+889	Brown, Graham and Crane	Vel qui rerum delectus minus sunt assumenda. Deleniti dolore incidunt quidem explicabo hic laboriosam fugit. Fugiat ab ad provident accusantium non.\n\nAlias minima dolor laudantium iusto nam quasi non. Beatae beatae distinctio sed dignissimos cupiditate dolorum mollitia.\n\nRepellat libero ullam non libero. Officiis odio suscipit quaerat impedit quidem. Quas ullam dolores labore facilis dolorem numquam incidunt. Quia unde ea consectetur hic culpa veritatis.\n\nQuisquam velit ducimus rem eligendi porro. Consequuntur adipisci fuga ipsam deleniti. Fuga voluptate dignissimos autem fugiat dolor ab similique. Tempora ab quis adipisci. Ut cupiditate animi voluptates rem adipisci quis vel repellendus.\n\nPerferendis natus quibusdam quo ipsa itaque esse quas. Culpa vel quisquam ab adipisci perferendis error. Ad modi neque iste eius.	18.54	\N	2018-01-06 17:55:25.703833+00	5	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+890	Holloway-Vaughn	Fuga ut sequi a unde incidunt aspernatur saepe. Labore quae praesentium sint voluptatum deserunt officiis illum in. Officia nihil exercitationem neque distinctio nesciunt eius tempore qui. Laboriosam culpa accusamus eaque modi suscipit veritatis.\n\nHic ipsa tenetur voluptates quam. Deleniti eaque unde vitae itaque tempore eaque.\n\nSunt cupiditate maiores totam fugiat tempora dicta dolorum. Perspiciatis molestiae dolores adipisci repudiandae atque animi incidunt. Et ratione voluptatem laboriosam. Modi accusamus occaecati exercitationem occaecati quaerat expedita.\n\nTempora incidunt unde dolor occaecati nobis. Perspiciatis doloribus at quis vero exercitationem eveniet. Recusandae voluptate id minima nam ullam ipsa ullam.\n\nNemo beatae dolores nam rem fuga enim temporibus. Tenetur id similique distinctio quibusdam culpa praesentium labore. Non quas earum laborum. Consequatur veritatis consequatur dignissimos dolorum illo excepturi reiciendis eaque. Architecto impedit pariatur nam est cum consequuntur.	53.69	\N	2018-01-06 17:55:25.733581+00	5	"9"=>"25", "10"=>"26", "11"=>"29"	f	t
+891	Johnson-Robertson	At officia itaque asperiores nulla. Excepturi repellat asperiores labore incidunt aperiam minus. Iste quae accusamus nesciunt temporibus.\n\nError at fugiat eligendi optio. Voluptas quisquam inventore facilis fugiat occaecati. Odio tempora nisi quod error itaque nemo.\n\nEx aliquam placeat dolore. Officia incidunt ipsum voluptatibus repellat nostrum. Quasi error facere quis ipsam molestias. Laborum vel reiciendis ratione aut ipsam.\n\nSunt harum nemo beatae ipsam reprehenderit eos at voluptatibus. Iste illo architecto iste provident. Laborum quas sequi in eveniet.\n\nRem ab aliquam totam. Quae rerum sequi voluptas explicabo delectus. Amet reiciendis veniam unde. Saepe corporis iusto aut sed hic temporibus.	94.66	\N	2018-01-06 17:55:25.76227+00	6	"9"=>"24", "10"=>"26", "11"=>"28"	f	t
+892	Nelson LLC	Dolorem aut sed voluptas pariatur saepe aliquid. Commodi quos sed consequuntur deserunt consequuntur assumenda. Ad quas sit architecto doloremque autem atque qui.\n\nOdio cupiditate modi rerum temporibus fuga. Reprehenderit iusto similique tempora incidunt. Pariatur velit cumque suscipit officiis quasi sed adipisci. Tempora sunt officiis soluta quasi vero quisquam commodi. Illum est architecto officia exercitationem quam.\n\nAsperiores enim temporibus aliquid quisquam optio occaecati provident veritatis. Quidem necessitatibus non perspiciatis impedit at eveniet. Occaecati quis hic numquam aperiam.\n\nQuo nisi molestiae nulla consequuntur aspernatur minus aliquid aspernatur. Fugiat error tempore nemo tempore suscipit dolor id. Illo magnam necessitatibus nemo vero tenetur illum nesciunt. Quisquam delectus laborum reiciendis officia odit ex.\n\nIpsa dolorum voluptatem iusto aperiam natus. Nobis ratione reiciendis facere ipsa magni sequi. Quia aut quo eius possimus.	14.44	\N	2018-01-06 17:55:25.799815+00	6	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
+893	Cabrera, Sharp and Garcia	Cupiditate dolorem eveniet neque molestias itaque eos fuga. Ab dolor aliquam accusantium fugit.\n\nAut deserunt delectus perspiciatis asperiores iure vero quos. Est error pariatur deleniti. Autem alias minus fugiat aspernatur esse tempora unde.\n\nDelectus molestiae autem tempora earum. Dolores totam rem molestiae reiciendis repellendus occaecati. Ut corrupti aut accusamus temporibus inventore in. Odio magni modi distinctio cupiditate iure adipisci.\n\nNam possimus provident cum facere. Provident est ut architecto quidem libero labore quas.\n\nCumque repudiandae laboriosam tempore. Quae distinctio necessitatibus quidem nesciunt rem. Nisi minima assumenda quod praesentium totam recusandae minus. Maxime reprehenderit sequi magnam eligendi nulla enim.	76.51	\N	2018-01-06 17:55:25.829365+00	6	"9"=>"25", "10"=>"26", "11"=>"28"	f	t
+894	Knight, Wilson and Green	Voluptate assumenda id voluptates corrupti possimus at. Nisi dolorem aspernatur itaque neque dolore atque. Perferendis aliquid voluptatum aliquid minima sunt molestiae voluptas.\n\nSint iste veniam nostrum hic reiciendis quas accusamus. Suscipit deleniti possimus enim accusamus dignissimos iste. Eum nobis dolore quo provident voluptatem voluptatum aut. Aliquid quae earum quam deserunt.\n\nOptio quia ipsum quam eius ea nemo eligendi. At beatae alias sapiente corporis distinctio quas molestiae. Quod architecto temporibus alias repellat maxime dicta. Distinctio id ea porro eos.\n\nEsse esse dignissimos id laudantium molestiae excepturi. Sit quibusdam iure accusantium blanditiis corrupti odio nisi. Libero quas quia alias repellendus deserunt reprehenderit a. Corporis natus quaerat magnam eum cumque animi cupiditate quidem.\n\nAtque quis ratione ea rem itaque hic voluptatem. Minus dicta aliquam itaque impedit.	78.28	\N	2018-01-06 17:55:25.863386+00	6	"9"=>"25", "10"=>"27", "11"=>"29"	f	t
+899	Garcia PLC	Quisquam veniam quibusdam quos excepturi reiciendis autem unde. Fugiat voluptatem qui voluptatem ipsa. Eos ut delectus accusantium nisi vitae quas asperiores. Dolorem deserunt similique alias recusandae inventore exercitationem. Eos tenetur illo ratione debitis quibusdam maxime.\n\nIusto eligendi cum velit eligendi suscipit dicta. Recusandae cumque veritatis molestias minima est quo. Accusantium dicta eum alias.\n\nCommodi praesentium suscipit odit rerum tenetur fugiat voluptatibus. Quidem earum explicabo voluptatum assumenda neque est. Eum esse debitis eveniet ullam minus eos. Cum ab porro repudiandae reiciendis.\n\nVitae vel animi optio esse laboriosam numquam. Maiores voluptatem soluta dolorem. Quidem itaque impedit itaque placeat laboriosam accusantium. Placeat ipsa aperiam aliquid quia. Ex quae commodi beatae saepe.\n\nQuaerat debitis asperiores voluptas dicta enim repellendus. Dolor ullam fuga animi officia commodi. Neque aliquam sit alias doloribus.	43.20	\N	2018-01-06 17:55:26.025255+00	6	"9"=>"24", "10"=>"27", "11"=>"28"	f	t
+900	English Group	Et molestiae est necessitatibus error cum. Et sint harum quisquam alias doloremque rerum. Et hic cumque nam doloremque. Laboriosam sint vitae velit maxime magni.\n\nMolestiae nesciunt cumque iure illo consectetur. Deserunt occaecati reiciendis necessitatibus tenetur quia. Molestias consequatur ut culpa animi iusto voluptatum eius. Itaque dignissimos explicabo corrupti occaecati dolorum incidunt.\n\nCorporis error impedit magni dolore atque. Maxime deserunt quas fugit cum. Aut quasi soluta amet dolorum consequuntur nostrum. Nam minima esse error temporibus.\n\nAmet in error quia sapiente porro ex itaque. Nihil cumque asperiores a aliquam quod. Labore veniam perferendis minima repellendus ducimus incidunt qui. Reprehenderit sint ratione atque qui tempora facere numquam.\n\nEligendi sequi libero quisquam iure. Reiciendis odio atque ipsa laudantium adipisci. Quod rerum earum odio sapiente iusto dicta eveniet. Eaque unde in facilis eveniet dicta saepe pariatur.	60.23	\N	2018-01-06 17:55:26.067756+00	6	"9"=>"24", "10"=>"27", "11"=>"29"	f	t
 \.
 
 
@@ -5016,6 +5440,306 @@ COPY product_product_categories (id, product_id, category_id) FROM stdin;
 598	598	4
 599	599	4
 600	600	4
+601	601	1
+602	602	1
+603	603	1
+604	604	1
+605	605	1
+606	606	1
+607	607	1
+608	608	1
+609	609	1
+610	610	1
+611	611	2
+612	612	2
+613	613	2
+614	614	2
+615	615	2
+616	616	2
+617	617	2
+618	618	2
+619	619	2
+620	620	2
+621	621	3
+622	622	3
+623	623	3
+624	624	3
+625	625	3
+626	626	3
+627	627	3
+628	628	3
+629	629	3
+630	630	3
+631	631	3
+632	632	3
+633	633	3
+634	634	3
+635	635	3
+636	636	3
+637	637	3
+638	638	3
+639	639	3
+640	640	3
+641	641	4
+642	642	4
+643	643	4
+644	644	4
+645	645	4
+646	646	4
+647	647	4
+648	648	4
+649	649	4
+650	650	4
+651	651	4
+652	652	4
+653	653	4
+654	654	4
+655	655	4
+656	656	4
+657	657	4
+658	658	4
+659	659	4
+660	660	4
+661	661	1
+662	662	1
+663	663	1
+664	664	1
+665	665	1
+666	666	1
+667	667	1
+668	668	1
+669	669	1
+670	670	1
+671	671	2
+672	672	2
+673	673	2
+674	674	2
+675	675	2
+676	676	2
+677	677	2
+678	678	2
+679	679	2
+680	680	2
+681	681	3
+682	682	3
+683	683	3
+684	684	3
+685	685	3
+686	686	3
+687	687	3
+688	688	3
+689	689	3
+690	690	3
+691	691	3
+692	692	3
+693	693	3
+694	694	3
+695	695	3
+696	696	3
+697	697	3
+698	698	3
+699	699	3
+700	700	3
+701	701	4
+702	702	4
+703	703	4
+704	704	4
+705	705	4
+706	706	4
+707	707	4
+708	708	4
+709	709	4
+710	710	4
+711	711	4
+712	712	4
+713	713	4
+714	714	4
+715	715	4
+716	716	4
+717	717	4
+718	718	4
+719	719	4
+720	720	4
+721	721	1
+722	722	1
+723	723	1
+724	724	1
+725	725	1
+726	726	1
+727	727	1
+728	728	1
+729	729	1
+730	730	1
+731	731	2
+732	732	2
+733	733	2
+734	734	2
+735	735	2
+736	736	2
+737	737	2
+738	738	2
+739	739	2
+740	740	2
+741	741	3
+742	742	3
+743	743	3
+744	744	3
+745	745	3
+746	746	3
+747	747	3
+748	748	3
+749	749	3
+750	750	3
+751	751	3
+752	752	3
+753	753	3
+754	754	3
+755	755	3
+756	756	3
+757	757	3
+758	758	3
+759	759	3
+760	760	3
+761	761	4
+762	762	4
+763	763	4
+764	764	4
+765	765	4
+766	766	4
+767	767	4
+768	768	4
+769	769	4
+770	770	4
+771	771	4
+772	772	4
+773	773	4
+774	774	4
+775	775	4
+776	776	4
+777	777	4
+778	778	4
+779	779	4
+780	780	4
+781	781	1
+782	782	1
+783	783	1
+784	784	1
+785	785	1
+786	786	1
+787	787	1
+788	788	1
+789	789	1
+790	790	1
+791	791	2
+792	792	2
+793	793	2
+794	794	2
+795	795	2
+796	796	2
+797	797	2
+798	798	2
+799	799	2
+800	800	2
+801	801	3
+802	802	3
+803	803	3
+804	804	3
+805	805	3
+806	806	3
+807	807	3
+808	808	3
+809	809	3
+810	810	3
+811	811	3
+812	812	3
+813	813	3
+814	814	3
+815	815	3
+816	816	3
+817	817	3
+818	818	3
+819	819	3
+820	820	3
+821	821	4
+822	822	4
+823	823	4
+824	824	4
+825	825	4
+826	826	4
+827	827	4
+828	828	4
+829	829	4
+830	830	4
+831	831	4
+832	832	4
+833	833	4
+834	834	4
+835	835	4
+836	836	4
+837	837	4
+838	838	4
+839	839	4
+840	840	4
+841	841	1
+842	842	1
+843	843	1
+844	844	1
+845	845	1
+846	846	1
+847	847	1
+848	848	1
+849	849	1
+850	850	1
+851	851	2
+852	852	2
+853	853	2
+854	854	2
+855	855	2
+856	856	2
+857	857	2
+858	858	2
+859	859	2
+860	860	2
+861	861	3
+862	862	3
+863	863	3
+864	864	3
+865	865	3
+866	866	3
+867	867	3
+868	868	3
+869	869	3
+870	870	3
+871	871	3
+872	872	3
+873	873	3
+874	874	3
+875	875	3
+876	876	3
+877	877	3
+878	878	3
+879	879	3
+880	880	3
+881	881	4
+882	882	4
+883	883	4
+884	884	4
+885	885	4
+886	886	4
+887	887	4
+888	888	4
+889	889	4
+890	890	4
+891	891	4
+892	892	4
+893	893	4
+894	894	4
+895	895	4
+896	896	4
+897	897	4
+898	898	4
+899	899	4
+900	900	4
 \.
 
 
@@ -6601,6 +7325,760 @@ COPY product_productimage (id, image, ppoi, alt, "order", product_id) FROM stdin
 1507	products/saleor/static/placeholders/books/book_05_SszMrrV.jpg	0.5x0.5		1	600
 1508	products/saleor/static/placeholders/books/book_01_XrOJQmd.jpg	0.5x0.5		2	600
 1509	products/saleor/static/placeholders/books/book_03_GoYpKPE.jpg	0.5x0.5		3	600
+1510	products/saleor/static/placeholders/t-shirts/6_eqHrVwH.jpg	0.5x0.5		0	601
+1511	products/saleor/static/placeholders/t-shirts/6_6cBccX3.jpg	0.5x0.5		1	601
+1512	products/saleor/static/placeholders/t-shirts/6_YQETk6y.jpg	0.5x0.5		2	601
+1513	products/saleor/static/placeholders/t-shirts/6_s0qTWQv.jpg	0.5x0.5		3	601
+1514	products/saleor/static/placeholders/t-shirts/6_C1xaRBH.jpg	0.5x0.5		0	602
+1515	products/saleor/static/placeholders/t-shirts/5_4MheYRr.jpg	0.5x0.5		0	603
+1516	products/saleor/static/placeholders/t-shirts/6_FsT1e1F.jpg	0.5x0.5		0	604
+1517	products/saleor/static/placeholders/t-shirts/6_UmBEvlk.jpg	0.5x0.5		0	605
+1518	products/saleor/static/placeholders/t-shirts/5_eKS6tL7.jpg	0.5x0.5		0	606
+1519	products/saleor/static/placeholders/t-shirts/6_eAn56Uy.jpg	0.5x0.5		1	606
+1520	products/saleor/static/placeholders/t-shirts/5_lmdMwhB.jpg	0.5x0.5		2	606
+1521	products/saleor/static/placeholders/t-shirts/5_1SUUCor.jpg	0.5x0.5		3	606
+1522	products/saleor/static/placeholders/t-shirts/5_O2QfdO1.jpg	0.5x0.5		0	607
+1523	products/saleor/static/placeholders/t-shirts/6_e1fxPoK.jpg	0.5x0.5		1	607
+1524	products/saleor/static/placeholders/t-shirts/5_6emlzfs.jpg	0.5x0.5		0	608
+1525	products/saleor/static/placeholders/t-shirts/6_wCz8wKH.jpg	0.5x0.5		1	608
+1526	products/saleor/static/placeholders/t-shirts/5_PqBUJuc.jpg	0.5x0.5		2	608
+1527	products/saleor/static/placeholders/t-shirts/5_MeNL2da.jpg	0.5x0.5		0	609
+1528	products/saleor/static/placeholders/t-shirts/6_XewPuAs.jpg	0.5x0.5		1	609
+1529	products/saleor/static/placeholders/t-shirts/6_oHPzmaf.jpg	0.5x0.5		0	610
+1530	products/saleor/static/placeholders/t-shirts/5_431U6w5.jpg	0.5x0.5		1	610
+1531	products/saleor/static/placeholders/mugs/4_8JE7au5.jpg	0.5x0.5		0	611
+1532	products/saleor/static/placeholders/mugs/box_01_i5Uuri1.jpg	0.5x0.5		1	611
+1533	products/saleor/static/placeholders/mugs/4_6PHBwLW.jpg	0.5x0.5		2	611
+1534	products/saleor/static/placeholders/mugs/4_E9elf3X.jpg	0.5x0.5		3	611
+1535	products/saleor/static/placeholders/mugs/7_g5SdVt5.jpg	0.5x0.5		0	612
+1536	products/saleor/static/placeholders/mugs/4_kYYp9bn.jpg	0.5x0.5		1	612
+1537	products/saleor/static/placeholders/mugs/4_Ju53uC4.jpg	0.5x0.5		0	613
+1538	products/saleor/static/placeholders/mugs/7_CIHKmII.jpg	0.5x0.5		0	614
+1539	products/saleor/static/placeholders/mugs/3_5Zb3Aej.jpg	0.5x0.5		1	614
+1540	products/saleor/static/placeholders/mugs/7_SZSigJs.jpg	0.5x0.5		0	615
+1541	products/saleor/static/placeholders/mugs/7_sCCPeGa.jpg	0.5x0.5		1	615
+1542	products/saleor/static/placeholders/mugs/box_01_TlUoNzk.jpg	0.5x0.5		2	615
+1543	products/saleor/static/placeholders/mugs/7_aO2DmT8.jpg	0.5x0.5		3	615
+1544	products/saleor/static/placeholders/mugs/7_C2rHQnk.jpg	0.5x0.5		0	616
+1545	products/saleor/static/placeholders/mugs/box_01_l0Wp7fM.jpg	0.5x0.5		1	616
+1546	products/saleor/static/placeholders/mugs/box_01_S16MLJE.jpg	0.5x0.5		2	616
+1547	products/saleor/static/placeholders/mugs/box_01_qhPFh1H.jpg	0.5x0.5		0	617
+1548	products/saleor/static/placeholders/mugs/4_pL3SxFQ.jpg	0.5x0.5		1	617
+1549	products/saleor/static/placeholders/mugs/3_KSC0RDH.jpg	0.5x0.5		2	617
+1550	products/saleor/static/placeholders/mugs/7_hWHGqfP.jpg	0.5x0.5		3	617
+1551	products/saleor/static/placeholders/mugs/4_5cbbzZ8.jpg	0.5x0.5		0	618
+1552	products/saleor/static/placeholders/mugs/3_KyhlZUX.jpg	0.5x0.5		1	618
+1553	products/saleor/static/placeholders/mugs/7_vrpEvMS.jpg	0.5x0.5		2	618
+1554	products/saleor/static/placeholders/mugs/4_owWBdRh.jpg	0.5x0.5		0	619
+1555	products/saleor/static/placeholders/mugs/3_BGgvLM8.jpg	0.5x0.5		0	620
+1556	products/saleor/static/placeholders/mugs/box_01_nV0E7MQ.jpg	0.5x0.5		1	620
+1557	products/saleor/static/placeholders/mugs/7_mfgxB6c.jpg	0.5x0.5		2	620
+1558	products/saleor/static/placeholders/coffee/coffee_03_thefSun.jpg	0.5x0.5		0	621
+1559	products/saleor/static/placeholders/coffee/8_1ThAEIp.jpg	0.5x0.5		1	621
+1560	products/saleor/static/placeholders/coffee/coffee_01_1kDvJmR.jpg	0.5x0.5		0	622
+1561	products/saleor/static/placeholders/coffee/8_b0sHW7H.jpg	0.5x0.5		1	622
+1562	products/saleor/static/placeholders/coffee/coffee_01_P0HBv9R.jpg	0.5x0.5		0	623
+1563	products/saleor/static/placeholders/coffee/coffee_03_bmC6Grg.jpg	0.5x0.5		1	623
+1564	products/saleor/static/placeholders/coffee/coffee_01_HgI1ijd.jpg	0.5x0.5		0	624
+1565	products/saleor/static/placeholders/coffee/coffee_03_YScPPFG.jpg	0.5x0.5		1	624
+1566	products/saleor/static/placeholders/coffee/coffee_02_e17O1WF.jpg	0.5x0.5		2	624
+1567	products/saleor/static/placeholders/coffee/coffee_03_NG3E5Op.jpg	0.5x0.5		3	624
+1568	products/saleor/static/placeholders/coffee/coffee_04_kmlVzOI.jpg	0.5x0.5		0	625
+1569	products/saleor/static/placeholders/coffee/coffee_04_HpmScM3.jpg	0.5x0.5		1	625
+1570	products/saleor/static/placeholders/coffee/8_LmHz7FM.jpg	0.5x0.5		0	626
+1571	products/saleor/static/placeholders/coffee/coffee_03_WAeEXJN.jpg	0.5x0.5		1	626
+1572	products/saleor/static/placeholders/coffee/coffee_02_ot3yooE.jpg	0.5x0.5		2	626
+1573	products/saleor/static/placeholders/coffee/coffee_01_AvbgzQk.jpg	0.5x0.5		0	627
+1574	products/saleor/static/placeholders/coffee/8_boz8vXd.jpg	0.5x0.5		0	628
+1575	products/saleor/static/placeholders/coffee/coffee_01_HQifAvE.jpg	0.5x0.5		1	628
+1576	products/saleor/static/placeholders/coffee/coffee_01_qLxwKSG.jpg	0.5x0.5		0	629
+1577	products/saleor/static/placeholders/coffee/coffee_04_1YNW70o.jpg	0.5x0.5		0	630
+1578	products/saleor/static/placeholders/coffee/coffee_04_bw4Eqhc.jpg	0.5x0.5		1	630
+1579	products/saleor/static/placeholders/coffee/coffee_01_iP2Yvhf.jpg	0.5x0.5		2	630
+1580	products/saleor/static/placeholders/candy/2_HrZP7yN.jpg	0.5x0.5		0	631
+1581	products/saleor/static/placeholders/candy/1_2A6pB2L.jpg	0.5x0.5		1	631
+1582	products/saleor/static/placeholders/candy/2_Zo4T6PN.jpg	0.5x0.5		2	631
+1583	products/saleor/static/placeholders/candy/1_chF4GiP.jpg	0.5x0.5		0	632
+1584	products/saleor/static/placeholders/candy/1_NE9xy8Z.jpg	0.5x0.5		1	632
+1585	products/saleor/static/placeholders/candy/2_QxHmYbu.jpg	0.5x0.5		2	632
+1586	products/saleor/static/placeholders/candy/2_lJxwfeM.jpg	0.5x0.5		0	633
+1587	products/saleor/static/placeholders/candy/1_Ckv8M3A.jpg	0.5x0.5		1	633
+1588	products/saleor/static/placeholders/candy/2_bGtAdW1.jpg	0.5x0.5		2	633
+1589	products/saleor/static/placeholders/candy/1_KVEDYWe.jpg	0.5x0.5		3	633
+1590	products/saleor/static/placeholders/candy/1_TabwkKh.jpg	0.5x0.5		0	634
+1591	products/saleor/static/placeholders/candy/1_J8hyPtW.jpg	0.5x0.5		1	634
+1592	products/saleor/static/placeholders/candy/2_MXrDkIs.jpg	0.5x0.5		2	634
+1593	products/saleor/static/placeholders/candy/1_bu0fPKA.jpg	0.5x0.5		0	635
+1594	products/saleor/static/placeholders/candy/2_0OlLAgm.jpg	0.5x0.5		1	635
+1595	products/saleor/static/placeholders/candy/2_zJWlk6L.jpg	0.5x0.5		2	635
+1596	products/saleor/static/placeholders/candy/2_gjri4gM.jpg	0.5x0.5		0	636
+1597	products/saleor/static/placeholders/candy/2_HKP6ipQ.jpg	0.5x0.5		1	636
+1598	products/saleor/static/placeholders/candy/2_ezlevze.jpg	0.5x0.5		0	637
+1599	products/saleor/static/placeholders/candy/2_MNtA22W.jpg	0.5x0.5		0	638
+1600	products/saleor/static/placeholders/candy/2_aBd9zDx.jpg	0.5x0.5		1	638
+1601	products/saleor/static/placeholders/candy/1_FN0u0aF.jpg	0.5x0.5		2	638
+1602	products/saleor/static/placeholders/candy/2_ndtLmUn.jpg	0.5x0.5		3	638
+1603	products/saleor/static/placeholders/candy/2_mYf29gG.jpg	0.5x0.5		0	639
+1604	products/saleor/static/placeholders/candy/2_IWnfKpK.jpg	0.5x0.5		0	640
+1605	products/saleor/static/placeholders/candy/1_ZIAjt0R.jpg	0.5x0.5		1	640
+1606	products/saleor/static/placeholders/books/book_01_vG9S3qo.jpg	0.5x0.5		0	641
+1607	products/saleor/static/placeholders/books/book_03_RFER6VU.jpg	0.5x0.5		1	641
+1608	products/saleor/static/placeholders/books/book_01_JXp6Yfx.jpg	0.5x0.5		2	641
+1609	products/saleor/static/placeholders/books/book_05_zscUtEo.jpg	0.5x0.5		3	641
+1610	products/saleor/static/placeholders/books/book_01_99loTSN.jpg	0.5x0.5		0	642
+1611	products/saleor/static/placeholders/books/book_01_sc51G7a.jpg	0.5x0.5		1	642
+1612	products/saleor/static/placeholders/books/book_05_k0XYES0.jpg	0.5x0.5		2	642
+1613	products/saleor/static/placeholders/books/book_02_QAoIOHc.jpg	0.5x0.5		3	642
+1614	products/saleor/static/placeholders/books/book_05_beikb3k.jpg	0.5x0.5		0	643
+1615	products/saleor/static/placeholders/books/book_02_4NbjOsq.jpg	0.5x0.5		1	643
+1616	products/saleor/static/placeholders/books/book_01_Pdcech4.jpg	0.5x0.5		2	643
+1617	products/saleor/static/placeholders/books/book_03_2ZsHAvT.jpg	0.5x0.5		3	643
+1618	products/saleor/static/placeholders/books/book_04_HyqWpfJ.jpg	0.5x0.5		0	644
+1619	products/saleor/static/placeholders/books/book_03_MdHa5r3.jpg	0.5x0.5		1	644
+1620	products/saleor/static/placeholders/books/book_02_unOfYux.jpg	0.5x0.5		0	645
+1621	products/saleor/static/placeholders/books/book_01_VsIlJfI.jpg	0.5x0.5		0	646
+1622	products/saleor/static/placeholders/books/book_01_s0hVjj0.jpg	0.5x0.5		0	647
+1623	products/saleor/static/placeholders/books/book_04_qtiJmmX.jpg	0.5x0.5		1	647
+1624	products/saleor/static/placeholders/books/book_04_zPGpn60.jpg	0.5x0.5		2	647
+1625	products/saleor/static/placeholders/books/book_01_3YwWojK.jpg	0.5x0.5		3	647
+1626	products/saleor/static/placeholders/books/book_02_NyQLfFA.jpg	0.5x0.5		0	648
+1627	products/saleor/static/placeholders/books/book_05_thzgWl2.jpg	0.5x0.5		1	648
+1628	products/saleor/static/placeholders/books/book_01_Lw3N7Fr.jpg	0.5x0.5		0	649
+1629	products/saleor/static/placeholders/books/book_04_cILPu0x.jpg	0.5x0.5		1	649
+1630	products/saleor/static/placeholders/books/book_04_lWfzbln.jpg	0.5x0.5		2	649
+1631	products/saleor/static/placeholders/books/book_03_FB1T1Vf.jpg	0.5x0.5		0	650
+1632	products/saleor/static/placeholders/books/book_04_UeAYX3j.jpg	0.5x0.5		1	650
+1633	products/saleor/static/placeholders/books/book_01_2XpaKkw.jpg	0.5x0.5		2	650
+1634	products/saleor/static/placeholders/books/book_05_OAcykB3.jpg	0.5x0.5		0	651
+1635	products/saleor/static/placeholders/books/book_03_EwJTtpR.jpg	0.5x0.5		1	651
+1636	products/saleor/static/placeholders/books/book_03_vsIrOYJ.jpg	0.5x0.5		2	651
+1637	products/saleor/static/placeholders/books/book_05_qA9F48j.jpg	0.5x0.5		0	652
+1638	products/saleor/static/placeholders/books/book_02_T2Ekx8W.jpg	0.5x0.5		1	652
+1639	products/saleor/static/placeholders/books/book_01_t1Rj0I9.jpg	0.5x0.5		2	652
+1640	products/saleor/static/placeholders/books/book_04_WoF5FqF.jpg	0.5x0.5		3	652
+1641	products/saleor/static/placeholders/books/book_01_MudSo3g.jpg	0.5x0.5		0	653
+1642	products/saleor/static/placeholders/books/book_05_cSi4h5e.jpg	0.5x0.5		1	653
+1643	products/saleor/static/placeholders/books/book_05_6VvafRe.jpg	0.5x0.5		0	654
+1644	products/saleor/static/placeholders/books/book_02_0uAuN9u.jpg	0.5x0.5		1	654
+1645	products/saleor/static/placeholders/books/book_01_w3ic7au.jpg	0.5x0.5		0	655
+1646	products/saleor/static/placeholders/books/book_01_wq9T5Ie.jpg	0.5x0.5		1	655
+1647	products/saleor/static/placeholders/books/book_05_vXuYXWv.jpg	0.5x0.5		2	655
+1648	products/saleor/static/placeholders/books/book_05_Kz2lSK5.jpg	0.5x0.5		0	656
+1649	products/saleor/static/placeholders/books/book_04_F8OH7iJ.jpg	0.5x0.5		0	657
+1650	products/saleor/static/placeholders/books/book_01_9bvyjnW.jpg	0.5x0.5		0	658
+1651	products/saleor/static/placeholders/books/book_05_5un0pwh.jpg	0.5x0.5		1	658
+1652	products/saleor/static/placeholders/books/book_02_YB6yTbZ.jpg	0.5x0.5		2	658
+1653	products/saleor/static/placeholders/books/book_05_HaSM6zG.jpg	0.5x0.5		0	659
+1654	products/saleor/static/placeholders/books/book_03_65lkhC2.jpg	0.5x0.5		0	660
+1655	products/saleor/static/placeholders/books/book_03_kWmhkAb.jpg	0.5x0.5		1	660
+1656	products/saleor/static/placeholders/books/book_05_Vtne9Ma.jpg	0.5x0.5		2	660
+1657	products/saleor/static/placeholders/books/book_02_JvZKO2F.jpg	0.5x0.5		3	660
+1658	products/saleor/static/placeholders/t-shirts/6_7zx8u4g.jpg	0.5x0.5		0	661
+1659	products/saleor/static/placeholders/t-shirts/6_e2EI07q.jpg	0.5x0.5		1	661
+1660	products/saleor/static/placeholders/t-shirts/6_yXvg9QT.jpg	0.5x0.5		0	662
+1661	products/saleor/static/placeholders/t-shirts/6_KPJlNyS.jpg	0.5x0.5		1	662
+1662	products/saleor/static/placeholders/t-shirts/5_UiztGqX.jpg	0.5x0.5		2	662
+1663	products/saleor/static/placeholders/t-shirts/6_pw2p4eM.jpg	0.5x0.5		0	663
+1664	products/saleor/static/placeholders/t-shirts/5_5JKlB1x.jpg	0.5x0.5		1	663
+1665	products/saleor/static/placeholders/t-shirts/6_isgsmyi.jpg	0.5x0.5		2	663
+1666	products/saleor/static/placeholders/t-shirts/6_kdV18h5.jpg	0.5x0.5		3	663
+1667	products/saleor/static/placeholders/t-shirts/5_Bmk5uki.jpg	0.5x0.5		0	664
+1668	products/saleor/static/placeholders/t-shirts/5_XIN2B0N.jpg	0.5x0.5		1	664
+1669	products/saleor/static/placeholders/t-shirts/5_rR2bTKX.jpg	0.5x0.5		0	665
+1670	products/saleor/static/placeholders/t-shirts/5_3p4Bd9W.jpg	0.5x0.5		0	666
+1671	products/saleor/static/placeholders/t-shirts/6_a9IXUlY.jpg	0.5x0.5		1	666
+1672	products/saleor/static/placeholders/t-shirts/5_eZsUdNn.jpg	0.5x0.5		2	666
+1673	products/saleor/static/placeholders/t-shirts/5_zSd8e7s.jpg	0.5x0.5		0	667
+1674	products/saleor/static/placeholders/t-shirts/6_xx9f68y.jpg	0.5x0.5		1	667
+1675	products/saleor/static/placeholders/t-shirts/6_a6J3g6U.jpg	0.5x0.5		2	667
+1676	products/saleor/static/placeholders/t-shirts/6_gs9VckG.jpg	0.5x0.5		3	667
+1677	products/saleor/static/placeholders/t-shirts/6_xVBM4wh.jpg	0.5x0.5		0	668
+1678	products/saleor/static/placeholders/t-shirts/6_tPeWpPt.jpg	0.5x0.5		0	669
+1679	products/saleor/static/placeholders/t-shirts/5_2gmCaHn.jpg	0.5x0.5		1	669
+1680	products/saleor/static/placeholders/t-shirts/6_gbsI0Qo.jpg	0.5x0.5		0	670
+1681	products/saleor/static/placeholders/mugs/4_p7QeUTk.jpg	0.5x0.5		0	671
+1682	products/saleor/static/placeholders/mugs/4_ghWoG13.jpg	0.5x0.5		1	671
+1683	products/saleor/static/placeholders/mugs/7_El8RGfg.jpg	0.5x0.5		0	672
+1684	products/saleor/static/placeholders/mugs/box_01_XEGXKIc.jpg	0.5x0.5		1	672
+1685	products/saleor/static/placeholders/mugs/box_01_PYrSPR2.jpg	0.5x0.5		2	672
+1686	products/saleor/static/placeholders/mugs/7_qaAd1XK.jpg	0.5x0.5		0	673
+1687	products/saleor/static/placeholders/mugs/box_01_k8WLuI2.jpg	0.5x0.5		1	673
+1688	products/saleor/static/placeholders/mugs/4_zsGdpOu.jpg	0.5x0.5		0	674
+1689	products/saleor/static/placeholders/mugs/3_5bmGvDX.jpg	0.5x0.5		0	675
+1690	products/saleor/static/placeholders/mugs/4_iv8dnbl.jpg	0.5x0.5		0	676
+1691	products/saleor/static/placeholders/mugs/7_wRNCyDO.jpg	0.5x0.5		1	676
+1692	products/saleor/static/placeholders/mugs/3_eqjDbv1.jpg	0.5x0.5		2	676
+1693	products/saleor/static/placeholders/mugs/box_01_FihMYy9.jpg	0.5x0.5		3	676
+1694	products/saleor/static/placeholders/mugs/box_01_ZqvKeQ0.jpg	0.5x0.5		0	677
+1695	products/saleor/static/placeholders/mugs/7_Tle2OnC.jpg	0.5x0.5		1	677
+1696	products/saleor/static/placeholders/mugs/3_7bfPtRv.jpg	0.5x0.5		2	677
+1697	products/saleor/static/placeholders/mugs/box_01_COQShBu.jpg	0.5x0.5		0	678
+1698	products/saleor/static/placeholders/mugs/7_Pabw264.jpg	0.5x0.5		1	678
+1699	products/saleor/static/placeholders/mugs/box_01_TR7mIP3.jpg	0.5x0.5		2	678
+1700	products/saleor/static/placeholders/mugs/7_zapCx86.jpg	0.5x0.5		3	678
+1701	products/saleor/static/placeholders/mugs/4_YMfaOIn.jpg	0.5x0.5		0	679
+1702	products/saleor/static/placeholders/mugs/7_uwCzbyD.jpg	0.5x0.5		1	679
+1703	products/saleor/static/placeholders/mugs/7_cA9PIsW.jpg	0.5x0.5		2	679
+1704	products/saleor/static/placeholders/mugs/7_jFak8Q5.jpg	0.5x0.5		0	680
+1705	products/saleor/static/placeholders/mugs/box_01_jetHfIj.jpg	0.5x0.5		1	680
+1706	products/saleor/static/placeholders/mugs/3_XFYDDJ5.jpg	0.5x0.5		2	680
+1707	products/saleor/static/placeholders/mugs/7_VX8qpLD.jpg	0.5x0.5		3	680
+1708	products/saleor/static/placeholders/coffee/coffee_04_6p5Nw5r.jpg	0.5x0.5		0	681
+1709	products/saleor/static/placeholders/coffee/coffee_02_yE75cyZ.jpg	0.5x0.5		0	682
+1710	products/saleor/static/placeholders/coffee/coffee_04_pkEoqDS.jpg	0.5x0.5		1	682
+1711	products/saleor/static/placeholders/coffee/coffee_02_qST1FTt.jpg	0.5x0.5		2	682
+1712	products/saleor/static/placeholders/coffee/8_ITMkB3y.jpg	0.5x0.5		3	682
+1713	products/saleor/static/placeholders/coffee/coffee_01_ue5IHXa.jpg	0.5x0.5		0	683
+1714	products/saleor/static/placeholders/coffee/coffee_01_hm5AbUE.jpg	0.5x0.5		0	684
+1715	products/saleor/static/placeholders/coffee/coffee_01_aizevkP.jpg	0.5x0.5		1	684
+1716	products/saleor/static/placeholders/coffee/coffee_01_d8B09ke.jpg	0.5x0.5		2	684
+1717	products/saleor/static/placeholders/coffee/8_ZSIUKXi.jpg	0.5x0.5		3	684
+1718	products/saleor/static/placeholders/coffee/coffee_03_FM2qaBo.jpg	0.5x0.5		0	685
+1719	products/saleor/static/placeholders/coffee/coffee_01_oemin8d.jpg	0.5x0.5		1	685
+1720	products/saleor/static/placeholders/coffee/8_3SmgNsN.jpg	0.5x0.5		2	685
+1721	products/saleor/static/placeholders/coffee/coffee_02_tFhWfnd.jpg	0.5x0.5		0	686
+1722	products/saleor/static/placeholders/coffee/coffee_03_eQAJWG8.jpg	0.5x0.5		0	687
+1723	products/saleor/static/placeholders/coffee/coffee_01_0YgYsmj.jpg	0.5x0.5		1	687
+1724	products/saleor/static/placeholders/coffee/coffee_01_I4bk4hX.jpg	0.5x0.5		2	687
+1725	products/saleor/static/placeholders/coffee/coffee_02_mpYuuu4.jpg	0.5x0.5		3	687
+1726	products/saleor/static/placeholders/coffee/8_ogeOKkD.jpg	0.5x0.5		0	688
+1727	products/saleor/static/placeholders/coffee/coffee_01_SLrhxAj.jpg	0.5x0.5		1	688
+1728	products/saleor/static/placeholders/coffee/8_nohs4S0.jpg	0.5x0.5		0	689
+1729	products/saleor/static/placeholders/coffee/coffee_03_4BdaIlF.jpg	0.5x0.5		1	689
+1730	products/saleor/static/placeholders/coffee/coffee_01_25TqssO.jpg	0.5x0.5		0	690
+1731	products/saleor/static/placeholders/coffee/8_gssJFGE.jpg	0.5x0.5		1	690
+1732	products/saleor/static/placeholders/coffee/coffee_04_lAOWFNL.jpg	0.5x0.5		2	690
+1733	products/saleor/static/placeholders/candy/1_RWxYajk.jpg	0.5x0.5		0	691
+1734	products/saleor/static/placeholders/candy/2_XXu4M6L.jpg	0.5x0.5		1	691
+1735	products/saleor/static/placeholders/candy/1_s3duszs.jpg	0.5x0.5		2	691
+1736	products/saleor/static/placeholders/candy/2_OMyjK2u.jpg	0.5x0.5		0	692
+1737	products/saleor/static/placeholders/candy/1_p8Ob0DR.jpg	0.5x0.5		0	693
+1738	products/saleor/static/placeholders/candy/2_wxqK1gt.jpg	0.5x0.5		0	694
+1739	products/saleor/static/placeholders/candy/2_8jUuU7p.jpg	0.5x0.5		1	694
+1740	products/saleor/static/placeholders/candy/2_lN9xCTz.jpg	0.5x0.5		2	694
+1741	products/saleor/static/placeholders/candy/1_jYRToSv.jpg	0.5x0.5		3	694
+1742	products/saleor/static/placeholders/candy/1_VViibrt.jpg	0.5x0.5		0	695
+1743	products/saleor/static/placeholders/candy/1_EnuCZsc.jpg	0.5x0.5		0	696
+1744	products/saleor/static/placeholders/candy/1_Pfxln9T.jpg	0.5x0.5		1	696
+1745	products/saleor/static/placeholders/candy/1_unDQeaI.jpg	0.5x0.5		2	696
+1746	products/saleor/static/placeholders/candy/1_ngaWlGl.jpg	0.5x0.5		3	696
+1747	products/saleor/static/placeholders/candy/2_FMBz148.jpg	0.5x0.5		0	697
+1748	products/saleor/static/placeholders/candy/2_9udw1P1.jpg	0.5x0.5		1	697
+1749	products/saleor/static/placeholders/candy/1_DctQ1qm.jpg	0.5x0.5		2	697
+1750	products/saleor/static/placeholders/candy/1_2BFzAkF.jpg	0.5x0.5		3	697
+1751	products/saleor/static/placeholders/candy/2_tljmXbw.jpg	0.5x0.5		0	698
+1752	products/saleor/static/placeholders/candy/2_wn4GNtv.jpg	0.5x0.5		1	698
+1753	products/saleor/static/placeholders/candy/2_iV5nGYP.jpg	0.5x0.5		2	698
+1754	products/saleor/static/placeholders/candy/2_3QI8k36.jpg	0.5x0.5		0	699
+1755	products/saleor/static/placeholders/candy/1_DySdbKE.jpg	0.5x0.5		1	699
+1756	products/saleor/static/placeholders/candy/2_f0UErGR.jpg	0.5x0.5		0	700
+1757	products/saleor/static/placeholders/candy/2_FKBXkvq.jpg	0.5x0.5		1	700
+1758	products/saleor/static/placeholders/books/book_01_eH0OrkY.jpg	0.5x0.5		0	701
+1759	products/saleor/static/placeholders/books/book_02_yxO4soW.jpg	0.5x0.5		1	701
+1760	products/saleor/static/placeholders/books/book_01_VTxuUBW.jpg	0.5x0.5		2	701
+1761	products/saleor/static/placeholders/books/book_04_9UtLF6n.jpg	0.5x0.5		3	701
+1762	products/saleor/static/placeholders/books/book_04_bo9r1yP.jpg	0.5x0.5		0	702
+1763	products/saleor/static/placeholders/books/book_05_pzT8bHO.jpg	0.5x0.5		1	702
+1764	products/saleor/static/placeholders/books/book_04_CS6cowm.jpg	0.5x0.5		2	702
+1765	products/saleor/static/placeholders/books/book_04_S9wPFWO.jpg	0.5x0.5		3	702
+1766	products/saleor/static/placeholders/books/book_01_bjWnZMO.jpg	0.5x0.5		0	703
+1767	products/saleor/static/placeholders/books/book_04_UNBenzi.jpg	0.5x0.5		1	703
+1768	products/saleor/static/placeholders/books/book_01_I2ZgnI1.jpg	0.5x0.5		0	704
+1769	products/saleor/static/placeholders/books/book_03_X6hV7YE.jpg	0.5x0.5		1	704
+1770	products/saleor/static/placeholders/books/book_02_qpWUTSi.jpg	0.5x0.5		0	705
+1771	products/saleor/static/placeholders/books/book_02_0lNSKG6.jpg	0.5x0.5		1	705
+1772	products/saleor/static/placeholders/books/book_02_89kYwDv.jpg	0.5x0.5		2	705
+1773	products/saleor/static/placeholders/books/book_05_VLSetPt.jpg	0.5x0.5		0	706
+1774	products/saleor/static/placeholders/books/book_01_pgrCn7E.jpg	0.5x0.5		1	706
+1775	products/saleor/static/placeholders/books/book_04_4Dzx3Nm.jpg	0.5x0.5		2	706
+1776	products/saleor/static/placeholders/books/book_04_mMX3aTi.jpg	0.5x0.5		3	706
+1777	products/saleor/static/placeholders/books/book_05_sXZ9vZI.jpg	0.5x0.5		0	707
+1778	products/saleor/static/placeholders/books/book_04_YZnURSC.jpg	0.5x0.5		1	707
+1779	products/saleor/static/placeholders/books/book_05_R2bLfKk.jpg	0.5x0.5		0	708
+1780	products/saleor/static/placeholders/books/book_04_MhswqLF.jpg	0.5x0.5		1	708
+1781	products/saleor/static/placeholders/books/book_02_ULStBNC.jpg	0.5x0.5		2	708
+1782	products/saleor/static/placeholders/books/book_02_lViMuQf.jpg	0.5x0.5		3	708
+1783	products/saleor/static/placeholders/books/book_03_jDuh0ex.jpg	0.5x0.5		0	709
+1784	products/saleor/static/placeholders/books/book_02_2enf5j1.jpg	0.5x0.5		0	710
+1785	products/saleor/static/placeholders/books/book_04_9hOHGIl.jpg	0.5x0.5		1	710
+1786	products/saleor/static/placeholders/books/book_01_FkYcdH1.jpg	0.5x0.5		2	710
+1787	products/saleor/static/placeholders/books/book_03_4jrcdlm.jpg	0.5x0.5		3	710
+1788	products/saleor/static/placeholders/books/book_03_jHzbqb9.jpg	0.5x0.5		0	711
+1789	products/saleor/static/placeholders/books/book_03_OuJvuyJ.jpg	0.5x0.5		1	711
+1790	products/saleor/static/placeholders/books/book_02_GsfqILN.jpg	0.5x0.5		2	711
+1791	products/saleor/static/placeholders/books/book_02_knzZ0Gz.jpg	0.5x0.5		3	711
+1792	products/saleor/static/placeholders/books/book_03_6sy1crn.jpg	0.5x0.5		0	712
+1793	products/saleor/static/placeholders/books/book_02_xwf7xk6.jpg	0.5x0.5		1	712
+1794	products/saleor/static/placeholders/books/book_05_VtN42yo.jpg	0.5x0.5		2	712
+1795	products/saleor/static/placeholders/books/book_05_8b8cPnc.jpg	0.5x0.5		3	712
+1796	products/saleor/static/placeholders/books/book_05_L3QeYhM.jpg	0.5x0.5		0	713
+1797	products/saleor/static/placeholders/books/book_01_dt2yc9p.jpg	0.5x0.5		1	713
+1798	products/saleor/static/placeholders/books/book_02_yWZb0Dn.jpg	0.5x0.5		0	714
+1799	products/saleor/static/placeholders/books/book_04_emB0icZ.jpg	0.5x0.5		1	714
+1800	products/saleor/static/placeholders/books/book_04_SzhXfK8.jpg	0.5x0.5		0	715
+1801	products/saleor/static/placeholders/books/book_01_l5i2TwJ.jpg	0.5x0.5		1	715
+1802	products/saleor/static/placeholders/books/book_04_hs3aVsC.jpg	0.5x0.5		2	715
+1803	products/saleor/static/placeholders/books/book_05_zTuCpAd.jpg	0.5x0.5		3	715
+1804	products/saleor/static/placeholders/books/book_01_eYJwTGY.jpg	0.5x0.5		0	716
+1805	products/saleor/static/placeholders/books/book_04_RE2K3Lg.jpg	0.5x0.5		1	716
+1806	products/saleor/static/placeholders/books/book_01_4oDuZv7.jpg	0.5x0.5		0	717
+1807	products/saleor/static/placeholders/books/book_03_rqQpAB5.jpg	0.5x0.5		0	718
+1808	products/saleor/static/placeholders/books/book_02_cmAJtVW.jpg	0.5x0.5		1	718
+1809	products/saleor/static/placeholders/books/book_02_0WvDp6v.jpg	0.5x0.5		0	719
+1810	products/saleor/static/placeholders/books/book_01_XhSNUcq.jpg	0.5x0.5		1	719
+1811	products/saleor/static/placeholders/books/book_04_5LXLE33.jpg	0.5x0.5		0	720
+1812	products/saleor/static/placeholders/books/book_03_GEbgTzi.jpg	0.5x0.5		1	720
+1813	products/saleor/static/placeholders/books/book_04_fucSdx3.jpg	0.5x0.5		2	720
+1814	products/saleor/static/placeholders/t-shirts/5_To5m89Q.jpg	0.5x0.5		0	721
+1815	products/saleor/static/placeholders/t-shirts/6_ySmr0Ko.jpg	0.5x0.5		1	721
+1816	products/saleor/static/placeholders/t-shirts/6_hMYFFku.jpg	0.5x0.5		2	721
+1817	products/saleor/static/placeholders/t-shirts/5_1F2uFcD.jpg	0.5x0.5		0	722
+1818	products/saleor/static/placeholders/t-shirts/6_W2OWr5O.jpg	0.5x0.5		1	722
+1819	products/saleor/static/placeholders/t-shirts/5_6Qq9RRC.jpg	0.5x0.5		2	722
+1820	products/saleor/static/placeholders/t-shirts/6_2zLNKQH.jpg	0.5x0.5		3	722
+1821	products/saleor/static/placeholders/t-shirts/5_OMSmoHg.jpg	0.5x0.5		0	723
+1822	products/saleor/static/placeholders/t-shirts/6_WFFwtYe.jpg	0.5x0.5		1	723
+1823	products/saleor/static/placeholders/t-shirts/5_U85sreY.jpg	0.5x0.5		2	723
+1824	products/saleor/static/placeholders/t-shirts/6_T80ns0E.jpg	0.5x0.5		0	724
+1825	products/saleor/static/placeholders/t-shirts/5_zJmj4fI.jpg	0.5x0.5		0	725
+1826	products/saleor/static/placeholders/t-shirts/5_zoDe1Wf.jpg	0.5x0.5		0	726
+1827	products/saleor/static/placeholders/t-shirts/5_SXQYk6C.jpg	0.5x0.5		0	727
+1828	products/saleor/static/placeholders/t-shirts/6_VAZfOgX.jpg	0.5x0.5		0	728
+1829	products/saleor/static/placeholders/t-shirts/6_EkaOB0W.jpg	0.5x0.5		1	728
+1830	products/saleor/static/placeholders/t-shirts/6_eaDXFjP.jpg	0.5x0.5		2	728
+1831	products/saleor/static/placeholders/t-shirts/5_EXoMdwp.jpg	0.5x0.5		3	728
+1832	products/saleor/static/placeholders/t-shirts/6_uQ6lzvs.jpg	0.5x0.5		0	729
+1833	products/saleor/static/placeholders/t-shirts/5_rpIXGzH.jpg	0.5x0.5		1	729
+1834	products/saleor/static/placeholders/t-shirts/5_QbYXxCg.jpg	0.5x0.5		0	730
+1835	products/saleor/static/placeholders/t-shirts/5_0gfz1FU.jpg	0.5x0.5		1	730
+1836	products/saleor/static/placeholders/mugs/box_01_cWZdTx8.jpg	0.5x0.5		0	731
+1837	products/saleor/static/placeholders/mugs/3_WQG68hy.jpg	0.5x0.5		1	731
+1838	products/saleor/static/placeholders/mugs/3_ncFGHQG.jpg	0.5x0.5		2	731
+1839	products/saleor/static/placeholders/mugs/box_01_ySEGuUW.jpg	0.5x0.5		0	732
+1840	products/saleor/static/placeholders/mugs/7_te4zwp1.jpg	0.5x0.5		1	732
+1841	products/saleor/static/placeholders/mugs/4_UF9ILCc.jpg	0.5x0.5		2	732
+1842	products/saleor/static/placeholders/mugs/box_01_Eemz84S.jpg	0.5x0.5		0	733
+1843	products/saleor/static/placeholders/mugs/4_a3wwITd.jpg	0.5x0.5		0	734
+1844	products/saleor/static/placeholders/mugs/4_DbiBCyz.jpg	0.5x0.5		1	734
+1845	products/saleor/static/placeholders/mugs/7_dQ52yCH.jpg	0.5x0.5		0	735
+1846	products/saleor/static/placeholders/mugs/3_gZOLDkc.jpg	0.5x0.5		0	736
+1847	products/saleor/static/placeholders/mugs/7_3DmrFDb.jpg	0.5x0.5		1	736
+1848	products/saleor/static/placeholders/mugs/box_01_p4LVK8Q.jpg	0.5x0.5		0	737
+1849	products/saleor/static/placeholders/mugs/4_CgujPeV.jpg	0.5x0.5		1	737
+1850	products/saleor/static/placeholders/mugs/7_fOIyED0.jpg	0.5x0.5		2	737
+1851	products/saleor/static/placeholders/mugs/box_01_yqex7J9.jpg	0.5x0.5		0	738
+1852	products/saleor/static/placeholders/mugs/box_01_xDQRYuA.jpg	0.5x0.5		0	739
+1853	products/saleor/static/placeholders/mugs/7_EccSM96.jpg	0.5x0.5		0	740
+1854	products/saleor/static/placeholders/coffee/coffee_02_evJdRIF.jpg	0.5x0.5		0	741
+1855	products/saleor/static/placeholders/coffee/coffee_02_36PWs92.jpg	0.5x0.5		1	741
+1856	products/saleor/static/placeholders/coffee/coffee_01_izTbJGB.jpg	0.5x0.5		2	741
+1857	products/saleor/static/placeholders/coffee/8_6FMY5ae.jpg	0.5x0.5		3	741
+1858	products/saleor/static/placeholders/coffee/coffee_04_0PgBk7L.jpg	0.5x0.5		0	742
+1859	products/saleor/static/placeholders/coffee/coffee_04_Qxu1J8F.jpg	0.5x0.5		0	743
+1860	products/saleor/static/placeholders/coffee/coffee_04_sJFpxkL.jpg	0.5x0.5		1	743
+1861	products/saleor/static/placeholders/coffee/coffee_04_hnxJVoH.jpg	0.5x0.5		2	743
+1862	products/saleor/static/placeholders/coffee/coffee_02_2BPKuvx.jpg	0.5x0.5		3	743
+1863	products/saleor/static/placeholders/coffee/8_baDEL2q.jpg	0.5x0.5		0	744
+1864	products/saleor/static/placeholders/coffee/coffee_04_zhKxVWU.jpg	0.5x0.5		1	744
+1865	products/saleor/static/placeholders/coffee/coffee_02_ngLcPFC.jpg	0.5x0.5		2	744
+1866	products/saleor/static/placeholders/coffee/8_hkkEYIR.jpg	0.5x0.5		0	745
+1867	products/saleor/static/placeholders/coffee/coffee_02_aTqE6Cc.jpg	0.5x0.5		0	746
+1868	products/saleor/static/placeholders/coffee/coffee_03_QcKW6CI.jpg	0.5x0.5		1	746
+1869	products/saleor/static/placeholders/coffee/coffee_01_dxvpeK2.jpg	0.5x0.5		2	746
+1870	products/saleor/static/placeholders/coffee/coffee_03_MBjlqqQ.jpg	0.5x0.5		3	746
+1871	products/saleor/static/placeholders/coffee/coffee_01_DrGTkyg.jpg	0.5x0.5		0	747
+1872	products/saleor/static/placeholders/coffee/coffee_04_hXMrpzz.jpg	0.5x0.5		0	748
+1873	products/saleor/static/placeholders/coffee/coffee_01_1HRnDuy.jpg	0.5x0.5		1	748
+1874	products/saleor/static/placeholders/coffee/8_nabatf8.jpg	0.5x0.5		2	748
+1875	products/saleor/static/placeholders/coffee/coffee_04_rjJmDqe.jpg	0.5x0.5		3	748
+1876	products/saleor/static/placeholders/coffee/coffee_02_KgosfKg.jpg	0.5x0.5		0	749
+1877	products/saleor/static/placeholders/coffee/coffee_03_EYawt86.jpg	0.5x0.5		1	749
+1878	products/saleor/static/placeholders/coffee/coffee_04_3uOGLUd.jpg	0.5x0.5		0	750
+1879	products/saleor/static/placeholders/candy/1_bgYgXLP.jpg	0.5x0.5		0	751
+1880	products/saleor/static/placeholders/candy/2_zR5JzJz.jpg	0.5x0.5		1	751
+1881	products/saleor/static/placeholders/candy/2_eLb9Dcg.jpg	0.5x0.5		0	752
+1882	products/saleor/static/placeholders/candy/2_dFZlZBF.jpg	0.5x0.5		1	752
+1883	products/saleor/static/placeholders/candy/1_klNTU6b.jpg	0.5x0.5		2	752
+1884	products/saleor/static/placeholders/candy/1_0eQ739I.jpg	0.5x0.5		3	752
+1885	products/saleor/static/placeholders/candy/2_89LxDXp.jpg	0.5x0.5		0	753
+1886	products/saleor/static/placeholders/candy/2_qDMZxlB.jpg	0.5x0.5		1	753
+1887	products/saleor/static/placeholders/candy/1_mG9NkLX.jpg	0.5x0.5		2	753
+1888	products/saleor/static/placeholders/candy/1_oc3miuF.jpg	0.5x0.5		0	754
+1889	products/saleor/static/placeholders/candy/2_FC5s8La.jpg	0.5x0.5		0	755
+1890	products/saleor/static/placeholders/candy/2_10oWrSe.jpg	0.5x0.5		1	755
+1891	products/saleor/static/placeholders/candy/1_iyg1x3T.jpg	0.5x0.5		2	755
+1892	products/saleor/static/placeholders/candy/1_rXcZc3A.jpg	0.5x0.5		0	756
+1893	products/saleor/static/placeholders/candy/2_3lZaeDP.jpg	0.5x0.5		0	757
+1894	products/saleor/static/placeholders/candy/2_qDLceQv.jpg	0.5x0.5		1	757
+1895	products/saleor/static/placeholders/candy/1_w4Cn1Tn.jpg	0.5x0.5		0	758
+1896	products/saleor/static/placeholders/candy/1_6a2Zf3F.jpg	0.5x0.5		1	758
+1897	products/saleor/static/placeholders/candy/1_zxrriaB.jpg	0.5x0.5		0	759
+1898	products/saleor/static/placeholders/candy/1_ZaDgLtX.jpg	0.5x0.5		1	759
+1899	products/saleor/static/placeholders/candy/1_tNs8lXp.jpg	0.5x0.5		0	760
+1900	products/saleor/static/placeholders/candy/2_OLp8ecN.jpg	0.5x0.5		1	760
+1901	products/saleor/static/placeholders/books/book_05_wVnecti.jpg	0.5x0.5		0	761
+1902	products/saleor/static/placeholders/books/book_01_SOOHYHM.jpg	0.5x0.5		1	761
+1903	products/saleor/static/placeholders/books/book_04_OrGJQXB.jpg	0.5x0.5		2	761
+1904	products/saleor/static/placeholders/books/book_05_zCF2G6A.jpg	0.5x0.5		0	762
+1905	products/saleor/static/placeholders/books/book_02_la3FrsJ.jpg	0.5x0.5		1	762
+1906	products/saleor/static/placeholders/books/book_05_i1tNKCj.jpg	0.5x0.5		0	763
+1907	products/saleor/static/placeholders/books/book_04_tZRg1pL.jpg	0.5x0.5		1	763
+1908	products/saleor/static/placeholders/books/book_01_gqwqOCO.jpg	0.5x0.5		2	763
+1909	products/saleor/static/placeholders/books/book_02_jJ97RYU.jpg	0.5x0.5		0	764
+1910	products/saleor/static/placeholders/books/book_03_RuCdvYk.jpg	0.5x0.5		0	765
+1911	products/saleor/static/placeholders/books/book_03_XQsGjUY.jpg	0.5x0.5		1	765
+1912	products/saleor/static/placeholders/books/book_01_jfQP99U.jpg	0.5x0.5		2	765
+1913	products/saleor/static/placeholders/books/book_02_i0cDFkA.jpg	0.5x0.5		3	765
+1914	products/saleor/static/placeholders/books/book_05_ej5p3V9.jpg	0.5x0.5		0	766
+1915	products/saleor/static/placeholders/books/book_05_pwM5lyg.jpg	0.5x0.5		1	766
+1916	products/saleor/static/placeholders/books/book_03_p9xPwJi.jpg	0.5x0.5		2	766
+1917	products/saleor/static/placeholders/books/book_03_IIq129e.jpg	0.5x0.5		3	766
+1918	products/saleor/static/placeholders/books/book_05_SFh1cFb.jpg	0.5x0.5		0	767
+1919	products/saleor/static/placeholders/books/book_02_d0NvViT.jpg	0.5x0.5		1	767
+1920	products/saleor/static/placeholders/books/book_01_U6XpZ5s.jpg	0.5x0.5		0	768
+1921	products/saleor/static/placeholders/books/book_03_Fp3o4fM.jpg	0.5x0.5		1	768
+1922	products/saleor/static/placeholders/books/book_01_dHUuw2H.jpg	0.5x0.5		0	769
+1923	products/saleor/static/placeholders/books/book_01_pzByxxZ.jpg	0.5x0.5		1	769
+1924	products/saleor/static/placeholders/books/book_03_wTKj9Cl.jpg	0.5x0.5		0	770
+1925	products/saleor/static/placeholders/books/book_05_RtwI841.jpg	0.5x0.5		1	770
+1926	products/saleor/static/placeholders/books/book_05_Zyez76a.jpg	0.5x0.5		2	770
+1927	products/saleor/static/placeholders/books/book_03_ZCSj2yH.jpg	0.5x0.5		0	771
+1928	products/saleor/static/placeholders/books/book_04_LBe8BvL.jpg	0.5x0.5		1	771
+1929	products/saleor/static/placeholders/books/book_05_BRjapK9.jpg	0.5x0.5		2	771
+1930	products/saleor/static/placeholders/books/book_01_khs2Yzg.jpg	0.5x0.5		0	772
+1931	products/saleor/static/placeholders/books/book_05_XulirFP.jpg	0.5x0.5		0	773
+1932	products/saleor/static/placeholders/books/book_02_LZ7v78w.jpg	0.5x0.5		1	773
+1933	products/saleor/static/placeholders/books/book_05_Z4hWyjx.jpg	0.5x0.5		2	773
+1934	products/saleor/static/placeholders/books/book_02_vRo48eD.jpg	0.5x0.5		0	774
+1935	products/saleor/static/placeholders/books/book_04_Ief5uV1.jpg	0.5x0.5		0	775
+1936	products/saleor/static/placeholders/books/book_04_onThGs4.jpg	0.5x0.5		1	775
+1937	products/saleor/static/placeholders/books/book_03_mT1tnEZ.jpg	0.5x0.5		2	775
+1938	products/saleor/static/placeholders/books/book_05_n8Q1sNo.jpg	0.5x0.5		3	775
+1939	products/saleor/static/placeholders/books/book_02_RMzdL26.jpg	0.5x0.5		0	776
+1940	products/saleor/static/placeholders/books/book_02_BxcbjB5.jpg	0.5x0.5		1	776
+1941	products/saleor/static/placeholders/books/book_01_2IIzeRZ.jpg	0.5x0.5		2	776
+1942	products/saleor/static/placeholders/books/book_02_F5YtpbY.jpg	0.5x0.5		0	777
+1943	products/saleor/static/placeholders/books/book_05_IdASWMT.jpg	0.5x0.5		1	777
+1944	products/saleor/static/placeholders/books/book_01_9ZZOp2y.jpg	0.5x0.5		0	778
+1945	products/saleor/static/placeholders/books/book_05_a8dFRIs.jpg	0.5x0.5		1	778
+1946	products/saleor/static/placeholders/books/book_03_QcHf9d7.jpg	0.5x0.5		2	778
+1947	products/saleor/static/placeholders/books/book_05_PimSE6u.jpg	0.5x0.5		0	779
+1948	products/saleor/static/placeholders/books/book_04_igjn1PP.jpg	0.5x0.5		1	779
+1949	products/saleor/static/placeholders/books/book_02_xz287Yn.jpg	0.5x0.5		2	779
+1950	products/saleor/static/placeholders/books/book_02_PYP6aRa.jpg	0.5x0.5		0	780
+1951	products/saleor/static/placeholders/books/book_05_2HmiRq5.jpg	0.5x0.5		1	780
+1952	products/saleor/static/placeholders/books/book_02_OoEquRK.jpg	0.5x0.5		2	780
+1953	products/saleor/static/placeholders/t-shirts/6_zuQuuBb.jpg	0.5x0.5		0	781
+1954	products/saleor/static/placeholders/t-shirts/5_KNhzE5e.jpg	0.5x0.5		1	781
+1955	products/saleor/static/placeholders/t-shirts/6_5nvRO4D.jpg	0.5x0.5		2	781
+1956	products/saleor/static/placeholders/t-shirts/6_EYuDzoz.jpg	0.5x0.5		0	782
+1957	products/saleor/static/placeholders/t-shirts/5_Lz2ZqjL.jpg	0.5x0.5		0	783
+1958	products/saleor/static/placeholders/t-shirts/6_senNZ31.jpg	0.5x0.5		0	784
+1959	products/saleor/static/placeholders/t-shirts/6_xkxabD9.jpg	0.5x0.5		0	785
+1960	products/saleor/static/placeholders/t-shirts/5_cIoZuGP.jpg	0.5x0.5		1	785
+1961	products/saleor/static/placeholders/t-shirts/5_okyYj7V.jpg	0.5x0.5		2	785
+1962	products/saleor/static/placeholders/t-shirts/6_HTVDexv.jpg	0.5x0.5		3	785
+1963	products/saleor/static/placeholders/t-shirts/6_2f9PpOG.jpg	0.5x0.5		0	786
+1964	products/saleor/static/placeholders/t-shirts/6_xRBXovZ.jpg	0.5x0.5		1	786
+1965	products/saleor/static/placeholders/t-shirts/5_P5yjrtH.jpg	0.5x0.5		2	786
+1966	products/saleor/static/placeholders/t-shirts/6_aQhyQ7Q.jpg	0.5x0.5		3	786
+1967	products/saleor/static/placeholders/t-shirts/5_pFsmai4.jpg	0.5x0.5		0	787
+1968	products/saleor/static/placeholders/t-shirts/6_uWFi5rO.jpg	0.5x0.5		1	787
+1969	products/saleor/static/placeholders/t-shirts/5_8gIj0D7.jpg	0.5x0.5		2	787
+1970	products/saleor/static/placeholders/t-shirts/5_jTXndKO.jpg	0.5x0.5		0	788
+1971	products/saleor/static/placeholders/t-shirts/5_Obhuc3w.jpg	0.5x0.5		1	788
+1972	products/saleor/static/placeholders/t-shirts/5_AdkAaRU.jpg	0.5x0.5		0	789
+1973	products/saleor/static/placeholders/t-shirts/6_X4fJ1dz.jpg	0.5x0.5		1	789
+1974	products/saleor/static/placeholders/t-shirts/6_c13zKE2.jpg	0.5x0.5		0	790
+1975	products/saleor/static/placeholders/t-shirts/6_QOCdPMY.jpg	0.5x0.5		1	790
+1976	products/saleor/static/placeholders/t-shirts/6_HwrP6Lh.jpg	0.5x0.5		2	790
+1977	products/saleor/static/placeholders/t-shirts/5_Oc6AqLX.jpg	0.5x0.5		3	790
+1978	products/saleor/static/placeholders/mugs/4_XmwIstk.jpg	0.5x0.5		0	791
+1979	products/saleor/static/placeholders/mugs/4_WNtEDNS.jpg	0.5x0.5		0	792
+1980	products/saleor/static/placeholders/mugs/4_cjLuKr6.jpg	0.5x0.5		0	793
+1981	products/saleor/static/placeholders/mugs/3_px9iZZz.jpg	0.5x0.5		1	793
+1982	products/saleor/static/placeholders/mugs/box_01_GxVDvpb.jpg	0.5x0.5		2	793
+1983	products/saleor/static/placeholders/mugs/3_GWdYwO4.jpg	0.5x0.5		0	794
+1984	products/saleor/static/placeholders/mugs/3_YBTJMUi.jpg	0.5x0.5		1	794
+1985	products/saleor/static/placeholders/mugs/3_u3VqkKk.jpg	0.5x0.5		0	795
+1986	products/saleor/static/placeholders/mugs/3_Cn91QuP.jpg	0.5x0.5		1	795
+1987	products/saleor/static/placeholders/mugs/3_4FY3Lf0.jpg	0.5x0.5		2	795
+1988	products/saleor/static/placeholders/mugs/7_AV24kEq.jpg	0.5x0.5		3	795
+1989	products/saleor/static/placeholders/mugs/box_01_9FQuAj9.jpg	0.5x0.5		0	796
+1990	products/saleor/static/placeholders/mugs/3_d8EeLXU.jpg	0.5x0.5		1	796
+1991	products/saleor/static/placeholders/mugs/3_VY4ubIK.jpg	0.5x0.5		0	797
+1992	products/saleor/static/placeholders/mugs/4_G2e1yCj.jpg	0.5x0.5		1	797
+1993	products/saleor/static/placeholders/mugs/box_01_Gd8FlLE.jpg	0.5x0.5		0	798
+1994	products/saleor/static/placeholders/mugs/box_01_u44gUBK.jpg	0.5x0.5		0	799
+1995	products/saleor/static/placeholders/mugs/3_g5iJjbP.jpg	0.5x0.5		1	799
+1996	products/saleor/static/placeholders/mugs/7_FFIBcab.jpg	0.5x0.5		2	799
+1997	products/saleor/static/placeholders/mugs/3_2VqK0t3.jpg	0.5x0.5		0	800
+1998	products/saleor/static/placeholders/mugs/7_py79z2U.jpg	0.5x0.5		1	800
+1999	products/saleor/static/placeholders/coffee/coffee_01_qSwuTh1.jpg	0.5x0.5		0	801
+2000	products/saleor/static/placeholders/coffee/8_mmRugy4.jpg	0.5x0.5		1	801
+2001	products/saleor/static/placeholders/coffee/coffee_04_2OF3IKp.jpg	0.5x0.5		0	802
+2002	products/saleor/static/placeholders/coffee/8_0YT7oKG.jpg	0.5x0.5		1	802
+2003	products/saleor/static/placeholders/coffee/coffee_02_0HFzKse.jpg	0.5x0.5		0	803
+2004	products/saleor/static/placeholders/coffee/8_HR4i59B.jpg	0.5x0.5		1	803
+2005	products/saleor/static/placeholders/coffee/coffee_03_bsBVMpx.jpg	0.5x0.5		2	803
+2006	products/saleor/static/placeholders/coffee/coffee_01_mem0ZVT.jpg	0.5x0.5		3	803
+2007	products/saleor/static/placeholders/coffee/coffee_03_sBvbrtV.jpg	0.5x0.5		0	804
+2008	products/saleor/static/placeholders/coffee/coffee_02_EzYkZLK.jpg	0.5x0.5		0	805
+2009	products/saleor/static/placeholders/coffee/coffee_03_nlsMo3U.jpg	0.5x0.5		0	806
+2010	products/saleor/static/placeholders/coffee/coffee_02_9vSUQjt.jpg	0.5x0.5		1	806
+2011	products/saleor/static/placeholders/coffee/coffee_03_wt3Q5Wq.jpg	0.5x0.5		2	806
+2012	products/saleor/static/placeholders/coffee/coffee_04_f0nuggX.jpg	0.5x0.5		3	806
+2013	products/saleor/static/placeholders/coffee/8_ThoNNLO.jpg	0.5x0.5		0	807
+2014	products/saleor/static/placeholders/coffee/coffee_04_vYDZ2W2.jpg	0.5x0.5		1	807
+2015	products/saleor/static/placeholders/coffee/coffee_01_9jAPbUp.jpg	0.5x0.5		2	807
+2016	products/saleor/static/placeholders/coffee/coffee_02_dYrmv5c.jpg	0.5x0.5		0	808
+2017	products/saleor/static/placeholders/coffee/8_WyvmWWC.jpg	0.5x0.5		1	808
+2018	products/saleor/static/placeholders/coffee/coffee_01_wQEn5Tm.jpg	0.5x0.5		0	809
+2019	products/saleor/static/placeholders/coffee/coffee_03_JPPus3R.jpg	0.5x0.5		1	809
+2020	products/saleor/static/placeholders/coffee/coffee_03_NWfqYzO.jpg	0.5x0.5		2	809
+2021	products/saleor/static/placeholders/coffee/coffee_02_8o7PEVU.jpg	0.5x0.5		0	810
+2022	products/saleor/static/placeholders/coffee/8_92vg4KI.jpg	0.5x0.5		1	810
+2023	products/saleor/static/placeholders/coffee/coffee_04_swwvqF7.jpg	0.5x0.5		2	810
+2024	products/saleor/static/placeholders/candy/1_NbFKtAu.jpg	0.5x0.5		0	811
+2025	products/saleor/static/placeholders/candy/1_bEBigo0.jpg	0.5x0.5		0	812
+2026	products/saleor/static/placeholders/candy/1_ptsMjiM.jpg	0.5x0.5		0	813
+2027	products/saleor/static/placeholders/candy/2_3TfsK0b.jpg	0.5x0.5		1	813
+2028	products/saleor/static/placeholders/candy/2_1htYVUm.jpg	0.5x0.5		0	814
+2029	products/saleor/static/placeholders/candy/2_U6v7RGQ.jpg	0.5x0.5		1	814
+2030	products/saleor/static/placeholders/candy/2_ns0StXh.jpg	0.5x0.5		2	814
+2031	products/saleor/static/placeholders/candy/1_7UTbh1Q.jpg	0.5x0.5		0	815
+2032	products/saleor/static/placeholders/candy/2_ueFSQ67.jpg	0.5x0.5		1	815
+2033	products/saleor/static/placeholders/candy/1_QRcX9RJ.jpg	0.5x0.5		2	815
+2034	products/saleor/static/placeholders/candy/2_MWpYxPW.jpg	0.5x0.5		3	815
+2035	products/saleor/static/placeholders/candy/2_FdHTD5l.jpg	0.5x0.5		0	816
+2036	products/saleor/static/placeholders/candy/2_AnBI71P.jpg	0.5x0.5		1	816
+2037	products/saleor/static/placeholders/candy/1_PejJUgB.jpg	0.5x0.5		2	816
+2038	products/saleor/static/placeholders/candy/1_OrMwPaO.jpg	0.5x0.5		0	817
+2039	products/saleor/static/placeholders/candy/1_icrVQ0H.jpg	0.5x0.5		1	817
+2040	products/saleor/static/placeholders/candy/1_cUSCSYc.jpg	0.5x0.5		2	817
+2041	products/saleor/static/placeholders/candy/1_pAp2hD6.jpg	0.5x0.5		3	817
+2042	products/saleor/static/placeholders/candy/2_RwlIpQQ.jpg	0.5x0.5		0	818
+2043	products/saleor/static/placeholders/candy/2_125cydr.jpg	0.5x0.5		1	818
+2044	products/saleor/static/placeholders/candy/1_2XQXADq.jpg	0.5x0.5		2	818
+2045	products/saleor/static/placeholders/candy/1_ley7W0e.jpg	0.5x0.5		0	819
+2046	products/saleor/static/placeholders/candy/1_8bRjLQY.jpg	0.5x0.5		1	819
+2047	products/saleor/static/placeholders/candy/1_XgOFtx7.jpg	0.5x0.5		2	819
+2048	products/saleor/static/placeholders/candy/2_HdDVSoE.jpg	0.5x0.5		3	819
+2049	products/saleor/static/placeholders/candy/1_LYBMlxd.jpg	0.5x0.5		0	820
+2050	products/saleor/static/placeholders/candy/2_s3cEBJW.jpg	0.5x0.5		1	820
+2051	products/saleor/static/placeholders/candy/1_bX1ZEBP.jpg	0.5x0.5		2	820
+2052	products/saleor/static/placeholders/books/book_02_vQt0BNq.jpg	0.5x0.5		0	821
+2053	products/saleor/static/placeholders/books/book_01_1683OvA.jpg	0.5x0.5		1	821
+2054	products/saleor/static/placeholders/books/book_03_Uf1ivLv.jpg	0.5x0.5		0	822
+2055	products/saleor/static/placeholders/books/book_01_wIQPZxx.jpg	0.5x0.5		1	822
+2056	products/saleor/static/placeholders/books/book_03_kC27juo.jpg	0.5x0.5		2	822
+2057	products/saleor/static/placeholders/books/book_05_hhu4ELi.jpg	0.5x0.5		0	823
+2058	products/saleor/static/placeholders/books/book_01_WKWGYFJ.jpg	0.5x0.5		1	823
+2059	products/saleor/static/placeholders/books/book_01_zxbRQaL.jpg	0.5x0.5		0	824
+2060	products/saleor/static/placeholders/books/book_05_iuiwAzn.jpg	0.5x0.5		1	824
+2061	products/saleor/static/placeholders/books/book_02_xQMNGtn.jpg	0.5x0.5		0	825
+2062	products/saleor/static/placeholders/books/book_01_IQCOSp3.jpg	0.5x0.5		1	825
+2063	products/saleor/static/placeholders/books/book_02_VqhqnYz.jpg	0.5x0.5		2	825
+2064	products/saleor/static/placeholders/books/book_01_zoddsHG.jpg	0.5x0.5		3	825
+2065	products/saleor/static/placeholders/books/book_04_U3ZqD3i.jpg	0.5x0.5		0	826
+2066	products/saleor/static/placeholders/books/book_02_hV2jFtq.jpg	0.5x0.5		1	826
+2067	products/saleor/static/placeholders/books/book_03_4UuiRee.jpg	0.5x0.5		2	826
+2068	products/saleor/static/placeholders/books/book_01_J7hZijf.jpg	0.5x0.5		3	826
+2069	products/saleor/static/placeholders/books/book_05_YAX72ir.jpg	0.5x0.5		0	827
+2070	products/saleor/static/placeholders/books/book_05_o1nrxCV.jpg	0.5x0.5		0	828
+2071	products/saleor/static/placeholders/books/book_02_LhE5wkm.jpg	0.5x0.5		0	829
+2072	products/saleor/static/placeholders/books/book_03_G0sWgnt.jpg	0.5x0.5		1	829
+2073	products/saleor/static/placeholders/books/book_01_dDJfUfF.jpg	0.5x0.5		2	829
+2074	products/saleor/static/placeholders/books/book_03_wkzok4B.jpg	0.5x0.5		3	829
+2075	products/saleor/static/placeholders/books/book_02_l00kEe6.jpg	0.5x0.5		0	830
+2076	products/saleor/static/placeholders/books/book_01_R8VULkl.jpg	0.5x0.5		1	830
+2077	products/saleor/static/placeholders/books/book_04_vmlbVPN.jpg	0.5x0.5		2	830
+2078	products/saleor/static/placeholders/books/book_02_38UX5R5.jpg	0.5x0.5		3	830
+2079	products/saleor/static/placeholders/books/book_02_pCzzuVE.jpg	0.5x0.5		0	831
+2080	products/saleor/static/placeholders/books/book_04_9qrQdfq.jpg	0.5x0.5		0	832
+2081	products/saleor/static/placeholders/books/book_02_38RvqZX.jpg	0.5x0.5		1	832
+2082	products/saleor/static/placeholders/books/book_03_O6IhcEp.jpg	0.5x0.5		2	832
+2083	products/saleor/static/placeholders/books/book_05_CiVMq6O.jpg	0.5x0.5		3	832
+2084	products/saleor/static/placeholders/books/book_04_CfxjOxR.jpg	0.5x0.5		0	833
+2085	products/saleor/static/placeholders/books/book_01_M2jjNjj.jpg	0.5x0.5		1	833
+2086	products/saleor/static/placeholders/books/book_02_ohvhzVX.jpg	0.5x0.5		2	833
+2087	products/saleor/static/placeholders/books/book_01_i9WOuE3.jpg	0.5x0.5		0	834
+2088	products/saleor/static/placeholders/books/book_05_KjgRC9W.jpg	0.5x0.5		0	835
+2089	products/saleor/static/placeholders/books/book_02_OUdDxtC.jpg	0.5x0.5		1	835
+2090	products/saleor/static/placeholders/books/book_03_fxcJtKJ.jpg	0.5x0.5		2	835
+2091	products/saleor/static/placeholders/books/book_02_OxrFYiP.jpg	0.5x0.5		0	836
+2092	products/saleor/static/placeholders/books/book_03_l7VzXyL.jpg	0.5x0.5		1	836
+2093	products/saleor/static/placeholders/books/book_02_CsG5wbq.jpg	0.5x0.5		2	836
+2094	products/saleor/static/placeholders/books/book_02_FoZ2SaL.jpg	0.5x0.5		3	836
+2095	products/saleor/static/placeholders/books/book_04_uOn2Z04.jpg	0.5x0.5		0	837
+2096	products/saleor/static/placeholders/books/book_02_OCmixgT.jpg	0.5x0.5		1	837
+2097	products/saleor/static/placeholders/books/book_05_wa2EztE.jpg	0.5x0.5		0	838
+2098	products/saleor/static/placeholders/books/book_02_x1svacm.jpg	0.5x0.5		1	838
+2099	products/saleor/static/placeholders/books/book_04_HZlWAuK.jpg	0.5x0.5		2	838
+2100	products/saleor/static/placeholders/books/book_05_UR43xBD.jpg	0.5x0.5		3	838
+2101	products/saleor/static/placeholders/books/book_03_vadiGRW.jpg	0.5x0.5		0	839
+2102	products/saleor/static/placeholders/books/book_01_D8bp066.jpg	0.5x0.5		1	839
+2103	products/saleor/static/placeholders/books/book_03_myXYLqr.jpg	0.5x0.5		0	840
+2104	products/saleor/static/placeholders/t-shirts/6_0EWvia8.jpg	0.5x0.5		0	841
+2105	products/saleor/static/placeholders/t-shirts/5_Hav3HHd.jpg	0.5x0.5		1	841
+2106	products/saleor/static/placeholders/t-shirts/5_3b3sNwj.jpg	0.5x0.5		2	841
+2107	products/saleor/static/placeholders/t-shirts/5_GAJXPhB.jpg	0.5x0.5		3	841
+2108	products/saleor/static/placeholders/t-shirts/5_IcY8fyY.jpg	0.5x0.5		0	842
+2109	products/saleor/static/placeholders/t-shirts/6_rQddiOA.jpg	0.5x0.5		1	842
+2110	products/saleor/static/placeholders/t-shirts/6_e7EiOyQ.jpg	0.5x0.5		2	842
+2111	products/saleor/static/placeholders/t-shirts/6_6T9zBoQ.jpg	0.5x0.5		0	843
+2112	products/saleor/static/placeholders/t-shirts/5_YQn2u6n.jpg	0.5x0.5		1	843
+2113	products/saleor/static/placeholders/t-shirts/6_3dDD4ie.jpg	0.5x0.5		2	843
+2114	products/saleor/static/placeholders/t-shirts/5_MvMBoM9.jpg	0.5x0.5		3	843
+2115	products/saleor/static/placeholders/t-shirts/5_DyNti1Q.jpg	0.5x0.5		0	844
+2116	products/saleor/static/placeholders/t-shirts/5_jNMlxjz.jpg	0.5x0.5		1	844
+2117	products/saleor/static/placeholders/t-shirts/5_OIppztM.jpg	0.5x0.5		2	844
+2118	products/saleor/static/placeholders/t-shirts/6_rM4x3UV.jpg	0.5x0.5		3	844
+2119	products/saleor/static/placeholders/t-shirts/5_1vlUidG.jpg	0.5x0.5		0	845
+2120	products/saleor/static/placeholders/t-shirts/5_lQ52uG4.jpg	0.5x0.5		1	845
+2121	products/saleor/static/placeholders/t-shirts/5_7ojPht7.jpg	0.5x0.5		0	846
+2122	products/saleor/static/placeholders/t-shirts/5_zcvCckp.jpg	0.5x0.5		1	846
+2123	products/saleor/static/placeholders/t-shirts/6_kSXqtyL.jpg	0.5x0.5		2	846
+2124	products/saleor/static/placeholders/t-shirts/5_halYhgp.jpg	0.5x0.5		0	847
+2125	products/saleor/static/placeholders/t-shirts/5_uYkErqx.jpg	0.5x0.5		1	847
+2126	products/saleor/static/placeholders/t-shirts/6_KhwbNEw.jpg	0.5x0.5		2	847
+2127	products/saleor/static/placeholders/t-shirts/5_MlFTSD5.jpg	0.5x0.5		0	848
+2128	products/saleor/static/placeholders/t-shirts/5_P9joJxA.jpg	0.5x0.5		1	848
+2129	products/saleor/static/placeholders/t-shirts/5_xE0i33K.jpg	0.5x0.5		2	848
+2130	products/saleor/static/placeholders/t-shirts/6_fWN9Tvq.jpg	0.5x0.5		0	849
+2131	products/saleor/static/placeholders/t-shirts/5_cVQl9Kw.jpg	0.5x0.5		1	849
+2132	products/saleor/static/placeholders/t-shirts/5_r1FhBO5.jpg	0.5x0.5		2	849
+2133	products/saleor/static/placeholders/t-shirts/5_9uAuxD3.jpg	0.5x0.5		3	849
+2134	products/saleor/static/placeholders/t-shirts/5_T0vhcYB.jpg	0.5x0.5		0	850
+2135	products/saleor/static/placeholders/t-shirts/5_5mk947x.jpg	0.5x0.5		1	850
+2136	products/saleor/static/placeholders/mugs/3_mjvleso.jpg	0.5x0.5		0	851
+2137	products/saleor/static/placeholders/mugs/7_pJdGpcK.jpg	0.5x0.5		1	851
+2138	products/saleor/static/placeholders/mugs/box_01_GuR7Q3V.jpg	0.5x0.5		0	852
+2139	products/saleor/static/placeholders/mugs/box_01_vjM7iBK.jpg	0.5x0.5		1	852
+2140	products/saleor/static/placeholders/mugs/3_XDYRwMn.jpg	0.5x0.5		2	852
+2141	products/saleor/static/placeholders/mugs/7_ZpmrD6i.jpg	0.5x0.5		3	852
+2142	products/saleor/static/placeholders/mugs/4_LwWzkPg.jpg	0.5x0.5		0	853
+2143	products/saleor/static/placeholders/mugs/7_M7184Qv.jpg	0.5x0.5		0	854
+2144	products/saleor/static/placeholders/mugs/4_YPy3Q2P.jpg	0.5x0.5		1	854
+2145	products/saleor/static/placeholders/mugs/3_2VLeuJ4.jpg	0.5x0.5		2	854
+2146	products/saleor/static/placeholders/mugs/box_01_34YMlHA.jpg	0.5x0.5		3	854
+2147	products/saleor/static/placeholders/mugs/4_NUgC16h.jpg	0.5x0.5		0	855
+2148	products/saleor/static/placeholders/mugs/7_SpczevB.jpg	0.5x0.5		1	855
+2149	products/saleor/static/placeholders/mugs/7_8vRLl1m.jpg	0.5x0.5		2	855
+2150	products/saleor/static/placeholders/mugs/4_D7QYgUA.jpg	0.5x0.5		3	855
+2151	products/saleor/static/placeholders/mugs/box_01_HgFfUhc.jpg	0.5x0.5		0	856
+2152	products/saleor/static/placeholders/mugs/4_RMMW6n0.jpg	0.5x0.5		1	856
+2153	products/saleor/static/placeholders/mugs/4_lt71Imu.jpg	0.5x0.5		2	856
+2154	products/saleor/static/placeholders/mugs/box_01_1Tuysu6.jpg	0.5x0.5		3	856
+2155	products/saleor/static/placeholders/mugs/box_01_3utz2pt.jpg	0.5x0.5		0	857
+2156	products/saleor/static/placeholders/mugs/3_lV72uWg.jpg	0.5x0.5		1	857
+2157	products/saleor/static/placeholders/mugs/4_rEf60Zq.jpg	0.5x0.5		2	857
+2158	products/saleor/static/placeholders/mugs/7_qPsSM7n.jpg	0.5x0.5		3	857
+2159	products/saleor/static/placeholders/mugs/7_FhA791u.jpg	0.5x0.5		0	858
+2160	products/saleor/static/placeholders/mugs/3_M7jg0RU.jpg	0.5x0.5		0	859
+2161	products/saleor/static/placeholders/mugs/3_dXmGAyB.jpg	0.5x0.5		1	859
+2162	products/saleor/static/placeholders/mugs/3_SyRztpD.jpg	0.5x0.5		2	859
+2163	products/saleor/static/placeholders/mugs/box_01_TUE9oW4.jpg	0.5x0.5		0	860
+2164	products/saleor/static/placeholders/mugs/3_emQLEJi.jpg	0.5x0.5		1	860
+2165	products/saleor/static/placeholders/mugs/3_eTqJ8rq.jpg	0.5x0.5		2	860
+2166	products/saleor/static/placeholders/coffee/8_f2rVIh3.jpg	0.5x0.5		0	861
+2167	products/saleor/static/placeholders/coffee/coffee_01_hTcUKPU.jpg	0.5x0.5		1	861
+2168	products/saleor/static/placeholders/coffee/coffee_02_o0MQdFB.jpg	0.5x0.5		2	861
+2169	products/saleor/static/placeholders/coffee/coffee_01_bXSsm7E.jpg	0.5x0.5		3	861
+2170	products/saleor/static/placeholders/coffee/coffee_02_ASizx3p.jpg	0.5x0.5		0	862
+2171	products/saleor/static/placeholders/coffee/8_EiuBrEr.jpg	0.5x0.5		1	862
+2172	products/saleor/static/placeholders/coffee/8_ODg54YY.jpg	0.5x0.5		0	863
+2173	products/saleor/static/placeholders/coffee/8_8jYCoul.jpg	0.5x0.5		1	863
+2174	products/saleor/static/placeholders/coffee/coffee_03_xBbR5XW.jpg	0.5x0.5		2	863
+2175	products/saleor/static/placeholders/coffee/coffee_03_1Xe240W.jpg	0.5x0.5		3	863
+2176	products/saleor/static/placeholders/coffee/coffee_01_Hh152nY.jpg	0.5x0.5		0	864
+2177	products/saleor/static/placeholders/coffee/coffee_01_59Vad9h.jpg	0.5x0.5		1	864
+2178	products/saleor/static/placeholders/coffee/coffee_01_7v1ROTJ.jpg	0.5x0.5		2	864
+2179	products/saleor/static/placeholders/coffee/coffee_01_hNdgrRO.jpg	0.5x0.5		3	864
+2180	products/saleor/static/placeholders/coffee/8_wiDuZXY.jpg	0.5x0.5		0	865
+2181	products/saleor/static/placeholders/coffee/coffee_03_dAqi5qU.jpg	0.5x0.5		1	865
+2182	products/saleor/static/placeholders/coffee/coffee_02_IZMXGT6.jpg	0.5x0.5		0	866
+2183	products/saleor/static/placeholders/coffee/coffee_03_h3WnQG0.jpg	0.5x0.5		1	866
+2184	products/saleor/static/placeholders/coffee/coffee_01_1JTADLQ.jpg	0.5x0.5		2	866
+2185	products/saleor/static/placeholders/coffee/8_83e7jYT.jpg	0.5x0.5		3	866
+2186	products/saleor/static/placeholders/coffee/coffee_02_ZdRjcxr.jpg	0.5x0.5		0	867
+2187	products/saleor/static/placeholders/coffee/coffee_01_rsuvfNl.jpg	0.5x0.5		1	867
+2188	products/saleor/static/placeholders/coffee/8_YBQJmC5.jpg	0.5x0.5		2	867
+2189	products/saleor/static/placeholders/coffee/8_bhhEgqy.jpg	0.5x0.5		3	867
+2190	products/saleor/static/placeholders/coffee/coffee_01_nTy9xlV.jpg	0.5x0.5		0	868
+2191	products/saleor/static/placeholders/coffee/coffee_01_0747guP.jpg	0.5x0.5		1	868
+2192	products/saleor/static/placeholders/coffee/coffee_02_aZ3RJ0y.jpg	0.5x0.5		2	868
+2193	products/saleor/static/placeholders/coffee/coffee_01_x7C6Ypl.jpg	0.5x0.5		3	868
+2194	products/saleor/static/placeholders/coffee/coffee_04_jzuDDS9.jpg	0.5x0.5		0	869
+2195	products/saleor/static/placeholders/coffee/coffee_04_WuM6lNa.jpg	0.5x0.5		1	869
+2196	products/saleor/static/placeholders/coffee/8_6roSvvG.jpg	0.5x0.5		2	869
+2197	products/saleor/static/placeholders/coffee/coffee_04_DrykvJh.jpg	0.5x0.5		3	869
+2198	products/saleor/static/placeholders/coffee/coffee_04_ScXYeGt.jpg	0.5x0.5		0	870
+2199	products/saleor/static/placeholders/candy/2_nn2kBFf.jpg	0.5x0.5		0	871
+2200	products/saleor/static/placeholders/candy/2_N7A1Wd0.jpg	0.5x0.5		1	871
+2201	products/saleor/static/placeholders/candy/1_twPPTH1.jpg	0.5x0.5		0	872
+2202	products/saleor/static/placeholders/candy/1_Zf0Tu0P.jpg	0.5x0.5		1	872
+2203	products/saleor/static/placeholders/candy/1_rEEkTvS.jpg	0.5x0.5		0	873
+2204	products/saleor/static/placeholders/candy/1_oG7Ch2f.jpg	0.5x0.5		1	873
+2205	products/saleor/static/placeholders/candy/2_SpoACKf.jpg	0.5x0.5		0	874
+2206	products/saleor/static/placeholders/candy/1_kwxQJbO.jpg	0.5x0.5		0	875
+2207	products/saleor/static/placeholders/candy/1_glSzy2E.jpg	0.5x0.5		0	876
+2208	products/saleor/static/placeholders/candy/1_5qwGOmN.jpg	0.5x0.5		1	876
+2209	products/saleor/static/placeholders/candy/2_DGfMXeE.jpg	0.5x0.5		0	877
+2210	products/saleor/static/placeholders/candy/2_nMVfa6g.jpg	0.5x0.5		1	877
+2211	products/saleor/static/placeholders/candy/2_b1JRtHu.jpg	0.5x0.5		0	878
+2212	products/saleor/static/placeholders/candy/1_MBl4FI9.jpg	0.5x0.5		1	878
+2213	products/saleor/static/placeholders/candy/2_6s9XoUa.jpg	0.5x0.5		2	878
+2214	products/saleor/static/placeholders/candy/2_Etp8nVh.jpg	0.5x0.5		3	878
+2215	products/saleor/static/placeholders/candy/1_sjHSpOG.jpg	0.5x0.5		0	879
+2216	products/saleor/static/placeholders/candy/2_WLQWAAb.jpg	0.5x0.5		0	880
+2217	products/saleor/static/placeholders/candy/1_LEqnROw.jpg	0.5x0.5		1	880
+2218	products/saleor/static/placeholders/candy/2_30DbPCR.jpg	0.5x0.5		2	880
+2219	products/saleor/static/placeholders/books/book_04_v86Xam6.jpg	0.5x0.5		0	881
+2220	products/saleor/static/placeholders/books/book_04_eaMLpRn.jpg	0.5x0.5		1	881
+2221	products/saleor/static/placeholders/books/book_02_ZHU28EL.jpg	0.5x0.5		2	881
+2222	products/saleor/static/placeholders/books/book_01_Af12FTK.jpg	0.5x0.5		3	881
+2223	products/saleor/static/placeholders/books/book_05_Wu3jmcq.jpg	0.5x0.5		0	882
+2224	products/saleor/static/placeholders/books/book_03_Jv0ZbDU.jpg	0.5x0.5		1	882
+2225	products/saleor/static/placeholders/books/book_05_cSxTZLf.jpg	0.5x0.5		2	882
+2226	products/saleor/static/placeholders/books/book_05_3Mm43Jj.jpg	0.5x0.5		3	882
+2227	products/saleor/static/placeholders/books/book_05_HyA8XGm.jpg	0.5x0.5		0	883
+2228	products/saleor/static/placeholders/books/book_01_5JM3Nm0.jpg	0.5x0.5		1	883
+2229	products/saleor/static/placeholders/books/book_04_hzVgDWu.jpg	0.5x0.5		0	884
+2230	products/saleor/static/placeholders/books/book_03_yTVxw3R.jpg	0.5x0.5		1	884
+2231	products/saleor/static/placeholders/books/book_02_9dW2X6Y.jpg	0.5x0.5		2	884
+2232	products/saleor/static/placeholders/books/book_05_q22qaIQ.jpg	0.5x0.5		0	885
+2233	products/saleor/static/placeholders/books/book_05_Mzsjei3.jpg	0.5x0.5		1	885
+2234	products/saleor/static/placeholders/books/book_05_XDkNMGq.jpg	0.5x0.5		2	885
+2235	products/saleor/static/placeholders/books/book_01_EbGbrbH.jpg	0.5x0.5		0	886
+2236	products/saleor/static/placeholders/books/book_04_eGUKPfY.jpg	0.5x0.5		1	886
+2237	products/saleor/static/placeholders/books/book_05_bn2Szpz.jpg	0.5x0.5		2	886
+2238	products/saleor/static/placeholders/books/book_01_ugTqG8x.jpg	0.5x0.5		0	887
+2239	products/saleor/static/placeholders/books/book_03_894rRDk.jpg	0.5x0.5		0	888
+2240	products/saleor/static/placeholders/books/book_01_GTmFmsL.jpg	0.5x0.5		1	888
+2241	products/saleor/static/placeholders/books/book_03_3FP7Ubj.jpg	0.5x0.5		0	889
+2242	products/saleor/static/placeholders/books/book_05_GUkgEgm.jpg	0.5x0.5		0	890
+2243	products/saleor/static/placeholders/books/book_02_zoi7OGH.jpg	0.5x0.5		1	890
+2244	products/saleor/static/placeholders/books/book_04_ialPpM6.jpg	0.5x0.5		0	891
+2245	products/saleor/static/placeholders/books/book_03_zK9VdKg.jpg	0.5x0.5		1	891
+2246	products/saleor/static/placeholders/books/book_03_EK97JMJ.jpg	0.5x0.5		0	892
+2247	products/saleor/static/placeholders/books/book_05_NlCQaTG.jpg	0.5x0.5		0	893
+2248	products/saleor/static/placeholders/books/book_05_jXpwGyj.jpg	0.5x0.5		1	893
+2249	products/saleor/static/placeholders/books/book_03_kfZHe5Q.jpg	0.5x0.5		0	894
+2250	products/saleor/static/placeholders/books/book_01_CUcWUHc.jpg	0.5x0.5		0	895
+2251	products/saleor/static/placeholders/books/book_05_E4oOurq.jpg	0.5x0.5		1	895
+2252	products/saleor/static/placeholders/books/book_05_oUU5iN0.jpg	0.5x0.5		2	895
+2253	products/saleor/static/placeholders/books/book_04_V4uQ8mj.jpg	0.5x0.5		3	895
+2254	products/saleor/static/placeholders/books/book_05_ftNLcnb.jpg	0.5x0.5		0	896
+2255	products/saleor/static/placeholders/books/book_05_CvP3EYF.jpg	0.5x0.5		0	897
+2256	products/saleor/static/placeholders/books/book_05_pAP4ZnL.jpg	0.5x0.5		0	898
+2257	products/saleor/static/placeholders/books/book_05_cMC5CLo.jpg	0.5x0.5		0	899
+2258	products/saleor/static/placeholders/books/book_01_Ketv3t7.jpg	0.5x0.5		1	899
+2259	products/saleor/static/placeholders/books/book_04_FilcaP0.jpg	0.5x0.5		2	899
+2260	products/saleor/static/placeholders/books/book_04_Tb91Q7D.jpg	0.5x0.5		0	900
+2261	products/saleor/static/placeholders/books/book_01_3GIpXfz.jpg	0.5x0.5		1	900
+2262	products/saleor/static/placeholders/books/book_02_UnLYYia.jpg	0.5x0.5		2	900
+2263	products/saleor/static/placeholders/books/book_02_h0w302b.jpg	0.5x0.5		3	900
 \.
 
 
@@ -8067,6 +9545,7 @@ COPY product_productvariant (id, sku, name, price_override, product_id, attribut
 1456	507-1338		46.71	507	"6"=>"17"
 1457	507-1339		40.70	507	"6"=>"16"
 1458	507-1340		37.88	507	"6"=>"15"
+1769	619-1337		\N	619	
 1459	508-1337		148.48	508	"6"=>"18"
 1460	508-1338		110.13	508	"6"=>"17"
 1461	508-1339		108.42	508	"6"=>"16"
@@ -8309,6 +9788,855 @@ COPY product_productvariant (id, sku, name, price_override, product_id, attribut
 1698	599-1338		58.92	599	"12"=>"30"
 1699	600-1337		114.29	600	"12"=>"31"
 1700	600-1338		89.00	600	"12"=>"30"
+1701	601-1337		\N	601	"4"=>"12"
+1702	601-1338		\N	601	"4"=>"11"
+1703	601-1339		\N	601	"4"=>"10"
+1704	601-1340		\N	601	"4"=>"9"
+1705	601-1341		\N	601	"4"=>"8"
+1706	601-1342		\N	601	"4"=>"7"
+1707	602-1337		\N	602	"4"=>"12"
+1708	602-1338		\N	602	"4"=>"11"
+1709	602-1339		\N	602	"4"=>"10"
+1710	602-1340		\N	602	"4"=>"9"
+1711	602-1341		\N	602	"4"=>"8"
+1712	602-1342		\N	602	"4"=>"7"
+1713	603-1337		\N	603	"4"=>"12"
+1714	603-1338		\N	603	"4"=>"11"
+1715	603-1339		\N	603	"4"=>"10"
+1716	603-1340		\N	603	"4"=>"9"
+1717	603-1341		\N	603	"4"=>"8"
+1718	603-1342		\N	603	"4"=>"7"
+1719	604-1337		\N	604	"4"=>"12"
+1720	604-1338		\N	604	"4"=>"11"
+1721	604-1339		\N	604	"4"=>"10"
+1722	604-1340		\N	604	"4"=>"9"
+1723	604-1341		\N	604	"4"=>"8"
+1724	604-1342		\N	604	"4"=>"7"
+1725	605-1337		\N	605	"4"=>"12"
+1726	605-1338		\N	605	"4"=>"11"
+1727	605-1339		\N	605	"4"=>"10"
+1728	605-1340		\N	605	"4"=>"9"
+1729	605-1341		\N	605	"4"=>"8"
+1730	605-1342		\N	605	"4"=>"7"
+1731	606-1337		\N	606	"4"=>"12"
+1732	606-1338		\N	606	"4"=>"11"
+1733	606-1339		\N	606	"4"=>"10"
+1734	606-1340		\N	606	"4"=>"9"
+1735	606-1341		\N	606	"4"=>"8"
+1736	606-1342		\N	606	"4"=>"7"
+1737	607-1337		\N	607	"4"=>"12"
+1738	607-1338		\N	607	"4"=>"11"
+1739	607-1339		\N	607	"4"=>"10"
+1740	607-1340		\N	607	"4"=>"9"
+1741	607-1341		\N	607	"4"=>"8"
+1742	607-1342		\N	607	"4"=>"7"
+1743	608-1337		\N	608	"4"=>"12"
+1744	608-1338		\N	608	"4"=>"11"
+1745	608-1339		\N	608	"4"=>"10"
+1746	608-1340		\N	608	"4"=>"9"
+1747	608-1341		\N	608	"4"=>"8"
+1748	608-1342		\N	608	"4"=>"7"
+1749	609-1337		\N	609	"4"=>"12"
+1750	609-1338		\N	609	"4"=>"11"
+1751	609-1339		\N	609	"4"=>"10"
+1752	609-1340		\N	609	"4"=>"9"
+1753	609-1341		\N	609	"4"=>"8"
+1754	609-1342		\N	609	"4"=>"7"
+1755	610-1337		\N	610	"4"=>"12"
+1756	610-1338		\N	610	"4"=>"11"
+1757	610-1339		\N	610	"4"=>"10"
+1758	610-1340		\N	610	"4"=>"9"
+1759	610-1341		\N	610	"4"=>"8"
+1760	610-1342		\N	610	"4"=>"7"
+1761	611-1337		\N	611	
+1762	612-1337		\N	612	
+1763	613-1337		\N	613	
+1764	614-1337		\N	614	
+1765	615-1337		\N	615	
+1766	616-1337		\N	616	
+1767	617-1337		\N	617	
+1768	618-1337		\N	618	
+1770	620-1337		\N	620	
+1771	621-1337		169.53	621	"6"=>"18"
+1772	621-1338		157.68	621	"6"=>"17"
+1773	621-1339		96.30	621	"6"=>"16"
+1774	621-1340		87.69	621	"6"=>"15"
+1775	622-1337		101.58	622	"6"=>"18"
+1776	622-1338		41.82	622	"6"=>"17"
+1777	622-1339		24.60	622	"6"=>"16"
+1778	622-1340		17.91	622	"6"=>"15"
+1779	623-1337		140.15	623	"6"=>"18"
+1780	623-1338		134.05	623	"6"=>"17"
+1781	623-1339		114.16	623	"6"=>"16"
+1782	623-1340		112.60	623	"6"=>"15"
+1783	624-1337		191.80	624	"6"=>"18"
+1784	624-1338		120.59	624	"6"=>"17"
+1785	624-1339		105.07	624	"6"=>"16"
+1786	624-1340		100.52	624	"6"=>"15"
+1787	625-1337		104.09	625	"6"=>"18"
+1788	625-1338		88.03	625	"6"=>"17"
+1789	625-1339		78.61	625	"6"=>"16"
+1790	625-1340		57.22	625	"6"=>"15"
+1791	626-1337		90.53	626	"6"=>"18"
+1792	626-1338		77.95	626	"6"=>"17"
+1793	626-1339		58.72	626	"6"=>"16"
+1794	626-1340		40.51	626	"6"=>"15"
+1795	627-1337		102.93	627	"6"=>"18"
+1796	627-1338		77.54	627	"6"=>"17"
+1797	627-1339		51.07	627	"6"=>"16"
+1798	627-1340		14.53	627	"6"=>"15"
+1799	628-1337		145.15	628	"6"=>"18"
+1800	628-1338		130.52	628	"6"=>"17"
+1801	628-1339		87.92	628	"6"=>"16"
+1802	628-1340		77.84	628	"6"=>"15"
+1803	629-1337		104.84	629	"6"=>"18"
+1804	629-1338		67.36	629	"6"=>"17"
+1805	629-1339		67.20	629	"6"=>"16"
+1806	629-1340		52.59	629	"6"=>"15"
+1807	630-1337		168.19	630	"6"=>"18"
+1808	630-1338		128.54	630	"6"=>"17"
+1809	630-1339		87.37	630	"6"=>"16"
+1810	630-1340		81.50	630	"6"=>"15"
+1811	631-1337		176.74	631	"8"=>"23"
+1812	631-1338		160.72	631	"8"=>"22"
+1813	631-1339		106.57	631	"8"=>"21"
+1814	632-1337		130.60	632	"8"=>"23"
+1815	632-1338		91.75	632	"8"=>"22"
+1816	632-1339		56.99	632	"8"=>"21"
+1817	633-1337		141.89	633	"8"=>"23"
+1818	633-1338		134.52	633	"8"=>"22"
+1819	633-1339		91.81	633	"8"=>"21"
+1820	634-1337		171.84	634	"8"=>"23"
+1821	634-1338		125.99	634	"8"=>"22"
+1822	634-1339		96.32	634	"8"=>"21"
+1823	635-1337		147.10	635	"8"=>"23"
+1824	635-1338		129.12	635	"8"=>"22"
+1825	635-1339		88.35	635	"8"=>"21"
+1826	636-1337		97.27	636	"8"=>"23"
+1827	636-1338		84.91	636	"8"=>"22"
+1828	636-1339		16.20	636	"8"=>"21"
+1829	637-1337		90.50	637	"8"=>"23"
+1830	637-1338		19.68	637	"8"=>"22"
+1831	637-1339		17.45	637	"8"=>"21"
+1832	638-1337		85.70	638	"8"=>"23"
+1833	638-1338		79.52	638	"8"=>"22"
+1834	638-1339		32.03	638	"8"=>"21"
+1835	639-1337		191.24	639	"8"=>"23"
+1836	639-1338		162.33	639	"8"=>"22"
+1837	639-1339		109.53	639	"8"=>"21"
+1838	640-1337		78.30	640	"8"=>"23"
+1839	640-1338		65.35	640	"8"=>"22"
+1840	640-1339		20.82	640	"8"=>"21"
+1841	641-1337		\N	641	
+1842	642-1337		\N	642	
+1843	643-1337		\N	643	
+1844	644-1337		\N	644	
+1845	645-1337		\N	645	
+1846	646-1337		\N	646	
+1847	647-1337		\N	647	
+1848	648-1337		\N	648	
+1849	649-1337		\N	649	
+1850	650-1337		\N	650	
+1851	651-1337		46.60	651	"12"=>"31"
+1852	651-1338		33.12	651	"12"=>"30"
+1853	652-1337		89.08	652	"12"=>"31"
+1854	652-1338		35.47	652	"12"=>"30"
+1855	653-1337		150.49	653	"12"=>"31"
+1856	653-1338		137.80	653	"12"=>"30"
+1857	654-1337		110.38	654	"12"=>"31"
+1858	654-1338		35.07	654	"12"=>"30"
+1859	655-1337		149.78	655	"12"=>"31"
+1860	655-1338		135.05	655	"12"=>"30"
+1861	656-1337		97.79	656	"12"=>"31"
+1862	656-1338		63.98	656	"12"=>"30"
+1863	657-1337		113.47	657	"12"=>"31"
+1864	657-1338		99.91	657	"12"=>"30"
+1865	658-1337		94.85	658	"12"=>"31"
+1866	658-1338		77.64	658	"12"=>"30"
+1867	659-1337		130.42	659	"12"=>"31"
+1868	659-1338		75.80	659	"12"=>"30"
+1869	660-1337		104.77	660	"12"=>"31"
+1870	660-1338		79.30	660	"12"=>"30"
+1871	661-1337		\N	661	"4"=>"12"
+1872	661-1338		\N	661	"4"=>"11"
+1873	661-1339		\N	661	"4"=>"10"
+1874	661-1340		\N	661	"4"=>"9"
+1875	661-1341		\N	661	"4"=>"8"
+1876	661-1342		\N	661	"4"=>"7"
+1877	662-1337		\N	662	"4"=>"12"
+1878	662-1338		\N	662	"4"=>"11"
+1879	662-1339		\N	662	"4"=>"10"
+1880	662-1340		\N	662	"4"=>"9"
+1881	662-1341		\N	662	"4"=>"8"
+1882	662-1342		\N	662	"4"=>"7"
+1883	663-1337		\N	663	"4"=>"12"
+1884	663-1338		\N	663	"4"=>"11"
+1885	663-1339		\N	663	"4"=>"10"
+1886	663-1340		\N	663	"4"=>"9"
+1887	663-1341		\N	663	"4"=>"8"
+1888	663-1342		\N	663	"4"=>"7"
+1889	664-1337		\N	664	"4"=>"12"
+1890	664-1338		\N	664	"4"=>"11"
+1891	664-1339		\N	664	"4"=>"10"
+1892	664-1340		\N	664	"4"=>"9"
+1893	664-1341		\N	664	"4"=>"8"
+1894	664-1342		\N	664	"4"=>"7"
+1895	665-1337		\N	665	"4"=>"12"
+1896	665-1338		\N	665	"4"=>"11"
+1897	665-1339		\N	665	"4"=>"10"
+1898	665-1340		\N	665	"4"=>"9"
+1899	665-1341		\N	665	"4"=>"8"
+1900	665-1342		\N	665	"4"=>"7"
+1901	666-1337		\N	666	"4"=>"12"
+1902	666-1338		\N	666	"4"=>"11"
+1903	666-1339		\N	666	"4"=>"10"
+1904	666-1340		\N	666	"4"=>"9"
+1905	666-1341		\N	666	"4"=>"8"
+1906	666-1342		\N	666	"4"=>"7"
+1907	667-1337		\N	667	"4"=>"12"
+1908	667-1338		\N	667	"4"=>"11"
+1909	667-1339		\N	667	"4"=>"10"
+1910	667-1340		\N	667	"4"=>"9"
+1911	667-1341		\N	667	"4"=>"8"
+1912	667-1342		\N	667	"4"=>"7"
+1913	668-1337		\N	668	"4"=>"12"
+1914	668-1338		\N	668	"4"=>"11"
+1915	668-1339		\N	668	"4"=>"10"
+1916	668-1340		\N	668	"4"=>"9"
+1917	668-1341		\N	668	"4"=>"8"
+1918	668-1342		\N	668	"4"=>"7"
+1919	669-1337		\N	669	"4"=>"12"
+1920	669-1338		\N	669	"4"=>"11"
+1921	669-1339		\N	669	"4"=>"10"
+1922	669-1340		\N	669	"4"=>"9"
+1923	669-1341		\N	669	"4"=>"8"
+1924	669-1342		\N	669	"4"=>"7"
+1925	670-1337		\N	670	"4"=>"12"
+1926	670-1338		\N	670	"4"=>"11"
+1927	670-1339		\N	670	"4"=>"10"
+1928	670-1340		\N	670	"4"=>"9"
+1929	670-1341		\N	670	"4"=>"8"
+1930	670-1342		\N	670	"4"=>"7"
+1931	671-1337		\N	671	
+1932	672-1337		\N	672	
+1933	673-1337		\N	673	
+1934	674-1337		\N	674	
+1935	675-1337		\N	675	
+1936	676-1337		\N	676	
+1937	677-1337		\N	677	
+1938	678-1337		\N	678	
+1939	679-1337		\N	679	
+1940	680-1337		\N	680	
+1941	681-1337		117.75	681	"6"=>"18"
+1942	681-1338		90.86	681	"6"=>"17"
+1943	681-1339		77.90	681	"6"=>"16"
+1944	681-1340		43.42	681	"6"=>"15"
+1945	682-1337		154.23	682	"6"=>"18"
+1946	682-1338		152.41	682	"6"=>"17"
+1947	682-1339		128.15	682	"6"=>"16"
+1948	682-1340		114.32	682	"6"=>"15"
+1949	683-1337		155.93	683	"6"=>"18"
+1950	683-1338		144.02	683	"6"=>"17"
+1951	683-1339		113.81	683	"6"=>"16"
+1952	683-1340		72.19	683	"6"=>"15"
+1953	684-1337		157.93	684	"6"=>"18"
+1954	684-1338		148.94	684	"6"=>"17"
+1955	684-1339		135.90	684	"6"=>"16"
+1956	684-1340		79.85	684	"6"=>"15"
+1957	685-1337		124.28	685	"6"=>"18"
+1958	685-1338		104.99	685	"6"=>"17"
+1959	685-1339		103.06	685	"6"=>"16"
+1960	685-1340		29.58	685	"6"=>"15"
+1961	686-1337		130.91	686	"6"=>"18"
+1962	686-1338		130.12	686	"6"=>"17"
+1963	686-1339		82.38	686	"6"=>"16"
+1964	686-1340		67.65	686	"6"=>"15"
+1965	687-1337		127.68	687	"6"=>"18"
+1966	687-1338		106.68	687	"6"=>"17"
+1967	687-1339		80.35	687	"6"=>"16"
+1968	687-1340		64.26	687	"6"=>"15"
+1969	688-1337		116.89	688	"6"=>"18"
+1970	688-1338		109.93	688	"6"=>"17"
+1971	688-1339		71.63	688	"6"=>"16"
+1972	688-1340		66.04	688	"6"=>"15"
+1973	689-1337		85.66	689	"6"=>"18"
+1974	689-1338		36.94	689	"6"=>"17"
+1975	689-1339		19.66	689	"6"=>"16"
+1976	689-1340		19.56	689	"6"=>"15"
+1977	690-1337		82.05	690	"6"=>"18"
+1978	690-1338		75.75	690	"6"=>"17"
+1979	690-1339		58.37	690	"6"=>"16"
+1980	690-1340		36.94	690	"6"=>"15"
+1981	691-1337		145.70	691	"8"=>"23"
+1982	691-1338		112.30	691	"8"=>"22"
+1983	691-1339		107.78	691	"8"=>"21"
+1984	692-1337		128.65	692	"8"=>"23"
+1985	692-1338		108.52	692	"8"=>"22"
+1986	692-1339		107.99	692	"8"=>"21"
+1987	693-1337		126.40	693	"8"=>"23"
+1988	693-1338		118.24	693	"8"=>"22"
+1989	693-1339		47.54	693	"8"=>"21"
+1990	694-1337		50.19	694	"8"=>"23"
+1991	694-1338		43.00	694	"8"=>"22"
+1992	694-1339		14.51	694	"8"=>"21"
+1993	695-1337		120.30	695	"8"=>"23"
+1994	695-1338		118.09	695	"8"=>"22"
+1995	695-1339		95.30	695	"8"=>"21"
+1996	696-1337		57.73	696	"8"=>"23"
+1997	696-1338		55.93	696	"8"=>"22"
+1998	696-1339		54.99	696	"8"=>"21"
+1999	697-1337		83.95	697	"8"=>"23"
+2000	697-1338		54.28	697	"8"=>"22"
+2001	697-1339		52.67	697	"8"=>"21"
+2002	698-1337		114.10	698	"8"=>"23"
+2003	698-1338		112.05	698	"8"=>"22"
+2004	698-1339		107.61	698	"8"=>"21"
+2005	699-1337		114.27	699	"8"=>"23"
+2006	699-1338		112.40	699	"8"=>"22"
+2007	699-1339		100.27	699	"8"=>"21"
+2008	700-1337		111.84	700	"8"=>"23"
+2009	700-1338		74.88	700	"8"=>"22"
+2010	700-1339		70.82	700	"8"=>"21"
+2011	701-1337		\N	701	
+2012	702-1337		\N	702	
+2013	703-1337		\N	703	
+2014	704-1337		\N	704	
+2015	705-1337		\N	705	
+2016	706-1337		\N	706	
+2017	707-1337		\N	707	
+2018	708-1337		\N	708	
+2019	709-1337		\N	709	
+2020	710-1337		\N	710	
+2021	711-1337		138.83	711	"12"=>"31"
+2022	711-1338		110.91	711	"12"=>"30"
+2023	712-1337		131.18	712	"12"=>"31"
+2024	712-1338		113.06	712	"12"=>"30"
+2025	713-1337		116.86	713	"12"=>"31"
+2026	713-1338		66.58	713	"12"=>"30"
+2027	714-1337		160.58	714	"12"=>"31"
+2028	714-1338		106.62	714	"12"=>"30"
+2029	715-1337		114.23	715	"12"=>"31"
+2030	715-1338		94.55	715	"12"=>"30"
+2031	716-1337		106.88	716	"12"=>"31"
+2032	716-1338		77.42	716	"12"=>"30"
+2033	717-1337		146.30	717	"12"=>"31"
+2034	717-1338		120.15	717	"12"=>"30"
+2035	718-1337		120.54	718	"12"=>"31"
+2036	718-1338		75.67	718	"12"=>"30"
+2037	719-1337		85.33	719	"12"=>"31"
+2038	719-1338		32.68	719	"12"=>"30"
+2039	720-1337		157.96	720	"12"=>"31"
+2040	720-1338		145.99	720	"12"=>"30"
+2041	721-1337		\N	721	"4"=>"12"
+2042	721-1338		\N	721	"4"=>"11"
+2043	721-1339		\N	721	"4"=>"10"
+2044	721-1340		\N	721	"4"=>"9"
+2045	721-1341		\N	721	"4"=>"8"
+2046	721-1342		\N	721	"4"=>"7"
+2047	722-1337		\N	722	"4"=>"12"
+2048	722-1338		\N	722	"4"=>"11"
+2049	722-1339		\N	722	"4"=>"10"
+2050	722-1340		\N	722	"4"=>"9"
+2051	722-1341		\N	722	"4"=>"8"
+2052	722-1342		\N	722	"4"=>"7"
+2053	723-1337		\N	723	"4"=>"12"
+2054	723-1338		\N	723	"4"=>"11"
+2055	723-1339		\N	723	"4"=>"10"
+2056	723-1340		\N	723	"4"=>"9"
+2057	723-1341		\N	723	"4"=>"8"
+2058	723-1342		\N	723	"4"=>"7"
+2059	724-1337		\N	724	"4"=>"12"
+2060	724-1338		\N	724	"4"=>"11"
+2061	724-1339		\N	724	"4"=>"10"
+2062	724-1340		\N	724	"4"=>"9"
+2063	724-1341		\N	724	"4"=>"8"
+2064	724-1342		\N	724	"4"=>"7"
+2065	725-1337		\N	725	"4"=>"12"
+2066	725-1338		\N	725	"4"=>"11"
+2067	725-1339		\N	725	"4"=>"10"
+2068	725-1340		\N	725	"4"=>"9"
+2069	725-1341		\N	725	"4"=>"8"
+2070	725-1342		\N	725	"4"=>"7"
+2071	726-1337		\N	726	"4"=>"12"
+2072	726-1338		\N	726	"4"=>"11"
+2073	726-1339		\N	726	"4"=>"10"
+2074	726-1340		\N	726	"4"=>"9"
+2075	726-1341		\N	726	"4"=>"8"
+2076	726-1342		\N	726	"4"=>"7"
+2077	727-1337		\N	727	"4"=>"12"
+2078	727-1338		\N	727	"4"=>"11"
+2079	727-1339		\N	727	"4"=>"10"
+2080	727-1340		\N	727	"4"=>"9"
+2081	727-1341		\N	727	"4"=>"8"
+2082	727-1342		\N	727	"4"=>"7"
+2083	728-1337		\N	728	"4"=>"12"
+2084	728-1338		\N	728	"4"=>"11"
+2085	728-1339		\N	728	"4"=>"10"
+2086	728-1340		\N	728	"4"=>"9"
+2087	728-1341		\N	728	"4"=>"8"
+2088	728-1342		\N	728	"4"=>"7"
+2089	729-1337		\N	729	"4"=>"12"
+2090	729-1338		\N	729	"4"=>"11"
+2091	729-1339		\N	729	"4"=>"10"
+2092	729-1340		\N	729	"4"=>"9"
+2093	729-1341		\N	729	"4"=>"8"
+2094	729-1342		\N	729	"4"=>"7"
+2095	730-1337		\N	730	"4"=>"12"
+2096	730-1338		\N	730	"4"=>"11"
+2097	730-1339		\N	730	"4"=>"10"
+2098	730-1340		\N	730	"4"=>"9"
+2099	730-1341		\N	730	"4"=>"8"
+2100	730-1342		\N	730	"4"=>"7"
+2101	731-1337		\N	731	
+2102	732-1337		\N	732	
+2103	733-1337		\N	733	
+2104	734-1337		\N	734	
+2105	735-1337		\N	735	
+2106	736-1337		\N	736	
+2107	737-1337		\N	737	
+2108	738-1337		\N	738	
+2109	739-1337		\N	739	
+2110	740-1337		\N	740	
+2111	741-1337		104.17	741	"6"=>"18"
+2112	741-1338		50.81	741	"6"=>"17"
+2113	741-1339		44.34	741	"6"=>"16"
+2114	741-1340		39.19	741	"6"=>"15"
+2115	742-1337		164.82	742	"6"=>"18"
+2116	742-1338		147.41	742	"6"=>"17"
+2117	742-1339		147.02	742	"6"=>"16"
+2118	742-1340		140.27	742	"6"=>"15"
+2119	743-1337		110.77	743	"6"=>"18"
+2120	743-1338		102.62	743	"6"=>"17"
+2121	743-1339		83.80	743	"6"=>"16"
+2122	743-1340		70.24	743	"6"=>"15"
+2123	744-1337		153.90	744	"6"=>"18"
+2124	744-1338		115.58	744	"6"=>"17"
+2125	744-1339		114.69	744	"6"=>"16"
+2126	744-1340		89.33	744	"6"=>"15"
+2127	745-1337		103.56	745	"6"=>"18"
+2128	745-1338		94.24	745	"6"=>"17"
+2129	745-1339		75.38	745	"6"=>"16"
+2130	745-1340		54.35	745	"6"=>"15"
+2131	746-1337		103.18	746	"6"=>"18"
+2132	746-1338		45.26	746	"6"=>"17"
+2133	746-1339		42.68	746	"6"=>"16"
+2134	746-1340		31.55	746	"6"=>"15"
+2135	747-1337		97.23	747	"6"=>"18"
+2136	747-1338		51.60	747	"6"=>"17"
+2137	747-1339		38.55	747	"6"=>"16"
+2138	747-1340		16.48	747	"6"=>"15"
+2139	748-1337		137.49	748	"6"=>"18"
+2140	748-1338		128.59	748	"6"=>"17"
+2141	748-1339		105.20	748	"6"=>"16"
+2142	748-1340		96.20	748	"6"=>"15"
+2143	749-1337		95.91	749	"6"=>"18"
+2144	749-1338		94.20	749	"6"=>"17"
+2145	749-1339		59.15	749	"6"=>"16"
+2146	749-1340		57.18	749	"6"=>"15"
+2147	750-1337		160.17	750	"6"=>"18"
+2148	750-1338		146.97	750	"6"=>"17"
+2149	750-1339		116.01	750	"6"=>"16"
+2150	750-1340		109.40	750	"6"=>"15"
+2151	751-1337		148.94	751	"8"=>"23"
+2152	751-1338		110.38	751	"8"=>"22"
+2153	751-1339		102.74	751	"8"=>"21"
+2154	752-1337		149.58	752	"8"=>"23"
+2155	752-1338		120.63	752	"8"=>"22"
+2156	752-1339		78.14	752	"8"=>"21"
+2157	753-1337		156.72	753	"8"=>"23"
+2158	753-1338		107.17	753	"8"=>"22"
+2159	753-1339		91.42	753	"8"=>"21"
+2160	754-1337		108.10	754	"8"=>"23"
+2161	754-1338		74.25	754	"8"=>"22"
+2162	754-1339		65.69	754	"8"=>"21"
+2163	755-1337		105.09	755	"8"=>"23"
+2164	755-1338		52.60	755	"8"=>"22"
+2165	755-1339		52.25	755	"8"=>"21"
+2166	756-1337		162.20	756	"8"=>"23"
+2167	756-1338		124.05	756	"8"=>"22"
+2168	756-1339		114.89	756	"8"=>"21"
+2169	757-1337		139.19	757	"8"=>"23"
+2170	757-1338		105.26	757	"8"=>"22"
+2171	757-1339		100.66	757	"8"=>"21"
+2172	758-1337		158.76	758	"8"=>"23"
+2173	758-1338		155.25	758	"8"=>"22"
+2174	758-1339		86.30	758	"8"=>"21"
+2175	759-1337		173.73	759	"8"=>"23"
+2176	759-1338		171.94	759	"8"=>"22"
+2177	759-1339		81.63	759	"8"=>"21"
+2178	760-1337		81.11	760	"8"=>"23"
+2179	760-1338		46.31	760	"8"=>"22"
+2180	760-1339		26.58	760	"8"=>"21"
+2181	761-1337		\N	761	
+2182	762-1337		\N	762	
+2183	763-1337		\N	763	
+2184	764-1337		\N	764	
+2185	765-1337		\N	765	
+2186	766-1337		\N	766	
+2187	767-1337		\N	767	
+2188	768-1337		\N	768	
+2189	769-1337		\N	769	
+2190	770-1337		\N	770	
+2191	771-1337		108.71	771	"12"=>"31"
+2192	771-1338		34.77	771	"12"=>"30"
+2193	772-1337		105.35	772	"12"=>"31"
+2194	772-1338		74.07	772	"12"=>"30"
+2195	773-1337		81.35	773	"12"=>"31"
+2196	773-1338		50.15	773	"12"=>"30"
+2197	774-1337		113.41	774	"12"=>"31"
+2198	774-1338		100.08	774	"12"=>"30"
+2199	775-1337		69.12	775	"12"=>"31"
+2200	775-1338		10.59	775	"12"=>"30"
+2201	776-1337		153.46	776	"12"=>"31"
+2202	776-1338		98.75	776	"12"=>"30"
+2203	777-1337		128.68	777	"12"=>"31"
+2204	777-1338		73.50	777	"12"=>"30"
+2205	778-1337		179.42	778	"12"=>"31"
+2206	778-1338		173.84	778	"12"=>"30"
+2207	779-1337		94.74	779	"12"=>"31"
+2208	779-1338		34.53	779	"12"=>"30"
+2209	780-1337		101.12	780	"12"=>"31"
+2210	780-1338		88.55	780	"12"=>"30"
+2211	781-1337		\N	781	"4"=>"12"
+2212	781-1338		\N	781	"4"=>"11"
+2213	781-1339		\N	781	"4"=>"10"
+2214	781-1340		\N	781	"4"=>"9"
+2215	781-1341		\N	781	"4"=>"8"
+2216	781-1342		\N	781	"4"=>"7"
+2217	782-1337		\N	782	"4"=>"12"
+2218	782-1338		\N	782	"4"=>"11"
+2219	782-1339		\N	782	"4"=>"10"
+2220	782-1340		\N	782	"4"=>"9"
+2221	782-1341		\N	782	"4"=>"8"
+2222	782-1342		\N	782	"4"=>"7"
+2223	783-1337		\N	783	"4"=>"12"
+2224	783-1338		\N	783	"4"=>"11"
+2225	783-1339		\N	783	"4"=>"10"
+2226	783-1340		\N	783	"4"=>"9"
+2227	783-1341		\N	783	"4"=>"8"
+2228	783-1342		\N	783	"4"=>"7"
+2229	784-1337		\N	784	"4"=>"12"
+2230	784-1338		\N	784	"4"=>"11"
+2231	784-1339		\N	784	"4"=>"10"
+2232	784-1340		\N	784	"4"=>"9"
+2233	784-1341		\N	784	"4"=>"8"
+2234	784-1342		\N	784	"4"=>"7"
+2235	785-1337		\N	785	"4"=>"12"
+2236	785-1338		\N	785	"4"=>"11"
+2237	785-1339		\N	785	"4"=>"10"
+2238	785-1340		\N	785	"4"=>"9"
+2239	785-1341		\N	785	"4"=>"8"
+2240	785-1342		\N	785	"4"=>"7"
+2241	786-1337		\N	786	"4"=>"12"
+2242	786-1338		\N	786	"4"=>"11"
+2243	786-1339		\N	786	"4"=>"10"
+2244	786-1340		\N	786	"4"=>"9"
+2245	786-1341		\N	786	"4"=>"8"
+2246	786-1342		\N	786	"4"=>"7"
+2247	787-1337		\N	787	"4"=>"12"
+2248	787-1338		\N	787	"4"=>"11"
+2249	787-1339		\N	787	"4"=>"10"
+2250	787-1340		\N	787	"4"=>"9"
+2251	787-1341		\N	787	"4"=>"8"
+2252	787-1342		\N	787	"4"=>"7"
+2253	788-1337		\N	788	"4"=>"12"
+2254	788-1338		\N	788	"4"=>"11"
+2255	788-1339		\N	788	"4"=>"10"
+2256	788-1340		\N	788	"4"=>"9"
+2257	788-1341		\N	788	"4"=>"8"
+2258	788-1342		\N	788	"4"=>"7"
+2259	789-1337		\N	789	"4"=>"12"
+2260	789-1338		\N	789	"4"=>"11"
+2261	789-1339		\N	789	"4"=>"10"
+2262	789-1340		\N	789	"4"=>"9"
+2263	789-1341		\N	789	"4"=>"8"
+2264	789-1342		\N	789	"4"=>"7"
+2265	790-1337		\N	790	"4"=>"12"
+2266	790-1338		\N	790	"4"=>"11"
+2267	790-1339		\N	790	"4"=>"10"
+2268	790-1340		\N	790	"4"=>"9"
+2269	790-1341		\N	790	"4"=>"8"
+2270	790-1342		\N	790	"4"=>"7"
+2271	791-1337		\N	791	
+2272	792-1337		\N	792	
+2273	793-1337		\N	793	
+2274	794-1337		\N	794	
+2275	795-1337		\N	795	
+2276	796-1337		\N	796	
+2277	797-1337		\N	797	
+2278	798-1337		\N	798	
+2279	799-1337		\N	799	
+2280	800-1337		\N	800	
+2281	801-1337		119.11	801	"6"=>"18"
+2282	801-1338		109.05	801	"6"=>"17"
+2283	801-1339		82.86	801	"6"=>"16"
+2284	801-1340		45.10	801	"6"=>"15"
+2285	802-1337		177.57	802	"6"=>"18"
+2286	802-1338		131.43	802	"6"=>"17"
+2287	802-1339		129.14	802	"6"=>"16"
+2288	802-1340		118.16	802	"6"=>"15"
+2289	803-1337		144.31	803	"6"=>"18"
+2290	803-1338		95.20	803	"6"=>"17"
+2291	803-1339		81.90	803	"6"=>"16"
+2292	803-1340		81.80	803	"6"=>"15"
+2293	804-1337		85.64	804	"6"=>"18"
+2294	804-1338		51.22	804	"6"=>"17"
+2295	804-1339		39.02	804	"6"=>"16"
+2296	804-1340		24.13	804	"6"=>"15"
+2297	805-1337		174.73	805	"6"=>"18"
+2298	805-1338		167.22	805	"6"=>"17"
+2299	805-1339		152.70	805	"6"=>"16"
+2300	805-1340		107.35	805	"6"=>"15"
+2301	806-1337		120.45	806	"6"=>"18"
+2302	806-1338		109.57	806	"6"=>"17"
+2303	806-1339		66.59	806	"6"=>"16"
+2304	806-1340		66.16	806	"6"=>"15"
+2305	807-1337		193.28	807	"6"=>"18"
+2306	807-1338		185.60	807	"6"=>"17"
+2307	807-1339		184.34	807	"6"=>"16"
+2308	807-1340		182.24	807	"6"=>"15"
+2309	808-1337		123.38	808	"6"=>"18"
+2310	808-1338		115.11	808	"6"=>"17"
+2311	808-1339		76.20	808	"6"=>"16"
+2312	808-1340		34.06	808	"6"=>"15"
+2313	809-1337		177.67	809	"6"=>"18"
+2314	809-1338		167.42	809	"6"=>"17"
+2315	809-1339		154.50	809	"6"=>"16"
+2316	809-1340		122.84	809	"6"=>"15"
+2317	810-1337		169.96	810	"6"=>"18"
+2318	810-1338		169.24	810	"6"=>"17"
+2319	810-1339		130.19	810	"6"=>"16"
+2320	810-1340		124.26	810	"6"=>"15"
+2321	811-1337		130.08	811	"8"=>"23"
+2322	811-1338		113.78	811	"8"=>"22"
+2323	811-1339		79.29	811	"8"=>"21"
+2324	812-1337		127.78	812	"8"=>"23"
+2325	812-1338		72.80	812	"8"=>"22"
+2326	812-1339		34.26	812	"8"=>"21"
+2327	813-1337		77.15	813	"8"=>"23"
+2328	813-1338		48.10	813	"8"=>"22"
+2329	813-1339		20.62	813	"8"=>"21"
+2330	814-1337		121.00	814	"8"=>"23"
+2331	814-1338		101.33	814	"8"=>"22"
+2332	814-1339		63.75	814	"8"=>"21"
+2333	815-1337		134.55	815	"8"=>"23"
+2334	815-1338		122.44	815	"8"=>"22"
+2335	815-1339		109.44	815	"8"=>"21"
+2336	816-1337		109.41	816	"8"=>"23"
+2337	816-1338		56.51	816	"8"=>"22"
+2338	816-1339		27.62	816	"8"=>"21"
+2339	817-1337		139.44	817	"8"=>"23"
+2340	817-1338		109.91	817	"8"=>"22"
+2341	817-1339		107.94	817	"8"=>"21"
+2342	818-1337		85.15	818	"8"=>"23"
+2343	818-1338		64.42	818	"8"=>"22"
+2344	818-1339		53.07	818	"8"=>"21"
+2345	819-1337		75.60	819	"8"=>"23"
+2346	819-1338		36.36	819	"8"=>"22"
+2347	819-1339		32.77	819	"8"=>"21"
+2348	820-1337		124.45	820	"8"=>"23"
+2349	820-1338		65.06	820	"8"=>"22"
+2350	820-1339		53.21	820	"8"=>"21"
+2351	821-1337		\N	821	
+2352	822-1337		\N	822	
+2353	823-1337		\N	823	
+2354	824-1337		\N	824	
+2355	825-1337		\N	825	
+2356	826-1337		\N	826	
+2357	827-1337		\N	827	
+2358	828-1337		\N	828	
+2359	829-1337		\N	829	
+2360	830-1337		\N	830	
+2361	831-1337		180.83	831	"12"=>"31"
+2362	831-1338		103.06	831	"12"=>"30"
+2363	832-1337		53.25	832	"12"=>"31"
+2364	832-1338		39.87	832	"12"=>"30"
+2365	833-1337		116.73	833	"12"=>"31"
+2366	833-1338		71.75	833	"12"=>"30"
+2367	834-1337		164.29	834	"12"=>"31"
+2368	834-1338		91.99	834	"12"=>"30"
+2369	835-1337		64.87	835	"12"=>"31"
+2370	835-1338		46.18	835	"12"=>"30"
+2371	836-1337		158.21	836	"12"=>"31"
+2372	836-1338		96.60	836	"12"=>"30"
+2373	837-1337		125.49	837	"12"=>"31"
+2374	837-1338		100.08	837	"12"=>"30"
+2375	838-1337		96.48	838	"12"=>"31"
+2376	838-1338		75.26	838	"12"=>"30"
+2377	839-1337		181.31	839	"12"=>"31"
+2378	839-1338		171.23	839	"12"=>"30"
+2379	840-1337		96.68	840	"12"=>"31"
+2380	840-1338		74.64	840	"12"=>"30"
+2381	841-1337		\N	841	"4"=>"12"
+2382	841-1338		\N	841	"4"=>"11"
+2383	841-1339		\N	841	"4"=>"10"
+2384	841-1340		\N	841	"4"=>"9"
+2385	841-1341		\N	841	"4"=>"8"
+2386	841-1342		\N	841	"4"=>"7"
+2387	842-1337		\N	842	"4"=>"12"
+2388	842-1338		\N	842	"4"=>"11"
+2389	842-1339		\N	842	"4"=>"10"
+2390	842-1340		\N	842	"4"=>"9"
+2391	842-1341		\N	842	"4"=>"8"
+2392	842-1342		\N	842	"4"=>"7"
+2393	843-1337		\N	843	"4"=>"12"
+2394	843-1338		\N	843	"4"=>"11"
+2395	843-1339		\N	843	"4"=>"10"
+2396	843-1340		\N	843	"4"=>"9"
+2397	843-1341		\N	843	"4"=>"8"
+2398	843-1342		\N	843	"4"=>"7"
+2399	844-1337		\N	844	"4"=>"12"
+2400	844-1338		\N	844	"4"=>"11"
+2401	844-1339		\N	844	"4"=>"10"
+2402	844-1340		\N	844	"4"=>"9"
+2403	844-1341		\N	844	"4"=>"8"
+2404	844-1342		\N	844	"4"=>"7"
+2405	845-1337		\N	845	"4"=>"12"
+2406	845-1338		\N	845	"4"=>"11"
+2407	845-1339		\N	845	"4"=>"10"
+2408	845-1340		\N	845	"4"=>"9"
+2409	845-1341		\N	845	"4"=>"8"
+2410	845-1342		\N	845	"4"=>"7"
+2411	846-1337		\N	846	"4"=>"12"
+2412	846-1338		\N	846	"4"=>"11"
+2413	846-1339		\N	846	"4"=>"10"
+2414	846-1340		\N	846	"4"=>"9"
+2415	846-1341		\N	846	"4"=>"8"
+2416	846-1342		\N	846	"4"=>"7"
+2417	847-1337		\N	847	"4"=>"12"
+2418	847-1338		\N	847	"4"=>"11"
+2419	847-1339		\N	847	"4"=>"10"
+2420	847-1340		\N	847	"4"=>"9"
+2421	847-1341		\N	847	"4"=>"8"
+2422	847-1342		\N	847	"4"=>"7"
+2423	848-1337		\N	848	"4"=>"12"
+2424	848-1338		\N	848	"4"=>"11"
+2425	848-1339		\N	848	"4"=>"10"
+2426	848-1340		\N	848	"4"=>"9"
+2427	848-1341		\N	848	"4"=>"8"
+2428	848-1342		\N	848	"4"=>"7"
+2429	849-1337		\N	849	"4"=>"12"
+2430	849-1338		\N	849	"4"=>"11"
+2431	849-1339		\N	849	"4"=>"10"
+2432	849-1340		\N	849	"4"=>"9"
+2433	849-1341		\N	849	"4"=>"8"
+2434	849-1342		\N	849	"4"=>"7"
+2435	850-1337		\N	850	"4"=>"12"
+2436	850-1338		\N	850	"4"=>"11"
+2437	850-1339		\N	850	"4"=>"10"
+2438	850-1340		\N	850	"4"=>"9"
+2439	850-1341		\N	850	"4"=>"8"
+2440	850-1342		\N	850	"4"=>"7"
+2441	851-1337		\N	851	
+2442	852-1337		\N	852	
+2443	853-1337		\N	853	
+2444	854-1337		\N	854	
+2445	855-1337		\N	855	
+2446	856-1337		\N	856	
+2447	857-1337		\N	857	
+2448	858-1337		\N	858	
+2449	859-1337		\N	859	
+2450	860-1337		\N	860	
+2451	861-1337		96.76	861	"6"=>"18"
+2452	861-1338		80.76	861	"6"=>"17"
+2453	861-1339		63.23	861	"6"=>"16"
+2454	861-1340		62.63	861	"6"=>"15"
+2455	862-1337		122.10	862	"6"=>"18"
+2456	862-1338		115.85	862	"6"=>"17"
+2457	862-1339		92.50	862	"6"=>"16"
+2458	862-1340		84.35	862	"6"=>"15"
+2459	863-1337		167.53	863	"6"=>"18"
+2460	863-1338		158.45	863	"6"=>"17"
+2461	863-1339		137.40	863	"6"=>"16"
+2462	863-1340		109.99	863	"6"=>"15"
+2463	864-1337		143.28	864	"6"=>"18"
+2464	864-1338		137.93	864	"6"=>"17"
+2465	864-1339		103.17	864	"6"=>"16"
+2466	864-1340		72.89	864	"6"=>"15"
+2467	865-1337		99.08	865	"6"=>"18"
+2468	865-1338		42.83	865	"6"=>"17"
+2469	865-1339		36.62	865	"6"=>"16"
+2470	865-1340		14.49	865	"6"=>"15"
+2471	866-1337		169.78	866	"6"=>"18"
+2472	866-1338		169.26	866	"6"=>"17"
+2473	866-1339		128.72	866	"6"=>"16"
+2474	866-1340		117.96	866	"6"=>"15"
+2475	867-1337		124.44	867	"6"=>"18"
+2476	867-1338		117.43	867	"6"=>"17"
+2477	867-1339		113.94	867	"6"=>"16"
+2478	867-1340		113.72	867	"6"=>"15"
+2479	868-1337		120.40	868	"6"=>"18"
+2480	868-1338		114.15	868	"6"=>"17"
+2481	868-1339		86.40	868	"6"=>"16"
+2482	868-1340		59.96	868	"6"=>"15"
+2483	869-1337		153.31	869	"6"=>"18"
+2484	869-1338		138.88	869	"6"=>"17"
+2485	869-1339		115.81	869	"6"=>"16"
+2486	869-1340		93.80	869	"6"=>"15"
+2487	870-1337		78.59	870	"6"=>"18"
+2488	870-1338		76.01	870	"6"=>"17"
+2489	870-1339		41.25	870	"6"=>"16"
+2490	870-1340		11.09	870	"6"=>"15"
+2491	871-1337		176.72	871	"8"=>"23"
+2492	871-1338		164.55	871	"8"=>"22"
+2493	871-1339		163.67	871	"8"=>"21"
+2494	872-1337		118.79	872	"8"=>"23"
+2495	872-1338		100.79	872	"8"=>"22"
+2496	872-1339		63.88	872	"8"=>"21"
+2497	873-1337		163.81	873	"8"=>"23"
+2498	873-1338		124.99	873	"8"=>"22"
+2499	873-1339		80.87	873	"8"=>"21"
+2500	874-1337		141.06	874	"8"=>"23"
+2501	874-1338		140.99	874	"8"=>"22"
+2502	874-1339		83.53	874	"8"=>"21"
+2503	875-1337		112.86	875	"8"=>"23"
+2504	875-1338		103.68	875	"8"=>"22"
+2505	875-1339		51.44	875	"8"=>"21"
+2506	876-1337		126.65	876	"8"=>"23"
+2507	876-1338		112.53	876	"8"=>"22"
+2508	876-1339		86.71	876	"8"=>"21"
+2509	877-1337		120.68	877	"8"=>"23"
+2510	877-1338		108.70	877	"8"=>"22"
+2511	877-1339		91.47	877	"8"=>"21"
+2512	878-1337		106.24	878	"8"=>"23"
+2513	878-1338		54.85	878	"8"=>"22"
+2514	878-1339		53.82	878	"8"=>"21"
+2515	879-1337		29.18	879	"8"=>"23"
+2516	879-1338		25.90	879	"8"=>"22"
+2517	879-1339		18.99	879	"8"=>"21"
+2518	880-1337		142.94	880	"8"=>"23"
+2519	880-1338		110.80	880	"8"=>"22"
+2520	880-1339		98.61	880	"8"=>"21"
+2521	881-1337		\N	881	
+2522	882-1337		\N	882	
+2523	883-1337		\N	883	
+2524	884-1337		\N	884	
+2525	885-1337		\N	885	
+2526	886-1337		\N	886	
+2527	887-1337		\N	887	
+2528	888-1337		\N	888	
+2529	889-1337		\N	889	
+2530	890-1337		\N	890	
+2531	891-1337		175.00	891	"12"=>"31"
+2532	891-1338		132.63	891	"12"=>"30"
+2533	892-1337		44.41	892	"12"=>"31"
+2534	892-1338		17.33	892	"12"=>"30"
+2535	893-1337		114.39	893	"12"=>"31"
+2536	893-1338		98.03	893	"12"=>"30"
+2537	894-1337		140.57	894	"12"=>"31"
+2538	894-1338		102.65	894	"12"=>"30"
+2539	895-1337		150.76	895	"12"=>"31"
+2540	895-1338		115.22	895	"12"=>"30"
+2541	896-1337		66.73	896	"12"=>"31"
+2542	896-1338		26.53	896	"12"=>"30"
+2543	897-1337		139.66	897	"12"=>"31"
+2544	897-1338		97.20	897	"12"=>"30"
+2545	898-1337		148.38	898	"12"=>"31"
+2546	898-1338		119.94	898	"12"=>"30"
+2547	899-1337		135.78	899	"12"=>"31"
+2548	899-1338		82.59	899	"12"=>"30"
+2549	900-1337		154.40	900	"12"=>"31"
+2550	900-1338		131.44	900	"12"=>"30"
 \.
 
 
@@ -10017,6 +12345,856 @@ COPY product_stock (id, quantity, cost_price, variant_id, quantity_allocated, lo
 1698	42	\N	1698	0	1
 1699	30	\N	1699	0	1
 1700	3	\N	1700	0	1
+1701	15	\N	1701	0	1
+1702	9	\N	1702	0	1
+1703	11	\N	1703	0	1
+1704	3	\N	1704	0	1
+1705	36	\N	1705	0	1
+1706	4	\N	1706	0	1
+1707	24	\N	1707	0	1
+1708	8	\N	1708	0	1
+1709	39	\N	1709	0	1
+1710	32	\N	1710	0	1
+1711	26	\N	1711	0	1
+1712	17	\N	1712	0	1
+1713	47	\N	1713	0	1
+1714	23	\N	1714	0	1
+1715	50	\N	1715	0	1
+1716	18	\N	1716	0	1
+1717	17	\N	1717	0	1
+1718	18	\N	1718	0	1
+1719	5	\N	1719	0	1
+1720	13	\N	1720	0	1
+1721	34	\N	1721	0	1
+1722	17	\N	1722	0	1
+1723	32	\N	1723	0	1
+1724	23	\N	1724	0	1
+1725	25	\N	1725	0	1
+1726	24	\N	1726	0	1
+1727	42	\N	1727	0	1
+1728	33	\N	1728	0	1
+1729	35	\N	1729	0	1
+1730	4	\N	1730	0	1
+1731	3	\N	1731	0	1
+1732	6	\N	1732	0	1
+1733	43	\N	1733	0	1
+1734	34	\N	1734	0	1
+1735	10	\N	1735	0	1
+1736	18	\N	1736	0	1
+1737	49	\N	1737	0	1
+1738	36	\N	1738	0	1
+1739	50	\N	1739	0	1
+1740	30	\N	1740	0	1
+1741	19	\N	1741	0	1
+1742	12	\N	1742	0	1
+1743	9	\N	1743	0	1
+1744	14	\N	1744	0	1
+1745	40	\N	1745	0	1
+1746	41	\N	1746	0	1
+1747	6	\N	1747	0	1
+1748	12	\N	1748	0	1
+1749	19	\N	1749	0	1
+1750	39	\N	1750	0	1
+1751	42	\N	1751	0	1
+1752	26	\N	1752	0	1
+1753	23	\N	1753	0	1
+1754	42	\N	1754	0	1
+1755	14	\N	1755	0	1
+1756	1	\N	1756	0	1
+1757	17	\N	1757	0	1
+1758	37	\N	1758	0	1
+1759	10	\N	1759	0	1
+1760	31	\N	1760	0	1
+1761	44	\N	1761	0	1
+1762	8	\N	1762	0	1
+1763	27	\N	1763	0	1
+1764	49	\N	1764	0	1
+1765	37	\N	1765	0	1
+1766	22	\N	1766	0	1
+1767	9	\N	1767	0	1
+1768	11	\N	1768	0	1
+1769	48	\N	1769	0	1
+1770	11	\N	1770	0	1
+1771	14	\N	1771	0	1
+1772	12	\N	1772	0	1
+1773	47	\N	1773	0	1
+1774	42	\N	1774	0	1
+1775	27	\N	1775	0	1
+1776	48	\N	1776	0	1
+1777	9	\N	1777	0	1
+1778	23	\N	1778	0	1
+1779	36	\N	1779	0	1
+1780	8	\N	1780	0	1
+1781	25	\N	1781	0	1
+1782	5	\N	1782	0	1
+1783	15	\N	1783	0	1
+1784	36	\N	1784	0	1
+1785	27	\N	1785	0	1
+1786	39	\N	1786	0	1
+1787	2	\N	1787	0	1
+1788	28	\N	1788	0	1
+1789	16	\N	1789	0	1
+1790	4	\N	1790	0	1
+1791	30	\N	1791	0	1
+1792	19	\N	1792	0	1
+1793	47	\N	1793	0	1
+1794	15	\N	1794	0	1
+1795	24	\N	1795	0	1
+1796	32	\N	1796	0	1
+1797	11	\N	1797	0	1
+1798	47	\N	1798	0	1
+1799	17	\N	1799	0	1
+1800	10	\N	1800	0	1
+1801	25	\N	1801	0	1
+1802	47	\N	1802	0	1
+1803	48	\N	1803	0	1
+1804	20	\N	1804	0	1
+1805	15	\N	1805	0	1
+1806	8	\N	1806	0	1
+1807	26	\N	1807	0	1
+1808	2	\N	1808	0	1
+1809	6	\N	1809	0	1
+1810	13	\N	1810	0	1
+1811	15	\N	1811	0	1
+1812	39	\N	1812	0	1
+1813	46	\N	1813	0	1
+1814	3	\N	1814	0	1
+1815	41	\N	1815	0	1
+1816	6	\N	1816	0	1
+1817	10	\N	1817	0	1
+1818	41	\N	1818	0	1
+1819	13	\N	1819	0	1
+1820	10	\N	1820	0	1
+1821	25	\N	1821	0	1
+1822	1	\N	1822	0	1
+1823	37	\N	1823	0	1
+1824	2	\N	1824	0	1
+1825	19	\N	1825	0	1
+1826	45	\N	1826	0	1
+1827	31	\N	1827	0	1
+1828	9	\N	1828	0	1
+1829	7	\N	1829	0	1
+1830	1	\N	1830	0	1
+1831	39	\N	1831	0	1
+1832	30	\N	1832	0	1
+1833	33	\N	1833	0	1
+1834	4	\N	1834	0	1
+1835	27	\N	1835	0	1
+1836	30	\N	1836	0	1
+1837	42	\N	1837	0	1
+1838	39	\N	1838	0	1
+1839	18	\N	1839	0	1
+1840	11	\N	1840	0	1
+1841	20	\N	1841	0	1
+1842	11	\N	1842	0	1
+1843	40	\N	1843	0	1
+1844	42	\N	1844	0	1
+1845	21	\N	1845	0	1
+1846	7	\N	1846	0	1
+1847	36	\N	1847	0	1
+1848	35	\N	1848	0	1
+1849	25	\N	1849	0	1
+1850	17	\N	1850	0	1
+1851	11	\N	1851	0	1
+1852	9	\N	1852	0	1
+1853	15	\N	1853	0	1
+1854	13	\N	1854	0	1
+1855	32	\N	1855	0	1
+1856	6	\N	1856	0	1
+1857	35	\N	1857	0	1
+1858	12	\N	1858	0	1
+1859	16	\N	1859	0	1
+1860	35	\N	1860	0	1
+1861	41	\N	1861	0	1
+1862	11	\N	1862	0	1
+1863	28	\N	1863	0	1
+1864	14	\N	1864	0	1
+1865	43	\N	1865	0	1
+1866	5	\N	1866	0	1
+1867	44	\N	1867	0	1
+1868	5	\N	1868	0	1
+1869	13	\N	1869	0	1
+1870	47	\N	1870	0	1
+1871	35	\N	1871	0	1
+1872	26	\N	1872	0	1
+1873	32	\N	1873	0	1
+1874	26	\N	1874	0	1
+1875	28	\N	1875	0	1
+1876	17	\N	1876	0	1
+1877	35	\N	1877	0	1
+1878	12	\N	1878	0	1
+1879	25	\N	1879	0	1
+1880	48	\N	1880	0	1
+1881	39	\N	1881	0	1
+1882	9	\N	1882	0	1
+1883	44	\N	1883	0	1
+1884	49	\N	1884	0	1
+1885	50	\N	1885	0	1
+1886	17	\N	1886	0	1
+1887	28	\N	1887	0	1
+1888	28	\N	1888	0	1
+1889	23	\N	1889	0	1
+1890	31	\N	1890	0	1
+1891	44	\N	1891	0	1
+1892	37	\N	1892	0	1
+1893	17	\N	1893	0	1
+1894	48	\N	1894	0	1
+1895	25	\N	1895	0	1
+1896	34	\N	1896	0	1
+1897	35	\N	1897	0	1
+1898	40	\N	1898	0	1
+1899	5	\N	1899	0	1
+1900	24	\N	1900	0	1
+1901	41	\N	1901	0	1
+1902	19	\N	1902	0	1
+1903	40	\N	1903	0	1
+1904	4	\N	1904	0	1
+1905	28	\N	1905	0	1
+1906	32	\N	1906	0	1
+1907	14	\N	1907	0	1
+1908	2	\N	1908	0	1
+1909	46	\N	1909	0	1
+1910	47	\N	1910	0	1
+1911	29	\N	1911	0	1
+1912	12	\N	1912	0	1
+1913	43	\N	1913	0	1
+1914	41	\N	1914	0	1
+1915	38	\N	1915	0	1
+1916	42	\N	1916	0	1
+1917	22	\N	1917	0	1
+1918	28	\N	1918	0	1
+1919	7	\N	1919	0	1
+1920	34	\N	1920	0	1
+1921	43	\N	1921	0	1
+1922	40	\N	1922	0	1
+1923	26	\N	1923	0	1
+1924	18	\N	1924	0	1
+1925	44	\N	1925	0	1
+1926	3	\N	1926	0	1
+1927	21	\N	1927	0	1
+1928	34	\N	1928	0	1
+1929	12	\N	1929	0	1
+1930	39	\N	1930	0	1
+1931	30	\N	1931	0	1
+1932	12	\N	1932	0	1
+1933	39	\N	1933	0	1
+1934	31	\N	1934	0	1
+1935	40	\N	1935	0	1
+1936	12	\N	1936	0	1
+1937	18	\N	1937	0	1
+1938	35	\N	1938	0	1
+1939	24	\N	1939	0	1
+1940	43	\N	1940	0	1
+1941	1	\N	1941	0	1
+1942	21	\N	1942	0	1
+1943	48	\N	1943	0	1
+1944	37	\N	1944	0	1
+1945	17	\N	1945	0	1
+1946	46	\N	1946	0	1
+1947	10	\N	1947	0	1
+1948	36	\N	1948	0	1
+1949	14	\N	1949	0	1
+1950	6	\N	1950	0	1
+1951	16	\N	1951	0	1
+1952	18	\N	1952	0	1
+1953	4	\N	1953	0	1
+1954	6	\N	1954	0	1
+1955	9	\N	1955	0	1
+1956	12	\N	1956	0	1
+1957	45	\N	1957	0	1
+1958	1	\N	1958	0	1
+1959	39	\N	1959	0	1
+1960	11	\N	1960	0	1
+1961	8	\N	1961	0	1
+1962	8	\N	1962	0	1
+1963	36	\N	1963	0	1
+1964	10	\N	1964	0	1
+1965	28	\N	1965	0	1
+1966	30	\N	1966	0	1
+1967	35	\N	1967	0	1
+1968	18	\N	1968	0	1
+1969	3	\N	1969	0	1
+1970	36	\N	1970	0	1
+1971	16	\N	1971	0	1
+1972	41	\N	1972	0	1
+1973	2	\N	1973	0	1
+1974	8	\N	1974	0	1
+1975	36	\N	1975	0	1
+1976	48	\N	1976	0	1
+1977	20	\N	1977	0	1
+1978	28	\N	1978	0	1
+1979	35	\N	1979	0	1
+1980	19	\N	1980	0	1
+1981	37	\N	1981	0	1
+1982	29	\N	1982	0	1
+1983	34	\N	1983	0	1
+1984	10	\N	1984	0	1
+1985	32	\N	1985	0	1
+1986	7	\N	1986	0	1
+1987	1	\N	1987	0	1
+1988	46	\N	1988	0	1
+1989	33	\N	1989	0	1
+1990	50	\N	1990	0	1
+1991	21	\N	1991	0	1
+1992	16	\N	1992	0	1
+1993	49	\N	1993	0	1
+1994	23	\N	1994	0	1
+1995	38	\N	1995	0	1
+1996	40	\N	1996	0	1
+1997	23	\N	1997	0	1
+1998	36	\N	1998	0	1
+1999	22	\N	1999	0	1
+2000	20	\N	2000	0	1
+2001	25	\N	2001	0	1
+2002	7	\N	2002	0	1
+2003	46	\N	2003	0	1
+2004	43	\N	2004	0	1
+2005	30	\N	2005	0	1
+2006	13	\N	2006	0	1
+2007	26	\N	2007	0	1
+2008	50	\N	2008	0	1
+2009	28	\N	2009	0	1
+2010	40	\N	2010	0	1
+2011	21	\N	2011	0	1
+2012	32	\N	2012	0	1
+2013	44	\N	2013	0	1
+2014	47	\N	2014	0	1
+2015	17	\N	2015	0	1
+2016	5	\N	2016	0	1
+2017	30	\N	2017	0	1
+2018	40	\N	2018	0	1
+2019	22	\N	2019	0	1
+2020	50	\N	2020	0	1
+2021	19	\N	2021	0	1
+2022	32	\N	2022	0	1
+2023	36	\N	2023	0	1
+2024	49	\N	2024	0	1
+2025	3	\N	2025	0	1
+2026	9	\N	2026	0	1
+2027	39	\N	2027	0	1
+2028	1	\N	2028	0	1
+2029	47	\N	2029	0	1
+2030	41	\N	2030	0	1
+2031	50	\N	2031	0	1
+2032	5	\N	2032	0	1
+2033	8	\N	2033	0	1
+2034	43	\N	2034	0	1
+2035	11	\N	2035	0	1
+2036	25	\N	2036	0	1
+2037	28	\N	2037	0	1
+2038	41	\N	2038	0	1
+2039	39	\N	2039	0	1
+2040	41	\N	2040	0	1
+2041	8	\N	2041	0	1
+2042	23	\N	2042	0	1
+2043	49	\N	2043	0	1
+2044	8	\N	2044	0	1
+2045	5	\N	2045	0	1
+2046	49	\N	2046	0	1
+2047	13	\N	2047	0	1
+2048	14	\N	2048	0	1
+2049	8	\N	2049	0	1
+2050	15	\N	2050	0	1
+2051	33	\N	2051	0	1
+2052	28	\N	2052	0	1
+2053	13	\N	2053	0	1
+2054	40	\N	2054	0	1
+2055	27	\N	2055	0	1
+2056	23	\N	2056	0	1
+2057	48	\N	2057	0	1
+2058	11	\N	2058	0	1
+2059	17	\N	2059	0	1
+2060	6	\N	2060	0	1
+2061	6	\N	2061	0	1
+2062	39	\N	2062	0	1
+2063	35	\N	2063	0	1
+2064	9	\N	2064	0	1
+2065	11	\N	2065	0	1
+2066	20	\N	2066	0	1
+2067	26	\N	2067	0	1
+2068	26	\N	2068	0	1
+2069	22	\N	2069	0	1
+2070	36	\N	2070	0	1
+2071	20	\N	2071	0	1
+2072	18	\N	2072	0	1
+2073	9	\N	2073	0	1
+2074	35	\N	2074	0	1
+2075	33	\N	2075	0	1
+2076	37	\N	2076	0	1
+2077	25	\N	2077	0	1
+2078	30	\N	2078	0	1
+2079	27	\N	2079	0	1
+2080	6	\N	2080	0	1
+2081	10	\N	2081	0	1
+2082	9	\N	2082	0	1
+2083	23	\N	2083	0	1
+2084	45	\N	2084	0	1
+2085	21	\N	2085	0	1
+2086	36	\N	2086	0	1
+2087	19	\N	2087	0	1
+2088	48	\N	2088	0	1
+2089	12	\N	2089	0	1
+2090	9	\N	2090	0	1
+2091	43	\N	2091	0	1
+2092	9	\N	2092	0	1
+2093	29	\N	2093	0	1
+2094	7	\N	2094	0	1
+2095	47	\N	2095	0	1
+2096	33	\N	2096	0	1
+2097	13	\N	2097	0	1
+2098	29	\N	2098	0	1
+2099	36	\N	2099	0	1
+2100	11	\N	2100	0	1
+2101	28	\N	2101	0	1
+2102	33	\N	2102	0	1
+2103	29	\N	2103	0	1
+2104	1	\N	2104	0	1
+2105	46	\N	2105	0	1
+2106	37	\N	2106	0	1
+2107	32	\N	2107	0	1
+2108	12	\N	2108	0	1
+2109	9	\N	2109	0	1
+2110	41	\N	2110	0	1
+2111	39	\N	2111	0	1
+2112	48	\N	2112	0	1
+2113	2	\N	2113	0	1
+2114	5	\N	2114	0	1
+2115	33	\N	2115	0	1
+2116	28	\N	2116	0	1
+2117	18	\N	2117	0	1
+2118	34	\N	2118	0	1
+2119	39	\N	2119	0	1
+2120	27	\N	2120	0	1
+2121	17	\N	2121	0	1
+2122	33	\N	2122	0	1
+2123	16	\N	2123	0	1
+2124	41	\N	2124	0	1
+2125	13	\N	2125	0	1
+2126	43	\N	2126	0	1
+2127	43	\N	2127	0	1
+2128	26	\N	2128	0	1
+2129	36	\N	2129	0	1
+2130	1	\N	2130	0	1
+2131	22	\N	2131	0	1
+2132	32	\N	2132	0	1
+2133	46	\N	2133	0	1
+2134	19	\N	2134	0	1
+2135	11	\N	2135	0	1
+2136	37	\N	2136	0	1
+2137	49	\N	2137	0	1
+2138	31	\N	2138	0	1
+2139	11	\N	2139	0	1
+2140	36	\N	2140	0	1
+2141	2	\N	2141	0	1
+2142	12	\N	2142	0	1
+2143	35	\N	2143	0	1
+2144	44	\N	2144	0	1
+2145	28	\N	2145	0	1
+2146	32	\N	2146	0	1
+2147	5	\N	2147	0	1
+2148	5	\N	2148	0	1
+2149	5	\N	2149	0	1
+2150	46	\N	2150	0	1
+2151	11	\N	2151	0	1
+2152	6	\N	2152	0	1
+2153	49	\N	2153	0	1
+2154	41	\N	2154	0	1
+2155	36	\N	2155	0	1
+2156	20	\N	2156	0	1
+2157	18	\N	2157	0	1
+2158	29	\N	2158	0	1
+2159	39	\N	2159	0	1
+2160	38	\N	2160	0	1
+2161	8	\N	2161	0	1
+2162	38	\N	2162	0	1
+2163	6	\N	2163	0	1
+2164	41	\N	2164	0	1
+2165	24	\N	2165	0	1
+2166	36	\N	2166	0	1
+2167	13	\N	2167	0	1
+2168	26	\N	2168	0	1
+2169	25	\N	2169	0	1
+2170	27	\N	2170	0	1
+2171	40	\N	2171	0	1
+2172	14	\N	2172	0	1
+2173	2	\N	2173	0	1
+2174	39	\N	2174	0	1
+2175	30	\N	2175	0	1
+2176	33	\N	2176	0	1
+2177	40	\N	2177	0	1
+2178	43	\N	2178	0	1
+2179	23	\N	2179	0	1
+2180	30	\N	2180	0	1
+2181	25	\N	2181	0	1
+2182	3	\N	2182	0	1
+2183	26	\N	2183	0	1
+2184	8	\N	2184	0	1
+2185	40	\N	2185	0	1
+2186	17	\N	2186	0	1
+2187	18	\N	2187	0	1
+2188	9	\N	2188	0	1
+2189	38	\N	2189	0	1
+2190	39	\N	2190	0	1
+2191	46	\N	2191	0	1
+2192	8	\N	2192	0	1
+2193	41	\N	2193	0	1
+2194	41	\N	2194	0	1
+2195	1	\N	2195	0	1
+2196	30	\N	2196	0	1
+2197	43	\N	2197	0	1
+2198	44	\N	2198	0	1
+2199	30	\N	2199	0	1
+2200	38	\N	2200	0	1
+2201	41	\N	2201	0	1
+2202	17	\N	2202	0	1
+2203	41	\N	2203	0	1
+2204	7	\N	2204	0	1
+2205	11	\N	2205	0	1
+2206	25	\N	2206	0	1
+2207	10	\N	2207	0	1
+2208	33	\N	2208	0	1
+2209	17	\N	2209	0	1
+2210	35	\N	2210	0	1
+2211	30	\N	2211	0	1
+2212	28	\N	2212	0	1
+2213	10	\N	2213	0	1
+2214	30	\N	2214	0	1
+2215	31	\N	2215	0	1
+2216	17	\N	2216	0	1
+2217	1	\N	2217	0	1
+2218	6	\N	2218	0	1
+2219	37	\N	2219	0	1
+2220	9	\N	2220	0	1
+2221	12	\N	2221	0	1
+2222	41	\N	2222	0	1
+2223	16	\N	2223	0	1
+2224	4	\N	2224	0	1
+2225	46	\N	2225	0	1
+2226	14	\N	2226	0	1
+2227	14	\N	2227	0	1
+2228	16	\N	2228	0	1
+2229	39	\N	2229	0	1
+2230	5	\N	2230	0	1
+2231	6	\N	2231	0	1
+2232	25	\N	2232	0	1
+2233	23	\N	2233	0	1
+2234	11	\N	2234	0	1
+2235	14	\N	2235	0	1
+2236	24	\N	2236	0	1
+2237	9	\N	2237	0	1
+2238	33	\N	2238	0	1
+2239	6	\N	2239	0	1
+2240	49	\N	2240	0	1
+2241	16	\N	2241	0	1
+2242	22	\N	2242	0	1
+2243	37	\N	2243	0	1
+2244	48	\N	2244	0	1
+2245	1	\N	2245	0	1
+2246	4	\N	2246	0	1
+2247	45	\N	2247	0	1
+2248	39	\N	2248	0	1
+2249	7	\N	2249	0	1
+2250	18	\N	2250	0	1
+2251	50	\N	2251	0	1
+2252	6	\N	2252	0	1
+2253	20	\N	2253	0	1
+2254	16	\N	2254	0	1
+2255	39	\N	2255	0	1
+2256	3	\N	2256	0	1
+2257	23	\N	2257	0	1
+2258	2	\N	2258	0	1
+2259	7	\N	2259	0	1
+2260	36	\N	2260	0	1
+2261	1	\N	2261	0	1
+2262	8	\N	2262	0	1
+2263	40	\N	2263	0	1
+2264	1	\N	2264	0	1
+2265	28	\N	2265	0	1
+2266	39	\N	2266	0	1
+2267	4	\N	2267	0	1
+2268	48	\N	2268	0	1
+2269	50	\N	2269	0	1
+2270	18	\N	2270	0	1
+2271	38	\N	2271	0	1
+2272	16	\N	2272	0	1
+2273	50	\N	2273	0	1
+2274	2	\N	2274	0	1
+2275	11	\N	2275	0	1
+2276	41	\N	2276	0	1
+2277	45	\N	2277	0	1
+2278	14	\N	2278	0	1
+2279	45	\N	2279	0	1
+2280	37	\N	2280	0	1
+2281	7	\N	2281	0	1
+2282	9	\N	2282	0	1
+2283	48	\N	2283	0	1
+2284	50	\N	2284	0	1
+2285	33	\N	2285	0	1
+2286	24	\N	2286	0	1
+2287	14	\N	2287	0	1
+2288	22	\N	2288	0	1
+2289	18	\N	2289	0	1
+2290	6	\N	2290	0	1
+2291	6	\N	2291	0	1
+2292	34	\N	2292	0	1
+2293	26	\N	2293	0	1
+2294	44	\N	2294	0	1
+2295	12	\N	2295	0	1
+2296	17	\N	2296	0	1
+2297	37	\N	2297	0	1
+2298	21	\N	2298	0	1
+2299	32	\N	2299	0	1
+2300	21	\N	2300	0	1
+2301	10	\N	2301	0	1
+2302	41	\N	2302	0	1
+2303	41	\N	2303	0	1
+2304	7	\N	2304	0	1
+2305	20	\N	2305	0	1
+2306	46	\N	2306	0	1
+2307	4	\N	2307	0	1
+2308	17	\N	2308	0	1
+2309	32	\N	2309	0	1
+2310	17	\N	2310	0	1
+2311	29	\N	2311	0	1
+2312	2	\N	2312	0	1
+2313	46	\N	2313	0	1
+2314	24	\N	2314	0	1
+2315	49	\N	2315	0	1
+2316	6	\N	2316	0	1
+2317	12	\N	2317	0	1
+2318	41	\N	2318	0	1
+2319	10	\N	2319	0	1
+2320	21	\N	2320	0	1
+2321	29	\N	2321	0	1
+2322	9	\N	2322	0	1
+2323	45	\N	2323	0	1
+2324	33	\N	2324	0	1
+2325	25	\N	2325	0	1
+2326	39	\N	2326	0	1
+2327	6	\N	2327	0	1
+2328	7	\N	2328	0	1
+2329	18	\N	2329	0	1
+2330	11	\N	2330	0	1
+2331	28	\N	2331	0	1
+2332	9	\N	2332	0	1
+2333	47	\N	2333	0	1
+2334	50	\N	2334	0	1
+2335	6	\N	2335	0	1
+2336	14	\N	2336	0	1
+2337	44	\N	2337	0	1
+2338	22	\N	2338	0	1
+2339	16	\N	2339	0	1
+2340	9	\N	2340	0	1
+2341	17	\N	2341	0	1
+2342	29	\N	2342	0	1
+2343	46	\N	2343	0	1
+2344	46	\N	2344	0	1
+2345	19	\N	2345	0	1
+2346	41	\N	2346	0	1
+2347	48	\N	2347	0	1
+2348	1	\N	2348	0	1
+2349	3	\N	2349	0	1
+2350	36	\N	2350	0	1
+2351	33	\N	2351	0	1
+2352	30	\N	2352	0	1
+2353	42	\N	2353	0	1
+2354	36	\N	2354	0	1
+2355	50	\N	2355	0	1
+2356	31	\N	2356	0	1
+2357	3	\N	2357	0	1
+2358	12	\N	2358	0	1
+2359	48	\N	2359	0	1
+2360	25	\N	2360	0	1
+2361	43	\N	2361	0	1
+2362	24	\N	2362	0	1
+2363	33	\N	2363	0	1
+2364	17	\N	2364	0	1
+2365	39	\N	2365	0	1
+2366	42	\N	2366	0	1
+2367	42	\N	2367	0	1
+2368	6	\N	2368	0	1
+2369	5	\N	2369	0	1
+2370	48	\N	2370	0	1
+2371	11	\N	2371	0	1
+2372	45	\N	2372	0	1
+2373	34	\N	2373	0	1
+2374	30	\N	2374	0	1
+2375	3	\N	2375	0	1
+2376	31	\N	2376	0	1
+2377	50	\N	2377	0	1
+2378	34	\N	2378	0	1
+2379	45	\N	2379	0	1
+2380	48	\N	2380	0	1
+2381	13	\N	2381	0	1
+2382	20	\N	2382	0	1
+2383	38	\N	2383	0	1
+2384	4	\N	2384	0	1
+2385	32	\N	2385	0	1
+2386	24	\N	2386	0	1
+2387	2	\N	2387	0	1
+2388	40	\N	2388	0	1
+2389	50	\N	2389	0	1
+2390	23	\N	2390	0	1
+2391	15	\N	2391	0	1
+2392	32	\N	2392	0	1
+2393	28	\N	2393	0	1
+2394	4	\N	2394	0	1
+2395	16	\N	2395	0	1
+2396	32	\N	2396	0	1
+2397	35	\N	2397	0	1
+2398	24	\N	2398	0	1
+2399	8	\N	2399	0	1
+2400	35	\N	2400	0	1
+2401	41	\N	2401	0	1
+2402	40	\N	2402	0	1
+2403	19	\N	2403	0	1
+2404	34	\N	2404	0	1
+2405	17	\N	2405	0	1
+2406	16	\N	2406	0	1
+2407	5	\N	2407	0	1
+2408	40	\N	2408	0	1
+2409	39	\N	2409	0	1
+2410	35	\N	2410	0	1
+2411	46	\N	2411	0	1
+2412	50	\N	2412	0	1
+2413	42	\N	2413	0	1
+2414	10	\N	2414	0	1
+2415	47	\N	2415	0	1
+2416	27	\N	2416	0	1
+2417	21	\N	2417	0	1
+2418	37	\N	2418	0	1
+2419	33	\N	2419	0	1
+2420	12	\N	2420	0	1
+2421	43	\N	2421	0	1
+2422	6	\N	2422	0	1
+2423	22	\N	2423	0	1
+2424	50	\N	2424	0	1
+2425	34	\N	2425	0	1
+2426	9	\N	2426	0	1
+2427	1	\N	2427	0	1
+2428	3	\N	2428	0	1
+2429	10	\N	2429	0	1
+2430	25	\N	2430	0	1
+2431	9	\N	2431	0	1
+2432	44	\N	2432	0	1
+2433	9	\N	2433	0	1
+2434	14	\N	2434	0	1
+2435	46	\N	2435	0	1
+2436	26	\N	2436	0	1
+2437	19	\N	2437	0	1
+2438	34	\N	2438	0	1
+2439	28	\N	2439	0	1
+2440	16	\N	2440	0	1
+2441	46	\N	2441	0	1
+2442	35	\N	2442	0	1
+2443	1	\N	2443	0	1
+2444	48	\N	2444	0	1
+2445	29	\N	2445	0	1
+2446	3	\N	2446	0	1
+2447	15	\N	2447	0	1
+2448	16	\N	2448	0	1
+2449	19	\N	2449	0	1
+2450	39	\N	2450	0	1
+2451	38	\N	2451	0	1
+2452	12	\N	2452	0	1
+2453	35	\N	2453	0	1
+2454	25	\N	2454	0	1
+2455	28	\N	2455	0	1
+2456	5	\N	2456	0	1
+2457	17	\N	2457	0	1
+2458	44	\N	2458	0	1
+2459	21	\N	2459	0	1
+2460	23	\N	2460	0	1
+2461	27	\N	2461	0	1
+2462	27	\N	2462	0	1
+2463	36	\N	2463	0	1
+2464	1	\N	2464	0	1
+2465	24	\N	2465	0	1
+2466	41	\N	2466	0	1
+2467	18	\N	2467	0	1
+2468	31	\N	2468	0	1
+2469	15	\N	2469	0	1
+2470	24	\N	2470	0	1
+2471	22	\N	2471	0	1
+2472	30	\N	2472	0	1
+2473	26	\N	2473	0	1
+2474	33	\N	2474	0	1
+2475	25	\N	2475	0	1
+2476	7	\N	2476	0	1
+2477	35	\N	2477	0	1
+2478	1	\N	2478	0	1
+2479	41	\N	2479	0	1
+2480	3	\N	2480	0	1
+2481	36	\N	2481	0	1
+2482	9	\N	2482	0	1
+2483	21	\N	2483	0	1
+2484	36	\N	2484	0	1
+2485	41	\N	2485	0	1
+2486	20	\N	2486	0	1
+2487	46	\N	2487	0	1
+2488	31	\N	2488	0	1
+2489	32	\N	2489	0	1
+2490	16	\N	2490	0	1
+2491	45	\N	2491	0	1
+2492	40	\N	2492	0	1
+2493	14	\N	2493	0	1
+2494	34	\N	2494	0	1
+2495	24	\N	2495	0	1
+2496	18	\N	2496	0	1
+2497	21	\N	2497	0	1
+2498	27	\N	2498	0	1
+2499	36	\N	2499	0	1
+2500	3	\N	2500	0	1
+2501	23	\N	2501	0	1
+2502	2	\N	2502	0	1
+2503	27	\N	2503	0	1
+2504	17	\N	2504	0	1
+2505	23	\N	2505	0	1
+2506	17	\N	2506	0	1
+2507	18	\N	2507	0	1
+2508	26	\N	2508	0	1
+2509	32	\N	2509	0	1
+2510	50	\N	2510	0	1
+2511	31	\N	2511	0	1
+2512	35	\N	2512	0	1
+2513	45	\N	2513	0	1
+2514	19	\N	2514	0	1
+2515	34	\N	2515	0	1
+2516	8	\N	2516	0	1
+2517	2	\N	2517	0	1
+2518	41	\N	2518	0	1
+2519	37	\N	2519	0	1
+2520	47	\N	2520	0	1
+2521	11	\N	2521	0	1
+2522	12	\N	2522	0	1
+2523	9	\N	2523	0	1
+2524	45	\N	2524	0	1
+2525	48	\N	2525	0	1
+2526	16	\N	2526	0	1
+2527	24	\N	2527	0	1
+2528	22	\N	2528	0	1
+2529	35	\N	2529	0	1
+2530	3	\N	2530	0	1
+2531	5	\N	2531	0	1
+2532	33	\N	2532	0	1
+2533	33	\N	2533	0	1
+2534	8	\N	2534	0	1
+2535	12	\N	2535	0	1
+2536	6	\N	2536	0	1
+2537	20	\N	2537	0	1
+2538	17	\N	2538	0	1
+2539	32	\N	2539	0	1
+2540	16	\N	2540	0	1
+2541	43	\N	2541	0	1
+2542	28	\N	2542	0	1
+2543	10	\N	2543	0	1
+2544	18	\N	2544	0	1
+2545	22	\N	2545	0	1
+2546	16	\N	2546	0	1
+2547	41	\N	2547	0	1
+2548	23	\N	2548	0	1
+2549	11	\N	2549	0	1
+2550	8	\N	2550	0	1
 \.
 
 
@@ -10062,6 +13240,16 @@ COPY shipping_shippingmethod (id, name, description) FROM stdin;
 18	DHL	
 19	UPC	
 20	DHL	
+21	UPC	
+22	DHL	
+23	UPC	
+24	DHL	
+25	UPC	
+26	DHL	
+27	UPC	
+28	DHL	
+29	UPC	
+30	DHL	
 \.
 
 
@@ -10091,6 +13279,17 @@ COPY shipping_shippingmethodcountry (id, country_code, price, shipping_method_id
 19		52.52	18
 20		57.38	19
 21		39.23	20
+22		40.80	21
+23		76.80	22
+24		23.35	23
+25		81.60	24
+26		45.13	25
+27		57.10	26
+28		45.61	27
+29		71.87	28
+30		1.42	29
+31		7.15	30
+32	US	36.34	16
 \.
 
 
@@ -10417,6 +13616,107 @@ COPY userprofile_address (id, first_name, last_name, company_name, street_addres
 259	Hannah	Perez		71344 Adam Via		Tammyview	63904-3453	AD			
 260	Kelly	Johnson		89943 Kevin Underpass		Ryanton	11472-4047	UA			
 261	Jennifer	Lowe		18032 Michele Wall Apt. 116		South Robertomouth	16204	IQ			
+262	Jennifer	Duffy		11872 Obrien Manors		Port Christopher	82819-7319	AE			
+263	Joshua	Atkinson		754 Kim Forks Suite 670		Dennisview	87450	KR			
+264	Jeffrey	Gonzales		2073 Lisa Crossing Suite 364		Davidtown	01930	CZ			
+265	Jeff	Howe		67746 Frank Dam Suite 879		West Jeffreyland	50584-4995	ML			
+266	Amanda	White		5024 Morgan Ridge		Bakerfort	60478	QA			
+267	Margaret	Thompson		180 Scott Freeway Suite 405		Port Jameshaven	75730	TO			
+268	Jacqueline	Cox		69148 Hannah Highway Suite 775		Mooremouth	86062-0212	PW			
+269	Jeffrey	Daniels		922 Garcia Crescent		Williamsonborough	71196-3128	SE			
+270	Julian	Thompson		8615 Miller Village Apt. 884		Catherinemouth	96322-1577	NI			
+271	Mary	Franklin		9030 Keith Extensions		Manninghaven	51810	SI			
+272	Paula	Frazier		36107 Smith Knoll Suite 072		East Belinda	87865-6306	TN			
+273	Jeremy	Freeman		3006 Lauren Forest Apt. 772		North Michael	43369-0781	MG			
+274	Kevin	Garcia		384 Brenda Harbor Suite 903		East Michaelborough	56799-8086	HN			
+275	Edward	Meyer		54119 Hayley Valleys		West Tara	08740	ID			
+276	Paige	Lopez		2325 Chad Pass		South Lindseymouth	42940-4334	RO			
+277	Alex	Stewart		4055 Ashley Fort		West Stuartborough	18422	IN			
+278	John	Lucas		09925 Robert Springs Suite 769		Justinstad	93154	GR			
+279	Roberto	Shaw		8629 Rebecca Plaza		Lisamouth	12351	ID			
+280	Daniel	Lopez		1967 Abigail Branch Apt. 985		Michaelton	46575	FJ			
+281	Terri	Tyler		51309 David Views		East Michaelview	48729	CO			
+282	Cameron	Carpenter		8762 Teresa Vista		South Frankland	28544-1667	RS			
+283	Ryan	Carlson		16654 Adam Junctions Apt. 755		East Caroline	47735-3811	CH			
+284	Melissa	Howell		142 Eric Land Apt. 747		Williamsshire	44648	CR			
+285	Katrina	Cannon		24113 Marcus Extension		Johnsonchester	02935	KG			
+286	Elizabeth	Smith		4288 Hall Estates		West Barryborough	51159	MT			
+287	Alexander	Hebert		666 Simmons Fork Apt. 556		Kimberlyhaven	01805	LV			
+288	Douglas	Freeman		00195 Cody Road Apt. 813		Whitneyfort	68196	MA			
+289	Joshua	Warren		8368 Miller Corner		New Sabrinaberg	08973	KM			
+290	Vicki	Bryan		01804 Jensen Walk Apt. 460		West James	00181	UZ			
+291	Timothy	Hanson		072 Hodge Glen Suite 216		West Jesus	46923-6651	MM			
+292	Debra	Sheppard		0818 Timothy Extensions		Browntown	25820	SD			
+293	Teresa	Whitney		197 Jennifer Ridges Suite 264		South Amberton	77458	ES			
+294	Hannah	Lynch		4937 Yoder Trail		Harrischester	34896-8884	CM			
+295	Shane	King		05722 Kyle Rue		Port Erikmouth	67501-2989	PT			
+296	Valerie	Ford		482 Howard Ridges		North Cameron	54829-4056	NE			
+297	Lindsey	Mccarthy		6960 Robert Hill Suite 525		West Melissa	94976	HR			
+298	Eric	Lee		0111 Laura Ville		New Brianview	35461-3662	KI			
+299	Joseph	Garcia		263 Whitney Neck Apt. 313		New Robin	95990	NA			
+300	Mackenzie	Anthony		912 Gomez Square		Elliotthaven	25706	TN			
+301	Daniel	Gibson		137 Rodriguez Squares		Stephanieview	24242	SZ			
+302	Jacob	Stephens		4948 Chung Route Suite 710		West Kaylaview	05556	TZ			
+303	Haley	Jackson		78497 Cobb Stravenue Apt. 919		Stephentown	76223-7417	TR			
+304	Tony	Ferrell		3825 Javier Vista		Amyhaven	35876	IQ			
+305	Joshua	Dean		848 Walker Summit		Lake Jasonland	31522	TZ			
+306	Keith	Golden		275 Greene Way Apt. 940		East Amanda	46562-5424	BT			
+307	Jordan	Stewart		36469 Cohen Meadow		Wardshire	55348-1907	NA			
+308	Crystal	Davidson		4301 Kent Underpass Suite 080		Jayborough	67672-4248	CG			
+309	Michael	Herrera		3556 David Mountains Suite 612		Owensport	46919-7847	BS			
+310	Diana	Phillips		3187 Charles Springs Apt. 674		Richardland	50693-4860	DZ			
+311	William	Hughes		7433 Jillian Cliffs		North Elizabethfurt	80888-9740	SC			
+312	Kevin	Cordova		77157 Michele Village		Hermanmouth	23049	BD			
+313	Hector	Sandoval		11881 Yang Gateway Apt. 749		West Tina	55128-3105	SC			
+314	Emily	Davis		18439 James Light		Joshuafort	09392-4061	TD			
+315	Haley	Hensley		5921 Kyle Lodge Apt. 925		Floreshaven	55968	NR			
+316	William	Ali		29526 James Plain Suite 241		West Melissachester	86406-5105	CV			
+317	Karen	Chapman		53674 Elizabeth Plaza		Tiffanyport	57708	BO			
+318	Erin	Edwards		71505 Johnson Streets		West Melissa	58986	TJ			
+319	Scott	Reed		3718 Mcpherson Parks Apt. 530		Lindafort	69939-5711	IT			
+320	Jeremy	Wolf		5510 Kimberly Mill Suite 079		New Jessica	36141-9010	FI			
+321	Anna	Craig		198 Hull Shoal Suite 655		New Tiffanyberg	81971	MV			
+322	Alexander	Caldwell		75220 Andrew Drives		Michelletown	49602-4777	FR			
+323	Susan	Patterson		963 Smith Row Apt. 890		Michaelfurt	58252-1074	CL			
+324	Jason	Torres		467 Nicholas Green Suite 159		East Roberto	03394	ET			
+325	Cindy	Ross		690 Daniel Estates Apt. 640		West Douglasshire	56370	BF			
+326	Christopher	Barnett		722 Patterson Ferry Apt. 963		Port Lance	49781	CG			
+327	Karen	Lane		67064 Allen Springs		Lake Cody	82176-7830	VA			
+328	Ruben	Conner		1236 Lee Light		Lake Erin	65739-8891	BZ			
+329	David	Thomas		8685 Joseph Fall Apt. 439		Port Linda	05714-6257	CF			
+330	William	Myers		79435 Krueger Coves Suite 298		Sullivanside	21710-8196	GA			
+331	Ashley	Blanchard		9228 Walker Landing Suite 813		Ashleyton	93119-9013	VA			
+332	Kelli	Williams		8439 Bailey Ports Apt. 851		North Christianmouth	39331	ZM			
+333	Kristy	Gonzalez		507 Richardson Throughway		Stefanietown	57422	TZ			
+334	Daniel	Nixon		5073 Pittman Fields		East Jenniferport	15129	KN			
+335	Kevin	Stone		59780 Robert Park		Watsonburgh	28250-1617	AD			
+336	Melinda	Jones		6025 Mitchell Mission		Isabellashire	34106	VU			
+337	Phyllis	Shannon		1762 Davis Branch Apt. 688		Jennifermouth	92606	IR			
+338	Jose	Davis		64925 Jackson Lodge Suite 932		New Josephville	90176-3236	FM			
+339	Lisa	Reyes		454 Dana Union Apt. 483		East Joseph	93916	DJ			
+340	Taylor	Rivas		004 David Plains		Thompsonhaven	83291	TT			
+341	Warren	Parsons		30302 Brent Shores		Johnsonborough	48206-0979	CZ			
+342	Courtney	Yang		2386 Evans Mills Apt. 799		Andersonstad	03069	BT			
+343	Michelle	Robinson		102 Christopher Isle Suite 078		Davidfort	54892-7370	DM			
+344	Joseph	Sanchez		30349 Tracy Tunnel Suite 645		New Aaronshire	56041	TL			
+345	Jocelyn	Chandler		2376 Vega Lodge Apt. 576		Jonathanbury	88850	MY			
+346	Jackson	Newman		879 Timothy Mountains		Port Veronicaberg	70022-9806	CV			
+347	Amanda	Mason		2436 Smith Squares		Nixonview	32475	BY			
+348	Nicholas	Williams		84311 Berry River		Cameronmouth	44269	MZ			
+349	Erica	Smith		867 Sean Ford Apt. 006		Bensonhaven	31236	KE			
+350	Christopher	Moss		39382 Bird Falls Suite 570		East Emilyton	91095-8014	TH			
+351	Jason	Mendez		6334 Sullivan Ranch Suite 067		North Donna	48495-9562	BI			
+352	Rachel	Crawford		939 Amanda Green Apt. 399		Gonzalezside	65537	SA			
+353	William	Humphrey		1752 Brian Plains		East Marialand	44577-1777	GH			
+354	Lori	Boyer		7898 Melissa Forest		Hughesville	79677	IS			
+355	Holly	Lowery		32979 Gerald Ferry		North Jeffreyville	00430-4547	SA			
+356	Taylor	Grant		562 Teresa Wall		Lake Adam	02502-0846	DE			
+357	Amy	Knight		116 Kenneth Pass Apt. 115		New Kenneth	26189	PT			
+358	Luis	Morgan		90326 Ellen Crossing Suite 447		New Michael	95273	LC			
+359	Jennifer	Adams		2628 Jennifer Valleys		Crystalside	73025-9313	MX			
+360	Anna	Smith		51118 Russo Mall Apt. 481		East John	15599-8742	OM			
+361	Tricia	Young		143 Matthews Gardens		Phyllisberg	77500-8358	KZ			
+362	Elizabeth	Malone		644 Morgan Walk		New Tamara	83635	AM			
 \.
 
 
@@ -10520,6 +13820,7 @@ COPY userprofile_user (id, is_superuser, email, is_staff, is_active, password, d
 92	f	eric.cole@example.com	f	t	pbkdf2_sha256$36000$owfqaEH6Eixt$3KMREGes+Qsq9RIlpE5S9TCbKh8i23AzS7LPfWSmYFs=	2017-11-28 00:10:06.954062+00	\N	129	129
 93	f	emily.adams@example.com	f	t	pbkdf2_sha256$36000$o0s0f3MQyVyN$y3Mah62W0kP3h8eE4PDadmPT0QwiY8xoHvc/GPU7L4Y=	2017-11-28 00:10:07.026428+00	\N	130	130
 94	f	melvin.roberts@example.com	f	t	pbkdf2_sha256$36000$8VKmgj35GyyV$8ro9rkQq/ntajID8JgigzTB/OKJ0C6zEacxemprk5hY=	2017-11-28 00:10:07.106233+00	\N	131	131
+235	f	haley.jackson@example.com	f	t	pbkdf2_sha256$36000$SdDTKjtu6VtI$1eO0VnMnfVSDnaOIIkTL/rGZVFMMJ8yQc5GJC11Z5Tk=	2018-01-06 17:34:19.883202+00	\N	303	303
 95	f	william.neal@example.com	f	t	pbkdf2_sha256$36000$IYEGzR0NAJEM$OEXeJK61bXbhK7KFfnSctNb7YNodQXuATja1clfDhZc=	2017-11-28 00:10:07.179107+00	\N	132	132
 135	f	billy.moore@example.com	f	t	pbkdf2_sha256$36000$35ru0Tt2rPmy$U6nyi89mwbIN0EDiXglcF8K8KroQipAk58TjWviC5AY=	2017-12-03 17:37:31.892609+00	\N	192	192
 96	f	kathryn.navarro@example.com	f	t	pbkdf2_sha256$36000$ycrhR0WRM7q3$FxpZLqVkoU8FHM43a8mcHngUsSom0lj4cXYb6puK5Ks=	2017-11-28 00:10:07.251321+00	\N	133	133
@@ -10615,9 +13916,108 @@ COPY userprofile_user (id, is_superuser, email, is_staff, is_active, password, d
 189	f	crystal.clark@example.com	f	t	pbkdf2_sha256$36000$Uee9RMB9BpYk$2akTtYAgNStKat2fKGvkKeN6Yn4yrOX1jZOR0fk3Qj8=	2017-12-13 16:36:59.635032+00	\N	256	256
 190	f	casey.estrada@example.com	f	t	pbkdf2_sha256$36000$BdW35wBCZwZa$ZvPnSsNPRmxn/M5V8cbXeWy8UuaC3m5F9/ISoMpdlzY=	2017-12-13 16:36:59.760302+00	\N	257	257
 191	f	katie.nguyen@example.com	f	t	pbkdf2_sha256$36000$C58GcWge9RGj$d1RDqHlZSwF1Wxgb3E0dtf0Tb7T5DtausmsXnT67vW8=	2017-12-13 16:36:59.887407+00	\N	258	258
+236	f	tony.ferrell@example.com	f	t	pbkdf2_sha256$36000$RlKucUDkTXxb$WKIslZp3z2zszBGC4dQPMForoB9BSL4zish2csr5LWs=	2018-01-06 17:34:19.967373+00	\N	304	304
 192	f	hannah.perez@example.com	f	t	pbkdf2_sha256$36000$PPv0FnlFbJfE$NJ2k5ewGWWn1XYevq0n4reF+p9dHYiq/RpGKM+8fJjA=	2017-12-13 16:36:59.977914+00	\N	259	259
 193	f	kelly.johnson@example.com	f	t	pbkdf2_sha256$36000$wPDerRrlKlOj$xvs5LnhM1vB8uemvRhjzZHRikap815rjr8nXDAIG3XY=	2017-12-13 16:37:00.165293+00	\N	260	260
 194	t	austin_agbo@yahoo.com	t	t	pbkdf2_sha256$36000$CD5l8ZDrhnPJ$k3MI9h7f6HGAlP5vRICSIkcrJHZOkJsf0vX8mH4HWHQ=	2018-01-05 18:41:25.143322+00	\N	\N	\N
+237	f	joshua.dean@example.com	f	t	pbkdf2_sha256$36000$B1PMK7hKIMVZ$ghpNE2rN+HnvPTyjkUTISU0PyoDJGIIF5pE0/khWweo=	2018-01-06 17:34:20.04504+00	\N	305	305
+195	f	jennifer.duffy@example.com	f	t	pbkdf2_sha256$36000$pLH35qjs5vEt$cbN8QxYjqXD+7fTDw9jaxsK7+olgktg6kFTlqMC2KNM=	2018-01-05 18:43:29.635202+00	\N	262	262
+196	f	joshua.atkinson@example.com	f	t	pbkdf2_sha256$36000$hoMWTDTtecLi$o89YzwmjTBm/BjZ8+LZFLGVi6hlIM0Uz4EoOC2IQhLo=	2018-01-05 18:43:29.703419+00	\N	263	263
+238	f	keith.golden@example.com	f	t	pbkdf2_sha256$36000$iNgY5rq135YX$4lYeMU5w993RvN3fSTC97XmrLOYIADGfa5PCrjv95NU=	2018-01-06 17:34:20.126692+00	\N	306	306
+197	f	jeffrey.gonzales@example.com	f	t	pbkdf2_sha256$36000$CtmLiWdhskoR$cjnOrTztTThif/eYGK9N+pqgfsoPha3/+Kia+k+ZTik=	2018-01-05 18:43:29.770969+00	\N	264	264
+198	f	jeff.howe@example.com	f	t	pbkdf2_sha256$36000$HDYC7UBiZfTs$b+pkf0rifBmNImkBYBnFOZHgAV+OXg853MbLEOMmWuk=	2018-01-05 18:43:29.843949+00	\N	265	265
+199	f	amanda.white@example.com	f	t	pbkdf2_sha256$36000$yDgkzJzhxI6M$+oL+0QPzvZQ4l8GWR0RXkSweSWZumlPq8/Zcjs/lzxc=	2018-01-05 18:43:29.907451+00	\N	266	266
+200	f	margaret.thompson@example.com	f	t	pbkdf2_sha256$36000$zYZXcuOmpOiR$7GOIFk0dmfextYsaVUxZzBrctyNrf/7JkuGbaSwSv+8=	2018-01-05 18:43:29.97691+00	\N	267	267
+201	f	jacqueline.cox@example.com	f	t	pbkdf2_sha256$36000$nXkFPTEH5knD$DR3iaoZo1oOK6JM5KB2KLIEZRQdMCqTg3hCYK2B1yP0=	2018-01-05 18:43:30.065631+00	\N	268	268
+202	f	jeffrey.daniels@example.com	f	t	pbkdf2_sha256$36000$7RrQN4zr8P2p$o7BGazGXRPEYGx6noNLUwY9viBdOd+IGkWAdVV+YUsY=	2018-01-05 18:43:30.128723+00	\N	269	269
+203	f	julian.thompson@example.com	f	t	pbkdf2_sha256$36000$XPrOCDWXUFja$APtBXZMcY31bjU9LW/2l/UyxveuG+GNxiLZe39k0n6k=	2018-01-05 18:43:30.206626+00	\N	270	270
+204	f	mary.franklin@example.com	f	t	pbkdf2_sha256$36000$tsR96BYGnQv2$zhePGmvw1iFVVatAmyG33iWCa9y4R3PhF/xx28VIMaQ=	2018-01-05 18:43:30.278531+00	\N	271	271
+205	f	paula.frazier@example.com	f	t	pbkdf2_sha256$36000$dwUIGeGTd0gS$kilC6DFU7jCbRZB1S+4oFlm9PYfaICt6hwMW1REXJiY=	2018-01-05 18:43:30.342572+00	\N	272	272
+206	f	jeremy.freeman@example.com	f	t	pbkdf2_sha256$36000$do93LneiCy7u$8Pn12uLFNzheDCQuvvuEuODUbyB+7bKIJgTdiuBvnQI=	2018-01-05 18:43:30.407287+00	\N	273	273
+207	f	kevin.garcia@example.com	f	t	pbkdf2_sha256$36000$3Rumd1KjSLWu$ejoORcB57WcJ9md+KqHP1rg6bZmLBLqEmwp+SwqF2dw=	2018-01-05 18:43:30.472982+00	\N	274	274
+208	f	edward.meyer@example.com	f	t	pbkdf2_sha256$36000$9Nd8nzYhuvMo$EPJAW+xGzqNzg7raOOwINnbvsLdf8RRY8ssEVGCjKFw=	2018-01-05 18:43:30.540871+00	\N	275	275
+209	f	paige.lopez@example.com	f	t	pbkdf2_sha256$36000$gtqgJzeKQ0g7$11t0OJ+9eOVB4+xzPz5q3PYcXLgLnIjJvH5hjmlDKHw=	2018-01-05 18:43:30.602844+00	\N	276	276
+210	f	alex.stewart@example.com	f	t	pbkdf2_sha256$36000$uY2U3cPFaIyk$5vTZnT7un1NNuI2CFRx1mlVsWAaaO0H8Fv32asEHOm8=	2018-01-05 18:43:30.667798+00	\N	277	277
+211	f	john.lucas@example.com	f	t	pbkdf2_sha256$36000$LcJeeOZJATeR$y6IAKmaEDoQtKhL6mrYGYgG2eRYuq5Ty5yNtt/AJFis=	2018-01-05 18:43:30.729448+00	\N	278	278
+212	f	roberto.shaw@example.com	f	t	pbkdf2_sha256$36000$NyqJ1Vpuq85j$//8SFYM0rg9+fxmkaG7apATusrs03PBvGqdcKonAM3I=	2018-01-05 18:43:30.794903+00	\N	279	279
+213	f	daniel.lopez@example.com	f	t	pbkdf2_sha256$36000$x2J0U7OUhLIe$navLPnVz49M2Cs6tnd8aqa3xKj6zM3KMiNWdpMS8VV0=	2018-01-05 18:43:30.858706+00	\N	280	280
+214	f	terri.tyler@example.com	f	t	pbkdf2_sha256$36000$8iDt8EQDrMj6$7BGU7dO5axPvmskzeuPZWE06HeQ29uBtdhwFU0JsJTo=	2018-01-05 18:43:30.926871+00	\N	281	281
+215	f	cameron.carpenter@example.com	f	t	pbkdf2_sha256$36000$P84yxTFrHuuq$PvmYwfDHOBjlDv6ShIr6idZKnxkQWpsG2Q+oqFGyCBw=	2018-01-06 17:25:48.322499+00	\N	282	282
+216	f	ryan.carlson@example.com	f	t	pbkdf2_sha256$36000$1RKfi5e1MvZy$ekF+OJgoXsEGpHpSeV6RtwGaCT761MrPgiHbjK4madM=	2018-01-06 17:25:48.426636+00	\N	283	283
+217	f	melissa.howell@example.com	f	t	pbkdf2_sha256$36000$PwrqpWH67pJy$iOi3G80Fljj9b+fOWrV4OVnue+fx6xxIpQk8bUlkngs=	2018-01-06 17:25:48.512477+00	\N	284	284
+218	f	katrina.cannon@example.com	f	t	pbkdf2_sha256$36000$6jLoeBAKBs9O$zZBG6cQxmcUYObZpimpEMdGeBMbZZUuzHaQgtzM5JNw=	2018-01-06 17:25:48.595303+00	\N	285	285
+219	f	elizabeth.smith@example.com	f	t	pbkdf2_sha256$36000$MUDBtUPksKKO$Ih4x2e2Ew++3JknOXRN0m/t3qnZqo71clTnWGSxPyyA=	2018-01-06 17:25:48.681596+00	\N	286	286
+220	f	alexander.hebert@example.com	f	t	pbkdf2_sha256$36000$7JvFcUdXJNqs$Itv8R2SXNOk//aj/jRZ9sELxcE/CD47rP/SMQMLydWo=	2018-01-06 17:25:48.759574+00	\N	287	287
+221	f	douglas.freeman@example.com	f	t	pbkdf2_sha256$36000$P6TrVVUh13sa$0NVkZUjet2uL88Oc1F2flqQ1TRB6B0dn7qOOqjA4gG4=	2018-01-06 17:25:48.841607+00	\N	288	288
+222	f	joshua.warren@example.com	f	t	pbkdf2_sha256$36000$eOAIxsXCKIMD$gwU0JbGkybAMnKwQCnJDhhM6I9NYuRHjOuMHfa2cHyA=	2018-01-06 17:25:48.927004+00	\N	289	289
+223	f	vicki.bryan@example.com	f	t	pbkdf2_sha256$36000$l7xWsU7sKYL4$hWjeR8bq3f5be+RsuVdkdVNLFtQuu4mR6kclRQ7/HYU=	2018-01-06 17:25:49.014058+00	\N	290	290
+224	f	timothy.hanson@example.com	f	t	pbkdf2_sha256$36000$bsrdLWNLfq0U$E6OIvklaLLrus1Mx4fkR8Od35eSfKfwXm7CT/vbPSxM=	2018-01-06 17:25:49.098701+00	\N	291	291
+225	f	debra.sheppard@example.com	f	t	pbkdf2_sha256$36000$k0ch5tjnFwbD$zmSzz+HiZisMczecD7jeJ01NtRydbwA9x6MjNtsyxcA=	2018-01-06 17:25:49.180925+00	\N	292	292
+226	f	teresa.whitney@example.com	f	t	pbkdf2_sha256$36000$x2S0phYzSejd$jF5mlghppc/CVEpi1S6qhyEjqu4hlr4sTPAYP+ooJLU=	2018-01-06 17:25:49.286663+00	\N	293	293
+227	f	hannah.lynch@example.com	f	t	pbkdf2_sha256$36000$GQTmm1AueFWV$n/0XJI4iRJ7vzMNsK3OYjff64G8ou+4PLQy0+wMmklg=	2018-01-06 17:25:49.365879+00	\N	294	294
+228	f	shane.king@example.com	f	t	pbkdf2_sha256$36000$YHefvU9Ftte3$qecrMBXAVULNpm/TEiXBH9T86/cd6g0GOiD/b3bU++4=	2018-01-06 17:25:49.443738+00	\N	295	295
+229	f	valerie.ford@example.com	f	t	pbkdf2_sha256$36000$wITH4LtrrgpM$1NlAfVWd7Gn7DlQx8/lQ+SAjwI8KxZg0UsxObhMlAFo=	2018-01-06 17:25:49.523259+00	\N	296	296
+230	f	lindsey.mccarthy@example.com	f	t	pbkdf2_sha256$36000$KNq5XHSj4Nrs$dqAn4K0BuOsSyBJVMG+On4s3DMO61TxxB3J1WVHLDXM=	2018-01-06 17:25:49.601581+00	\N	297	297
+231	f	eric.lee@example.com	f	t	pbkdf2_sha256$36000$Tml8QiHlT1uZ$gwzj7thp11eqQLXmygJ8XvWB2bNo08d3OZkSoLAirqU=	2018-01-06 17:25:49.680609+00	\N	298	298
+232	f	joseph.garcia@example.com	f	t	pbkdf2_sha256$36000$1fFswGUXtbjz$/wMOeuix5KV2iimcgA3a4m00nTrZZFEjlgZWdc6s7L8=	2018-01-06 17:25:49.763867+00	\N	299	299
+233	f	mackenzie.anthony@example.com	f	t	pbkdf2_sha256$36000$6dfxZb9iJ5sm$OfFFtvFyHHzXTYdErMCd3Ilck/HD8sXUEoVawkNiKi8=	2018-01-06 17:25:49.847679+00	\N	300	300
+234	f	daniel.gibson@example.com	f	t	pbkdf2_sha256$36000$kfuSeLbucJ4N$nFpLqQ4rNxCEbYL5BsrlGf5GC8nKYQh/bdp53S+FbKg=	2018-01-06 17:25:49.930619+00	\N	301	301
+239	f	jordan.stewart@example.com	f	t	pbkdf2_sha256$36000$7taWzTzDP87P$m+Fia5xuDHu1NXFtWZjTzfBLwjGikHY3ew8h8KNCgmo=	2018-01-06 17:34:20.216364+00	\N	307	307
+240	f	crystal.davidson@example.com	f	t	pbkdf2_sha256$36000$vjSWf4VA0b0K$FoCBY9H7grhbuqUa4pWg/MD1nUe7YFvhPQeYmO+faI4=	2018-01-06 17:34:20.316229+00	\N	308	308
+241	f	michael.herrera@example.com	f	t	pbkdf2_sha256$36000$WhKXkrks0yik$rWQ5pcNfBw8ox2ZjAQp4yKPOOT4LJK4AILQXdLy7zMg=	2018-01-06 17:34:20.401249+00	\N	309	309
+242	f	diana.phillips@example.com	f	t	pbkdf2_sha256$36000$5w99LO0VVROu$ExHZPZW2WDlvLgWOlgOugMP7JwSylJUbAicT497Dzrs=	2018-01-06 17:34:20.482703+00	\N	310	310
+243	f	william.hughes@example.com	f	t	pbkdf2_sha256$36000$mi0P75cGD3qO$S+8R4EQY0m6OfI4tot4eNbAlWCHf1dyadFtCrwFGb9w=	2018-01-06 17:34:20.566549+00	\N	311	311
+244	f	kevin.cordova@example.com	f	t	pbkdf2_sha256$36000$vB1gW3OwkCUZ$mcuDNqy6J7irMcWSBxshyfq5qLwRYSLny4oOQ6PLbAo=	2018-01-06 17:34:20.650287+00	\N	312	312
+245	f	hector.sandoval@example.com	f	t	pbkdf2_sha256$36000$nmvvwdcdVfjR$qUvSg3rvN31b645id85rDiPpQ3XS7u3lU1nrxBwtSGs=	2018-01-06 17:34:20.735838+00	\N	313	313
+246	f	emily.davis@example.com	f	t	pbkdf2_sha256$36000$4S90UJWgTmj3$UEgXGLdV56PyLHVjtud0ElwrK/nRWDNngMmEv6tzefw=	2018-01-06 17:34:20.815658+00	\N	314	314
+247	f	haley.hensley@example.com	f	t	pbkdf2_sha256$36000$sxYhNN1CsQKA$xofEpVm2xaIdMT8jfbqAHbKVnu0YSzgYSyHNKHVAfNM=	2018-01-06 17:34:20.892174+00	\N	315	315
+248	f	william.ali@example.com	f	t	pbkdf2_sha256$36000$0IARl5AbsJRo$xjUkUzUS08dG5VFxOH+D8evcMqikrNk7gzsUQDa1N1k=	2018-01-06 17:34:20.970826+00	\N	316	316
+249	f	karen.chapman@example.com	f	t	pbkdf2_sha256$36000$0BPTQumHBUmI$ncEmwDjLUygG4fohyPqsOL8DUf3d12tgO+kRnqQI9js=	2018-01-06 17:34:21.048263+00	\N	317	317
+250	f	erin.edwards@example.com	f	t	pbkdf2_sha256$36000$IHGi9Iiwfm9n$5AYBpz0En/XvNIHOR2kX92CSga6TJYeSqyyAznfgOX8=	2018-01-06 17:34:21.127962+00	\N	318	318
+251	f	scott.reed@example.com	f	t	pbkdf2_sha256$36000$zCoiR37YGEnA$0HUr1w9eIKc8vSJnXvddhol8f9lp5I8VIsHobfp3500=	2018-01-06 17:34:21.217692+00	\N	319	319
+252	f	jeremy.wolf@example.com	f	t	pbkdf2_sha256$36000$jhptOWTYkznY$kQKR6anlpnZh13z5oOR75LkiwD8SIuL2hUFNkeYWHYE=	2018-01-06 17:34:21.337843+00	\N	320	320
+253	f	anna.craig@example.com	f	t	pbkdf2_sha256$36000$cUGsu1NCIZgi$CnzGZ+lwTyWtiWtqP7xlQ5F6gxuchBkN24fS8V/Y7Jc=	2018-01-06 17:34:21.421494+00	\N	321	321
+254	f	alexander.caldwell@example.com	f	t	pbkdf2_sha256$36000$4m1rFYNMmYyi$K9olCwTA3nVi5khPJi/yESPSwT08IP8NcIX45F2X3kI=	2018-01-06 17:34:21.506976+00	\N	322	322
+255	f	susan.patterson@example.com	f	t	pbkdf2_sha256$36000$33KlzjaxD04g$THevKsHZ6Wba+dCz/N0eKMpeitr54lA7tu2wceEgi1A=	2018-01-06 17:37:22.657891+00	\N	323	323
+256	f	jason.torres@example.com	f	t	pbkdf2_sha256$36000$g9Olu5MWJqbN$XKaYB2yntJfXU7ATaz2NJ23YrmsN+BrfOO05UfwG0tY=	2018-01-06 17:37:22.740645+00	\N	324	324
+257	f	cindy.ross@example.com	f	t	pbkdf2_sha256$36000$vk1XaIlrMQ6h$+jWkYrIocpPbhaSVdsBvHO2eYHAwPBVelzAesUY2N2w=	2018-01-06 17:37:22.826608+00	\N	325	325
+258	f	christopher.barnett@example.com	f	t	pbkdf2_sha256$36000$sAJKEN4LwT91$W7VwfTlwHxxNHA9qRD+fNK43LkilAAJiUDKqovtnkOc=	2018-01-06 17:37:22.912401+00	\N	326	326
+259	f	karen.lane@example.com	f	t	pbkdf2_sha256$36000$90pSIH9SP4yO$BFyCmMzOx/4tP3CVy9ZWtq4zVeBySk2THcY/WiRvZuE=	2018-01-06 17:37:22.99345+00	\N	327	327
+260	f	ruben.conner@example.com	f	t	pbkdf2_sha256$36000$ef6LgV8y9GaG$dbn39MzhQ6HqaIp7yEUi33W3NwTSbqJ/lp03M+nH+JY=	2018-01-06 17:37:23.072405+00	\N	328	328
+261	f	david.thomas@example.com	f	t	pbkdf2_sha256$36000$UmKJ3n2dfdP8$jisuIyEghJBvR6SY74iOhji4Ns6ROmb9v7eE+6z7QoQ=	2018-01-06 17:37:23.151732+00	\N	329	329
+262	f	william.myers@example.com	f	t	pbkdf2_sha256$36000$icGvXsEMubRq$oW2IHmAr44GZYc60gR41pnoh1aV4Z6JBsH6GJeQd++w=	2018-01-06 17:37:23.239369+00	\N	330	330
+263	f	ashley.blanchard@example.com	f	t	pbkdf2_sha256$36000$c51Gt8BICoee$frNJgLM3CHbje3v7z7zJRWq8eaeduNYcB9wklRQOB4g=	2018-01-06 17:37:23.327109+00	\N	331	331
+264	f	kelli.williams@example.com	f	t	pbkdf2_sha256$36000$RdOmMTHtlpaC$0XwxlJzmB8mSqcGvzpiG7RDBaw1kMwRjgOQ6quARXhc=	2018-01-06 17:37:23.412258+00	\N	332	332
+265	f	kristy.gonzalez@example.com	f	t	pbkdf2_sha256$36000$PlF5JGxX3zvW$cvTUxoEjRaBGsolCRS/Z5L+0yN/xPdWaxpMOyqZeRsY=	2018-01-06 17:37:23.495118+00	\N	333	333
+266	f	daniel.nixon@example.com	f	t	pbkdf2_sha256$36000$5zhnHEXmC30F$l8wabDeOlH+WZihs3N5jm0MIVTXCcgQG/yKSKM6aKDs=	2018-01-06 17:37:23.573902+00	\N	334	334
+267	f	kevin.stone@example.com	f	t	pbkdf2_sha256$36000$v7xNLkxlCMYB$8AOlapPiSZ5syPuCr0GG81Lp6QHzmi7dbcG/vcAmYSo=	2018-01-06 17:37:23.652023+00	\N	335	335
+268	f	melinda.jones@example.com	f	t	pbkdf2_sha256$36000$icxIghFu0vlA$y1qM1GS9f0MJXze+1sLJir0O2ujmoTvbSYamiyli/Vw=	2018-01-06 17:37:23.729422+00	\N	336	336
+269	f	phyllis.shannon@example.com	f	t	pbkdf2_sha256$36000$xIpx1NU1h1I2$8ses0AJ00r7mslTNREv5zFy6IK9hOFrSbu5BjarXBCg=	2018-01-06 17:37:23.807572+00	\N	337	337
+270	f	jose.davis@example.com	f	t	pbkdf2_sha256$36000$jjj11dtaSpt7$7b+wMAZ5RqVzep5+NxlqvCo1DfSk42oBr6Mvo3byi3E=	2018-01-06 17:37:23.891231+00	\N	338	338
+271	f	lisa.reyes@example.com	f	t	pbkdf2_sha256$36000$0vqXvNetk29v$0JrULdF70e3KCw48k62GttXtBeVZWtUkqI53DacyXqc=	2018-01-06 17:37:23.977724+00	\N	339	339
+272	f	taylor.rivas@example.com	f	t	pbkdf2_sha256$36000$1dNbvJlBiiR9$IkSXBWczi1vNwsANrqmHS/m4H1FeyFE2R6mIk3ou0N0=	2018-01-06 17:37:24.057743+00	\N	340	340
+273	f	warren.parsons@example.com	f	t	pbkdf2_sha256$36000$BsZYb13SX0o6$Vu3WKxUNCJQdJuhnlM0i31u7SGgezEQv1wBn3kc1++A=	2018-01-06 17:37:24.142817+00	\N	341	341
+274	f	courtney.yang@example.com	f	t	pbkdf2_sha256$36000$Ng8HwOxSQ2BS$S0CMY5cvsAJnqTSdnE+KdQLQgMwemnty89e5muAcObk=	2018-01-06 17:37:24.241904+00	\N	342	342
+275	f	michelle.robinson@example.com	f	t	pbkdf2_sha256$36000$0UdYiLJ2lKj6$EI95X3QJZcyCuHQHcDRxBvbFgJu0cpZmXQBtoN43DPk=	2018-01-06 17:55:26.265458+00	\N	343	343
+276	f	joseph.sanchez@example.com	f	t	pbkdf2_sha256$36000$w1P3XYJm5WsL$DLrd5/fxWKqh1XyXUA86JMr1KvsKe1yJZPytUDTEL6A=	2018-01-06 17:55:26.343938+00	\N	344	344
+277	f	jocelyn.chandler@example.com	f	t	pbkdf2_sha256$36000$w4rbgw3DvEL8$vVHo3AmIxsjyutEhgUKoBWRlH+Rcqn+bXFxL7CzmLU4=	2018-01-06 17:55:26.3896+00	\N	345	345
+278	f	jackson.newman@example.com	f	t	pbkdf2_sha256$36000$tdmkTV20yCuH$PyYjFFXRzaXUvvphsUOTYoqZBz89LdhtcK7FW1KT2fY=	2018-01-06 17:55:26.454615+00	\N	346	346
+279	f	amanda.mason@example.com	f	t	pbkdf2_sha256$36000$a0JQ5eJujPix$DLGqIyuKkuP8ZAtrNXJBZ6tKeNkTu1i7iLZvkWfXh3o=	2018-01-06 17:55:26.514354+00	\N	347	347
+280	f	nicholas.williams@example.com	f	t	pbkdf2_sha256$36000$vMjhSiWAIhXq$Qy9Kl+rQanBTRIHl7/gFkZI0JfO82doMFYpmukypIl0=	2018-01-06 17:55:26.567934+00	\N	348	348
+281	f	erica.smith@example.com	f	t	pbkdf2_sha256$36000$tWs4yVZsNcSn$46blWXZg4y95OyEyAx31VWUceUM7yHxbXIke0QHpiUc=	2018-01-06 17:55:26.618279+00	\N	349	349
+282	f	christopher.moss@example.com	f	t	pbkdf2_sha256$36000$DedD6GLkUhK5$GMJsTVbvkwmx4J/IawO1+9AxMVio89ZaVHjMvc5VOpg=	2018-01-06 17:55:26.668011+00	\N	350	350
+283	f	jason.mendez@example.com	f	t	pbkdf2_sha256$36000$7Arzi7QSuwwo$HAuqyhNAaCf7kHnXjj/dX2GnsZce0YBSy+QvpRNJiqc=	2018-01-06 17:55:26.722192+00	\N	351	351
+284	f	rachel.crawford@example.com	f	t	pbkdf2_sha256$36000$ZWa0z038xVW2$NLtqvxyDR7FmpM+OJDxlsIQRcJ+JDQbs7gGiYBG0lWc=	2018-01-06 17:55:26.775219+00	\N	352	352
+285	f	william.humphrey@example.com	f	t	pbkdf2_sha256$36000$WN9GTfh6ou6e$JSVjReQms2WUBJHa07KiPFSenrUyrXqpuM0Nvi2JKZ4=	2018-01-06 17:55:26.833425+00	\N	353	353
+286	f	lori.boyer@example.com	f	t	pbkdf2_sha256$36000$4V3I3Qx3eM13$DfYVesEwzBHzIehNmHyUjdNCHyLXjmPT0krG5oRcc78=	2018-01-06 17:55:26.889095+00	\N	354	354
+287	f	holly.lowery@example.com	f	t	pbkdf2_sha256$36000$xlhYvoe18YJN$PsmNuouVsGzYUwbdh/Z4QKmKJATnL4Vqfac6dJDRZAE=	2018-01-06 17:55:26.940387+00	\N	355	355
+288	f	taylor.grant@example.com	f	t	pbkdf2_sha256$36000$Kyv7a9mDukCo$SKPE1juoLHBhzYv6S0OkcqMc1nZsuvJYh6yPp1gMeMA=	2018-01-06 17:55:27.002555+00	\N	356	356
+289	f	amy.knight@example.com	f	t	pbkdf2_sha256$36000$a7XwQ1hbKjL4$2eu/hg+ELVhS01fhpTk1H1fJwL6HGsi+PY1+//PP7Rw=	2018-01-06 17:55:27.052367+00	\N	357	357
+290	f	luis.morgan@example.com	f	t	pbkdf2_sha256$36000$nYz4xyaUfWPS$HbAqfmd0RhSn8JhVCaIX8kktgY65Ucj+AdQBTOTasIY=	2018-01-06 17:55:27.104882+00	\N	358	358
+291	f	jennifer.adams@example.com	f	t	pbkdf2_sha256$36000$Tt6IPoOLpGSh$DgiYEbeGh0dJeowGZgKGrRooTD6yFxYyl+XThCnJtfk=	2018-01-06 17:55:27.155919+00	\N	359	359
+292	f	anna.smith@example.com	f	t	pbkdf2_sha256$36000$QUbXHfbg9X54$jl5kdvnuRej9xQcwGR2PY70po6btmcAy5Yo44epyQY0=	2018-01-06 17:55:27.234464+00	\N	360	360
+293	f	tricia.young@example.com	f	t	pbkdf2_sha256$36000$U4XsL0NuAq8D$JGRoNXo8X2HrTJXWb4OC0eiGcG61wWRu4sdROu6L+kk=	2018-01-06 17:55:27.31138+00	\N	361	361
+294	f	elizabeth.malone@example.com	f	t	pbkdf2_sha256$36000$ZMy0tOxJK3qE$r3VMEohRGOYnIGr47drdnHWNrTcFn0xGNJMFdryVisY=	2018-01-06 17:55:27.386766+00	\N	362	362
 \.
 
 
@@ -10818,6 +14218,106 @@ COPY userprofile_user_addresses (id, user_id, address_id) FROM stdin;
 190	191	258
 191	192	259
 192	193	260
+193	195	262
+194	196	263
+195	197	264
+196	198	265
+197	199	266
+198	200	267
+199	201	268
+200	202	269
+201	203	270
+202	204	271
+203	205	272
+204	206	273
+205	207	274
+206	208	275
+207	209	276
+208	210	277
+209	211	278
+210	212	279
+211	213	280
+212	214	281
+213	215	282
+214	216	283
+215	217	284
+216	218	285
+217	219	286
+218	220	287
+219	221	288
+220	222	289
+221	223	290
+222	224	291
+223	225	292
+224	226	293
+225	227	294
+226	228	295
+227	229	296
+228	230	297
+229	231	298
+230	232	299
+231	233	300
+232	234	301
+233	235	303
+234	236	304
+235	237	305
+236	238	306
+237	239	307
+238	240	308
+239	241	309
+240	242	310
+241	243	311
+242	244	312
+243	245	313
+244	246	314
+245	247	315
+246	248	316
+247	249	317
+248	250	318
+249	251	319
+250	252	320
+251	253	321
+252	254	322
+253	255	323
+254	256	324
+255	257	325
+256	258	326
+257	259	327
+258	260	328
+259	261	329
+260	262	330
+261	263	331
+262	264	332
+263	265	333
+264	266	334
+265	267	335
+266	268	336
+267	269	337
+268	270	338
+269	271	339
+270	272	340
+271	273	341
+272	274	342
+273	275	343
+274	276	344
+275	277	345
+276	278	346
+277	279	347
+278	280	348
+279	281	349
+280	282	350
+281	283	351
+282	284	352
+283	285	353
+284	286	354
+285	287	355
+286	288	356
+287	289	357
+288	290	358
+289	291	359
+290	292	360
+291	293	361
+292	294	362
 \.
 
 
@@ -10876,14 +14376,14 @@ SELECT pg_catalog.setval('discount_sale_categories_id_seq', 1, false);
 -- Name: discount_sale_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('discount_sale_id_seq', 50, true);
+SELECT pg_catalog.setval('discount_sale_id_seq', 75, true);
 
 
 --
 -- Name: discount_sale_products_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('discount_sale_products_id_seq', 200, true);
+SELECT pg_catalog.setval('discount_sale_products_id_seq', 300, true);
 
 
 --
@@ -10939,14 +14439,14 @@ SELECT pg_catalog.setval('impersonate_impersonationlog_id_seq', 1, false);
 -- Name: order_deliverygroup_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('order_deliverygroup_id_seq', 142, true);
+SELECT pg_catalog.setval('order_deliverygroup_id_seq', 147, true);
 
 
 --
 -- Name: order_order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('order_order_id_seq', 142, true);
+SELECT pg_catalog.setval('order_order_id_seq', 147, true);
 
 
 --
@@ -10995,14 +14495,14 @@ SELECT pg_catalog.setval('product_category_id_seq', 4, true);
 -- Name: product_product_categories_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('product_product_categories_id_seq', 600, true);
+SELECT pg_catalog.setval('product_product_categories_id_seq', 900, true);
 
 
 --
 -- Name: product_product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('product_product_id_seq', 600, true);
+SELECT pg_catalog.setval('product_product_id_seq', 900, true);
 
 
 --
@@ -11037,21 +14537,21 @@ SELECT pg_catalog.setval('product_productclass_variant_attributes_id_seq', 4, tr
 -- Name: product_productimage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('product_productimage_id_seq', 1509, true);
+SELECT pg_catalog.setval('product_productimage_id_seq', 2263, true);
 
 
 --
 -- Name: product_productvariant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('product_productvariant_id_seq', 1700, true);
+SELECT pg_catalog.setval('product_productvariant_id_seq', 2550, true);
 
 
 --
 -- Name: product_stock_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('product_stock_id_seq', 1700, true);
+SELECT pg_catalog.setval('product_stock_id_seq', 2550, true);
 
 
 --
@@ -11072,14 +14572,14 @@ SELECT pg_catalog.setval('product_variantimage_id_seq', 1, false);
 -- Name: shipping_shippingmethod_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('shipping_shippingmethod_id_seq', 20, true);
+SELECT pg_catalog.setval('shipping_shippingmethod_id_seq', 30, true);
 
 
 --
 -- Name: shipping_shippingmethodcountry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('shipping_shippingmethodcountry_id_seq', 21, true);
+SELECT pg_catalog.setval('shipping_shippingmethodcountry_id_seq', 32, true);
 
 
 --
@@ -11135,14 +14635,14 @@ SELECT pg_catalog.setval('social_auth_usersocialauth_id_seq', 1, false);
 -- Name: userprofile_address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('userprofile_address_id_seq', 261, true);
+SELECT pg_catalog.setval('userprofile_address_id_seq', 362, true);
 
 
 --
 -- Name: userprofile_user_addresses_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('userprofile_user_addresses_id_seq', 192, true);
+SELECT pg_catalog.setval('userprofile_user_addresses_id_seq', 292, true);
 
 
 --
@@ -11156,7 +14656,7 @@ SELECT pg_catalog.setval('userprofile_user_groups_id_seq', 1, false);
 -- Name: userprofile_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: aa
 --
 
-SELECT pg_catalog.setval('userprofile_user_id_seq', 194, true);
+SELECT pg_catalog.setval('userprofile_user_id_seq', 294, true);
 
 
 --
