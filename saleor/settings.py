@@ -270,7 +270,7 @@ PAYMENT_HOST = get_host
 PAYMENT_MODEL = 'order.Payment'
 
 PAYMENT_VARIANTS = {
-    'default': ('payments.cybersource.CyberSourceProvider', {'merchant_id': 'example', 'password': '1234567890abcdef', 'capture': False, 'sandbox': True})}
+    'default': ('payments.cybersource.CyberSourceProvider', {'merchant_id': 'business', 'password': 'Unite12$£', 'capture': False, 'sandbox': False})}
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
