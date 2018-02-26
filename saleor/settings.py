@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 
 import ast
@@ -276,7 +278,7 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 CHECKOUT_PAYMENT_CHOICES = [
-    ('default', 'Dummy provider')]
+    ('default', 'Pay')]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'}
@@ -416,3 +418,13 @@ IMPERSONATE_CUSTOM_USER_QUERYSET = \
     'saleor.userprofile.impersonate.get_impersonatable_users'
 IMPERSONATE_USE_HTTP_REFERER = True
 IMPERSONATE_CUSTOM_ALLOW = 'saleor.userprofile.impersonate.can_impersonate'
+
+# Just to pass during tests
+class DisableMigrations(object):
+    
+    def __contains__(self, item):
+        return True
+
+    def __getitem__(self, item):
+        return "notmigrations"
+
