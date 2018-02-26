@@ -23,42 +23,6 @@
   <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <style type="text/css">
-    .navbar__brand .container {
-      padding: 15px;
-    }
-
-    .logo {
-      color: #00f;
-      font-weight: bold;
-    }
-
-    .navbar__brand ul {
-      list-style: none;
-    }
-    .navbar__brand ul li {
-      display: inline-block;
-      padding: 0 0.5rem;
-      line-height: 1.9rem;
-    }
-    .navbar__brand ul li a {
-      font-size: 12px;
-    }
-
-    .navbar__brand .main-menu {
-      padding-left: 0;
-    }
-    .navbar__brand .main-menu li{
-      padding: 0 1rem 0 0;
-    }
-    .navbar__brand .main-menu li a {
-      font-size: 20px;
-    }
-
-    .navbar__brand__cart .cart__icon {
-      padding: 0 15px;
-    }
-  </style>
 </head>
 
 <body>
@@ -114,55 +78,7 @@
     </div>
     <div class="navbar__brand container-fluid d-block">
       <div class="container">
-        <div class="row">
-          <div class="col-8">
-              <a href="/">
-                <svg data-src="{% static "images/logo.svg" %}" height="38px" width="176px"/>
-        </a>
-      </div>
-      <div class="col-2 col-md-4 navbar__search static">
-        {% if SEARCH_IS_ENABLED %}
-          <div class="d-md-none mobile-search-icon">
-            <svg data-src="{% static "images/search.svg" %}" width="30" height="30"/>
-          </div>
-          <form class="form-inline search-form" action="{% url "search:search" %}">
-            <div class="mobile-close-search d-md-none">
-              <svg data-src="{% static "images/close.svg" %}" width="30" height="30"/>
-            </div>
-            <input class="form-control" type="text" name="q"
-                   value="{% if query %}{{ query }}{% endif %}"
-                   placeholder="{% trans "Search for product" %}">
-            <button class="btn btn-link" type="submit">
-              <svg data-src="{% static "images/search.svg" %}" width="30" height="30"/>
-            </button>
-          </form>
-        {% endif %}
-      </div>
-
-          <div class="col-2 col-md-4">
-            <div class="navbar__brand__cart float-right">
-              <a class="cart__icon" href="{% url "cart:index" %}">
-                <span class="cart-label d-none d-md-inline-block">
-                    {% trans "Your Cart" context "Main navigation item" %}
-                </span>
-                <div class="navbar__brand__cart__icon">
-                  <svg data-src="{% static "images/cart.svg" %}" width="35" height="30"/>
-                </div>
-                <span class="badge {% if not cart_counter %}empty{% endif %}">
-                  {% if cart_counter %}
-                    {{ cart_counter }}
-                  {% else %}
-                    0
-                  {% endif %}
-                </span>
-              </a>
-              <div class="cart-dropdown d-none">
-                {% include 'cart-dropdown.html' %}
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="row no-gutters">
+        <div class="row no-gutters">
           <div class="col-8 col-md-4 navbar__logo">
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
               <svg data-src="{% static "images/mobile_menu.svg" %}" width="28px" height="20px"/>
@@ -212,7 +128,7 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
     <div class="navbar__menu container d-block">
@@ -317,28 +233,28 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-12">
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/mirumeelabs/">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/">
             <svg data-src="{% static "images/facebook_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/mirumee/saleor">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/">
             <svg data-src="{% static "images/github_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/getsaleor">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/">
             <svg data-src="{% static "images/twitter_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/+Mirumee">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/">
             <svg data-src="{% static "images/google_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/Mirumee-Talks/">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/">
             <svg data-src="{% static "images/meetup_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/company/mirumee-software">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/">
             <svg data-src="{% static "images/linkedin_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/mirumee">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/">
             <svg data-src="{% static "images/dribbble_logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/explore/tags/mirumee/">
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/">
             <svg data-src="{% static "images/instagram_logo.svg" %}" width="45px" height="45px"/>
           </a>
         </div>
