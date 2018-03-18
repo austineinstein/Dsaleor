@@ -1,7 +1,5 @@
-try:
-    from urllib.parse import urlparse
-except ImportError:
-    from urlparse import urlparse
+import json
+from urllib.parse import urlparse
 
 from django.db.models import Q
 from django.utils.encoding import smart_text
@@ -23,3 +21,7 @@ def filter_products_by_attribute(queryset, attribute_id, value):
     in_product = Q(attributes__contains={key: value})
     in_variant = Q(variants__attributes__contains={key: value})
     return queryset.filter(in_product | in_variant)
+
+
+def get_graphql_content(response):
+    return json.loads(response.content.decode('utf8'))

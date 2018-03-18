@@ -1,7 +1,6 @@
-from __future__ import unicode_literals
-
-from ..documents import ProductDocument, OrderDocument, UserDocument
 from elasticsearch_dsl.query import MultiMatch
+
+from ..documents import OrderDocument, ProductDocument, UserDocument
 
 
 def _search_products(phrase):
@@ -24,19 +23,28 @@ def _search_users(phrase):
 
 def _search_orders(phrase):
     order_query = MultiMatch(
-        fields=['user', 'status', 'discount_name'], query=phrase)
+        fields=['user', 'discount_name'], query=phrase)
     return OrderDocument.search().query(order_query).source(False)
 
 
 def get_search_queries(phrase):
-    ''' Execute external search for all objects matching phrase  '''
+    """Return querysets to lookup different types of objects.
+
+    Args:
+        phrase (str): searched phrase
+    """
     return {
         'products': _search_products(phrase),
         'users': _search_users(phrase),
-        'orders': _search_orders(phrase)
-    }
+        'orders': _search_orders(phrase)}
 
 
 def search(phrase):
-    ''' Provide queryset for every search result '''
+    """Return all matching objects for dashboard views.
+
+    Composes independent search querysets into a single dictionary.
+
+    Args:
+        phrase (str): searched phrase
+    """
     return {k: s.to_queryset() for k, s in get_search_queries(phrase).items()}

@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-
 from django.contrib.auth.models import Group
 from django.urls import reverse
 
@@ -46,7 +44,7 @@ def test_delete_group(admin_client, staff_group):
     assert response['Location'] == '/dashboard/groups/'
 
 
-def test_delete_group_no_POST(admin_client, staff_group):
+def test_delete_group_no_post(admin_client, staff_group):
     url = reverse('dashboard:group-delete', args=[staff_group.pk])
     admin_client.get(url)
     assert Group.objects.all().count() == 1

@@ -3,8 +3,8 @@ from django.conf import settings
 from django.utils.translation import pgettext_lazy
 from payments import PaymentStatus
 
-from .models import Payment
-from ..registration.forms import SignupForm
+from ..account.forms import SignupForm
+from .models import OrderNote, Payment
 
 
 class PaymentMethodsForm(forms.Form):
@@ -19,10 +19,10 @@ class PaymentDeleteForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         self.order = kwargs.pop('order')
-        super(PaymentDeleteForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def clean(self):
-        cleaned_data = super(PaymentDeleteForm, self).clean()
+        cleaned_data = super().clean()
         payment_id = cleaned_data.get('payment_id')
         waiting_payments = self.order.payments.filter(
             status=PaymentStatus.WAITING)
@@ -45,5 +45,15 @@ class PaymentDeleteForm(forms.Form):
 
 class PasswordForm(SignupForm):
     def __init__(self, *args, **kwargs):
-        super(PasswordForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.fields['email'].widget = forms.HiddenInput()
+
+
+class OrderNoteForm(forms.ModelForm):
+    class Meta:
+        model = OrderNote
+        fields = ['content']
+        widgets = {
+            'content': forms.Textarea({'rows': 3, 'placeholder': False})}
+        labels = {
+            'content': pgettext_lazy('Order note', 'Add note to order')}

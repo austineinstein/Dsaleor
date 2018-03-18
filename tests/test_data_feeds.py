@@ -1,26 +1,15 @@
-from __future__ import unicode_literals
-
 import csv
+from io import StringIO
+from unittest.mock import Mock, patch
 
-from mock import Mock, patch
-
-from django.utils import six
 from django.utils.encoding import smart_text
-if six.PY3:
-    from io import StringIO
-else:
-    from StringIO import StringIO
 
-from django.contrib.sites.models import Site
-
+from saleor.data_feeds.google_merchant import (
+    get_feed_items, item_attributes, item_google_product_category, write_feed)
 from saleor.product.models import AttributeChoiceValue, Category
-from saleor.data_feeds.google_merchant import (get_feed_items,
-                                               item_attributes,
-                                               item_google_product_category,
-                                               write_feed)
 
 
-def test_saleor_feed_items(product_in_stock):
+def test_saleor_feed_items(product_in_stock, site_settings):
     valid_variant = product_in_stock.variants.first()
     items = get_feed_items()
     assert len(items) == 1
@@ -28,7 +17,7 @@ def test_saleor_feed_items(product_in_stock):
     discounts = []
     category_paths = {}
     attributes_dict = {}
-    current_site = Site.objects.get_current()
+    current_site = site_settings.site
     attribute_values_dict = {smart_text(a.pk): smart_text(a) for a
                              in AttributeChoiceValue.objects.all()}
     attributes = item_attributes(items[0], categories, category_paths,
@@ -41,16 +30,12 @@ def test_saleor_feed_items(product_in_stock):
 def test_category_formatter(db):
     main_category = Category(name='Main', slug='main')
     main_category.save()
-    main_category_item = Mock(
-        product=Mock(get_first_category=lambda: main_category))
+    main_category_item = Mock(product=Mock(category=main_category))
     sub_category = Category(name='Sub', slug='sub', parent=main_category)
     sub_category.save()
-    sub_category_item = Mock(
-        product=Mock(get_first_category=lambda: sub_category))
-    assert item_google_product_category(
-        main_category_item, {}) == 'Main'
-    assert item_google_product_category(
-        sub_category_item, {}) == 'Main > Sub'
+    sub_category_item = Mock(product=Mock(category=sub_category))
+    assert item_google_product_category(main_category_item, {}) == 'Main'
+    assert item_google_product_category(sub_category_item, {}) == 'Main > Sub'
 
 
 def test_write_feed(product_in_stock, monkeypatch):
@@ -72,7 +57,8 @@ def test_write_feed(product_in_stock, monkeypatch):
 
 
 @patch('saleor.data_feeds.google_merchant.item_link')
-def test_feed_contains_site_settings_domain(mocked_item_link, product_in_stock):
+def test_feed_contains_site_settings_domain(
+        mocked_item_link, product_in_stock, site_settings):
     write_feed(StringIO())
     mocked_item_link.assert_called_once_with(
-        product_in_stock.variants.first(), Site.objects.get_current())
+        product_in_stock.variants.first(), site_settings.site)

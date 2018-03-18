@@ -2,8 +2,8 @@
 from django import forms
 from django.utils.safestring import mark_safe
 from django.utils.translation import pgettext_lazy
-from django_prices.templatetags.prices_i18n import format_price
 
+from ..core.utils import format_money
 from ..shipping.models import ShippingMethodCountry
 
 
@@ -27,7 +27,7 @@ class ShippingAddressesForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         additional_addresses = kwargs.pop('additional_addresses', [])
-        super(ShippingAddressesForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         address_field = self.fields['address']
         address_choices = [
             (address.id, str(address)) for address in additional_addresses]
@@ -68,7 +68,7 @@ class ShippingCountryChoiceField(forms.ModelChoiceField):
 
     def label_from_instance(self, obj):
         """Return a friendly label for the shipping method."""
-        price_html = format_price(obj.price.gross, obj.price.currency)
+        price_html = format_money(obj.price)
         label = mark_safe('%s %s' % (obj.shipping_method, price_html))
         return label
 
@@ -84,14 +84,16 @@ class ShippingMethodForm(forms.Form):
         required=True)
 
     def __init__(self, country_code, *args, **kwargs):
-        super(ShippingMethodForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         method_field = self.fields['method']
         if country_code:
             queryset = method_field.queryset
             method_field.queryset = queryset.unique_for_country_code(
                 country_code)
+
         if self.initial.get('method') is None:
-            method_field.initial = method_field.queryset.first()
+            self.initial['method'] = method_field.queryset.first()
+
         method_field.empty_label = None
 
 
@@ -111,3 +113,18 @@ class AnonymousUserBillingForm(forms.Form):
         required=True, widget=forms.EmailInput(
             attrs={'autocomplete': 'billing email'}),
         label=pgettext_lazy('Billing form field label', 'Email'))
+
+
+class NoteForm(forms.Form):
+    """Form to add a note to an order."""
+
+    note = forms.CharField(
+        max_length=250, required=False, strip=True, label=False)
+    note.widget = forms.Textarea({'rows': 3})
+
+    def __init__(self, *args, **kwargs):
+        self.checkout = kwargs.pop('checkout', None)
+        super().__init__(*args, **kwargs)
+
+    def set_checkout_note(self):
+        self.checkout.note = self.cleaned_data.get('note', '')

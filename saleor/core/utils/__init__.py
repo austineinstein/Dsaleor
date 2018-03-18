@@ -1,8 +1,6 @@
-# coding: utf-8
-from __future__ import unicode_literals
-
 import decimal
 from json import JSONEncoder
+from urllib.parse import urljoin
 
 from babel.numbers import get_territory_currencies
 from django import forms
@@ -11,18 +9,18 @@ from django.contrib.sites.models import Site
 from django.core.paginator import InvalidPage, Paginator
 from django.http import Http404
 from django.utils.encoding import iri_to_uri, smart_text
+from django_babel.templatetags.babel import currencyfmt
 from django_countries import countries
 from django_countries.fields import Country
 from django_prices_openexchangerates import exchange_currency
 from geolite2 import geolite2
-from prices import PriceRange
+from prices import Money, TaxedMoney, MoneyRange
 
-from ...userprofile.models import User
+from ...account.models import User
 
-try:
-    from urllib.parse import urljoin
-except ImportError:
-    from urlparse import urljoin
+ZERO_TAXED_MONEY = TaxedMoney(
+    net=Money(0, settings.DEFAULT_CURRENCY),
+    gross=Money(0, settings.DEFAULT_CURRENCY))
 
 georeader = geolite2.reader()
 
@@ -42,10 +40,11 @@ class CategoryChoiceField(forms.ModelChoiceField):
         return '%s%s' % (indent, smart_text(obj))
 
 
-def build_absolute_uri(location, is_secure=False):
+def build_absolute_uri(location):
     # type: (str, bool, saleor.site.models.SiteSettings) -> str
     host = Site.objects.get_current().domain
-    current_uri = '%s://%s' % ('https' if is_secure else 'http', host)
+    protocol = 'https' if settings.ENABLE_SSL else 'http'
+    current_uri = '%s://%s' % (protocol, host)
     location = urljoin(current_uri, location)
     return iri_to_uri(location)
 
@@ -59,15 +58,19 @@ def get_client_ip(request):
 
 def get_country_by_ip(ip_address):
     geo_data = georeader.get(ip_address)
-    if geo_data and 'country' in geo_data and 'iso_code' in geo_data['country']:
+    if (
+            geo_data and
+            'country' in geo_data and
+            'iso_code' in geo_data['country']):
         country_iso_code = geo_data['country']['iso_code']
         if country_iso_code in countries:
             return Country(country_iso_code)
+    return None
 
 
 def get_currency_for_country(country):
     currencies = get_territory_currencies(country.code)
-    if len(currencies):
+    if currencies:
         return currencies[0]
     return settings.DEFAULT_CURRENCY
 
@@ -89,11 +92,15 @@ def get_paginator_items(items, paginate_by, page_number):
     return items
 
 
+def format_money(money):
+    return currencyfmt(money.amount, money.currency)
+
+
 def to_local_currency(price, currency):
     if not settings.OPENEXCHANGERATES_API_KEY:
-        return
-    if isinstance(price, PriceRange):
-        from_currency = price.min_price.currency
+        return None
+    if isinstance(price, MoneyRange):
+        from_currency = price.start.currency
     else:
         from_currency = price.currency
     if currency != from_currency:
@@ -101,6 +108,7 @@ def to_local_currency(price, currency):
             return exchange_currency(price, currency)
         except ValueError:
             pass
+    return None
 
 
 def get_user_shipping_country(request):
@@ -114,7 +122,7 @@ def get_user_shipping_country(request):
 def serialize_decimal(obj):
     if isinstance(obj, decimal.Decimal):
         return str(obj)
-    return JSONEncoder.default(obj)
+    return JSONEncoder().default(obj)
 
 
 def create_superuser(credentials):

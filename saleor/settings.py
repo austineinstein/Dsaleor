@@ -26,7 +26,7 @@ ROOT_URLCONF = 'saleor.urls'
 WSGI_APPLICATION = 'saleor.wsgi.application'
 
 ADMINS = (
-    ('Austin', 'austin_agbo@yahoo.com'),
+    # ('Your Name', 'your_email@example.com'),
 )
 MANAGERS = ADMINS
 
@@ -45,7 +45,7 @@ DATABASES = {
         conn_max_age=600)}
 
 
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Africa/Lagos'
 LANGUAGE_CODE = 'en-us'
 LOCALE_PATHS = [os.path.join(PROJECT_ROOT, 'locale')]
 USE_I18N = True
@@ -71,6 +71,9 @@ EMAIL_BACKEND = email_config['EMAIL_BACKEND']
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
 EMAIL_USE_SSL = email_config['EMAIL_USE_SSL']
 
+ENABLE_SSL = ast.literal_eval(
+    os.environ.get('ENABLE_SSL', 'False'))
+
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 ORDER_FROM_EMAIL = os.getenv('ORDER_FROM_EMAIL', DEFAULT_FROM_EMAIL)
 
@@ -81,6 +84,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     ('assets', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'assets')),
+    ('favicons', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'favicons')),
     ('images', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'images')),
     ('dashboard', os.path.join(PROJECT_ROOT, 'saleor', 'static', 'dashboard'))
 ]
@@ -103,10 +107,8 @@ context_processors = [
     'saleor.cart.context_processors.cart_counter',
     'saleor.core.context_processors.search_enabled',
     'saleor.site.context_processors.site',
-    'saleor.core.context_processors.webpage_schema',
     'social_django.context_processors.backends',
-    'social_django.context_processors.login_redirect',
-]
+    'social_django.context_processors.login_redirect']
 
 loaders = [
     'django.template.loaders.filesystem.Loader',
@@ -128,7 +130,6 @@ TEMPLATES = [{
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -136,14 +137,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django_babel.middleware.LocaleMiddleware',
-    'saleor.core.middleware.DiscountMiddleware',
-    'saleor.core.middleware.GoogleAnalytics',
-    'saleor.core.middleware.CountryMiddleware',
-    'saleor.core.middleware.CurrencyMiddleware',
-    'saleor.core.middleware.ClearSiteCacheMiddleware',
+    'saleor.core.middleware.discounts',
+    'saleor.core.middleware.google_analytics',
+    'saleor.core.middleware.country',
+    'saleor.core.middleware.currency',
+    'saleor.core.middleware.site',
     'social_django.middleware.SocialAuthExceptionMiddleware',
-    'impersonate.middleware.ImpersonateMiddleware'
-]
+    'impersonate.middleware.ImpersonateMiddleware']
 
 INSTALLED_APPS = [
     # External apps that need to go before django's
@@ -161,19 +161,21 @@ INSTALLED_APPS = [
     'django.forms',
 
     # Local apps
-    'saleor.userprofile',
+    'saleor.account',
     'saleor.discount',
     'saleor.product',
     'saleor.cart',
     'saleor.checkout',
     'saleor.core',
     'saleor.graphql',
-    'saleor.order',
+    'saleor.order.OrderAppConfig',
     'saleor.dashboard',
+    'saleor.schema',
     'saleor.shipping',
     'saleor.search',
     'saleor.site',
     'saleor.data_feeds',
+    'saleor.page',
 
     # External apps
     'versatileimagefield',
@@ -246,7 +248,7 @@ LOGGING = {
     }
 }
 
-AUTH_USER_MODEL = 'userprofile.User'
+AUTH_USER_MODEL = 'account.User'
 
 LOGIN_URL = '/account/login/'
 
@@ -289,15 +291,14 @@ MAX_CART_LINE_QUANTITY = os.environ.get('MAX_CART_LINE_QUANTITY', 50)
 
 PAGINATE_BY = 16
 DASHBOARD_PAGINATE_BY = 30
+DASHBOARD_SEARCH_LIMIT = 5
 
-BOOTSTRAP3 = {
+bootstrap4 = {
     'set_placeholder': False,
     'set_required': False,
     'success_css_class': '',
     'form_renderers': {
-        'default': 'saleor.core.utils.form_renderer.FormRenderer',
-    },
-}
+        'default': 'saleor.core.utils.form_renderer.FormRenderer'}}
 
 TEST_RUNNER = ''
 
@@ -313,7 +314,10 @@ AWS_MEDIA_BUCKET_NAME = os.environ.get('AWS_MEDIA_BUCKET_NAME')
 AWS_QUERYSTRING_AUTH = ast.literal_eval(
     os.environ.get('AWS_QUERYSTRING_AUTH', 'False'))
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 if AWS_STORAGE_BUCKET_NAME:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -362,32 +366,31 @@ WEBPACK_LOADER = {
 
 LOGOUT_ON_PASSWORD_CHANGE = False
 
-ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL', None)
-ENABLE_SEARCH = bool(ELASTICSEARCH_URL)
+# SEARCH CONFIGURATION
+DB_SEARCH_ENABLED = True
 
-if ELASTICSEARCH_URL:
+# support deployment-dependant elastic enviroment variable
+ES_URL = (os.environ.get('ELASTICSEARCH_URL') or
+          os.environ.get('SEARCHBOX_URL') or os.environ.get('BONSAI_URL'))
+
+ENABLE_SEARCH = bool(ES_URL) or DB_SEARCH_ENABLED  # global search disabling
+
+SEARCH_BACKEND = 'saleor.search.backends.postgresql'
+
+if ES_URL:
+    SEARCH_BACKEND = 'saleor.search.backends.elasticsearch'
     INSTALLED_APPS.append('django_elasticsearch_dsl')
     ELASTICSEARCH_DSL = {
         'default': {
-            'hosts': ELASTICSEARCH_URL
-        },
-    }
+            'hosts': ES_URL}}
 
 
-GRAPHENE = {
-    'MIDDLEWARE': [
-        'graphene_django.debug.DjangoDebugMiddleware'
-    ],
-    'SCHEMA': 'saleor.graphql.api.schema',
-    'SCHEMA_OUTPUT': os.path.join(
-        PROJECT_ROOT, 'saleor', 'static', 'schema.json')
-}
+GRAPHENE = {'MIDDLEWARE': ['graphene_django.debug.DjangoDebugMiddleware']}
 
 AUTHENTICATION_BACKENDS = [
-    'saleor.registration.backends.facebook.CustomFacebookOAuth2',
-    'saleor.registration.backends.google.CustomGoogleOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-]
+    'saleor.account.backends.facebook.CustomFacebookOAuth2',
+    'saleor.account.backends.google.CustomGoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend']
 
 SOCIAL_AUTH_PIPELINE = [
     'social_core.pipeline.social_auth.social_details',
@@ -398,8 +401,7 @@ SOCIAL_AUTH_PIPELINE = [
     'social_core.pipeline.user.create_user',
     'social_core.pipeline.social_auth.associate_user',
     'social_core.pipeline.social_auth.load_extra_data',
-    'social_core.pipeline.user.user_details',
-]
+    'social_core.pipeline.user.user_details']
 
 SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 SOCIAL_AUTH_USER_MODEL = AUTH_USER_MODEL
@@ -416,18 +418,31 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_RESULT_BACKEND = 'django-db'
 
 # Impersonate module settings
-IMPERSONATE_URI_EXCLUSIONS = [r'^dashboard/']
-IMPERSONATE_CUSTOM_USER_QUERYSET = \
-    'saleor.userprofile.impersonate.get_impersonatable_users'
-IMPERSONATE_USE_HTTP_REFERER = True
-IMPERSONATE_CUSTOM_ALLOW = 'saleor.userprofile.impersonate.can_impersonate'
+IMPERSONATE = {
+    'URI_EXCLUSIONS': [r'^dashboard/'],
+    'CUSTOM_USER_QUERYSET': 'saleor.account.impersonate.get_impersonatable_users',  # noqa
+    'USE_HTTP_REFERER': True,
+    'CUSTOM_ALLOW': 'saleor.account.impersonate.can_impersonate'}
 
-# Just to pass during tests
-class DisableMigrations(object):
-    
-    def __contains__(self, item):
-        return True
 
-    def __getitem__(self, item):
-        return "notmigrations"
-
+# Rich-text editor
+ALLOWED_TAGS = [
+    'a',
+    'b',
+    'blockquote',
+    'br',
+    'em',
+    'h2',
+    'h3',
+    'i',
+    'img',
+    'li',
+    'ol',
+    'p',
+    'strong',
+    'ul']
+ALLOWED_ATTRIBUTES = {
+    '*': ['align', 'style'],
+    'a': ['href', 'title'],
+    'img': ['src']}
+ALLOWED_STYLES = ['text-align']

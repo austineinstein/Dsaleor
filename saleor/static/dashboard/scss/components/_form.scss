@@ -119,6 +119,10 @@
     display: inline-block;
     margin-top: 1.4rem;
   }
+
+  .datepicker {
+    cursor: pointer;
+  }
 }
 
 .switch {
@@ -194,6 +198,47 @@
     .input-text-suffix {
       width: 20%;
     }
+  }
+}
+
+.input-range {
+  .separator {
+    display: inline-block;
+    margin-top: 10px;
+    width: 1rem;
+  }
+  &--field {
+    display: inline-table;
+    width: calc(50% - .8rem);
+    @media (max-width: $medium-screen) {
+      .input-text-suffix {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.phone-prefix-input {
+  display: grid;
+  grid-template-columns: 8rem calc(100% - 8rem);
+  align-items: stretch;
+  &__field {
+    &:last-of-type {
+      input[type="text"] {
+        margin-left: .5rem !important;
+      }
+    }
+  }
+}
+
+.medium-editor-element {
+  padding-bottom: 1rem;
+  border-bottom: 1px $grey-color solid;
+  outline: none;
+  transition: all $transition-duration;
+  &:focus, &:active {
+    border-bottom-color: $secondary-color;
+    box-shadow: 0 1px 0 0 $secondary-color;
   }
 }
 

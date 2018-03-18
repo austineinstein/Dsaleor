@@ -2,22 +2,36 @@
 {% load i18n %}
 {% load staticfiles %}
 {% load render_bundle from webpack_loader %}
+{% load placeholder %}
 
-<html lang="{{ LANGUAGE_CODE }}" class="no-js">
+<html lang="{{ LANGUAGE_CODE }}" class="no-js" data-shipping-options-url="{% url 'cart:shipping-options' %}" data-cart-summary-url="{% url 'cart:cart-summary' %}">
 <head>
   <title>{% block title %}{{ site.name }}{% endblock %}</title>
   {% block meta %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta name="author" content="{% trans "Mirumee Software" context "Meta author text" %}">
-    <meta name="theme-color" content="#21915a" />
+    <meta name="generator" content="Saleor">
+    <meta name="theme-color" content="#333333">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="{{ site.name }}">
+    <meta name="og:type" content="website">
   {% endblock meta %}
+
   {% include 'favicon.html' %}
-  {% render_bundle 'vendor' 'css' %}
-  {% render_bundle 'storefront' 'css' %}
+  {% render_bundle 'storefront' 'css' attrs='async' %}
 
   {% block stylesheet %}{% endblock stylesheet %}
+
+  {% block meta_tags %}
+    <meta property="og:title" content="{{ site.name }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="{% static "images/block1.png" %}">
+  {% endblock meta_tags %}
+
+  <link rel="manifest" href="{% url "manifest" %}" />
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -45,7 +59,7 @@
                 </li>
               {% endif %}
               <li>
-                <a href="{% url "profile:details" %}">
+                <a href="{% url "account:details" %}">
                   {% trans "Your account" context "Main navigation item" %}</a>
               </li>
               {% if user.is_impersonate %}
@@ -56,17 +70,17 @@
                 </li>
               {% else %}
                 <li>
-                  <a href="{% url "account_logout" %}">
+                  <a href="{% url "account:logout" %}">
                     {% trans "Log out" context "Main navigation item" %}</a>
                 </li>
               {% endif %}
             {% else %}
               <li>
-                <a href="{% url "account_signup" %}">
+                <a rel="nofollow" href="{% url "account:signup" %}">
                   {% trans "Register" context "Main navigation item" %}</a>
               </li>
               <li>
-                <a href="{% url "account_login" %}">
+                <a rel="nofollow" href="{% url "account:login" %}">
                   {% trans "Log in" context "Main navigation item" %}
                 </a>
               </li>
@@ -81,11 +95,11 @@
         <div class="row no-gutters">
           <div class="col-8 col-md-4 navbar__logo">
             <div class="menu-icon-mobile d-md-none navbar__brand__menu-toggle closed open">
-              <svg data-src="{% static "images/mobile_menu.svg" %}" width="28px" height="20px"/>
+              <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
               <span>{% trans "menu" context "Hamburger button text" %}</span>
             </div>
-            <a href="/">
-              <svg data-src="{% static "images/logo_document.svg" %}" height="150px" width="200px"/>
+            <a href="{% url 'home' %}">
+              <svg data-src="{% static "images/logo_document.svg" %}" height="38px" width="176px"/>
             </a>
           </div>
           <div class="col-2 col-md-4 navbar__search static">
@@ -99,7 +113,8 @@
                 </div>
                 <input class="form-control" type="text" name="q"
                        value="{% if query %}{{ query }}{% endif %}"
-                       placeholder="{% trans "Search for product" %}">
+                       placeholder="{% trans "Search for product" %}"
+                       required>
                 <button class="btn btn-link" type="submit">
                   <svg data-src="{% static "images/search.svg" %}" width="30" height="30"/>
                 </button>
@@ -108,9 +123,9 @@
           </div>
           <div class="col-2 col-md-4">
             <div class="navbar__brand__cart float-right">
-              <a class="cart__icon" href="{% url "cart:index" %}">
+              <a rel="nofollow" class="cart__icon" href="{% url "cart:index" %}">
                 <span class="cart-label d-none d-md-inline-block">
-                    {% trans "Your Cart" context "Main navigation item" %}
+                  {% trans "Your Cart" context "Main navigation item" %}
                 </span>
                 <div class="navbar__brand__cart__icon">
                   <svg data-src="{% static "images/cart.svg" %}" width="35" height="30"/>
@@ -124,7 +139,7 @@
                 </span>
               </a>
               <div class="cart-dropdown d-none">
-                {% include 'cart-dropdown.html' %}
+                {% include 'cart_dropdown.html' %}
               </div>
             </div>
           </div>
@@ -166,7 +181,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <a href="/" class="footer__logo">
+          <a href="{% url 'home' %}" class="footer__logo">
             <svg data-src="{% static "images/logo_document.svg" %}" height="150px" width="200px"/>
           </a>
         </div>
@@ -184,7 +199,7 @@
         <div class="col-md-3 col-sm-6">
           <ul>
             <li>
-              <a href="{% url "cart:index" %}">
+              <a rel="nofollow" href="{% url "cart:index" %}">
                 {% trans "Your Cart" context "Main navigation item" %}
               </a>
             </li>
@@ -202,7 +217,7 @@
                 </li>
               {% endif %}
               <li>
-                <a href="{% url "profile:details" %}">
+                <a href="{% url "account:details" %}">
                   {% trans "Your account" context "Main navigation item" %}
                 </a>
               </li>
@@ -214,18 +229,18 @@
                 </li>
               {% else %}
                 <li>
-                  <a href="{% url "account_logout" %}">
+                  <a href="{% url "account:logout" %}">
                     {% trans "Log out" context "Main navigation item" %}</a>
                 </li>
               {% endif %}
             {% else %}
               <li>
-                <a href="{% url "account_signup" %}">
+                <a rel="nofollow" href="{% url "account:signup" %}">
                   {% trans "Register" context "Main navigation item" %}
                 </a>
               </li>
               <li>
-                <a href="{% url "account_login" %}">
+                <a rel="nofollow" href="{% url "account:login" %}">
                   {% trans "Log in" context "Main navigation item" %}
                 </a>
               </li>
@@ -233,29 +248,29 @@
           </ul>
         </div>
         <div class="col-md-3 col-sm-12">
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/">
-            <svg data-src="{% static "images/facebook_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.facebook.com/mirumeelabs/">
+            <svg data-src="{% static "images/facebook-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/">
-            <svg data-src="{% static "images/github_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://github.com/mirumee/saleor">
+            <svg data-src="{% static "images/github-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/">
-            <svg data-src="{% static "images/twitter_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://twitter.com/getsaleor">
+            <svg data-src="{% static "images/twitter-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/">
-            <svg data-src="{% static "images/google_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://plus.google.com/+Mirumee">
+            <svg data-src="{% static "images/google-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/">
-            <svg data-src="{% static "images/meetup_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.meetup.com/Mirumee-Talks/">
+            <svg data-src="{% static "images/meetup-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/">
-            <svg data-src="{% static "images/linkedin_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://linkedin.com/company/mirumee-software">
+            <svg data-src="{% static "images/linkedin-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/">
-            <svg data-src="{% static "images/dribbble_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://dribbble.com/mirumee">
+            <svg data-src="{% static "images/dribbble-logo.svg" %}" width="45px" height="45px"/>
           </a>
-          <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/">
-            <svg data-src="{% static "images/instagram_logo.svg" %}" width="45px" height="45px"/>
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.instagram.com/explore/tags/mirumee/">
+            <svg data-src="{% static "images/instagram-logo.svg" %}" width="45px" height="45px"/>
           </a>
         </div>
       </div>
@@ -264,9 +279,7 @@
 {% endblock %}
 {% block footer_scripts %}
   <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-  {% render_bundle 'vendor' 'js' %}
   {% render_bundle 'storefront' 'js' %}
 {% endblock footer_scripts %}
-<script type="application/ld+json">{{ webpage_schema|safe }}</script>
 </body>
 </html>

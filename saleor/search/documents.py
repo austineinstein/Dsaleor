@@ -1,11 +1,9 @@
-from __future__ import unicode_literals
-
 from django_elasticsearch_dsl import DocType, Index, fields
 from elasticsearch_dsl import analyzer, token_filter
-from ..product.models import Product
-from ..userprofile.models import User
-from ..order.models import Order
 
+from ..account.models import User
+from ..order.models import Order
+from ..product.models import Product
 
 storefront = Index('storefront')
 storefront.settings(number_of_shards=1, number_of_replicas=0)
@@ -49,11 +47,13 @@ class UserDocument(DocType):
         address = instance.default_billing_address
         if address:
             return address.first_name
+        return None
 
     def prepare_last_name(self, instance):
         address = instance.default_billing_address
         if address:
             return address.last_name
+        return None
 
     class Meta:
         model = User
@@ -71,9 +71,8 @@ class OrderDocument(DocType):
     def prepare_user(self, instance):
         if instance.user:
             return instance.user.email
-        else:
-            return instance.user_email
+        return instance.user_email
 
     class Meta:
         model = Order
-        fields = ['status', 'user_email', 'discount_name']
+        fields = ['user_email', 'discount_name']

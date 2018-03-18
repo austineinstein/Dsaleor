@@ -14,8 +14,8 @@
 
 {% block header_extra %}
   {% if perms.product.edit_properties %}
-  <div class="fixed-action-btn">
-    <a class="btn-fab btn-floating btn-large waves-effect waves-light" href="{% url 'dashboard:product-attribute-add' %}" title="{% trans "Add attribute" context "Attribute list add button text" %}">
+  <div class="btn-fab-fixed">
+    <a class="btn-fab-default waves-effect waves-light" href="{% url 'dashboard:product-attribute-add' %}" title="{% trans "Add attribute" context "Attribute list add button text" %}">
       <svg data-src="{% static "dashboard/images/add.svg" %}" />
     </a>
   </div>
@@ -34,15 +34,18 @@
 
 {% block content %}
   <div class="row">
-    <div class="col s12">
+    <div class="col s12 l9">
       {% if attributes %}
         <div class="card">
           <div class="data-table-container">
             <table class="bordered highlight data-table data-table-description">
               <thead>
                 <tr>
-                  <th>{% trans "Name" context "Dashboard attributes list table header name" %}</th>
-                  <th>{% trans "Values" context "Dashboard attributes list table header values" %}</th>
+                  {% trans "Name" context "Dashboard attributes list table header name" as label %}
+                  {% sorting_header 'name' label is_wide=True %}
+                  <th>
+                    {% trans "Values" context "Dashboard attributes list table header values" %}
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -62,12 +65,21 @@
         </div>
         {% paginate attributes %}
       {% else %}
-        <div class="not-found">
-          <p class="grey-text">
-            {% trans "No attributes found." context "Empty attribute list message" %}
-          </p>
-        </div>
+        {% if is_empty %}
+          {% include 'dashboard/product/product_attribute/zero_page.html' %}
+        {% else %}
+          <div class="col s12">
+            <div class="not-found">
+              <p class="grey-text">
+                {% trans "No attributes found." context "Empty attribute list message" %}
+              </p>
+            </div>
+          </div>
+        {% endif %}
       {% endif %}
+    </div>
+    <div class="col s12 l3" id="filters">
+      {% if not is_empty %}{% filters filter_set %}{% endif %}
     </div>
   </div>
 {% endblock %}

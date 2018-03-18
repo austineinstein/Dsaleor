@@ -1,29 +1,45 @@
-import {initSelects} from './utils';
-import SVGInjector from 'svg-injector-2';
+import { svgInjector } from './misc';
+import { initSelects } from './selects';
 
-export default $(document).ready((e) => {
-  $('body').on('click', '.modal-trigger-custom', function (e) {
-    let that = this;
-    $.ajax({
-      url: $(this).data('href'),
-      method: 'get',
-      success: function (response) {
-        let $modal = $($(that).attr('href'));
-        $modal.html(response);
-        initSelects();
-        $modal.modal('open');
-        $modal.find('textarea, input[type="text"]')[0].focus();
-        // Image checkbox selector
-        $('.image_select-item-overlay').on('click', function (e) {
-          let id = $(e.target).attr('id');
-          let checkbox = $('input#' + id).prop('checked');
-          $('input#' + id).prop('checked', !checkbox);
-          $(e.target).toggleClass('checked', !checkbox);
-        });
-        new SVGInjector().inject(document.querySelectorAll('.modal-content svg[data-src]:not(.injected-svg)'));
+// List of input types that can be autofocused after opening modal
+const focusInputs = [
+  'textarea',
+  'input[type="text"]:not(.select-dropdown)',
+  'input[type="number"]'
+];
+
+// -----
+
+$('body').on('click', '.modal-trigger-custom', (e) => {
+  const target = e.currentTarget;
+  e.preventDefault();
+  $.ajax({
+    url: target.dataset.href,
+    method: 'GET',
+    success: (response) => {
+      const $modal = $(target.getAttribute('href'));
+      $modal
+        .html(response)
+        .modal('open');
+      initSelects();
+      const inputs = $modal.find(focusInputs.join(','));
+
+      // Automatically focus first autofocusable input in modal after opening
+      if (inputs.length) {
+        $modal.find(focusInputs.join(','))[0].focus();
       }
-    });
 
-    e.preventDefault();
+      // Image checkbox selector
+      $('.image_select-item-overlay').on('click', (e) => {
+        const imageId = e.currentTarget.getAttribute('id');
+        const checkbox = document.querySelector('input#' + imageId);
+        const checkboxState = checkbox.getAttribute('checked');
+        checkbox.setAttribute('checked', !checkboxState);
+        $(e.target).toggleClass('checked', !checkbox);
+      });
+
+      // Inject all SVGs from modal
+      svgInjector.inject(document.querySelectorAll('.modal-content svg[data-src]:not(.injected-svg)'));
+    }
   });
 });

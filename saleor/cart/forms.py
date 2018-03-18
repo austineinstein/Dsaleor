@@ -1,12 +1,11 @@
 """Cart-related forms and fields."""
-from __future__ import unicode_literals
-
 from django import forms
-from django.core.exceptions import ObjectDoesNotExist, NON_FIELD_ERRORS
 from django.conf import settings
+from django.core.exceptions import NON_FIELD_ERRORS, ObjectDoesNotExist
 from django.utils.translation import npgettext_lazy, pgettext_lazy
 from django_countries.fields import LazyTypedChoiceField, countries
-from satchless.item import InsufficientStock
+
+from ..core.exceptions import InsufficientStock
 from ..shipping.utils import get_shipment_options
 
 
@@ -14,7 +13,7 @@ class QuantityField(forms.IntegerField):
     """A specialized integer field with initial quantity and min/max values."""
 
     def __init__(self, **kwargs):
-        super(QuantityField, self).__init__(
+        super().__init__(
             min_value=0, max_value=settings.MAX_CART_LINE_QUANTITY,
             initial=1, **kwargs)
 
@@ -48,7 +47,7 @@ class AddToCartForm(forms.Form):
         self.cart = kwargs.pop('cart')
         self.product = kwargs.pop('product')
         self.discounts = kwargs.pop('discounts', ())
-        super(AddToCartForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     def clean(self):
         """Clean the form.
@@ -56,7 +55,7 @@ class AddToCartForm(forms.Form):
         Makes sure the total quantity in cart (taking into account what was
         already there) does not exceed available quantity.
         """
-        cleaned_data = super(AddToCartForm, self).clean()
+        cleaned_data = super().clean()
         quantity = cleaned_data.get('quantity')
         if quantity is None:
             return cleaned_data
@@ -106,7 +105,7 @@ class ReplaceCartLineForm(AddToCartForm):
     def __init__(self, *args, **kwargs):
         self.variant = kwargs.pop('variant')
         kwargs['product'] = self.variant.product
-        super(ReplaceCartLineForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.cart_line = self.cart.get_line(self.variant)
         self.fields['quantity'].widget.attrs = {
             'min': 1, 'max': settings.MAX_CART_LINE_QUANTITY}

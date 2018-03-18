@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles i18n %}
 {% load render_bundle from webpack_loader %}
-{% load version %}
 
 <html lang="{{ LANGUAGE_CODE }}" class="no-js">
   <head>
@@ -16,7 +15,6 @@
     {% endblock meta %}
 
     {% include 'favicon.html' %}
-    {% render_bundle 'vendor' 'css' %}
     {% render_bundle 'dashboard' 'css' %}
     <link rel="stylesheet" type="text/css" href="{% static "versatileimagefield/css/versatileimagefield.css" %}">
 
@@ -405,12 +403,12 @@
                   <div class="card-content">
                     <div class="row section">
                       <div class="col m4 s12">
-                        <a class="btn waves-effect waves-light" contenteditable="true">
+                        <a class="btn waves-effect" contenteditable="true">
                           Primary
                         </a>
                       </div>
                        <div class="col m4 s12">
-                        <a class="btn btn-flat" contenteditable="true">
+                        <a class="btn-flat waves-effect" contenteditable="true">
                           Secondary
                         </a>
                       </div>
@@ -422,12 +420,12 @@
                     </div>
                     <div class="row section">
                       <div class="col m4 s12">
-                        <a class="btn waves-effect waves-light disabled" contenteditable="true">
+                        <a class="btn disabled" contenteditable="true">
                           Primary disabled
                         </a>
                       </div>
                       <div class="col m4 s12">
-                        <a class="btn btn-flat disabled" contenteditable="true">
+                        <a class="btn-flat waves-effect disabled" contenteditable="true">
                           Secondary disabled
                         </a>
                       </div>
@@ -451,12 +449,12 @@
                         Used icons
                       </h4>
                       <svg data-src="{% static "dashboard/images/add.svg" %}" />
-                      <svg data-src="{% static "dashboard/images/account_circle.svg" %}" />
+                      <svg data-src="{% static "dashboard/images/account-circle.svg" %}" />
                       <svg data-src="{% static "dashboard/images/search.svg" %}" />
-                      <svg data-src="{% static "dashboard/images/mobile_menu.svg" %}" />
-                      <svg data-src="{% static "dashboard/images/more_vert.svg" %}" height="24" width="24" />
-                      <svg data-src="{% static "dashboard/images/arrow_left.svg" %}" />
-                      <svg data-src="{% static "dashboard/images/chevron_right.svg" %}" fill="#000" />
+                      <svg data-src="{% static "dashboard/images/mobile-menu.svg" %}" />
+                      <svg data-src="{% static "dashboard/images/more-vert.svg" %}" height="24" width="24" />
+                      <svg data-src="{% static "dashboard/images/arrow-left.svg" %}" />
+                      <svg data-src="{% static "dashboard/images/chevron-right.svg" %}" fill="#000" />
                       <svg data-src="{% static "dashboard/images/edit.svg" %}" fill="#000" width="24px" height="24px" />
                       <svg data-src="{% static "dashboard/images/style.svg" %}" fill="#000" width="24px" height="24px" />
                       <svg data-src="{% static "dashboard/images/store.svg" %}" fill="#000" width="24px" height="24px" />
@@ -464,7 +462,7 @@
                       <svg data-src="{% static "dashboard/images/description.svg" %}" fill="#000" width="24px" height="24px" />
                       <svg data-src="{% static "dashboard/images/description.svg" %}" fill="#000" width="24px" height="24px" />
                       <svg data-src="{% static "dashboard/images/history.svg" %}" fill="#000" width="24px" height="24px" />
-                      <svg data-src="{% static "dashboard/images/arrow_drop_down.svg" %}" fill="#000" width="24px" height="24px" />
+                      <svg data-src="{% static "dashboard/images/arrow-drop-down.svg" %}" fill="#000" width="24px" height="24px" />
                     </div>
                     <div class="section">
                       <h4>
@@ -785,7 +783,7 @@
                       </h4>
                       <form>
                         <div class="file-field input-field">
-                          <div class="btn">
+                          <div class="btn waves-effect">
                             <span contenteditable="true">File</span>
                             <input type="file">
                           </div>
@@ -829,7 +827,7 @@
                       </li>
                       <li class="back-mobile">
                         <a>
-                          <svg data-src="{% static "dashboard/images/arrow_left.svg" %}" fill="#fff" width="20px" height="20px" />
+                          <svg data-src="{% static "dashboard/images/arrow-left.svg" %}" fill="#fff" width="20px" height="20px" />
                         </a>
                       </li>
                       <li>
@@ -1029,7 +1027,7 @@
                   </h4>
                   <div class="card">
                     <div class="data-table-header-action">
-                      <a href="" class="btn btn-data-table btn-flat" contenteditable="true">
+                      <a href="" class="btn btn-data-table btn-flat waves-effect" contenteditable="true">
                         Add
                       </a>
                     </div>
@@ -1120,11 +1118,11 @@
                   <div class="card">
                     <form>
                       <div class="data-table-header-action">
-                        <a href="" class="btn btn-data-table btn-show-when-unchecked btn-flat" contenteditable="true">
+                        <a href="" class="btn btn-data-table btn-show-when-unchecked btn-flat waves-effect" contenteditable="true">
                           Add
                         </a>
-                        <a href="" class="btn btn-data-table btn-show-when-checked btn-flat" style="display:none" hidden contenteditable="true">
-                          Delete
+                        <a href="" class="btn btn-data-table btn-show-when-checked btn-flat waves-effect" style="display:none" hidden contenteditable="true">
+                          Remove
                         </a>
                       </div>
                       <div class="data-table-container">
@@ -1461,7 +1459,7 @@
                         </p>
                       </div>
                       <div class="card-action">
-                        <a href="#" class="btn btn-flat" contenteditable="true">
+                        <a href="#" class="btn-flat waves-effect" contenteditable="true">
                           This is a link
                         </a>
                       </div>
@@ -1490,7 +1488,7 @@
                     <div class="section">
                       <h4>Icon</h4>
                       <a class="dropdown-button" href="#" data-activates="dropdown1">
-                        <svg data-src="{% static "dashboard/images/more_vert.svg" %}" height="24" width="24" />
+                        <svg data-src="{% static "dashboard/images/more-vert.svg" %}" height="24" width="24" />
                       </a>
                     </div>
                     <ul id="dropdown1" class="dropdown-content">
@@ -1530,7 +1528,7 @@
                     <div class="section">
                       <h4>Dropdown</h4>
                       <a class='dropdown-button' href='#' data-activates='dropdown2'>
-                        <svg data-src="{% static "dashboard/images/more_vert.svg" %}" height="24" width="24" />
+                        <svg data-src="{% static "dashboard/images/more-vert.svg" %}" height="24" width="24" />
                       </a>
                       <ul id='dropdown2' class='dropdown-content'>
                         <li>
@@ -1549,10 +1547,10 @@
                         </p>
                       </div>
                       <div class="modal-footer">
-                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" contenteditable="true">
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat waves-effect" contenteditable="true">
                           Agree
                         </a>
-                        <a href="#!" class=" modal-action modal-close btn-flat" contenteditable="true">
+                        <a href="#!" class=" modal-action modal-close btn-flat waves-effect" contenteditable="true">
                           Cancel
                         </a>
                       </div>
@@ -1566,7 +1564,7 @@
                 </h3>
                 <div class="card">
                   <div class="card-content">
-                    <a class="btn" onclick="Materialize.toast('Example toast text', 4000)"> Toast</a>
+                    <a class="btn waves-effect" onclick="Materialize.toast('Example toast text', 4000)"> Toast</a>
                   </div>
                 </div>
               </div>
@@ -1578,7 +1576,7 @@
                 <ul class="pagination">
                   <li class="disabled">
                     <a href="#!">
-                      <svg data-src="{% static "dashboard/images/chevron_left.svg" %}" />
+                      <svg data-src="{% static "dashboard/images/chevron-left.svg" %}" />
                     </a>
                   </li>
                   <li class="active">
@@ -1608,7 +1606,7 @@
                   </li>
                   <li>
                     <a href="">
-                      <svg data-src="{% static "dashboard/images/chevron_right.svg" %}" fill="#000" />
+                      <svg data-src="{% static "dashboard/images/chevron-right.svg" %}" fill="#000" />
                     </a>
                   </li>
                 </ul>
@@ -1622,10 +1620,8 @@
 
     <!-- Core Scripts - Include with every page -->
     <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
-    {% render_bundle 'vendor' 'js' %}
     {% render_bundle 'dashboard' 'js' %}
     <script src="{% static "versatileimagefield/js/versatileimagefield.js" %}"></script>
-    {% include "dashboard/includes/_messages.html" %}
 
     {% block custom_js %}{% endblock %}
   </body>
