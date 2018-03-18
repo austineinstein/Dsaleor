@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-from __future__ import unicode_literals
-
 import ast
 import os.path
 
@@ -14,8 +10,7 @@ from django.contrib.messages import constants as messages
 def get_list(text):
     return [item.strip() for item in text.split(',')]
 
-
-#DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
+DEBUG = ast.literal_eval(os.environ.get('DEBUG', 'True'))
 
 SITE_ID = 1
 
