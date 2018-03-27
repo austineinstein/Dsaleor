@@ -188,6 +188,7 @@ INSTALLED_APPS = [
     'django_celery_results',
     'impersonate',
     'phonenumber_field',
+    'bootstrap4',
 ]
 
 LOGGING = {
@@ -297,7 +298,7 @@ bootstrap4 = {
 
 TEST_RUNNER = ''
 
-ALLOWED_HOSTS = get_list(os.environ.get('ALLOWED_HOSTS', 'localhost'))
+ALLOWED_HOSTS = get_list(os.environ.get('ALLOWED_HOSTS', '*'))
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -441,3 +442,7 @@ ALLOWED_ATTRIBUTES = {
     'a': ['href', 'title'],
     'img': ['src']}
 ALLOWED_STYLES = ['text-align']
+
+#Paystack Keys
+PAYSTACK_SECRET_KEY = 'sk_test_9ca042443bfb653c481f5a9c25d7922a97dec745'
+PAYSTACK_PUBLIC_KEY = 'pk_test_7a49deb15782be748f1ff631ea5782a228950d9e'
