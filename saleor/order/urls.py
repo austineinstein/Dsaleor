@@ -15,8 +15,4 @@ urlpatterns = [
         views.checkout_success, name='checkout-success'),
     url(r'^%s/attach/$' % (TOKEN_PATTERN,),
         views.connect_order_with_user, name='connect-order-with-user'),
-    url(r'^%s/verify/$' % (TOKEN_PATTERN,),
-        views.verify_payment, name='verify-payment'),
-    url(r'^webhook/$',
-        views.webhook, name='webhook'),
 ]
