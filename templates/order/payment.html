@@ -77,7 +77,7 @@
               {% csrf_token %}
               {{ payment_form }}
               {% block form_submit %}
-                <button type="submit" class="btn primary">
+                <button type="button" class="btn primary" onclick="payWithPaystack()">
                   {% trans "Proceed to payment" context "Payment details primary action" %}
                 </button>
               {% endblock %}
@@ -90,4 +90,44 @@
       {% include 'order/_ordered_items_table.html' %}
     </div>
   </div>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script >
+  var orderObj = {
+    email_prepared_for_paystack: '{{ order.user_email }}',
+    amount: parseInt({{ order.total.gross.amount }})*100,
+    orderid:{{ order.id }},
+    token:'{{ order.token }}'
+  };
+
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      // This assumes you already created a constant named
+      // PAYSTACK_PUBLIC_KEY with your public key from the
+      // Paystack dashboard. You can as well just paste it
+      // instead of creating the constant
+      key: '{{PAYSTACK_PUBLIC_KEY}}',
+      email: orderObj.email_prepared_for_paystack,
+      amount: orderObj.amount,
+      metadata: {
+        orderid: orderObj.orderid,
+        token: orderObj.token,
+      },
+      callback: function(response){
+        var verifying = $.get( "{% url 'order:verify-payment' token=order.token %}?reference=" + response.reference);
+        verifying.done(function( data ) {
+          location.href = data.url;
+        });
+      },
+      onClose: function(){
+        alert('Click "Pay now" to retry payment.');
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+
 {% endblock content %}

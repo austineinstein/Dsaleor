@@ -4,7 +4,7 @@ from django.conf import settings
 from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
-from django.http import Http404, HttpResponseForbidden
+from django.http import Http404, HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.template.response import TemplateResponse
 from django.utils.translation import pgettext_lazy
@@ -18,6 +18,11 @@ from .forms import (
     OrderNoteForm, PasswordForm, PaymentDeleteForm, PaymentMethodsForm)
 from .models import Order, OrderNote, Payment
 from .utils import attach_order_to_user, check_order_status
+
+import requests
+import json
+from django.urls import reverse
+from django.views.decorators.csrf import csrf_exempt
 
 logger = logging.getLogger(__name__)
 
@@ -75,7 +80,8 @@ def payment(request, token):
     ctx = {
         'order': order, 'payment_form': payment_form, 'payments': payments,
         'waiting_payment': waiting_payment,
-        'waiting_payment_form': waiting_payment_form}
+        'waiting_payment_form': waiting_payment_form,
+        'PAYSTACK_PUBLIC_KEY':settings.PAYSTACK_PUBLIC_KEY}
     return TemplateResponse(request, 'order/payment.html', ctx)
 
 
@@ -193,3 +199,51 @@ def connect_order_with_user(request, token):
         'The order is now assigned to your account')
     messages.success(request, msg)
     return redirect('order:details', token=order.token)
+
+def verify_payment(request,token):
+    reference = request.GET.get('reference')
+    url = 'https://api.paystack.co/transaction/verify/'+reference
+    headers = {'Authorization': 'Bearer '+settings.PAYSTACK_SECRET_KEY}
+
+    response = requests.get(url, headers=headers)
+    resp = json.loads(response.text)
+    if resp['data']['status'] == "success":
+        url = reverse('order:checkout-success', args=[token])
+    else:
+        url = reverse('order:cancel-payment', args=[token])
+    return JsonResponse({'url':url})
+
+@csrf_exempt
+def webhook(request):
+    body_unicode = request.body.decode('utf-8')
+    body_data = json.loads(body_unicode)
+    if body_data['event'] == 'charge.success':
+        orderid = body_data['data']['metadata']['orderid']
+        token = body_data['data']['metadata']['token']
+        transaction_id = body_data['data']['reference']
+        ip_address = body_data['data']['ip_address']
+        try:
+            order = Order.objects.get(id=orderid, token=token)
+        except Order.DoesNotExist:
+            order = None
+        if order: #Create Payment
+            logger.info(order)
+            status = PaymentStatus.CONFIRMED
+            payment = Payment.objects.create(
+                order=order,
+                status=status,
+                variant='default',
+                transaction_id=transaction_id,
+                currency=settings.DEFAULT_CURRENCY,
+                total=order.total.gross.amount,
+                delivery=order.shipping_price.gross.amount,
+                customer_ip_address=ip_address,
+                billing_first_name=order.billing_address.first_name,
+                billing_last_name=order.billing_address.last_name,
+                billing_address_1=order.billing_address.street_address_1,
+                billing_city=order.billing_address.city,
+                billing_postcode=order.billing_address.postal_code,
+                billing_country_code=order.billing_address.country)
+            payment.captured_amount = payment.total
+            payment.save()
+    return JsonResponse({'success':"true"})
