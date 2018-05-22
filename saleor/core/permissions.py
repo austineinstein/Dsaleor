@@ -28,6 +28,8 @@ MODELS_PERMISSIONS = [
     'user.impersonate_user',
     'voucher.view_voucher',
     'voucher.edit_voucher',
+    'image.view_image',
+    'image.edit_image',
 ]
 
 
