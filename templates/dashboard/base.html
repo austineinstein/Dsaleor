@@ -131,19 +131,29 @@
               </ul>
             </li>
             {% endif %}
+            {% if perms.order.view_image %}
+            <li class="side-nav-section">
+              <p>
+                {% trans "Dashboard Images" context "Dashboard images list" %}
+              </p>
+              <ul>
+                {% if perms.order.view_image %}
+                  <li class="{% block menu_images_class %}{% endblock %}">
+                    <a href="{% url 'dashboard:images' %}">
+                      {% trans "Images" context "Dashboard images list" %}
+                    </a>
+                  </li>
+                {% endif %}
+              </ul>
+            </li>
+            {% endif %}
             {% if perms.discount.view_sale or perms.discount.view_voucher %}
             <li class="side-nav-section">
               <p>
                 {% trans "Discounts" context "Dashboard discounts list" %}
               </p>
               <ul>
-                {% if perms.discount.view_sale %}
-                  <li class="{% block menu_sales_class %}{% endblock %}">
-                    <a href="{% url 'dashboard:sale-list' %}">
-                      {% trans "Sales" context "Dashboard sales (discounts) list" %}
-                    </a>
-                  </li>
-                {% endif %}
+                <li class="side-nav-section">
                 {% if perms.discount.view_voucher %}
                   <li class="{% block menu_vouchers_class %}{% endblock %}">
                     <a href="{% url 'dashboard:voucher-list' %}">
