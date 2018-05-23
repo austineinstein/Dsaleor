@@ -125,3 +125,18 @@ class User(PermissionsMixin, AbstractBaseUser):
 
     def get_short_name(self):
         return self.email
+
+
+
+class DashboardImage(models.Model):
+
+    IMAGE1 = 'image1'
+    IMAGE2 = 'image2'
+    IMAGE3 = 'image3'
+    LOGO = 'logo'
+    LOCATION_CHOICES = ((IMAGE1 , 'Image1') , (IMAGE2 , 'Image2') , (IMAGE3 , 'Image3') , (LOGO , 'Logo'))
+    image_location = models.CharField(max_length=20 , choices=LOCATION_CHOICES , unique=True)
+    image = models.ImageField(upload_to='front-images/')
+
+    def __str__(self):
+        return self.image_location

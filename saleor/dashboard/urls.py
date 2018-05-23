@@ -16,10 +16,12 @@ from .search.urls import urlpatterns as search_urls
 from .shipping.urls import urlpatterns as shipping_urls
 from .sites.urls import urlpatterns as site_urls
 from .staff.urls import urlpatterns as staff_urls
+from .dashboardimages.urls import urlpatterns as image_urls
 
 urlpatterns = [
     url(r'^$', core_views.index, name='index'),
     url(r'^categories/', include(category_urls)),
+    url(r'^images/', include(image_urls)),
     url(r'^collections/', include(collection_urls)),
     url(r'^orders/', include(order_urls)),
     url(r'^page/', include(page_urls)),
