@@ -110,7 +110,4 @@ var config = {
   }
 };
 
-module.exports = {
-  target: 'node',
-  externals: [nodeExternals()],
-};
+module.exports = config;
