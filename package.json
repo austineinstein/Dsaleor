@@ -65,8 +65,14 @@
     "node-sass": "^4.9.0",
     "postcss": "^6.0.11",
     "postcss-loader": "^2.0.6",
+<<<<<<< HEAD
     "sass-loader": "^6.0.7",
     "webpack": "^4.8.3",
+=======
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^6.0.6",
+    "webpack": "^4.0.1",
+>>>>>>> 751be31a7db9bfc46a58c98ddcc47bd78b7983d3
     "webpack-bundle-tracker": "0.2.0",
     "webpack-cli": "^2.0.9",
     "webpack-dev-server": "^3.1.0"

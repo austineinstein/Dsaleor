@@ -1,0 +1,76 @@
+{#<h1>Hello</h1>#}
+{% extends 'dashboard/base.html' %}
+{##}
+{% load materializecss %}
+{% load i18n %}
+{% load staticfiles %}
+{% load utils %}
+{##}
+{% block title %}
+  {% trans "Images" context "Images list page title "%} - {{ block.super }}
+{% endblock %}
+{##}
+{% block body_class %}body-images{% endblock %}
+{##}
+{% block menu_images_class %}active{% endblock %}
+{##}
+{% block breadcrumbs %}
+  <ul class="breadcrumbs breadcrumbs--history">
+    <li class="visible-s"><span>{% trans "Images" %}</span></li>
+  </ul>
+{% endblock %}
+{##}
+{#{% block header_extra %}#}
+{#  {% if perms.image.edit_image %}#}
+{#    <div class="btn-fab-fixed">#}
+{#      <a href="{% url 'dashboard:image-add' %}" class="btn-fab-default waves-effect waves-light" title="{% trans "Add Image" context 'Image list add button text' %}">#}
+{#        <svg data-src="{% static 'dashboard/images/add.svg' %}"/>#}
+{#      </a>#}
+{#    </div>#}
+{#  {% endif %}#}
+{#{% endblock %}#}
+
+{% block content %}
+  <div class="row">
+    <div class="col m12 l9">
+      <div class="card">
+        <form method="post" action="{% url 'dashboard:image-update' %}" enctype="multipart/form-data">
+          <div class="card-content card-content-form">
+            {% csrf_token %}
+            <div class="row" align="center" style="margin: 0 auto">
+
+                <table>
+                    <tr>
+                        <td>
+                            <label style="font-size: 25px;">Select Image Type </label>
+                        </td>
+                        <td>
+                            <select  name="image_location" type="Location" id="image_location">
+                                <option value="logo">Logo</option>
+                                <option value="image1" required >Image 1</option>
+                                <option value="image2">Image 2</option>
+                                <option value="image3">Image 3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="font-size: 25px;">Select Image: </label>
+                        </td>
+                        <td>
+                            <input type="file" name="image" required />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <div class="card-action right-align">
+              <button type="submit" class="btn btn-flat primary">
+                {% trans "Submit" context "Update Images" %}
+              </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -52,12 +52,12 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: //.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: //.scss$/,
         loader: ExtractTextPlugin.extract({
           use: [
             {
@@ -85,7 +85,7 @@ var config = {
         })
       },
       {
-        test: /\.(eot|otf|png|svg|jpg|ttf|woff|woff2)(\?v=[0-9.]+)?$/,
+        test: //.(eot|otf|png|svg|jpg|ttf|woff|woff2)(/?v=[0-9.]+)?$/,
         loader: fileLoaderPath,
         include: [
           resolve('node_modules'),
