@@ -25,7 +25,7 @@ SORT_BY_FIELDS_LABELS_VOUCHER = {
     'limit': pgettext_lazy('Voucher list sorting option', 'limit')}
 
 DISCOUNT_TYPE_CHOICES = (
-    ('fixed', pgettext_lazy('Sale type filter choice', 'USD')),
+    ('fixed', pgettext_lazy('Sale type filter choice', 'NGN')),
     ('percentage', pgettext_lazy('Sale type filter choice', '%')))
 
 

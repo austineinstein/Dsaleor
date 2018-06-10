@@ -5,32 +5,24 @@ from django.template.response import TemplateResponse
 from django.utils.translation import pgettext_lazy
 from impersonate.views import impersonate as orig_impersonate
 
-from ..account.models import User, DashboardImage
+from ..account.models import User
 from ..dashboard.views import staff_member_required
-from ..product.utils import products_for_homepage, products_with_availability
-from ..schema.webpage import get_webpage_schema
+from ..product.utils import products_for_homepage
+from ..product.utils.availability import products_with_availability
+from ..seo.schema.webpage import get_webpage_schema
 
 
 def home(request):
-    upar_image = DashboardImage.objects.filter(image_location='image1')
-    lower_images = DashboardImage.objects.exclude(image_location='logo')
-    lower_images = lower_images.exclude(image_location='image1')
-    print("lower_images: ",lower_images)
-    print("Uper: ",upar_image)
     products = products_for_homepage()[:8]
     products = products_with_availability(
-        products, discounts=request.discounts, local_currency=request.currency)
+        products, discounts=request.discounts, taxes=request.taxes,
+        local_currency=request.currency)
     webpage_schema = get_webpage_schema(request)
     return TemplateResponse(
         request, 'home.html', {
             'parent': None,
             'products': products,
-            'webpage_schema': json.dumps(webpage_schema),
-            'upar_images': upar_image,
-            'lower_images': lower_images
-
-        }
-    )
+            'webpage_schema': json.dumps(webpage_schema)})
 
 
 @staff_member_required
@@ -53,10 +45,5 @@ def handle_404(request, exception=None):
 
 
 def manifest(request):
-    site = request.site
-    ctx = {
-        'description': site.settings.description,
-        'name': site.name,
-        'short_name': site.name}
     return TemplateResponse(
-        request, 'manifest.json', ctx, content_type='application/json')
+        request, 'manifest.json', content_type='application/json')

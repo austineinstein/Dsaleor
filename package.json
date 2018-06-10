@@ -17,12 +17,10 @@
     "npm": "^5.4.2"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-beta.2",
-    "bower": "^1.8.4",
+    "bootstrap": "4.0.0",
     "classnames": "^2.2.5",
     "detect-passive-events": "^1.0.4",
     "dropzone": "^5.2.0",
-    "gulp": "^3.9.1",
     "jquery": "^3.1.1",
     "jquery.cookie": "^1.4.1",
     "lazysizes": "^4.0.1",
@@ -30,27 +28,26 @@
     "medium-editor": "^5.23.3",
     "mobx": "^3.0.2",
     "mobx-react": "^4.1.0",
-    "npm": "^5.8.0",
-    "popper.js": "^1.12.5",
+    "popper.js": "^1.14.1",
     "query-string": "^5.0.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "select2": "^4.0.3",
+    "select2": "^4.0.5",
     "sortablejs": "^1.5.0-rc1",
     "svg-injector-2": "^2.0.35"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.40",
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.40",
-    "@babel/plugin-proposal-decorators": "^7.0.0-beta.40",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.40",
-    "@babel/preset-es2015": "^7.0.0-beta.40",
-    "@babel/preset-react": "^7.0.0-beta.40",
-    "@babel/preset-stage-0": "^7.0.0-beta.40",
-    "autoprefixer": "^7.1.4",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.44",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
+    "@babel/preset-es2015": "^7.0.0-beta.44",
+    "@babel/preset-react": "^7.0.0-beta.44",
+    "@babel/preset-stage-0": "^7.0.0-beta.44",
+    "autoprefixer": "^8.2.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta.2",
-    "css-loader": "^0.28.10",
+    "css-loader": "^0.28.11",
     "eslint": "^4.6.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-standard": "^10.2.1",
@@ -59,23 +56,17 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-standard": "^3.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^1.1.10",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.0",
     "mjml": "^3.3.5",
     "node-sass": "^4.9.0",
-    "postcss": "^6.0.11",
-    "postcss-loader": "^2.0.6",
-<<<<<<< HEAD
+    "postcss": "^6.0.21",
+    "postcss-loader": "^2.1.3",
     "sass-loader": "^6.0.7",
-    "webpack": "^4.8.3",
-=======
-    "resolve-url-loader": "^2.3.0",
-    "sass-loader": "^6.0.6",
-    "webpack": "^4.0.1",
->>>>>>> 751be31a7db9bfc46a58c98ddcc47bd78b7983d3
-    "webpack-bundle-tracker": "0.2.0",
-    "webpack-cli": "^2.0.9",
-    "webpack-dev-server": "^3.1.0"
+    "webpack": "^4.5.0",
+    "webpack-bundle-tracker": "^0.3.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.1"
   },
   "babel": {
     "presets": [
@@ -98,6 +89,6 @@
     "build-assets": "webpack -p --progress",
     "heroku-postbuild": "npm run build-assets && npm run build-emails",
     "start": "webpack -d --watch --progress",
-    "build-emails": "mkdir -p templates/templated_email/compiled/ && find templates -name \"*.mjml\" -not -path \"templates/templated_email/source/*partials/*\" -not -path \"templates/templated_email/source/*shared/*\" -exec ./node_modules/.bin/mjml -l skip {} -o templates/templated_email/compiled/ \\;"
+    "build-emails": "mjml -l skip \"templates/templated_email/source/*.mjml\" -o templates/templated_email/compiled"
   }
 }

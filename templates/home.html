@@ -3,17 +3,15 @@
 
 {% block content %}
   <div class="home">
-  {% for image in upar_images %}
     <div class="row">
       <div class="col-sm-12 home__block1">
         <div class="home--square">
           <div class="home--content">
             <div class="home--content-wrapper">
               <div class="home--content-inner">
-                  <img style="width: 100%; height: auto;" src="{{ image.image.url }}">
-                <h1 style="font-size:3vw;position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%)">{% trans "Promo &amp; Sale" context "Homepage title" %}</h1>
-                <h2 style="font-size:1.5vw;position: absolute; top: 47%; left: 50%; transform: translate(-50%, -50%)">{% trans "from the Northpole" context "Homepage title" %}</h2>
-                  <a style="font-size:1vw;position: absolute; top: 52%; left: 50%; transform: translate(-50%, -50%)" class="btn btn-secondary home__button" href="#">
+                <h1>{% trans "Promo & Sale" context "Homepage title" %}</h1>
+                <h2>{% trans "from the Northpole" context "Homepage title" %}</h2>
+                  <a class="btn btn-secondary home__button" href="#">
                     {% trans "Shop now" context "Homepage action" %}
                   </a>
               </div>
@@ -22,40 +20,32 @@
         </div>
       </div>
     </div>
-  {% endfor %}
     <div class="row">
-    {% for image in lower_images %}
       <div class="col-sm-12 col-md-6 home__block2">
-
         <div class="home--square">
-
           <div class="home--content">
             <div class="home--content-wrapper">
-
-                <div class="home--content-inner">
-                     <img style="max-width: 100%; max-height: 100%;" src="{{ image.image.url }}">
-                <h1 style="font-size:2vw;position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%)">{% trans "Size &amp; Colours" context "Homepage title" %}</h1>
-                <a style="font-size:1vw;position: absolute; top: 52%; left: 50%; transform: translate(-50%, -50%)" class="btn btn-secondary home__button" href="#">{% trans "Shop now" context "Homepage action" %}</a>
+              <div class="home--content-inner">
+                <h1>{% trans "Size & Colours" context "Homepage title" %}</h1>
+                <a class="btn btn-secondary home__button" href="#">{% trans "Shop now" context "Homepage action" %}</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-{#      <div class="col-sm-12 col-md-6 home__block3">#}
-{#        <div class="home--square">#}
-{#          <div class="home--content">#}
-{#            <div class="home--content-wrapper">#}
-{#              <div class="home--content-inner">#}
-{#                <h1>{% trans "Digital Downloads" context "Homepage title" %}</h1>#}
-{#                <a class="btn btn-secondary home__button" href="#">{% trans "Shop now" context "Homepage action" %}</a>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{#      </div>#}
-    {% endfor %}
+      <div class="col-sm-12 col-md-6 home__block3">
+        <div class="home--square">
+          <div class="home--content">
+            <div class="home--content-wrapper">
+              <div class="home--content-inner">
+                <h1>{% trans "Digital Downloads" context "Homepage title" %}</h1>
+                <a class="btn btn-secondary home__button" href="#">{% trans "Shop now" context "Homepage action" %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
     <div class="home__featured">
       <h2 class="text-center">{% trans "Featured products" context "Homepage title" %}</h2>
       <div class="row">
