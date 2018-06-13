@@ -501,7 +501,5 @@ RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 
 #Paystack Keys
-PAYSTACK_SECRET_KEY = 'sk_live_41abc3d6caa46d27561023e5dc65642d2cd74363'
-PAYSTACK_PUBLIC_KEY = 'pk_live_eeec205f2e11544e29dd9e43f6bc040633943a8c'
-# PAYSTACK_SECRET_KEY = 'sk_test_9ca042443bfb653c481f5a9c25d7922a97dec745'
-# PAYSTACK_PUBLIC_KEY = 'pk_test_7a49deb15782be748f1ff631ea5782a228950d9e'
+PAYSTACK_SECRET_KEY = 'sk_live_________________________________________'
+PAYSTACK_PUBLIC_KEY = 'pk_live_________________________________________'
